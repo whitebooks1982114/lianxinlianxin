@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<string>《廉政准则》第一章第七条规定，不准干预和插手农村土地、资产和资源的使用、分配、承包、(  )等事项。</string>
+		<string>A.出售</string>
+		<string>B.租赁</string>
+		<string>C.征用</string>
+		<string>D.抵押</string>
+		<integer>2</integer>
+	</array>
+	<array>
+		<string>某领导到外地公务出差，可以有下列行为：(  )</string>
+		<string>A.出席地方有关单位举办的豪华接待晚宴</string>
+		<string>B.报销900元/间/天的招待所住宿费</string>
+		<string>C.报销返程飞机经济舱机票</string>
+		<string>D.接受当地邀请参观某一旅游景点</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>《中共中央纪委关于严格禁止利用职务上的便利谋取不正当利益的若干规定》中明确规定，严格禁止利用职务上的便利为请托人谋取利益，收受请托人提供的干股。干股是指(  )。</string>
+		<string>A.股票</string>
+		<string>B.债券</string>
+		<string>C.未出资而获得的股份</string>
+		<string>D.有价证券</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>党员以营利为目的聚众赌博或者以赌博为业的，给予(  )处分。</string>
+		<string>A.严重警告 </string>
+		<string>B.撤销党内职务</string>
+		<string>C.留党察看</string>
+		<string>D.开除党籍</string>
+		<integer>4</integer>
+	</array>
+	<array>
+		<string>国有企业领导人员不得个人从事(  )经营活动和有偿中介活动，或者在本企业的同类经营企业、关联企业和与本企业有业务关系的企业投资入股。</string>
+		<string>A.关联性</string>
+		<string>B.慈善性</string>
+		<string>C.营利性 </string>
+		<string>D.公益性</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>新任领导干部应当在符合报告条件后内( )，按照《关于领导干部报告个人有关事项的规定》报告个人有关事项。</string>
+		<string>A.20日</string>
+		<string>B.30日</string>
+		<string>C.60日</string>
+		<string>D.90日</string>
+		<integer>2</integer>
+	</array>
+	<array>
+		<string>党委(党组)应当建立健全党风廉政建设责任制的检查考核制度，检查考核工作每年进行( )</string>
+		<string>A.一次</string>
+		<string>B.两次</string>
+		<string>C.三次</string>
+		<string>D.四次</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>《用公款出国(境)旅游及相关违纪行为处分规定》所称用公款出国(境)旅游行为，是指无出国(境)公务，组织或者参加用公款支付( )费用，到国(境)外进行参观、游览等活动的行为。</string>
+		<string>A.全部或者部分</string>
+		<string>B.全部 </string>
+		<string>C.部分</string>
+		<string>D.少量</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>用公款出国(境)旅游的，情节严重的，给予(  )处分。</string>
+		<string>A.记过</string>
+		<string>B.降级</string>
+		<string>C.撤职</string>
+		<string>D.开除</string>
+		<integer>4</integer>
+	</array>
+	<array>
+		<string>对无正当理由拒不服从组织调动或者交流决定的党政干部，依照法律及有关规定(  )。</string>
+		<string>A.工资降低一级 </string>
+		<string>B.予以辞退</string>
+		<string>C.就地免职或者降职使用</string>
+		<string>D.给予开除处分</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>《党内监督条例》中首次赋予（  ）的法规保障地位。</string>
+		<string>A.各人民群众团体的监督</string>
+		<string>B.舆论监督</string>
+		<string>C.人民群众的直接监督</string>
+		<string>D.人民政协的监督</string>
+		<integer>2</integer>
+	</array>
+	<array>
+		<string>构成犯罪被判处刑罚的国有企业领导人员（ ）不得担任国有企业的领导职务。</string>
+		<string>A.五年内</string>
+		<string>B.十年内</string>
+		<string>C.终身</string>
+		<string>D.离职前</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>国有企业的纪检监察机构应当结合年度考核，每年对所管辖的国有企业领导人员执行《国有企业领导人员廉洁从业若干规定》的情况进行监督检查，并作出评估，向企业党组织和（）报告。</string>
+		<string>A.当地政府</string>
+		<string>B.上级纪检监察机构</string>
+		<string>C.职工代表大会</string>
+		<string>D.履行国有资产出资人职责的机构</string>
+		<integer>2</integer>
+	</array>
+	<array>
+		<string>《党内监督条例》中规定，党内监督的专门机关是（  ）。</string>
+		<string>A.党的各级委员会</string>
+		<string>B.人民代表大会</string>
+		<string>C.人民检察院</string>
+		<string>D.党的各级纪律检查委员会</string>
+		<integer>4</integer>
+	</array>
+	<array>
+		<string>《国有企业领导人员廉洁从业若干规定》的颁布时间为（  ）</string>
+		<string>A.2009年7月12日</string>
+		<string>B.2009年9月12日</string>
+		<string>C.2009年8月12日</string>
+		<string>D.2009年10月12日</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>党和国家工作人员利用职务上的便利,为他人谋取利益,其配偶收受对方财物,情节较重，对该党员应如何追究责任？ </string>
+		<string>A.给予警告或者严重警告处分</string>
+		<string>B.给予撤销党内职务或者留党察看处分</string>
+		<string>C.给予留党察看或者开除党籍处分</string>
+		<string>D.不追究其责任</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>《国有企业领导人员廉洁从业若干规定》制定的目的是:规范国有企业领导人员（），加强国有企业反腐倡廉建设，维护国家和出资人利益，促进国有企业科学发展。</string>
+		<string>A.廉洁从业行为</string>
+		<string>B.遵纪守法行为</string>
+		<string>C.克己奉公 </string>
+		<string>D.廉洁自律行为</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>.国家电网公司《关于建立协同监督机制进一步完善惩防体系的工作意见》要求，作为协同监督的领导机构，监督工作委员会实行联席会议制度，原则上（ ）召开一次。</string>
+		<string>A.每半年</string>
+		<string>B.每月 </string>
+		<string>C.每年</string>
+		<string>D.每季度</string>
+		<integer>4</integer>
+	</array>
+	<array>
+		<string>党章规定，党员享有(  )权利。</string>
+		<string>A.8项 </string>
+		<string>B.7项</string>
+		<string>C.6项</string>
+		<string>D.5项</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>《廉政准则》第一章“廉洁从政行为规范”，通过(  )方面()“不准”对党员领导干部提出了明确而具体的禁止性要求。</string>
+		<string>A.8个、48个</string>
+		<string>B.6个、52个</string>
+		<string>C.8个、52个</string>
+		<string>D.6个、48个</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>国有企业领导人员不得个人从事（ ）经营活动和有偿中介活动，或者在本企业的同类经营企业、关联企业和与本企业有业务关系的企业投资入股。</string>
+		<string>A.关联性</string>
+		<string>B.经营性</string>
+		<string>C.营利性</string>
+		<string>D.营业性 </string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>国有企业领导人员不得利用职权为（ ）从事营利性经营活动提供各种便利条件。</string>
+		<string>A.配偶、子女和其他亲属</string>
+		<string>B.配偶、子女和其他工作人员</string>
+		<string>C.配偶、子女及其他特定关系人</string>
+		<string>D.配偶、子女 </string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>财政部、监察部、审计署和国务院国资委等四部委颁布的《国有企业负责人职务消费行为监督管理暂行办法》中规定了国有企业负责人职务消费的（ ）条禁令。 </string>
+		<string>A.10条 </string>
+		<string>B.11条</string>
+		<string>C.12条 </string>
+		<string>D.13条 </string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>“小金库”是指违反法律法规及其他有关规定，应列入而未列入符合规定的单位账簿的（ ）及其形成的资产。</string>
+		<string>A.现金 </string>
+		<string>B.现金（含有价证券）</string>
+		<string>C.各项资金 </string>
+		<string>D.各项资金（含有价证券）</string>
+		<integer>4</integer>
+	</array>
+	<array>
+		<string>党和国家机关、国有企业(公司)、事业单位、人民团体将索取的财物合伙私分，如何定性？</string>
+		<string>A.以受贿论，并根据个人所得数额和所起作用分别处理</string>
+		<string>B.以贪污论</string>
+		<string>C.以违反财经纪律论</string>
+		<string>D.“法不责众”，不以违纪论处</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>《廉政准则》规定了（ ）个“不准”，规范党员领导干部行为。</string>
+		<string>A.51</string>
+		<string>B.52</string>
+		<string>C.53</string>
+		<string>D.54</string>
+		<integer>2</integer>
+	</array>
+	<array>
+		<string>党员领导干部组织实施和执行《廉政准则》的情况，应列入（ ）的重要内容，考核结果作为对其任免、奖惩的重要依据。</string>
+		<string>A.党风廉政建设责任制和干部考核</string>
+		<string>B.党风廉政建设责任制</string>
+		<string>C.干部考核</string>
+		<string>D.领导班子考核</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>下列哪个部门不是负责对国有企业领导人员进行经常性教育和监督，促进其廉洁从业的部门：（ ）</string>
+		<string>A.纪检监察机关</string>
+		<string>B.组织人事部门</string>
+		<string>C.司法机关</string>
+		<string>D.履行国有资产出资人职责的机构</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>.在干部选拔任用工作中,违反干部选拔任用规定的,追究主要责任者和其他直接责任人员的责任,情节严重的, 给予（  ）处分。</string>
+		<string>A.严重警告</string>
+		<string>B.撤销党内职务</string>
+		<string>C.留党察看</string>
+		<string>D.开除党籍</string>
+		<integer>4</integer>
+	</array>
+	<array>
+		<string>利用职务上的便利,占用公物归个人使用,时间超过（  ）,情节较重的,给予警告或者严重警告处分;情节严重的,给予撤销党内职务处分。</string>
+		<string>A.一个月</string>
+		<string>B.三个月</string>
+		<string>C.六个月</string>
+		<string>D.一年</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>国家电网公司《关于建立协同监督机制进一步完善惩防体系的工作意见》要求，作为协同监督的领导机构，监督工作委员会实行联席会议制度，原则上（  ）召开一次。</string>
+		<string>A.每半年</string>
+		<string>B.每月</string>
+		<string>C.每年</string>
+		<string>D.每季度</string>
+		<integer>4</integer>
+	</array>
+	<array>
+		<string>国家电网公司力争到2012年底在公司系统建成以岗位为点、以流程为线、以制度为面具有“五防三控”功能的廉政风险防控机制。其中“三控”是指（  ）</string>
+		<string>A.可控、在控、能控</string>
+		<string>B.可控、要控、能控</string>
+		<string>C.在控、能控、掌控 </string>
+		<string>D.在控、要控、掌控</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>《国家电网公司党风廉政建设责任制实施办法》规定：（  ）是本单位的党风廉政建设第一责任人。</string>
+		<string>A.总经理 </string>
+		<string>B.党委书记</string>
+		<string>C.领导班子成员</string>
+		<string>D.领导班子主要负责人</string>
+		<integer>4</integer>
+	</array>
+	<array>
+		<string>《国家电网公司党风廉政建设责任制实施办法》规定：党风廉政建设责任制检查考核（  ）进行一次。</string>
+		<string>A.每半年</string>
+		<string>B.每月</string>
+		<string>C.每年</string>
+		<string>D.每季度</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>《国家电网公司党风廉政建设责任制实施办法》规定：对领导班子和领导干部落实党风廉政建设责任制的评价采取百分制，（ ）以下为“不合格”。</string>
+		<string>A.80分 </string>
+		<string>B.70分</string>
+		<string>C.65分</string>
+		<string>D.60分 </string>
+		<integer>2</integer>
+	</array>
+	<array>
+		<string>坚持反腐倡廉工作方针，完善惩治和预防腐败体系，是我们党深刻总结反腐倡廉历史经验、适应形势发展和时代要求作出的（ ）。</string>
+		<string>A.重大战略决策 </string>
+		<string>B. 阶段性工作部署</string>
+		<string>C.长期性工作要求</string>
+		<string>D.反腐倡廉具体任务</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>国家电网公司党组《关于进一步加强协同监督机制建设的工作意见》（国家电网党„2012‟8号）要求建立规范的协同监督工作载体是( )</string>
+		<string>A 两书两报告</string>
+		<string>B.一书两报告</string>
+		<string>C.两书一报告</string>
+		<string>D.一书一报告</string>
+		<integer>2</integer>
+	</array>
+	<array>
+		<string>纪检监察人员必须遵纪守法，忠于职守，（ ），清正廉洁，保守秘密。</string>
+		<string>A.权责一致</string>
+		<string>B.客观公正</string>
+		<string>C.秉公执法</string>
+		<string>D.惩教结合</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>下列行为属于挥霍浪费公共财产，须给予处分的是（ ）。</string>
+		<string>A.公款外出学习</string>
+		<string>B.公款出国考察兼旅游</string>
+		<string>C.更换办公室内的装饰</string>
+		<string>D.单位发放劳保用品</string>
+		<integer>2</integer>
+	</array>
+	<array>
+		<string>党员领导干部一律不得接受可能影响（ ）的礼品、宴请以及旅游、健身、娱乐等活动安排。</string>
+		<string>A.公正执行公务</string>
+		<string>B.妨碍执行公务</string>
+		<string>C.有利执行公务</string>
+		<string>D.正确执行公务 </string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>下列哪个部门不是负责对国有企业领导人员进行经常性教育和监督，促进其廉洁从业的部门：（ ）</string>
+		<string>A.纪检监察机关</string>
+		<string>B.组织人事部门</string>
+		<string>C.司法机关 </string>
+		<string>D.履行国有资产出资人职责的机构</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>在干部选拔任用工作中,违反干部选拔任用规定的,追究主要责任者和其他直接责任人员的责任,情节严重的, 给予（ ）处分。</string>
+		<string>A.严重警告</string>
+		<string>B.撤销党内职务</string>
+		<string>C.留党察看</string>
+		<string>D.开除党籍</string>
+		<integer>4</integer>
+	</array>
+	<array>
+		<string>利用职务上的便利,占用公物归个人使用,时间超过（  ）,情节较重的,给予警告或者严重警告处分;情节严重的,给予撤销党内职务处分。</string>
+		<string>A.一个月</string>
+		<string>B.三个月</string>
+		<string>C.六个月</string>
+		<string>D.一年</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>国有企业领导人员因违反国家法律，造成国有资产重大损失被免职的，（）不得担任国有企业的领导职务。</string>
+		<string>A.三年内 </string>
+		<string>B.五年内</string>
+		<string>C.两年内</string>
+		<string>D.终身</string>
+		<integer>2</integer>
+	</array>
+	<array>
+		<string>《党内监督条例》中首次赋予（   ）的法规保障地位。</string>
+		<string>A.各人民群众团体的监督</string>
+		<string>B.舆论监督 </string>
+		<string>C.人民群众的直接监督</string>
+		<string>D.人民政协的监督</string>
+		<integer>2</integer>
+	</array>
+	<array>
+		<string>构成犯罪被判处刑罚的国有企业领导人员（ ）不得担任国有企业的领导职务。</string>
+		<string>A.五年内</string>
+		<string>B.十年内</string>
+		<string>C.终身</string>
+		<string>D.离职前</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>《党内监督条例》中规定，党内监督的专门机关是（   ）。</string>
+		<string>A.党的各级委员会</string>
+		<string>B.人民代表大会</string>
+		<string>C.人民检察院</string>
+		<string>D.党的各级纪律检查委员会</string>
+		<integer>4</integer>
+	</array>
+	<array>
+		<string>《国有企业领导人员廉洁从业若干规定》的颁布时间为（   ）</string>
+		<string>A.2009年7月12日</string>
+		<string>B.2009年9月12日</string>
+		<string>C.2009年8月12日</string>
+		<string>D.2009年10月12日 </string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>党和国家工作人员利用职务上的便利,为他人谋取利益,其配偶收受对方财物,情节较重，对该党员应如何追究责任？ </string>
+		<string>A.给予警告或者严重警告处分</string>
+		<string>B.给予撤销党内职务或者留党察看处分 </string>
+		<string>C.给予留党察看或者开除党籍处分</string>
+		<string>D.不追究其责任</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>《国有企业领导人员廉洁从业若干规定》制定的目的是:规范国有企业领导人员（ ），加强国有企业反腐倡廉建设，维护国家和出资人利益，促进国有企业科学发展。</string>
+		<string>A.廉洁从业行为</string>
+		<string>B.遵纪守法行为</string>
+		<string>C.克己奉公  </string>
+		<string>D.廉洁自律行为</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>党员受到警告或者严重警告处分的，（  ）内不得在党内提升职务</string>
+		<string>A.1 年</string>
+		<string>B.2年</string>
+		<string>C.3年</string>
+		<string>D.4 年</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>二人以上共同故意违纪中，对于经济方面共同违纪的，按照个人（  ），分别处分。</string>
+		<string>A.所起作用大小</string>
+		<string>B.职务高低</string>
+		<string>C.性质严重情况</string>
+		<string>D.所得数额及其所起作用</string>
+		<integer>4</integer>
+	</array>
+	<array>
+		<string>对预备党员违反党纪的，可以这样处理：（  ）</string>
+		<string>A.因为还不是正式党员所以不受党纪约束</string>
+		<string>B.应取消其预备党员资格 </string>
+		<string>C.应保留预备党员资格</string>
+		<string>D.视情节轻重定，预备党员资格轻则保留，重则取消 </string>
+		<integer>4</integer>
+	</array>
+	<array>
+		<string>对拒不执行组织的分配、调动、交流决定的党员，可以给予（ ）处分。</string>
+		<string>A.警告或严重警告</string>
+		<string>B.留党察看</string>
+		<string>C.开除党籍</string>
+		<string>D.警告、严重警告或撤销党内职务</string>
+		<integer>4</integer>
+	</array>
+	<array>
+		<string>党员受到（ ）处分，一年内不得向党外组织推荐担任高于原职的党外职务。</string>
+		<string>A.警告</string>
+		<string>B.严重警告 </string>
+		<string>C.警告或严重警告</string>
+		<string>D.留党察看 </string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>党员受到开除党籍处分，几年内不得重新入党？（ ） </string>
+		<string>A.一年</string>
+		<string>B.二年</string>
+		<string>C.三年</string>
+		<string>D.五年</string>
+		<integer>4</integer>
+	</array>
+	<array>
+		<string>《廉政准则》规定了（ ）个“不准”，规范党员领导干部行为。</string>
+		<string>A.51</string>
+		<string>B.52</string>
+		<string>C.53 </string>
+		<string>D.54 </string>
+		<integer>2</integer>
+	</array>
+	<array>
+		<string>党员领导干部组织实施和执行《廉政准则》的情况，应列入（ ）的重要内容，考核结果作为对其任免、奖惩的重要依据。</string>
+		<string>A.党风廉政建设责任制和干部考核</string>
+		<string>B.党风廉政建设责任制</string>
+		<string>C.干部考核</string>
+		<string>D.领导班子考核</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>下列哪项不是国有企业实施《国有企业领导人员廉洁从业若干规定》的主要责任人：（ ） </string>
+		<string>A.纪委书记</string>
+		<string>B.党委（党组）书记</string>
+		<string>C.董事长</string>
+		<string>D.总经理</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>国有企业领导人员违反《国有企业领导人员廉洁从业若干规定》受到降职处理的，（ ）不得担任与其原任职务相当或者高于其原任职务的职务。 </string>
+		<string>A.两年内</string>
+		<string>B.三年内</string>
+		<string>C.五年内</string>
+		<string>D.终身</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>《关于实行党风廉政建设责任制的规定》中明确，要把党风廉政建设作为（  ）和政权 建设的重要内容。</string>
+		<string>A.思想建设</string>
+		<string>B.作风建设</string>
+		<string>C.党的建设</string>
+		<string>D.组织建设</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>《关于实行党风廉政建设责任制的规定》中明确，领导班子对职责范围内的党风廉政建设 负（  ）。</string>
+		<string>A.全面领导责任</string>
+		<string>B.次要领导责任</string>
+		<string>C.主要领导责任</string>
+		<string>D.直接领导责任 </string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>《中国共产党党员领导干部廉洁从政若干准则》规定，党员领导干部利用职权，象征性地 支付钱款占有公共财物，这是一种（  ）行为。</string>
+		<string>A.欺骗 </string>
+		<string>B.挪用</string>
+		<string>C.受贿 </string>
+		<string>D.贪污 </string>
+		<integer>4</integer>
+	</array>
+	<array>
+		<string>《中共中央纪委关于严格禁止利用职务上的便利谋取不正当利益的若干规定》中规定： 收受请托人财物后及时退还或者上交的，（  ）。</string>
+		<string>A.不算违纪</string>
+		<string>B.可定性为违纪行为 </string>
+		<string>C.可从轻问责</string>
+		<string>D.不是违纪</string>
+		<integer>4</integer>
+	</array>
+	<array>
+		<string>党的十八届三中全会指出，坚持用制度管权管事管人，让人民监督权力，让权力在阳光 下运行，是（    ）的根本之策。</string>
+		<string>A.依法治国</string>
+		<string>B.依法行政</string>
+		<string>C.把权力关进制度笼子</string>
+		<string>D.把权力关进法制笼子</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>党的十八届三中全会指出，加强和改进对（   ）行使权力的制约和监督。</string>
+		<string>A.主要领导干部 </string>
+		<string>B.党委常委会</string>
+		<string>C.党委书记  </string>
+		<string>D.党政一把手 </string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>十八届中央纪委三次全会指出，推进党风廉政建设和反腐败斗争, 要落实党委的（  ） 责任。</string>
+		<string>A.主体 </string>
+		<string>B.监督 </string>
+		<string>C.决策</string>
+		<string>D.执行</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>习近平总书记在十八届中央纪委三次全会强调，各项改革举措要体现惩治和预防腐败要 求，同防范腐败（   ）。</string>
+		<string>A.同步决策、同步执行、同步监督</string>
+		<string>B.同步规划、同步执行、同步监督</string>
+		<string>C.同步考虑、同步部署、同步实施</string>
+		<string>D.同步考虑、同步建设、同步实施</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>十八届中央纪委三次全会指出，要坚持（ ），对党员干部身上的问题早发现、早提醒、 早纠正、早查处。</string>
+		<string>A.行政部门主抓 </string>
+		<string>B.谁主管谁负责</string>
+		<string>C.抓早抓小</string>
+		<string>D./</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>下列党政机关公款支出，不在严禁范围的是（    ）。</string>
+		<string>A.购买贺年片、年历等物品</string>
+		<string>B.购买烟花爆竹</string>
+		<string>C.购买月饼发放职工福利</string>
+		<string>D.购买食品慰问困难群众职工</string>
+		<integer>4</integer>
+	</array>
+	<array>
+		<string>开展教育实践活动，要把（   ）作为第一位的任务。</string>
+		<string>A.学习宣传、舆论引导</string>
+		<string>B.教育党员、影响群众</string>
+		<string>C.学习教育、思想理论武装</string>
+		<string>D.学习教育、舆论引导</string>
+		<integer>2</integer>
+	</array>
+	<array>
+		<string>教育实践活动要以（   ）的勇气和态度查找问题、剖析原因。</string>
+		<string>A.高度负责</string>
+		<string>B.敢于亮短揭丑</string>
+		<string>C.严谨细致</string>
+		<string>D. 高度认真</string>
+		<integer>2</integer>
+	</array>
+	<array>
+		<string>领导班子（   ）是职责范围内的党风廉政建设第一责任人。</string>
+		<string>A.成员</string>
+		<string>B.主要负责人</string>
+		<string>C.分管领导</string>
+		<string>D.集体 </string>
+		<integer>2</integer>
+	</array>
+	<array>
+		<string>从实践看，（   ）仍然是腐败现象滋生蔓延的重要原因。</string>
+		<string>A.形式主义、官僚主义作风 </string>
+		<string>B.弄虚作假、铺张浪费现象</string>
+		<string>C.教育不扎实，制度不健全，监督不得力</string>
+		<string>D.损害人民群众利益的不正之风 </string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>党风廉政建设的核心问题是（   ）。</string>
+		<string>A.密切党同人民群众的血肉联系</string>
+		<string>B.提高人民群众的物质文化生活水平 </string>
+		<string>C.促进社会主义物质文明发展 </string>
+		<string>D.促进社会主义精神文明发展 </string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>建立健全惩治和预防腐败体系要坚持（  ）相结合。</string>
+		<string>A.改革与发展 </string>
+		<string>B.理论与实践</string>
+		<string>C.继承与创新</string>
+		<string>D.改革与创新</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>当前，腐败现象多发，滋生腐败的土壤存在，反腐败斗争形势依然严峻复杂，形式主义、 官僚主义、享乐主义和（ ）严重损害党的形象。</string>
+		<string>A.奢侈浪费</string>
+		<string>B.经验主义 </string>
+		<string>C.奢靡之风 </string>
+		<string>D.虚假主义</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>坚决惩治腐败是我们党（   ）的重要体现。</string>
+		<string>A.执政能力</string>
+		<string>B.执政水平</string>
+		<string>C.执政地位</string>
+		<string>D.执政基础</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>建立健全教育、制度、监督并重的惩治和预防腐败体系实施纲要》中明确,反腐倡廉教 育要以（  ）为重点。</string>
+		<string>A.党员</string>
+		<string>B.领导干部</string>
+		<string>C.普通百姓 </string>
+		<string>D.党员领导干部</string>
+		<integer>2</integer>
+	</array>
+	<array>
+		<string>《中国共产党党员领导干部廉洁从政若干准则》是根据（  ），结合党员领导干部廉洁自 律工作实际制定的。</string>
+		<string>A.《中国共产党纪律处分条例》</string>
+		<string>B.《中国共产党党内监督条例(试行)》</string>
+		<string>C.《中国共产党章程》</string>
+		<string>D.《中华人民共和国公务员法》</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>中共中央纪律检查委员会向党的十八大工作报告中指出，必须坚持以（   ）精神推进工 作，始终保持反腐倡廉建设的生机和活力。</string>
+		<string>A.艰苦奋斗</string>
+		<string>B.改革创新</string>
+		<string>C.创先争优 </string>
+		<string>D.开拓进取 </string>
+		<integer>2</integer>
+	</array>
+	<array>
+		<string>中共中央纪律检查委员会向党的十八大工作报告中指出，（    ）是防治腐败的重要基础。</string>
+		<string>A.加强教育、增强党员干部拒腐防变能力</string>
+		<string>B.推动经济社会发展</string>
+		<string>C.全面建成小康社</string>
+		<string>D.解放和发展社会生产力</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>中共中央纪律检查委员会向党的十八大工作报告中指出，（  ）是源头上防治腐败的根本举措。</string>
+		<string>A.加大惩治腐败力度</string>
+		<string>B.加强教育</string>
+		<string>C.深化重点领域和关键环节改革</string>
+		<string>D.加强制度建设</string>
+		<integer>3</integer>
+	</array>
+	<array>
+		<string>中共中央纪律检查委员会向党的十八大工作报告中指出，（  ）是有效预防腐败的关键。</string>
+		<string>A.坚持党要管党</string>
+		<string>B.实行民主集中制</string>
+		<string>C.依法治国 </string>
+		<string>D.强化对权力的制约和监督</string>
+		<integer>4</integer>
+	</array>
+	<array>
+		<string>党的十八大报告指出，反对腐败、建设（  ），是党一贯坚持的鲜明政治立场。</string>
+		<string>A.廉洁政治</string>
+		<string>B.廉洁政府</string>
+		<string>C.清明政治 </string>
+		<string>D.清明政府</string>
+		<integer>1</integer>
+	</array>
+	<array>
+		<string>根据《中国共产党章程》，对严重触犯刑律的党员如何处理？（  ）</string>
+		<string>A.可以开除党籍</string>
+		<string>B.必须开除党籍</string>
+		<string>C.应当开除党籍</string>
+		<string>D.可以留党察看 </string>
+		<integer>2</integer>
+	</array>
+	<array>
+		<string>《中共中央政治局关于改进工作作风、密切联系群众的八项规定》中规定要精简（   ）？</string>
+		<string>A.财政开支</string>
+		<string>B.会议活动</string>
+		<string>C.公职人员数量</string>
+		<string>D.机构设置</string>
+		<integer>2</integer>
+	</array>
+	<array>
+		<string>以下选项不是《中共中央政治局关于改进工作作风、密切联系群众的八项规定》中规定的 内容是?（  ）</string>
+		<string>A.改进调查研究</string>
+		<string>B.规范出访活动</string>
+		<string>C.改进警卫工作</string>
+		<string>D.规范程序审批</string>
+		<integer>4</integer>
+	</array>
+	<array>
+		<string>为加强党内监督，完善巡视制度，规范巡视工作，党中央根据（  ），制定了《中国共产 党巡视工作条例》。</string>
+		<string>A.《中华人民共和国宪法》</string>
+		<string>B.《中国共产党章程》</string>
+		<string>C.《中国共产党纪律处分条例》</string>
+		<string>D.《中国共产党党内监督条例》</string>
+		<integer>2</integer>
+	</array>
+	<array>
+		<string>党的群众路线教育实践活动主要任务聚焦到（    ）上。</string>
+		<string>A.作风建设</string>
+		<string>B.思想建设 </string>
+		<string>C.制度建设</string>
+		<string>D.组织建设</string>
+		<integer>1</integer>
+	</array>
+</array>
+</plist>

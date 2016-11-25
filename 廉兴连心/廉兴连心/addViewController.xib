@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="addViewController" customModule="廉兴连心" customModuleProvider="target">
+            <connections>
+                <outlet property="addText" destination="KoR-qY-qMR" id="KzQ-5D-9K6"/>
+                <outlet property="addTitle" destination="p6h-3z-e3J" id="Ouq-FS-8ap"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="百科背景" translatesAutoresizingMaskIntoConstraints="NO" id="jRq-Sr-7tL">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtJ-cc-gTW">
+                    <rect key="frame" x="20" y="80" width="50" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="CvO-gC-f1a"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p6h-3z-e3J">
+                    <rect key="frame" x="78" y="80" width="277" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KoR-qY-qMR">
+                    <rect key="frame" x="20" y="154" width="335" height="413"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="KoR-qY-qMR" secondAttribute="bottom" constant="100" id="3ne-3O-2BL"/>
+                <constraint firstItem="p6h-3z-e3J" firstAttribute="leading" secondItem="wtJ-cc-gTW" secondAttribute="trailing" constant="8" id="Bc7-3g-KDt"/>
+                <constraint firstItem="jRq-Sr-7tL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GQJ-ms-vi3"/>
+                <constraint firstItem="KoR-qY-qMR" firstAttribute="top" secondItem="p6h-3z-e3J" secondAttribute="bottom" constant="44" id="IoU-yG-WZY"/>
+                <constraint firstItem="wtJ-cc-gTW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="KSf-b6-lWe"/>
+                <constraint firstItem="jRq-Sr-7tL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Qb5-NR-scU"/>
+                <constraint firstAttribute="trailing" secondItem="p6h-3z-e3J" secondAttribute="trailing" constant="20" id="XKq-nl-TuK"/>
+                <constraint firstItem="wtJ-cc-gTW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="b1C-jO-ztL"/>
+                <constraint firstAttribute="bottom" secondItem="jRq-Sr-7tL" secondAttribute="bottom" id="qSC-Ts-bZ2"/>
+                <constraint firstItem="KoR-qY-qMR" firstAttribute="trailing" secondItem="p6h-3z-e3J" secondAttribute="trailing" id="t8x-KI-8fZ"/>
+                <constraint firstItem="KoR-qY-qMR" firstAttribute="leading" secondItem="wtJ-cc-gTW" secondAttribute="leading" id="vDZ-PO-Npm"/>
+                <constraint firstAttribute="trailing" secondItem="jRq-Sr-7tL" secondAttribute="trailing" id="vqJ-8q-ALF"/>
+                <constraint firstItem="p6h-3z-e3J" firstAttribute="top" secondItem="wtJ-cc-gTW" secondAttribute="top" id="yJB-bt-l09"/>
+            </constraints>
+            <point key="canvasLocation" x="65.5" y="94.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="百科背景" width="598" height="598"/>
+    </resources>
+</document>

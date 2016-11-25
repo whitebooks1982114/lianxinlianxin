@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="detailContenViewController" customModule="廉兴连心" customModuleProvider="target">
+            <connections>
+                <outlet property="content" destination="kCc-oC-RRM" id="nZv-aX-B2o"/>
+                <outlet property="contentTitle" destination="4mR-4C-g02" id="H6T-Um-ccY"/>
+                <outlet property="username" destination="XT1-KR-YPb" id="yB1-vZ-CIf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="百科背景" translatesAutoresizingMaskIntoConstraints="NO" id="yEA-6W-Pfv">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMu-SX-Ar3">
+                    <rect key="frame" x="20" y="80" width="35" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上传用户" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soR-gN-MQN">
+                    <rect key="frame" x="20" y="131" width="70" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XT1-KR-YPb">
+                    <rect key="frame" x="122" y="131" width="200" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mR-4C-g02">
+                    <rect key="frame" x="122" y="80" width="200" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="Uhz-r1-vyX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="1111" translatesAutoresizingMaskIntoConstraints="NO" id="kCc-oC-RRM">
+                    <rect key="frame" x="20" y="170" width="302" height="289"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="289" id="rel-xz-HSl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="soR-gN-MQN" firstAttribute="leading" secondItem="IMu-SX-Ar3" secondAttribute="leading" id="Ezu-B9-I5d"/>
+                <constraint firstItem="4mR-4C-g02" firstAttribute="leading" secondItem="IMu-SX-Ar3" secondAttribute="trailing" constant="67" id="NUL-gt-ZbH"/>
+                <constraint firstItem="XT1-KR-YPb" firstAttribute="trailing" secondItem="4mR-4C-g02" secondAttribute="trailing" id="PWG-6r-4EM"/>
+                <constraint firstItem="kCc-oC-RRM" firstAttribute="leading" secondItem="soR-gN-MQN" secondAttribute="leading" id="PZb-a2-sEx"/>
+                <constraint firstItem="XT1-KR-YPb" firstAttribute="top" secondItem="soR-gN-MQN" secondAttribute="top" id="a8Y-9P-Kcj"/>
+                <constraint firstItem="kCc-oC-RRM" firstAttribute="trailing" secondItem="XT1-KR-YPb" secondAttribute="trailing" id="an6-gv-Vwn"/>
+                <constraint firstItem="XT1-KR-YPb" firstAttribute="leading" secondItem="4mR-4C-g02" secondAttribute="leading" id="g0E-HF-4DU"/>
+                <constraint firstItem="IMu-SX-Ar3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="ihT-vt-csE"/>
+                <constraint firstItem="kCc-oC-RRM" firstAttribute="top" secondItem="soR-gN-MQN" secondAttribute="bottom" constant="18" id="l2Z-eF-zBK"/>
+                <constraint firstItem="soR-gN-MQN" firstAttribute="top" secondItem="IMu-SX-Ar3" secondAttribute="bottom" constant="30" id="ql3-T8-9Sp"/>
+                <constraint firstItem="IMu-SX-Ar3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="yFM-IQ-pfQ"/>
+                <constraint firstItem="4mR-4C-g02" firstAttribute="top" secondItem="IMu-SX-Ar3" secondAttribute="top" id="zXe-5x-uHo"/>
+            </constraints>
+            <point key="canvasLocation" x="32.5" y="79.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="百科背景" width="598" height="598"/>
+    </resources>
+</document>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>公司领导</string>
+	<string>办公室</string>
+	<string>人资部</string>
+	<string>财务部</string>
+	<string>党群部</string>
+	<string>安监部</string>
+	<string>监审部</string>
+	<string>运检部</string>
+	<string>营销部</string>
+	<string>调控中心</string>
+	<string>建设部</string>
+	<string>发策部</string>
+	<string>其他</string>
+</array>
+</plist>
