@@ -15,14 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    
-
+  
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Bmob.register(withAppKey: "e1f6b4e604e2fc50b6ef6de799d8bbc3")
         
-              return true
+                    return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

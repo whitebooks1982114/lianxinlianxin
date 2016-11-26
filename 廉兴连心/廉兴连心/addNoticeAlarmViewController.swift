@@ -15,6 +15,7 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
     @IBOutlet weak var myTabel: UITableView!
     @IBOutlet weak var sendMessage: UIButton!
     
+    @IBOutlet weak var sendObject: UIView!
     @IBOutlet weak var noteicChecBox: M13Checkbox!
  
     @IBOutlet weak var alarmCheckBox: M13Checkbox!
@@ -69,10 +70,7 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
             saveNotice()
             
         }
-        if alarmSelected == true {
-            saveAlarm()
-            
-        }
+      
         
         deadline.resignFirstResponder()
         
@@ -86,7 +84,7 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
         }
         if alarmSelected == true {
             
-            sendAlarm()
+            saveAlarm()
         }
         UIView.animate(withDuration: 1.0, animations:
             {
@@ -134,7 +132,24 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
         alarmCheckBox.boxType = .square
         noteicChecBox.enableMorphing = true
         alarmCheckBox.enableMorphing = true
+       
+      
+        
         myTabel.isHidden = true
+        
+        let usr = BmobUser.current()
+        let userName = usr?.object(forKey: "username")
+        let currentUser = userName as! String
+        
+        if currentUser != "whitebooks" {
+        
+         self.noteicChecBox.isHidden = true
+         //其他用户不能发通知，下拉列表视图按钮不可见
+        self.sendObject.isHidden = true
+        
+        }
+        
+        
         
         deadline.delegate = self
         content.delegate = self
@@ -439,15 +454,21 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
     }
     //传送提醒内容等信息至BMOB数据库
     func saveAlarm() {
+        
+        
         let dateString = self.deadline.text
         let dateformatter:DateFormatter = DateFormatter()
         dateformatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
         let noticeDate = dateformatter.date(from: dateString!)
         let noticeContent = self.content.text
+        let user = BmobUser.current()
+        let userID = user?.objectId
         let post = BmobObject(className: "alarm")
         post?.setObject(noticeDate, forKey: "deadLine")
         post?.setObject(noticeContent, forKey: "alarmContent")
         post?.setObject("通知" + (dateString)!, forKey: "alarmTitle")
+        let author = BmobUser(outDataWithClassName: "_User", objectId: userID)
+        post?.setObject(author, forKey: "author")
         post?.saveInBackground(resultBlock: { (sucess, error) in
             if error != nil {
                 print("\(error?.localizedDescription)")
@@ -499,32 +520,7 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
         
     }
     
-    //发送提醒方法
-    func sendAlarm() {
       
-        let sendNotcie = BmobObject(outDataWithClassName: "alarm", objectId: self.alarmID)
-        
-        let relation = BmobRelation()
-        
-        for i in 0...self.select.count - 1 {
-            if self.select[i] == true {
-                relation.add(BmobObject(outDataWithClassName: "_User", objectId: self.userId[i]))
-                
-            }
-            
-        }
-        sendNotcie?.add(relation, forKey: "relation")
-        sendNotcie?.updateInBackground(resultBlock: { (success, error) in
-            if error != nil {
-                print("\(error?.localizedDescription)")
-                
-            }
-        })
-        
-
-    }
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

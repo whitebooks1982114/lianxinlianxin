@@ -45,24 +45,14 @@ class tixinTableViewController: UITableViewController {
         }else {
             
             
-            let userName = usr?.object(forKey: "username")
-            let currentUser = userName as! String
-            
-            if currentUser == "whitebooks" {
                 
                 let mystroy = self.storyboard
                 let add = mystroy?.instantiateViewController(withIdentifier: "add") as! addNoticeAlarmViewController
+               
                 
                 self.navigationController?.pushViewController(add, animated: true)
                 
-            }else {
-                let alert  = UIAlertController(title: "温馨提示", message: "对不起，您的权限不足", preferredStyle: .alert)
-                let ok = UIAlertAction(title: "好", style: .default, handler: nil)
-                alert.addAction(ok)
-                self.present(alert, animated: true, completion: nil)
-                
-            }
-            
+           
         }
         
     }

@@ -13,11 +13,13 @@ class dongtaiTableViewController: UITableViewController {
     var list  = [String]()
     var levelList = [String]()
     
+    let newsDetail = newsdetailViewController()
+    
     
     //查询函数
     func myQuery() {
         list.removeAll()
-    
+        levelList.removeAll()
         let query = BmobQuery(className: "news")
         query?.limit = 1000
         query?.order(byDescending: "updatedAt")
@@ -63,7 +65,7 @@ class dongtaiTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "通知背景"))
         self.navigationItem.title = "要闻动态"
-        myQuery()
+ 
         
         //下拉刷新
         let myRefresh = UIRefreshControl()
@@ -121,7 +123,20 @@ class dongtaiTableViewController: UITableViewController {
     }
     
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let selectedTitle = self.list[indexPath.row]
+       
+        newsDetail.newsName = selectedTitle
+        
+        self.navigationController?.pushViewController(newsDetail, animated: true)
+        
+    }
+    
+    
     /*
+     
+     
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
