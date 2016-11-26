@@ -20,7 +20,7 @@ class tongziTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "通知背景"))
         self.navigationItem.title = "消息通知"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.addNotice))
     }

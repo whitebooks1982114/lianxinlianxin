@@ -11,7 +11,9 @@ import M13Checkbox
 
 class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource {
     
+    @IBOutlet weak var myToolbar: UIToolbar!
     @IBOutlet weak var myTabel: UITableView!
+    @IBOutlet weak var sendMessage: UIButton!
     
     @IBOutlet weak var noteicChecBox: M13Checkbox!
  
@@ -61,7 +63,20 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
     @IBOutlet weak var content: UITextView!
     
     @IBOutlet weak var deadline: UITextField!
-    
+    //点击TOOLBAR完成按钮，发送通知或提醒内容到数据库
+    @IBAction func sendContent(_ sender: UIBarButtonItem) {
+        if noticeSelected == true {
+            saveNotice()
+            
+        }
+        if alarmSelected == true {
+            saveAlarm()
+            
+        }
+        
+        deadline.resignFirstResponder()
+        
+    }
     //发送按钮代码
     @IBAction func send(_ sender: UIButton) {
         
@@ -73,7 +88,12 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
             
             sendAlarm()
         }
+        UIView.animate(withDuration: 1.0, animations:
+            {
+               self.sendMessage.titleLabel?.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        })
         
+       _ = self.navigationController?.popToRootViewController(animated: true)
     }
     //列表是否展开标志
     var expend:Bool = false
@@ -107,7 +127,7 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
         super.viewDidLoad()
      
       
-     
+        myToolbar.removeFromSuperview()
         myDatePicker.removeFromSuperview()
     
         noteicChecBox.boxType = .square
@@ -123,6 +143,8 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
         myTabel.dataSource = self
         
         deadline.inputView = myDatePicker
+        deadline.inputAccessoryView = myToolbar
+        deadline.adjustsFontSizeToFitWidth = true
         self.navigationItem.title = "发送消息/通知"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(self.back))
         
@@ -381,7 +403,7 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
         })
         
     }
-    
+    //传送通知内容等信息至BMOB数据库
     func saveNotice() {
         let dateString = self.deadline.text
         let dateformatter:DateFormatter = DateFormatter()
@@ -415,12 +437,43 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
         })
        
     }
+    //传送提醒内容等信息至BMOB数据库
+    func saveAlarm() {
+        let dateString = self.deadline.text
+        let dateformatter:DateFormatter = DateFormatter()
+        dateformatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
+        let noticeDate = dateformatter.date(from: dateString!)
+        let noticeContent = self.content.text
+        let post = BmobObject(className: "alarm")
+        post?.setObject(noticeDate, forKey: "deadLine")
+        post?.setObject(noticeContent, forKey: "alarmContent")
+        post?.setObject("通知" + (dateString)!, forKey: "alarmTitle")
+        post?.saveInBackground(resultBlock: { (sucess, error) in
+            if error != nil {
+                print("\(error?.localizedDescription)")
+                let alert = UIAlertController(title: "错误信息", message: "\(error?.localizedDescription)", preferredStyle: .alert)
+                
+                let ok = UIAlertAction(title: "返回主界面", style: .destructive, handler: { (act) in
+                    _ = self.navigationController?.popToRootViewController(animated: true)
+                })
+                alert.addAction(ok)
+                self.present(alert, animated: true, completion: nil)
+                
+            }  else {
+                if let newAlarm = post {
+                    
+                    self.alarmID = newAlarm.objectId
+                    
+                }
+                
+            }
+        })
+  
+    }
     
     
     //发送通知方法
     func sendNotice() {
-        
-        saveNotice()
         
         
        let sendNotcie = BmobObject(outDataWithClassName: "notice", objectId: self.noticeID)
@@ -448,30 +501,27 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
     
     //发送提醒方法
     func sendAlarm() {
-        let dateString = self.deadline.text
-        let dateformatter:DateFormatter = DateFormatter()
-        dateformatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
-        let noticeDate = dateformatter.date(from: dateString!)
-        let noticeContent = self.content.text
-        let post = BmobObject(className: "alarm")
-        post?.setObject(noticeDate, forKey: "deadLine")
-        post?.setObject(noticeContent, forKey: "alarmContent")
-        post?.setObject("通知" + (dateString)!, forKey: "alarmTitle")
-        post?.saveInBackground(resultBlock: { (sucess, error) in
+      
+        let sendNotcie = BmobObject(outDataWithClassName: "alarm", objectId: self.alarmID)
+        
+        let relation = BmobRelation()
+        
+        for i in 0...self.select.count - 1 {
+            if self.select[i] == true {
+                relation.add(BmobObject(outDataWithClassName: "_User", objectId: self.userId[i]))
+                
+            }
+            
+        }
+        sendNotcie?.add(relation, forKey: "relation")
+        sendNotcie?.updateInBackground(resultBlock: { (success, error) in
             if error != nil {
                 print("\(error?.localizedDescription)")
-                let alert = UIAlertController(title: "错误信息", message: "\(error?.localizedDescription)", preferredStyle: .alert)
-                
-                let ok = UIAlertAction(title: "返回主界面", style: .destructive, handler: { (act) in
-                    _ = self.navigationController?.popToRootViewController(animated: true)
-                })
-                alert.addAction(ok)
-                self.present(alert, animated: true, completion: nil)
                 
             }
         })
-
         
+
     }
     
     
