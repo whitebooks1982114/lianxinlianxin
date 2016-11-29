@@ -466,7 +466,7 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
         let post = BmobObject(className: "alarm")
         post?.setObject(noticeDate, forKey: "deadLine")
         post?.setObject(noticeContent, forKey: "alarmContent")
-        post?.setObject("通知" + (dateString)!, forKey: "alarmTitle")
+        post?.setObject("提醒" + (dateString)!, forKey: "alarmTitle")
         let author = BmobUser(outDataWithClassName: "_User", objectId: userID)
         post?.setObject(author, forKey: "author")
         post?.saveInBackground(resultBlock: { (sucess, error) in

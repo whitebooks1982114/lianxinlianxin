@@ -217,6 +217,7 @@ class liantixinViewController: UIViewController  {
             self.noticeLabel.textColor = UIColor.orange
             self.alarmLabel.textColor = UIColor.magenta
         }, completion: nil)
+        myView.addSubview(loadChartLabel)
         
         chartData()
        

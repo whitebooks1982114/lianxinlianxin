@@ -9,6 +9,24 @@
 import UIKit
 
 class tixindetailViewController: UIViewController {
+    
+    var myTitle: String?
+    var cutDownDate: NSDate?
+    var alarmContent: String?
+    
+    @IBOutlet weak var myAlarmContent: UITextView!
+    
+    @IBOutlet weak var year: UILabel!
+    
+    @IBOutlet weak var month: UILabel!
+    
+    @IBOutlet weak var day: UILabel!
+    
+    @IBOutlet weak var remainDays: UILabel!
+    
+    @IBAction func alarmVoiceSwich(_ sender: UISwitch) {
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +41,39 @@ class tixindetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        self.myAlarmContent.text = alarmContent
+        
+        let oneDay = 86400
+        
+        let dm = DateFormatter()
+        dm.dateFormat = "YYYY-MM-dd HH:mm:ss"
+        
+        let deadLineString = dm.string(from: cutDownDate as! Date) as NSString
+        
+        let expireYear = deadLineString.substring(to: 4)
+        let expireMonth = deadLineString.substring(with: NSRange(location: 5, length: 2))
+        let expireDay = deadLineString.substring(with: NSRange(location: 8, length: 2))
+        
+        self.year.text = expireYear
+        self.month.text = expireMonth
+        self.day.text = expireDay
+        
+        let myremainDays = Int((cutDownDate?.timeIntervalSinceNow)!) / oneDay
+        
+        remainDays.text = "\(myremainDays)"
+        
+        if myremainDays < 2 && myremainDays > 0 {
+            
+            remainDays.textColor = UIColor.red
+        }else if myremainDays <= 0 {
+            
+            remainDays.text = "0"
+        }
+
+    }
 
     /*
     // MARK: - Navigation

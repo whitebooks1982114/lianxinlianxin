@@ -9,7 +9,56 @@
 import UIKit
 
 class tixinTableViewController: UITableViewController {
+    
+    
+    var list = [String]()
+    var deadLine = [NSDate]()
+    var noticeContent = [String]()
+    
+    let alarmDetail = tixindetailViewController()
+    
+    func myQuery() {
+        list.removeAll()
+        let queryAlarm = BmobQuery(className: "alarm")
+        
+        let user = BmobUser.current()
+    
+        let userID = user?.objectId
+        let author = BmobUser(outDataWithClassName: "_User", objectId: userID)
+        queryAlarm?.whereKey("author", equalTo: author)
    
+        queryAlarm?.limit = 1000
+        queryAlarm?.order(byAscending: "deadline")
+        queryAlarm?.findObjectsInBackground({ (array, error) in
+            if error != nil {
+                print("\(error?.localizedDescription)")
+                let alert = UIAlertController(title: "错误提示", message: "服务器连接失败", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "好", style: .default, handler: { (act) in
+                    _ = self.navigationController?.popToRootViewController(animated: true)
+                })
+                alert.addAction(ok)
+                self.present(alert, animated: true, completion: nil)
+                
+            }else {
+                for obj in array! {
+                    let detail = obj as! BmobObject
+                    let listtitle = detail.object(forKey: "alarmTitle") as! String
+                    let date = detail.object(forKey: "deadLine") as! NSDate
+                    let content = detail.object(forKey: "alarmContent") as! String
+                    self.list.append(listtitle)
+                    self.deadLine.append(date)
+                    self.noticeContent.append(content)
+                }
+                
+            }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+            
+        })
+        self.refreshControl?.endRefreshing()
+    }
+
     
     
     
@@ -31,6 +80,15 @@ class tixinTableViewController: UITableViewController {
         self.navigationItem.title = "事项提醒"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.addAlarm))
         
+        self.myQuery()
+        
+        let myRefresh = UIRefreshControl()
+        myRefresh.tintColor = UIColor.red
+        myRefresh.attributedTitle = NSAttributedString(string: "刷新中")
+        myRefresh.addTarget(self, action: #selector(self.myQuery), for: .valueChanged)
+        self.refreshControl = myRefresh
+        
+
     }
     
         //转到添加提醒事项页面
@@ -71,19 +129,42 @@ class tixinTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.list.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellid", for: indexPath)
 
         // Configure the cell...
+        cell.textLabel?.text = list[indexPath.row]
+        cell.backgroundColor = UIColor.clear
+        cell.textLabel?.lineBreakMode = .byWordWrapping
+        cell.textLabel?.numberOfLines = 0
+        if indexPath.row <= 3 {
+            cell.textLabel?.textColor = UIColor.red
+        }
+
+        
 
         return cell
     }
-    */
+    
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedTitle = self.list[indexPath.row]
+        let selectedDate = self.deadLine[indexPath.row]
+        let selectedContent = self.noticeContent[indexPath.row]
+        
+        alarmDetail.myTitle = selectedTitle
+        alarmDetail.cutDownDate = selectedDate
+        alarmDetail.alarmContent = selectedContent
+        
+        self.navigationController?.pushViewController(alarmDetail, animated: true)
+
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
