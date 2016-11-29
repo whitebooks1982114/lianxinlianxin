@@ -8,28 +8,42 @@
 
 import UIKit
 
+
 class noticedetailViewController: UIViewController {
     
     var mytitle: String?
     var cutDownTime: NSDate?
     var myNoticeContent: String?
     
+   
+    
     @IBOutlet weak var content: UITextView!
     
     @IBOutlet weak var remainDays: UILabel!
     
-    @IBAction func alarmVoiceSwitch(_ sender: UISwitch) {
+    @IBAction func noticeSwitch(_ sender: Any) {
+        
+        let mySwitch = sender as! UISwitch
+        
+       
+            if mySwitch.isOn {
+                print("on")
+            }else {
+           }
+        
     }
+   
     
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "通知消息"
         
-       
         // Do any additional setup after loading the view.
     }
+    
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -49,6 +63,8 @@ class noticedetailViewController: UIViewController {
             remainDays.text = "剩余0天"
             
         }
+        
+        
         
     }
     

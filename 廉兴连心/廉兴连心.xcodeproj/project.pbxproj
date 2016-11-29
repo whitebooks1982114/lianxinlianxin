@@ -77,6 +77,7 @@
 		A6EC66261DDE7FF100D71B0A /* newsdetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EC66241DDE7FF100D71B0A /* newsdetailViewController.swift */; };
 		A6EC66271DDE7FF100D71B0A /* newsdetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EC66251DDE7FF100D71B0A /* newsdetailViewController.xib */; };
 		A6EC662E1DDE92CB00D71B0A /* masterpiecesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EC662D1DDE92CB00D71B0A /* masterpiecesCollectionViewController.swift */; };
+		A6EF662F1DEDA110008E72BC /* 提醒音效.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A6EF662E1DEDA110008E72BC /* 提醒音效.mp3 */; };
 		A6F7BF8D1DCD6DF700402147 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F7BF8C1DCD6DF700402147 /* SWRevealViewController.m */; };
 		A6F7BF8E1DCD6DF700402147 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F7BF8C1DCD6DF700402147 /* SWRevealViewController.m */; };
 		A6F7BF8F1DCD6DF700402147 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F7BF8C1DCD6DF700402147 /* SWRevealViewController.m */; };
@@ -217,6 +218,7 @@
 		A6EC66241DDE7FF100D71B0A /* newsdetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsdetailViewController.swift; sourceTree = "<group>"; };
 		A6EC66251DDE7FF100D71B0A /* newsdetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = newsdetailViewController.xib; sourceTree = "<group>"; };
 		A6EC662D1DDE92CB00D71B0A /* masterpiecesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = masterpiecesCollectionViewController.swift; sourceTree = "<group>"; };
+		A6EF662E1DEDA110008E72BC /* 提醒音效.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "提醒音效.mp3"; sourceTree = "<group>"; };
 		A6F7BF8B1DCD6DED00402147 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		A6F7BF8C1DCD6DF700402147 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A6F7BF901DCD72BC00402147 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -384,8 +386,6 @@
 				A6BFFE801DD84A20004A781F /* 百科 */,
 				A6FE92021DD44931008CA618 /* 闯关 */,
 				A677CA641DD029AF008ECF71 /* login and signup */,
-				A616852E1DCE9AB700210D12 /* aboutUsViewController.swift */,
-				A616852F1DCE9AB700210D12 /* aboutUsViewController.xib */,
 				A6772BF61DCC4D7700425322 /* AppDelegate.swift */,
 				A6772C781DCC5EC800425322 /* userListTableViewController.swift */,
 				A6F7BF901DCD72BC00402147 /* Main.storyboard */,
@@ -395,6 +395,7 @@
 				A6772C001DCC4D7700425322 /* Assets.xcassets */,
 				A6772C021DCC4D7700425322 /* LaunchScreen.storyboard */,
 				A64466991DD2BFCC008CB465 /* department.plist */,
+				A6EF662E1DEDA110008E72BC /* 提醒音效.mp3 */,
 				A6772C051DCC4D7700425322 /* Info.plist */,
 				A6FE92421DD44DB0008CA618 /* 题库.plist */,
 				A6772BFD1DCC4D7700425322 /* ____.xcdatamodeld */,
@@ -455,6 +456,8 @@
 		A677CA641DD029AF008ECF71 /* login and signup */ = {
 			isa = PBXGroup;
 			children = (
+				A616852E1DCE9AB700210D12 /* aboutUsViewController.swift */,
+				A616852F1DCE9AB700210D12 /* aboutUsViewController.xib */,
 				A6772C5C1DCC5CE600425322 /* lianxinlianxinViewController.swift */,
 				A677CA601DD029A7008ECF71 /* signUpViewController.swift */,
 				A6996D711DD5E7A700C5E1A1 /* contributionInfoViewController.swift */,
@@ -672,6 +675,7 @@
 				A6EC66271DDE7FF100D71B0A /* newsdetailViewController.xib in Resources */,
 				A677CA6E1DD04AB3008ECF71 /* fogetPwdViewController.xib in Resources */,
 				A6E8B4AB1DD196AD0093F597 /* userInfoChangeViewController.xib in Resources */,
+				A6EF662F1DEDA110008E72BC /* 提醒音效.mp3 in Resources */,
 				A6772C2A1DCC4E3400425322 /* Bmob_iOS_SDK更新历史.txt in Resources */,
 				A6FE92431DD44DB0008CA618 /* 题库.plist in Resources */,
 				A6772C011DCC4D7700425322 /* Assets.xcassets in Resources */,
