@@ -30,7 +30,7 @@ class tongziTableViewController: UITableViewController {
         noticeInQuery?.whereKey("username", equalTo: userName)
         queryNotice?.whereKey("relation", matchesQuery: noticeInQuery)
         queryNotice?.limit = 1000
-        queryNotice?.order(byAscending: "deadline")
+        queryNotice?.order(byDescending: "updatedAt")
         queryNotice?.findObjectsInBackground({ (array, error) in
             if error != nil {
                 print("\(error?.localizedDescription)")
@@ -72,6 +72,12 @@ class tongziTableViewController: UITableViewController {
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "通知背景"))
         self.navigationItem.title = "消息通知"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.addNotice))
+        //如果未登录，通知列表无数据
+      let user = BmobUser.current()
+        if user == nil {
+            list.removeAll()
+            
+        }else {
         
         self.myQuery()
         
@@ -81,7 +87,7 @@ class tongziTableViewController: UITableViewController {
         myRefresh.addTarget(self, action: #selector(self.myQuery), for: .valueChanged)
         self.refreshControl = myRefresh
 
-        
+        }
         
         
         

@@ -114,27 +114,10 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n1H-Tc-m9T">
-                    <rect key="frame" x="252" y="444" width="51" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <connections>
-                        <action selector="alarmVoiceSwich:" destination="-1" eventType="valueChanged" id="bTr-69-Z2p"/>
-                    </connections>
-                </switch>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关闭提醒音" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wn4-43-CsT">
-                    <rect key="frame" x="233" y="403" width="100" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="100" id="A9D-t1-YBH"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="qV1-is-i56" firstAttribute="leading" secondItem="Knm-pU-nnJ" secondAttribute="leading" id="345-Yd-VBL"/>
-                <constraint firstItem="Wn4-43-CsT" firstAttribute="top" secondItem="dCS-bf-hdQ" secondAttribute="bottom" constant="28" id="86L-uI-ThO"/>
                 <constraint firstItem="ykz-s4-S3B" firstAttribute="bottom" secondItem="QBa-WS-MNm" secondAttribute="bottom" id="A6q-Jq-fwh"/>
                 <constraint firstItem="ykz-s4-S3B" firstAttribute="leading" secondItem="QBa-WS-MNm" secondAttribute="trailing" constant="26" id="ATJ-Iv-rkI"/>
                 <constraint firstItem="nOk-lU-JDF" firstAttribute="top" secondItem="qV1-is-i56" secondAttribute="bottom" constant="36" id="BJb-Sl-bv4"/>
@@ -144,7 +127,6 @@
                 <constraint firstItem="dCS-bf-hdQ" firstAttribute="centerY" secondItem="ykz-s4-S3B" secondAttribute="centerY" id="JIz-MS-hKC"/>
                 <constraint firstItem="qV1-is-i56" firstAttribute="top" secondItem="Knm-pU-nnJ" secondAttribute="bottom" constant="16" id="NnD-Jh-X1J"/>
                 <constraint firstItem="mTJ-XU-TAN" firstAttribute="bottom" secondItem="ykz-s4-S3B" secondAttribute="bottom" id="OBW-rU-m6i"/>
-                <constraint firstItem="Wn4-43-CsT" firstAttribute="leading" secondItem="dCS-bf-hdQ" secondAttribute="leading" id="PS8-Xz-Be1"/>
                 <constraint firstItem="Knm-pU-nnJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="RGn-IR-yRC"/>
                 <constraint firstItem="ykz-s4-S3B" firstAttribute="top" secondItem="QBa-WS-MNm" secondAttribute="top" id="Tpn-OH-hZS"/>
                 <constraint firstItem="QBa-WS-MNm" firstAttribute="leading" secondItem="nOk-lU-JDF" secondAttribute="trailing" constant="8" id="Xcj-9F-h5e"/>

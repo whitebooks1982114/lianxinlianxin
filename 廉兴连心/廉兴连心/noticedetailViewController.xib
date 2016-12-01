@@ -24,16 +24,6 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="通知背景" translatesAutoresizingMaskIntoConstraints="NO" id="pst-66-Trv">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关闭提醒音" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7N-H2-Ctn">
-                    <rect key="frame" x="20" y="410" width="200" height="40"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="200" id="McG-ah-Uvs"/>
-                        <constraint firstAttribute="height" constant="40" id="eBM-lx-kYU"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通知内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VxJ-uM-Z6P">
                     <rect key="frame" x="20" y="50" width="100" height="40"/>
                     <constraints>
@@ -73,12 +63,6 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Egd-xE-FiO">
-                    <rect key="frame" x="306" y="414.5" width="51" height="31"/>
-                    <connections>
-                        <action selector="noticeSwitch:" destination="-1" eventType="valueChanged" id="9Dj-Mq-daT"/>
-                    </connections>
-                </switch>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -86,15 +70,11 @@
                 <constraint firstItem="HCv-hc-n1H" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="1fI-J4-0XX"/>
                 <constraint firstItem="kW1-Sm-MHB" firstAttribute="top" secondItem="VxJ-uM-Z6P" secondAttribute="bottom" constant="20" id="740-vr-lya"/>
                 <constraint firstItem="VxJ-uM-Z6P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Axy-hT-14S"/>
-                <constraint firstItem="x7N-H2-Ctn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="CA7-W9-w6f"/>
-                <constraint firstAttribute="trailing" secondItem="Egd-xE-FiO" secondAttribute="trailing" constant="20" id="Cux-ig-Shj"/>
                 <constraint firstItem="pst-66-Trv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HMk-Tw-7i5"/>
-                <constraint firstItem="Egd-xE-FiO" firstAttribute="centerY" secondItem="x7N-H2-Ctn" secondAttribute="centerY" id="JmP-Va-h5Q"/>
                 <constraint firstItem="pst-66-Trv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Rgn-gr-Zzh"/>
                 <constraint firstItem="HCv-hc-n1H" firstAttribute="top" secondItem="Ihi-Ee-jtH" secondAttribute="bottom" constant="20" id="SyZ-R4-K5r"/>
                 <constraint firstAttribute="trailing" secondItem="pst-66-Trv" secondAttribute="trailing" id="XTd-C7-yIi"/>
                 <constraint firstItem="Ihi-Ee-jtH" firstAttribute="top" secondItem="kW1-Sm-MHB" secondAttribute="bottom" constant="20" id="YpY-XY-uCf"/>
-                <constraint firstItem="x7N-H2-Ctn" firstAttribute="top" secondItem="HCv-hc-n1H" secondAttribute="bottom" constant="20" id="aei-Qz-Qfw"/>
                 <constraint firstItem="VxJ-uM-Z6P" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="bYg-Ko-IeO"/>
                 <constraint firstItem="kW1-Sm-MHB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="c5S-vg-St8"/>
                 <constraint firstItem="Ihi-Ee-jtH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="dm9-09-Qpr"/>

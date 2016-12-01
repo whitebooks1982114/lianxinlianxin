@@ -24,9 +24,7 @@ class tixindetailViewController: UIViewController {
     
     @IBOutlet weak var remainDays: UILabel!
     
-    @IBAction func alarmVoiceSwich(_ sender: UISwitch) {
-    }
-    
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,13 +59,18 @@ class tixindetailViewController: UIViewController {
         self.month.text = expireMonth
         self.day.text = expireDay
         
-        let myremainDays = Int((cutDownDate?.timeIntervalSinceNow)!) / oneDay
+        let myremainDays = Int((cutDownDate?.timeIntervalSinceNow)!) / oneDay + 1
         
         remainDays.text = "\(myremainDays)"
         
         if myremainDays < 2 && myremainDays > 0 {
             
             remainDays.textColor = UIColor.red
+            
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: [.autoreverse,.curveEaseIn,.repeat], animations: {
+                self.remainDays.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+            }, completion: nil)
+
         }else if myremainDays <= 0 {
             
             remainDays.text = "0"

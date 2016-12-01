@@ -43,6 +43,7 @@ class contributionInfoViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         let usr = BmobUser.current()
+        if usr != nil{
         let usrname = (usr?.username)! as String
         let usrId = usr?.objectId
         let query = BmobQuery(className: "bake")
@@ -53,8 +54,7 @@ class contributionInfoViewController: UIViewController {
         
         
         
-        
-        if usr != nil {
+ 
             self.clearedLevel.text = "您已闯过了\(level)关"
             self.clearedLevel.textColor = UIColor.orange
             

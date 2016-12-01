@@ -8,19 +8,23 @@
 
 import UIKit
 import CoreData
+//全局变量，判断是否有将要到期的通知
+var noticeArrayIsNull: Bool = false
 
+var alarmArrayIsNull: Bool = false
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-  
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Bmob.register(withAppKey: "e1f6b4e604e2fc50b6ef6de799d8bbc3")
         
+        UserDefaults.standard.set(true, forKey: "noticevoice")
+         UserDefaults.standard.set(true, forKey: "alarmvoice")
                     return true
     }
 
@@ -35,10 +39,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
+        
+    
+        
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
+        
+        
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 

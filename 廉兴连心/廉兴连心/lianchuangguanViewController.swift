@@ -154,7 +154,7 @@ class lianchuangguanViewController: UIViewController {
         super.viewWillAppear(true)
        //如果用户未登陆，则读取本地通过数，如果用户登录则从网络读取用户通关数并进行更新
         let usr = BmobUser.current()
-        let level = usr?.object(forKey: "lianxinchuangguan") as! Int
+     
         
         
         if usr == nil {
@@ -166,6 +166,7 @@ class lianchuangguanViewController: UIViewController {
         
         allLevels[0] = 1
         } else {
+       let level = usr?.object(forKey: "lianxinchuangguan") as! Int
             for i in 0...8 {
                 if i <= level {
                     allLevels[i] = 1

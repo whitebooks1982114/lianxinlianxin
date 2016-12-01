@@ -15,6 +15,23 @@ class userListTableViewController: UITableViewController {
     let userInfoChange = userInfoChangeViewController()
     
     let contribuionInfo = contributionInfoViewController()
+    
+    let setting = settingsViewController()
+    
+    @IBAction func turnSetting(_ sender: UITapGestureRecognizer) {
+        let user = BmobUser.current()
+        if user != nil {
+        self.present(setting, animated: true, completion: nil)
+        }else {
+            let alert  = UIAlertController(title: "提示", message: "您尚未登录", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+    }
+    
+    
     @IBOutlet weak var avatar: UIImageView?
    
     @IBOutlet weak var username: UILabel?
@@ -32,6 +49,8 @@ class userListTableViewController: UITableViewController {
     
     @IBAction func logOut(_ sender: UIButton) {
         BmobUser.logout()
+        alarmArrayIsNull = false
+        noticeArrayIsNull = false
    
     }
     
@@ -70,7 +89,7 @@ class userListTableViewController: UITableViewController {
         self.avatar?.layer.masksToBounds = true
         self.avatar?.layer.cornerRadius = 8
         
-             
+        self.username?.adjustsFontSizeToFitWidth = true
                // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

@@ -28,7 +28,7 @@ class tixinTableViewController: UITableViewController {
         queryAlarm?.whereKey("author", equalTo: author)
    
         queryAlarm?.limit = 1000
-        queryAlarm?.order(byAscending: "deadline")
+        queryAlarm?.order(byDescending: "updatedAt")
         queryAlarm?.findObjectsInBackground({ (array, error) in
             if error != nil {
                 print("\(error?.localizedDescription)")

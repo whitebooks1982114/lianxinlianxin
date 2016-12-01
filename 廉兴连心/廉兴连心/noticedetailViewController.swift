@@ -14,24 +14,14 @@ class noticedetailViewController: UIViewController {
     var mytitle: String?
     var cutDownTime: NSDate?
     var myNoticeContent: String?
-    
+   
    
     
     @IBOutlet weak var content: UITextView!
     
     @IBOutlet weak var remainDays: UILabel!
     
-    @IBAction func noticeSwitch(_ sender: Any) {
-        
-        let mySwitch = sender as! UISwitch
-        
-       
-            if mySwitch.isOn {
-                print("on")
-            }else {
-           }
-        
-    }
+   
    
     
    
@@ -51,21 +41,25 @@ class noticedetailViewController: UIViewController {
     
         let oneDay = 86400
         
-        let myremainDays = Int((cutDownTime?.timeIntervalSinceNow)!) / oneDay
+        let myremainDays = Int((cutDownTime?.timeIntervalSinceNow)!) / oneDay + 1
         
         remainDays.text = "剩余\(myremainDays)天"
         
         if myremainDays < 2 && myremainDays > 0 {
             
             remainDays.textColor = UIColor.red
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: [.autoreverse,.curveEaseIn,.repeat], animations: {
+                self.remainDays.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+            }, completion: nil)
+            
+            
         }else if myremainDays <= 0 {
             
             remainDays.text = "剩余0天"
             
         }
         
-        
-        
+              
     }
     
     

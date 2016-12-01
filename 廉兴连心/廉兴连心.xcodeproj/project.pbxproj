@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A606BEE21DEEEB3D0094F8B6 /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A606BEE01DEEEB3D0094F8B6 /* settingsViewController.swift */; };
+		A606BEE31DEEEB3D0094F8B6 /* settingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A606BEE11DEEEB3D0094F8B6 /* settingsViewController.xib */; };
 		A611C3C71DE04DD100C0C889 /* M13Checkbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A611C3BA1DE04CA100C0C889 /* M13Checkbox.framework */; };
 		A611C3D81DE0610800C0C889 /* addNoticeAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A611C3D71DE0610800C0C889 /* addNoticeAlarmViewController.swift */; };
 		A61685301DCE9AB700210D12 /* aboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A616852E1DCE9AB700210D12 /* aboutUsViewController.swift */; };
@@ -142,6 +144,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A606BEE01DEEEB3D0094F8B6 /* settingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
+		A606BEE11DEEEB3D0094F8B6 /* settingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = settingsViewController.xib; sourceTree = "<group>"; };
 		A611C3AF1DE04CA100C0C889 /* M13Checkbox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = M13Checkbox.xcodeproj; path = "廉兴连心/M13Checkbox-master/M13Checkbox.xcodeproj"; sourceTree = "<group>"; };
 		A611C3D71DE0610800C0C889 /* addNoticeAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addNoticeAlarmViewController.swift; sourceTree = "<group>"; };
 		A616852E1DCE9AB700210D12 /* aboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aboutUsViewController.swift; sourceTree = "<group>"; };
@@ -463,6 +467,8 @@
 				A6996D711DD5E7A700C5E1A1 /* contributionInfoViewController.swift */,
 				A6996D721DD5E7A700C5E1A1 /* contributionInfoViewController.xib */,
 				A6E8B4A81DD196AD0093F597 /* userInfoChangeViewController.swift */,
+				A606BEE01DEEEB3D0094F8B6 /* settingsViewController.swift */,
+				A606BEE11DEEEB3D0094F8B6 /* settingsViewController.xib */,
 				A6E8B4A91DD196AD0093F597 /* userInfoChangeViewController.xib */,
 				A677CA651DD031EC008ECF71 /* logInViewController.swift */,
 				A677CA6B1DD04AB3008ECF71 /* fogetPwdViewController.swift */,
@@ -670,6 +676,7 @@
 			files = (
 				A6996D741DD5E7A700C5E1A1 /* contributionInfoViewController.xib in Resources */,
 				A6996D701DD5E06800C5E1A1 /* resultViewController.xib in Resources */,
+				A606BEE31DEEEB3D0094F8B6 /* settingsViewController.xib in Resources */,
 				A6772C041DCC4D7700425322 /* LaunchScreen.storyboard in Resources */,
 				A61685311DCE9AB700210D12 /* aboutUsViewController.xib in Resources */,
 				A6EC66271DDE7FF100D71B0A /* newsdetailViewController.xib in Resources */,
@@ -736,6 +743,7 @@
 				A6772C891DCC700B00425322 /* myTabViewController.swift in Sources */,
 				A611C3D81DE0610800C0C889 /* addNoticeAlarmViewController.swift in Sources */,
 				A6772C6D1DCC5D3C00425322 /* lianchuangguanViewController.swift in Sources */,
+				A606BEE21DEEEB3D0094F8B6 /* settingsViewController.swift in Sources */,
 				A62F9E3A1DDD2B7400491D40 /* tixinTableViewController.swift in Sources */,
 				A6B08A451DDD9B87009E66C6 /* tixindetailViewController.swift in Sources */,
 				A6BFFE7E1DD84A00004A781F /* baikeDirTableViewController.swift in Sources */,
