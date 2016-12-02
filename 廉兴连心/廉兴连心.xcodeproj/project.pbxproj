@@ -69,6 +69,8 @@
 		A6996D741DD5E7A700C5E1A1 /* contributionInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6996D721DD5E7A700C5E1A1 /* contributionInfoViewController.xib */; };
 		A6B08A451DDD9B87009E66C6 /* tixindetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B08A431DDD9B87009E66C6 /* tixindetailViewController.swift */; };
 		A6B08A461DDD9B87009E66C6 /* tixindetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6B08A441DDD9B87009E66C6 /* tixindetailViewController.xib */; };
+		A6B7BCDF1DF17D4F001ACD10 /* alarmdays.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6B7BCDE1DF17D4F001ACD10 /* alarmdays.plist */; };
+		A6B7BCE81DF1ACBD001ACD10 /* adminDirTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B7BCE71DF1ACBD001ACD10 /* adminDirTableViewController.swift */; };
 		A6BFFE7E1DD84A00004A781F /* baikeDirTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BFFE7C1DD84A00004A781F /* baikeDirTableViewController.swift */; };
 		A6BFFE831DD8596C004A781F /* detailContenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BFFE811DD8596C004A781F /* detailContenViewController.swift */; };
 		A6BFFE841DD8596C004A781F /* detailContenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6BFFE821DD8596C004A781F /* detailContenViewController.xib */; };
@@ -211,6 +213,8 @@
 		A6996D721DD5E7A700C5E1A1 /* contributionInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = contributionInfoViewController.xib; sourceTree = "<group>"; };
 		A6B08A431DDD9B87009E66C6 /* tixindetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tixindetailViewController.swift; sourceTree = "<group>"; };
 		A6B08A441DDD9B87009E66C6 /* tixindetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = tixindetailViewController.xib; sourceTree = "<group>"; };
+		A6B7BCDE1DF17D4F001ACD10 /* alarmdays.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = alarmdays.plist; sourceTree = "<group>"; };
+		A6B7BCE71DF1ACBD001ACD10 /* adminDirTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = adminDirTableViewController.swift; sourceTree = "<group>"; };
 		A6BFFE7C1DD84A00004A781F /* baikeDirTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = baikeDirTableViewController.swift; sourceTree = "<group>"; };
 		A6BFFE811DD8596C004A781F /* detailContenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailContenViewController.swift; sourceTree = "<group>"; };
 		A6BFFE821DD8596C004A781F /* detailContenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = detailContenViewController.xib; sourceTree = "<group>"; };
@@ -291,6 +295,7 @@
 				A62F9E3D1DDD2B8E00491D40 /* dongtaiTableViewController.swift */,
 				A62F9E3B1DDD2B8200491D40 /* tongziTableViewController.swift */,
 				A611C3D71DE0610800C0C889 /* addNoticeAlarmViewController.swift */,
+				A6B7BCE71DF1ACBD001ACD10 /* adminDirTableViewController.swift */,
 				A6B08A431DDD9B87009E66C6 /* tixindetailViewController.swift */,
 				A6EC66241DDE7FF100D71B0A /* newsdetailViewController.swift */,
 				A6EC66251DDE7FF100D71B0A /* newsdetailViewController.xib */,
@@ -400,6 +405,7 @@
 				A6772C021DCC4D7700425322 /* LaunchScreen.storyboard */,
 				A64466991DD2BFCC008CB465 /* department.plist */,
 				A6EF662E1DEDA110008E72BC /* 提醒音效.mp3 */,
+				A6B7BCDE1DF17D4F001ACD10 /* alarmdays.plist */,
 				A6772C051DCC4D7700425322 /* Info.plist */,
 				A6FE92421DD44DB0008CA618 /* 题库.plist */,
 				A6772BFD1DCC4D7700425322 /* ____.xcdatamodeld */,
@@ -694,6 +700,7 @@
 				A61F45C81DD95E2A00D097E4 /* addViewController.xib in Resources */,
 				A6EC66211DDE7DF700D71B0A /* noticedetailViewController.xib in Resources */,
 				A6F7BF911DCD72BC00402147 /* Main.storyboard in Resources */,
+				A6B7BCDF1DF17D4F001ACD10 /* alarmdays.plist in Resources */,
 				A6B08A461DDD9B87009E66C6 /* tixindetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -732,6 +739,7 @@
 				A673D23E1DDFC1A200A264FF /* PDBarChart.swift in Sources */,
 				A6BFFE831DD8596C004A781F /* detailContenViewController.swift in Sources */,
 				A673D23F1DDFC1A200A264FF /* PDChart.swift in Sources */,
+				A6B7BCE81DF1ACBD001ACD10 /* adminDirTableViewController.swift in Sources */,
 				A6FE92001DD44927008CA618 /* answerViewController.swift in Sources */,
 				A6772BF91DCC4D7700425322 /* ViewController.swift in Sources */,
 				A673D2401DDFC1A200A264FF /* PDChartAxesComponent.swift in Sources */,

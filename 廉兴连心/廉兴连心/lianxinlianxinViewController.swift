@@ -17,6 +17,13 @@ class lianxinlianxinViewController: UIViewController {
     
     
     var alarmVoiceOn: Bool = true
+    //通知，事项提醒提前天数设置
+    var alarmDaysSetting = 0.0
+    
+    //通知、事项开关点击次数
+    var noticeSwitchTimes:Int?
+    
+    var alarmSwitchTimes:Int?
     
 
     
@@ -78,7 +85,7 @@ class lianxinlianxinViewController: UIViewController {
       
         }
         
-        
+       
         
 
         // Do any additional setup after loading the view.
@@ -91,11 +98,36 @@ class lianxinlianxinViewController: UIViewController {
   
         
       alarmVoiceOn = UserDefaults.standard.bool(forKey: "alarmvoice")
+       
+       noticeSwitchTimes = UserDefaults.standard.integer(forKey: "noticetimes")
         
+       alarmSwitchTimes = UserDefaults.standard.integer(forKey: "alarmtimes")
+       //默认通知、提醒事项开关开启
+        if noticeSwitchTimes == 0 {
+            noticeVoiceOn = true
+            UserDefaults.standard.set(true, forKey: "noticevoice")
+        }
         
+        if alarmSwitchTimes == 0 {
+            alarmVoiceOn = true
+            UserDefaults.standard.set(true, forKey: "alarmvoice")
+        }
+        
+       alarmDaysSetting = Double(UserDefaults.standard.float(forKey: "days"))
+        
+        //默认提前1天提醒
+        if alarmDaysSetting == 0.0 {
+            alarmDaysSetting = 1.0
+        }
+       
         let currentDay = Date()
+    
         
-        let nextDay = currentDay.addingTimeInterval(56*60*60)
+        print(currentDay)
+     
+        let nextDay = currentDay.addingTimeInterval((alarmDaysSetting * 24.0 + 8.0) * 60.0 * 60.0)
+        
+      
         let chinaDay = currentDay.addingTimeInterval(8*60*60)
         let user = BmobUser.current()
         if user != nil {
@@ -118,6 +150,11 @@ class lianxinlianxinViewController: UIViewController {
             main?.andOperation()
             main?.findObjectsInBackground({ (array, error) in
                 if array != nil {
+                    for obj in array! {
+                        let object = obj as! BmobObject
+                        let date = object.object(forKey: "deadline") as! Date
+                        print(date)
+                        
                     if self.noticeVoiceOn == true {
                         if self.player == nil{
                             do{
@@ -133,8 +170,13 @@ class lianxinlianxinViewController: UIViewController {
                             self.player?.play()
                         }
                     }
-                    noticeArrayIsNull = true
+                        DispatchQueue.main.async {
+                        noticeArrayIsNotNull = true
+                        }
+                   
                 }
+                }
+                
                 if error != nil {
                     print("\(error?.localizedDescription)")
                 }
@@ -160,10 +202,13 @@ class lianxinlianxinViewController: UIViewController {
             mainAlarm?.findObjectsInBackground({ (array, error) in
                 if array != nil {
                   
-                    for _ in array! {
-                       
+                    for obj in array! {
+                        
+                            let object = obj as! BmobObject
+                            let date = object.object(forKey: "deadLine") as! Date
+                            print(date)
                         if self.alarmVoiceOn == true {
-                        if self.player == nil{
+                         if self.player == nil{
                             do{
                                 try  self.player = AVAudioPlayer(contentsOf: self.myUrl!)
                                 self.player?.prepareToPlay()
@@ -177,7 +222,9 @@ class lianxinlianxinViewController: UIViewController {
                             self.player?.play()
                         }
                     }
-                    alarmArrayIsNull = true
+                        DispatchQueue.main.async {
+                            alarmArrayIsNotNull = true
+                        }
                     }
                 }
               

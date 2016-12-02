@@ -166,11 +166,16 @@ class lianchuangguanViewController: UIViewController {
         
         allLevels[0] = 1
         } else {
-       let level = usr?.object(forKey: "lianxinchuangguan") as! Int
+            
+       let level = usr?.object(forKey: "lianxinchuangguan") as? Int
+            if level != nil{
             for i in 0...8 {
-                if i <= level {
+                if i <= level! {
                     allLevels[i] = 1
                 }
+            }
+            }else{
+                allLevels[0] = 1
             }
         }
         

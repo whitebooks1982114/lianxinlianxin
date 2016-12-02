@@ -49,8 +49,8 @@ class userListTableViewController: UITableViewController {
     
     @IBAction func logOut(_ sender: UIButton) {
         BmobUser.logout()
-        alarmArrayIsNull = false
-        noticeArrayIsNull = false
+        alarmArrayIsNotNull = false
+        noticeArrayIsNotNull = false
    
     }
     

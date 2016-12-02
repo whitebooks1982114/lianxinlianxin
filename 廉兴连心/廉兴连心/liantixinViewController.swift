@@ -218,14 +218,18 @@ class liantixinViewController: UIViewController  {
             self.alarmLabel.textColor = UIColor.magenta
         }, completion: nil)
         
-        if noticeArrayIsNull == true {
+        if noticeArrayIsNotNull == true {
             
             self.noticeImage.isHidden = false
+        }else{
+            self.noticeImage.isHidden = true
         }
         
-        if alarmArrayIsNull == true {
+        if alarmArrayIsNotNull == true {
             
             self.alarmImage.isHidden = false
+        }else{
+            self.alarmImage.isHidden = true
         }
         
         

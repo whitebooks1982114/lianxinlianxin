@@ -9,9 +9,11 @@
 import UIKit
 import CoreData
 //全局变量，判断是否有将要到期的通知
-var noticeArrayIsNull: Bool = false
+var noticeArrayIsNotNull: Bool = false
 
-var alarmArrayIsNull: Bool = false
+var alarmArrayIsNotNull: Bool = false
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,8 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Bmob.register(withAppKey: "e1f6b4e604e2fc50b6ef6de799d8bbc3")
         
-        UserDefaults.standard.set(true, forKey: "noticevoice")
-         UserDefaults.standard.set(true, forKey: "alarmvoice")
+       
                     return true
     }
 

@@ -567,7 +567,7 @@
             <objects>
                 <navigationController id="BCh-pa-szG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="事项提醒" image="calendar" id="khC-PN-Urk"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="kzB-bh-i7U">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kzB-bh-i7U">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -669,7 +669,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="廉  政  提  醒" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfP-Mt-tVk">
-                                        <rect key="frame" x="20" y="11" width="213" height="40"/>
+                                        <rect key="frame" x="20" y="10" width="213" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="iLO-rZ-JfS"/>
                                         </constraints>
@@ -742,6 +742,11 @@
                     <tabBarItem key="tabBarItem" title="信息动态" image="calendar" id="BNi-mn-A3M"/>
                     <navigationItem key="navigationItem" title="动态信息" id="YwW-5w-OSC">
                         <barButtonItem key="leftBarButtonItem" title="用户菜单" id="DIu-Md-3Jf"/>
+                        <barButtonItem key="rightBarButtonItem" title="监察目录" id="vp5-DI-LrK">
+                            <connections>
+                                <segue destination="r3T-Q9-EaP" kind="show" id="SJy-FB-zt7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="alarmImage" destination="3Nr-V5-1St" id="P1x-BX-XeV"/>
@@ -825,6 +830,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HAE-Td-dMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2840.8000000000002" y="-1875.1124437781111"/>
+        </scene>
+        <!--Admin Dir Table View Controller-->
+        <scene sceneID="lAL-PM-n80">
+            <objects>
+                <tableViewController id="r3T-Q9-EaP" customClass="adminDirTableViewController" customModule="廉兴连心" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="g5C-ya-VxY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fnN-Ub-vDv">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fnN-Ub-vDv" id="z3R-7E-mGd">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="r3T-Q9-EaP" id="5Sj-ls-rD7"/>
+                            <outlet property="delegate" destination="r3T-Q9-EaP" id="zi8-CE-46V"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WAT-jK-Ex4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2039" y="-1845"/>
         </scene>
         <!--Tongzi Table View Controller-->
         <scene sceneID="QgX-zF-ffA">
@@ -1418,11 +1451,11 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" rowHeight="75" id="SAI-wo-mol">
                                         <rect key="frame" x="0.0" y="366" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SAI-wo-mol" id="2Hl-GM-1cN">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="SAI-wo-mol" id="2Hl-GM-1cN">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5TN-Qq-eyQ">
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5TN-Qq-eyQ">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="375" id="8fl-Mf-BSz"/>
@@ -1435,7 +1468,7 @@
                                                         <action selector="logOut:" destination="4uj-er-qQk" eventType="touchUpInside" id="bdq-3p-9Mv"/>
                                                     </connections>
                                                 </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="退出登录" translatesAutoresizingMaskIntoConstraints="NO" id="JY6-E5-qac">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="退出登录" translatesAutoresizingMaskIntoConstraints="NO" id="JY6-E5-qac">
                                                     <rect key="frame" x="263" y="12" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="P2J-rG-C0N"/>
