@@ -19,6 +19,31 @@ class liantixinViewController: UIViewController  {
     
     @IBOutlet weak var noticeView: UIView!
     
+    //点击监察目录按钮
+    
+    @IBAction func adminDir(_ sender: UIBarButtonItem) {
+        let user = BmobUser.current()
+        let username = user?.username
+        if user == nil {
+            let alert  = UIAlertController(title: "温馨提示", message: "对不起，您未登录", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+
+        }else{
+            if username != "whitebooks" {
+            let alert  = UIAlertController(title: "温馨提示", message: "对不起，您不是纪检人员", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+
+        }else {
+            
+            self.navigationController?.pushViewController(adminDirTableViewController(), animated: true)
+        }
+        
+        }
+    }
     
     //加载图表
     @IBAction func loadChart(_ sender: UITapGestureRecognizer) {

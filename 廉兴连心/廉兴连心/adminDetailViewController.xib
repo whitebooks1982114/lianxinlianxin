@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="adminDetailViewController" customModule="廉兴连心" customModuleProvider="target">
+            <connections>
+                <outlet property="alarmConten" destination="C3a-I2-042" id="zNG-t4-yiY"/>
+                <outlet property="chineseName" destination="Myv-Av-kxd" id="pRN-js-jl4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="通知背景" translatesAutoresizingMaskIntoConstraints="NO" id="UDN-p7-zms">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Myv-Av-kxd">
+                    <rect key="frame" x="20" y="80" width="150" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="4lN-2g-F81"/>
+                        <constraint firstAttribute="width" constant="150" id="msr-mM-uhq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="C3a-I2-042">
+                    <rect key="frame" x="20" y="170" width="335" height="397"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="C3a-I2-042" firstAttribute="top" secondItem="Myv-Av-kxd" secondAttribute="bottom" constant="50" id="EjE-eY-LJL"/>
+                <constraint firstAttribute="bottom" secondItem="C3a-I2-042" secondAttribute="bottom" constant="100" id="H2Z-yx-Pjs"/>
+                <constraint firstItem="UDN-p7-zms" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JdI-Lb-Ihr"/>
+                <constraint firstItem="UDN-p7-zms" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NGn-GW-Fqh"/>
+                <constraint firstAttribute="trailing" secondItem="UDN-p7-zms" secondAttribute="trailing" id="QgQ-l4-JJC"/>
+                <constraint firstItem="C3a-I2-042" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="RgA-46-OI5"/>
+                <constraint firstItem="Myv-Av-kxd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="VHN-Q2-3he"/>
+                <constraint firstAttribute="bottom" secondItem="UDN-p7-zms" secondAttribute="bottom" id="cX3-Yt-WdZ"/>
+                <constraint firstItem="Myv-Av-kxd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="lpQ-8d-XaU"/>
+                <constraint firstAttribute="trailing" secondItem="C3a-I2-042" secondAttribute="trailing" constant="20" id="xek-6k-Cro"/>
+            </constraints>
+            <point key="canvasLocation" x="63.5" y="94.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="通知背景" width="598" height="598"/>
+    </resources>
+</document>

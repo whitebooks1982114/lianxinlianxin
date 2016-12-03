@@ -82,6 +82,8 @@
 		A6EC66271DDE7FF100D71B0A /* newsdetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EC66251DDE7FF100D71B0A /* newsdetailViewController.xib */; };
 		A6EC662E1DDE92CB00D71B0A /* masterpiecesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EC662D1DDE92CB00D71B0A /* masterpiecesCollectionViewController.swift */; };
 		A6EF662F1DEDA110008E72BC /* 提醒音效.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A6EF662E1DEDA110008E72BC /* 提醒音效.mp3 */; };
+		A6F037AD1DF246CB007E1A2B /* adminDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F037AB1DF246CB007E1A2B /* adminDetailViewController.swift */; };
+		A6F037AE1DF246CB007E1A2B /* adminDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6F037AC1DF246CB007E1A2B /* adminDetailViewController.xib */; };
 		A6F7BF8D1DCD6DF700402147 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F7BF8C1DCD6DF700402147 /* SWRevealViewController.m */; };
 		A6F7BF8E1DCD6DF700402147 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F7BF8C1DCD6DF700402147 /* SWRevealViewController.m */; };
 		A6F7BF8F1DCD6DF700402147 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F7BF8C1DCD6DF700402147 /* SWRevealViewController.m */; };
@@ -227,6 +229,8 @@
 		A6EC66251DDE7FF100D71B0A /* newsdetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = newsdetailViewController.xib; sourceTree = "<group>"; };
 		A6EC662D1DDE92CB00D71B0A /* masterpiecesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = masterpiecesCollectionViewController.swift; sourceTree = "<group>"; };
 		A6EF662E1DEDA110008E72BC /* 提醒音效.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "提醒音效.mp3"; sourceTree = "<group>"; };
+		A6F037AB1DF246CB007E1A2B /* adminDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = adminDetailViewController.swift; sourceTree = "<group>"; };
+		A6F037AC1DF246CB007E1A2B /* adminDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = adminDetailViewController.xib; sourceTree = "<group>"; };
 		A6F7BF8B1DCD6DED00402147 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		A6F7BF8C1DCD6DF700402147 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A6F7BF901DCD72BC00402147 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -296,6 +300,8 @@
 				A62F9E3B1DDD2B8200491D40 /* tongziTableViewController.swift */,
 				A611C3D71DE0610800C0C889 /* addNoticeAlarmViewController.swift */,
 				A6B7BCE71DF1ACBD001ACD10 /* adminDirTableViewController.swift */,
+				A6F037AB1DF246CB007E1A2B /* adminDetailViewController.swift */,
+				A6F037AC1DF246CB007E1A2B /* adminDetailViewController.xib */,
 				A6B08A431DDD9B87009E66C6 /* tixindetailViewController.swift */,
 				A6EC66241DDE7FF100D71B0A /* newsdetailViewController.swift */,
 				A6EC66251DDE7FF100D71B0A /* newsdetailViewController.xib */,
@@ -680,6 +686,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6F037AE1DF246CB007E1A2B /* adminDetailViewController.xib in Resources */,
 				A6996D741DD5E7A700C5E1A1 /* contributionInfoViewController.xib in Resources */,
 				A6996D701DD5E06800C5E1A1 /* resultViewController.xib in Resources */,
 				A606BEE31DEEEB3D0094F8B6 /* settingsViewController.xib in Resources */,
@@ -752,6 +759,7 @@
 				A611C3D81DE0610800C0C889 /* addNoticeAlarmViewController.swift in Sources */,
 				A6772C6D1DCC5D3C00425322 /* lianchuangguanViewController.swift in Sources */,
 				A606BEE21DEEEB3D0094F8B6 /* settingsViewController.swift in Sources */,
+				A6F037AD1DF246CB007E1A2B /* adminDetailViewController.swift in Sources */,
 				A62F9E3A1DDD2B7400491D40 /* tixinTableViewController.swift in Sources */,
 				A6B08A451DDD9B87009E66C6 /* tixindetailViewController.swift in Sources */,
 				A6BFFE7E1DD84A00004A781F /* baikeDirTableViewController.swift in Sources */,

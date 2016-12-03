@@ -128,7 +128,7 @@ class lianxinlianxinViewController: UIViewController {
         let nextDay = currentDay.addingTimeInterval((alarmDaysSetting * 24.0 + 8.0) * 60.0 * 60.0)
         
       
-        let chinaDay = currentDay.addingTimeInterval(8*60*60)
+        let chinaDay = currentDay
         let user = BmobUser.current()
         if user != nil {
             //查询马上到期的通知，并发出音效
