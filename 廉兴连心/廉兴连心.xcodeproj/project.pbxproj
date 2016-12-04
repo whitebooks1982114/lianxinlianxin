@@ -18,6 +18,9 @@
 		A62F9E3A1DDD2B7400491D40 /* tixinTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F9E391DDD2B7400491D40 /* tixinTableViewController.swift */; };
 		A62F9E3C1DDD2B8200491D40 /* tongziTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F9E3B1DDD2B8200491D40 /* tongziTableViewController.swift */; };
 		A62F9E3E1DDD2B8E00491D40 /* dongtaiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F9E3D1DDD2B8E00491D40 /* dongtaiTableViewController.swift */; };
+		A64233271DF2DCC00011BD41 /* masterPieceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64233261DF2DCC00011BD41 /* masterPieceViewController.swift */; };
+		A64233291DF2F5AC0011BD41 /* myCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64233281DF2F5AC0011BD41 /* myCellCollectionViewCell.swift */; };
+		A642332B1DF2F9170011BD41 /* myHeadCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642332A1DF2F9170011BD41 /* myHeadCollectionReusableView.swift */; };
 		A644669A1DD2BFCC008CB465 /* department.plist in Resources */ = {isa = PBXBuildFile; fileRef = A64466991DD2BFCC008CB465 /* department.plist */; };
 		A660847A1DDF1BA2001B7F61 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A66084751DDF1ACE001B7F61 /* Charts.framework */; };
 		A673D23E1DDFC1A200A264FF /* PDBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673D2361DDFC1A200A264FF /* PDBarChart.swift */; };
@@ -80,7 +83,6 @@
 		A6EC66211DDE7DF700D71B0A /* noticedetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EC661F1DDE7DF700D71B0A /* noticedetailViewController.xib */; };
 		A6EC66261DDE7FF100D71B0A /* newsdetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EC66241DDE7FF100D71B0A /* newsdetailViewController.swift */; };
 		A6EC66271DDE7FF100D71B0A /* newsdetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EC66251DDE7FF100D71B0A /* newsdetailViewController.xib */; };
-		A6EC662E1DDE92CB00D71B0A /* masterpiecesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EC662D1DDE92CB00D71B0A /* masterpiecesCollectionViewController.swift */; };
 		A6EF662F1DEDA110008E72BC /* 提醒音效.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A6EF662E1DEDA110008E72BC /* 提醒音效.mp3 */; };
 		A6F037AD1DF246CB007E1A2B /* adminDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F037AB1DF246CB007E1A2B /* adminDetailViewController.swift */; };
 		A6F037AE1DF246CB007E1A2B /* adminDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6F037AC1DF246CB007E1A2B /* adminDetailViewController.xib */; };
@@ -159,6 +161,9 @@
 		A62F9E391DDD2B7400491D40 /* tixinTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tixinTableViewController.swift; sourceTree = "<group>"; };
 		A62F9E3B1DDD2B8200491D40 /* tongziTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tongziTableViewController.swift; sourceTree = "<group>"; };
 		A62F9E3D1DDD2B8E00491D40 /* dongtaiTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dongtaiTableViewController.swift; sourceTree = "<group>"; };
+		A64233261DF2DCC00011BD41 /* masterPieceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = masterPieceViewController.swift; sourceTree = "<group>"; };
+		A64233281DF2F5AC0011BD41 /* myCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		A642332A1DF2F9170011BD41 /* myHeadCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myHeadCollectionReusableView.swift; sourceTree = "<group>"; };
 		A64466991DD2BFCC008CB465 /* department.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = department.plist; sourceTree = "<group>"; };
 		A660846E1DDF1ACE001B7F61 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "廉兴连心/Charts-master/Charts.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		A673D2361DDFC1A200A264FF /* PDBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDBarChart.swift; sourceTree = "<group>"; };
@@ -227,7 +232,6 @@
 		A6EC661F1DDE7DF700D71B0A /* noticedetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = noticedetailViewController.xib; sourceTree = "<group>"; };
 		A6EC66241DDE7FF100D71B0A /* newsdetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsdetailViewController.swift; sourceTree = "<group>"; };
 		A6EC66251DDE7FF100D71B0A /* newsdetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = newsdetailViewController.xib; sourceTree = "<group>"; };
-		A6EC662D1DDE92CB00D71B0A /* masterpiecesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = masterpiecesCollectionViewController.swift; sourceTree = "<group>"; };
 		A6EF662E1DEDA110008E72BC /* 提醒音效.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "提醒音效.mp3"; sourceTree = "<group>"; };
 		A6F037AB1DF246CB007E1A2B /* adminDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = adminDetailViewController.swift; sourceTree = "<group>"; };
 		A6F037AC1DF246CB007E1A2B /* adminDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = adminDetailViewController.xib; sourceTree = "<group>"; };
@@ -310,6 +314,16 @@
 				A6B08A441DDD9B87009E66C6 /* tixindetailViewController.xib */,
 			);
 			name = "动态提醒";
+			sourceTree = "<group>";
+		};
+		A642332C1DF2F91F0011BD41 /* 作品 */ = {
+			isa = PBXGroup;
+			children = (
+				A64233261DF2DCC00011BD41 /* masterPieceViewController.swift */,
+				A642332A1DF2F9170011BD41 /* myHeadCollectionReusableView.swift */,
+				A64233281DF2F5AC0011BD41 /* myCellCollectionViewCell.swift */,
+			);
+			name = "作品";
 			sourceTree = "<group>";
 		};
 		A660846F1DDF1ACE001B7F61 /* Products */ = {
@@ -403,9 +417,9 @@
 				A677CA641DD029AF008ECF71 /* login and signup */,
 				A6772BF61DCC4D7700425322 /* AppDelegate.swift */,
 				A6772C781DCC5EC800425322 /* userListTableViewController.swift */,
+				A642332C1DF2F91F0011BD41 /* 作品 */,
 				A6F7BF901DCD72BC00402147 /* Main.storyboard */,
 				A6772C881DCC700B00425322 /* myTabViewController.swift */,
-				A6EC662D1DDE92CB00D71B0A /* masterpiecesCollectionViewController.swift */,
 				A6772BF81DCC4D7700425322 /* ViewController.swift */,
 				A6772C001DCC4D7700425322 /* Assets.xcassets */,
 				A6772C021DCC4D7700425322 /* LaunchScreen.storyboard */,
@@ -760,19 +774,21 @@
 				A6772C6D1DCC5D3C00425322 /* lianchuangguanViewController.swift in Sources */,
 				A606BEE21DEEEB3D0094F8B6 /* settingsViewController.swift in Sources */,
 				A6F037AD1DF246CB007E1A2B /* adminDetailViewController.swift in Sources */,
+				A642332B1DF2F9170011BD41 /* myHeadCollectionReusableView.swift in Sources */,
 				A62F9E3A1DDD2B7400491D40 /* tixinTableViewController.swift in Sources */,
 				A6B08A451DDD9B87009E66C6 /* tixindetailViewController.swift in Sources */,
 				A6BFFE7E1DD84A00004A781F /* baikeDirTableViewController.swift in Sources */,
 				A677CA671DD031EC008ECF71 /* logInViewController.swift in Sources */,
-				A6EC662E1DDE92CB00D71B0A /* masterpiecesCollectionViewController.swift in Sources */,
 				A677CA6D1DD04AB3008ECF71 /* fogetPwdViewController.swift in Sources */,
 				A62F9E3C1DDD2B8200491D40 /* tongziTableViewController.swift in Sources */,
 				A673D2421DDFC1A200A264FF /* PDPieChart.swift in Sources */,
+				A64233291DF2F5AC0011BD41 /* myCellCollectionViewCell.swift in Sources */,
 				A673D2411DDFC1A200A264FF /* PDLineChart.swift in Sources */,
 				A6EC66201DDE7DF700D71B0A /* noticedetailViewController.swift in Sources */,
 				A6EC66261DDE7FF100D71B0A /* newsdetailViewController.swift in Sources */,
 				A6F7BF8D1DCD6DF700402147 /* SWRevealViewController.m in Sources */,
 				A6772C5D1DCC5CE600425322 /* lianxinlianxinViewController.swift in Sources */,
+				A64233271DF2DCC00011BD41 /* masterPieceViewController.swift in Sources */,
 				A6772BF71DCC4D7700425322 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

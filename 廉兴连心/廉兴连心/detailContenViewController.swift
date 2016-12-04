@@ -69,20 +69,13 @@ class detailContenViewController: UIViewController {
                            
                             DispatchQueue.main.async {
                                 self.username.text = self.author
-                            }
+                                
+                                self.myContent = content as! String
+                                 self.content.text = self.myContent                            }
                         }
                         
                         
                     })
-                    
-              
-                    self.myContent = content as! String
-                   
-                    DispatchQueue.main.async {
-                        self.content.text = self.myContent
-                        
-                        
-                    }
                     
               
                 }
