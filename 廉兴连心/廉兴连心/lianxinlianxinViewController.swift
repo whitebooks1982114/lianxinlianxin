@@ -152,8 +152,8 @@ class lianxinlianxinViewController: UIViewController {
                 if array != nil {
                     for obj in array! {
                         let object = obj as! BmobObject
-                        let date = object.object(forKey: "deadline") as! Date
-                        print(date)
+                        _ = object.object(forKey: "deadline") as! Date
+                     
                         
                     if self.noticeVoiceOn == true {
                         if self.player == nil{
@@ -205,8 +205,8 @@ class lianxinlianxinViewController: UIViewController {
                     for obj in array! {
                         
                             let object = obj as! BmobObject
-                            let date = object.object(forKey: "deadLine") as! Date
-                            print(date)
+                            _ = object.object(forKey: "deadLine") as! Date
+                        
                         if self.alarmVoiceOn == true {
                          if self.player == nil{
                             do{

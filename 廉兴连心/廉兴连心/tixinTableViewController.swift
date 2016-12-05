@@ -164,6 +164,60 @@ class tixinTableViewController: UITableViewController {
 
     }
     
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        
+        return .delete
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let indexPaths = [indexPath]
+        let deleteTitle = self.list[indexPath.row]
+        let deleteQuery = BmobQuery(className: "alarm")
+        deleteQuery?.whereKey("alarmTitle", equalTo: deleteTitle)
+        deleteQuery?.findObjectsInBackground({ (array, error) in
+            if error != nil {
+                print("\(error?.localizedDescription)")
+            }
+            if array != nil {
+                for obj in array! {
+                    let object = obj as! BmobObject
+                    let id  = object.objectId
+                    
+                    DispatchQueue.main.async {
+                        let deleteObject = BmobObject(outDataWithClassName: "alarm", objectId: id)
+                        deleteObject?.deleteInBackground({ (success, error) in
+                            if success {
+                                print("success")
+                            }
+                            if error != nil {
+                                print("\(error?.localizedDescription)")
+                            }
+                        })
+                    }
+                }
+            
+            }
+            
+            
+        })
+        
+        
+        
+        if editingStyle == .delete {
+            self.list.remove(at: indexPath.row)
+            self.deadLine.remove(at: indexPath.row)
+            self.noticeContent.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: indexPaths, with: .fade)
+            
+            
+            
+        }
+        self.tableView.reloadData()
+        
+    }
+    
+    
     
     /*
     // Override to support conditional editing of the table view.

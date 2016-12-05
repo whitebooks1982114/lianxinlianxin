@@ -77,8 +77,7 @@ class baikeDirTableViewController: UITableViewController, UISearchBarDelegate, U
             
             self.myQuery()
             
-            print(self.filterList.count)
-        
+               
         }
         let opqueue = OperationQueue()
         opqueue.addOperation(op)
