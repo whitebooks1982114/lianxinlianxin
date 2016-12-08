@@ -71,6 +71,11 @@ class settingsViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
     
     @IBOutlet weak var myTextField: UITextField!
     
+    
+    @IBOutlet weak var adminLabel: UILabel!
+    
+    @IBOutlet weak var adminTextField: UITextField!
+    
     var daysArray: NSArray?
 
     override func viewDidLoad() {
@@ -82,6 +87,7 @@ class settingsViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
         myPickeView.delegate = self
         myPickeView.dataSource = self
         myTextField.delegate = self
+        adminTextField.delegate = self
         
         myToolBar.removeFromSuperview()
         myPickeView.removeFromSuperview()
@@ -92,6 +98,8 @@ class settingsViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
         let settedDays = Int(UserDefaults.standard.float(forKey: "days"))
         self.myTextField.text = "提前\(settedDays)天"
         
+      
+        
         
 
         // Do any additional setup after loading the view.
@@ -99,19 +107,27 @@ class settingsViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         UIView.animate(withDuration: 0.5, animations: {
-            
+            let adminDays = Int(self.adminTextField.text!)
+            UserDefaults.standard.set(adminDays, forKey: "adminSettingDays")
             self.myTextField.resignFirstResponder()
+            self.adminTextField.resignFirstResponder()
         
         })
     }
     
-    
+     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let adminDays = Int(self.adminTextField.text!)
+        UserDefaults.standard.set(adminDays, forKey: "adminSettingDays")
+        self.adminTextField.resignFirstResponder()
+        return true
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         let currentNoticeSwitch = UserDefaults.standard.bool(forKey: "noticevoice")
         let currentAlarmSwitch = UserDefaults.standard.bool(forKey: "alarmvoice")
         myTextField.text = UserDefaults.standard.string(forKey: "daysstring")
+        adminTextField.text = "\(UserDefaults.standard.integer(forKey: "adminSettingDays"))天"
         
         if currentNoticeSwitch == false {
             noticeSwitch.isOn = false
@@ -124,12 +140,20 @@ class settingsViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
         }else {
             alarmSwitch.isOn = true
         }
-        
-        
+        let user = BmobUser.current()
+        let username = user?.username
+        if username != "whitebooks" {
+            self.adminLabel.isHidden = true
+            self.adminTextField.isHidden = true
+        }else {
+            self.adminTextField.isHidden = false
+            self.adminLabel.isHidden = false
+        }
 
         
     }
     
+  
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return (daysArray?.count)!
@@ -147,6 +171,7 @@ class settingsViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
         myTextField.text = daysArray?[row] as? String
         settingdays = Float(row) + 1.0
     }
+    
     
     
     

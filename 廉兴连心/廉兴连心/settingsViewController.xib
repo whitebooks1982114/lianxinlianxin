@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="settingsViewController" customModule="廉兴连心" customModuleProvider="target">
             <connections>
+                <outlet property="adminLabel" destination="bj5-H8-vUA" id="3Qt-e4-jXP"/>
+                <outlet property="adminTextField" destination="D9T-nC-da9" id="ead-qU-Gd4"/>
                 <outlet property="alarmSwitch" destination="PGR-e9-uhO" id="iTf-Fp-BCW"/>
                 <outlet property="myPickeView" destination="06r-42-csV" id="RG7-nP-rCa"/>
                 <outlet property="myTextField" destination="Fu2-zS-LQn" id="efp-pD-mhl"/>
@@ -93,19 +95,37 @@
                         </barButtonItem>
                     </items>
                 </toolbar>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="监察人员时间设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bj5-H8-vUA">
+                    <rect key="frame" x="20" y="309" width="150" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D9T-nC-da9">
+                    <rect key="frame" x="222" y="304.5" width="97" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="nfZ-zH-xzq" firstAttribute="centerY" secondItem="uKL-mB-1sQ" secondAttribute="centerY" id="2jO-F4-pX1"/>
                 <constraint firstItem="Fu2-zS-LQn" firstAttribute="centerX" secondItem="PGR-e9-uhO" secondAttribute="centerX" id="3Ya-vO-HJU"/>
                 <constraint firstItem="CWb-y4-oeY" firstAttribute="leading" secondItem="lyU-cP-fTL" secondAttribute="leading" id="90C-kt-fHh"/>
+                <constraint firstItem="D9T-nC-da9" firstAttribute="centerY" secondItem="bj5-H8-vUA" secondAttribute="centerY" id="FSG-GU-IQS"/>
                 <constraint firstAttribute="trailing" secondItem="hcM-L9-cu9" secondAttribute="trailing" id="IW4-gR-5v7"/>
+                <constraint firstItem="bj5-H8-vUA" firstAttribute="leading" secondItem="CWb-y4-oeY" secondAttribute="leading" id="KGx-9S-k9l"/>
+                <constraint firstItem="D9T-nC-da9" firstAttribute="trailing" secondItem="Fu2-zS-LQn" secondAttribute="trailing" id="OXm-bA-WCG"/>
+                <constraint firstItem="bj5-H8-vUA" firstAttribute="trailing" secondItem="CWb-y4-oeY" secondAttribute="trailing" id="Q2c-us-qSY"/>
+                <constraint firstItem="D9T-nC-da9" firstAttribute="leading" secondItem="Fu2-zS-LQn" secondAttribute="leading" id="RGZ-00-oPt"/>
                 <constraint firstItem="CWb-y4-oeY" firstAttribute="trailing" secondItem="lyU-cP-fTL" secondAttribute="trailing" id="X2H-dg-CUC"/>
                 <constraint firstItem="06r-42-csV" firstAttribute="top" secondItem="hcM-L9-cu9" secondAttribute="bottom" id="ZEd-8b-Txn"/>
                 <constraint firstAttribute="trailing" secondItem="06r-42-csV" secondAttribute="trailing" id="ayK-tA-obv"/>
                 <constraint firstItem="PGR-e9-uhO" firstAttribute="leading" secondItem="nfZ-zH-xzq" secondAttribute="leading" id="bNL-uJ-nuL"/>
                 <constraint firstItem="nfZ-zH-xzq" firstAttribute="leading" secondItem="uKL-mB-1sQ" secondAttribute="trailing" constant="76" id="cfF-yE-qZl"/>
                 <constraint firstItem="CWb-y4-oeY" firstAttribute="top" secondItem="lyU-cP-fTL" secondAttribute="bottom" constant="47" id="dpx-XJ-sMX"/>
+                <constraint firstItem="bj5-H8-vUA" firstAttribute="top" secondItem="CWb-y4-oeY" secondAttribute="bottom" constant="40" id="ebA-GG-U2E"/>
                 <constraint firstItem="uKL-mB-1sQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="gIO-BR-GXH"/>
                 <constraint firstItem="hcM-L9-cu9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hky-rU-PMQ"/>
                 <constraint firstItem="iha-vE-wy5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="35" id="j4Z-75-cQY"/>

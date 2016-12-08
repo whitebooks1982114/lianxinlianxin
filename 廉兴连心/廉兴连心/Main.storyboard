@@ -75,7 +75,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GYp-h8-NQJ">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GYp-h8-NQJ">
                                             <rect key="frame" x="10" y="0.0" width="60" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="K3e-BQ-qMU"/>
@@ -141,6 +141,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EA0-38-vgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-348" y="1006.1469265367317"/>
+        </scene>
+        <!--Page Detail View Controller-->
+        <scene sceneID="9pH-1E-G2H">
+            <objects>
+                <viewController storyboardIdentifier="pageDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HOa-fX-EQx" customClass="pageDetailViewController" customModule="廉兴连心" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Co6-Zg-VD1"/>
+                        <viewControllerLayoutGuide type="bottom" id="s9d-t6-uG6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dS2-hH-0Sp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahr-b0-n4I">
+                                <rect key="frame" x="20" y="20" width="374" height="716"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHW-UF-PMd">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="716"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jcq-RJ-yl9">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="716"/>
+                                                <gestureRecognizers/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="jcq-RJ-yl9" secondAttribute="trailing" id="6Uz-Fy-hFt"/>
+                                            <constraint firstItem="jcq-RJ-yl9" firstAttribute="centerY" secondItem="zHW-UF-PMd" secondAttribute="centerY" id="SlZ-Pl-E1T"/>
+                                            <constraint firstItem="jcq-RJ-yl9" firstAttribute="centerX" secondItem="zHW-UF-PMd" secondAttribute="centerX" id="cyK-tg-Cbn"/>
+                                            <constraint firstItem="jcq-RJ-yl9" firstAttribute="top" secondItem="zHW-UF-PMd" secondAttribute="top" id="eEb-lS-1bu"/>
+                                            <constraint firstAttribute="bottom" secondItem="jcq-RJ-yl9" secondAttribute="bottom" id="lV8-rT-4as"/>
+                                            <constraint firstItem="jcq-RJ-yl9" firstAttribute="leading" secondItem="zHW-UF-PMd" secondAttribute="leading" id="n8d-39-RmZ"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="jfs-zH-2H1" appends="YES" id="TuY-go-2Nm"/>
+                                        </connections>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zHW-UF-PMd" secondAttribute="trailing" id="ByG-2F-s4Y"/>
+                                    <constraint firstAttribute="bottom" secondItem="zHW-UF-PMd" secondAttribute="bottom" id="Xqm-qA-DUS"/>
+                                    <constraint firstItem="zHW-UF-PMd" firstAttribute="leading" secondItem="ahr-b0-n4I" secondAttribute="leading" id="jr3-tW-Pq8"/>
+                                    <constraint firstItem="zHW-UF-PMd" firstAttribute="top" secondItem="ahr-b0-n4I" secondAttribute="top" id="zMz-iM-pDh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="s9d-t6-uG6" firstAttribute="top" secondItem="ahr-b0-n4I" secondAttribute="bottom" id="SlA-jD-DD2"/>
+                            <constraint firstItem="ahr-b0-n4I" firstAttribute="top" secondItem="Co6-Zg-VD1" secondAttribute="bottom" id="oZh-Xl-G2J"/>
+                            <constraint firstItem="ahr-b0-n4I" firstAttribute="leading" secondItem="dS2-hH-0Sp" secondAttribute="leadingMargin" id="pN9-GC-CXj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ahr-b0-n4I" secondAttribute="trailing" id="qgV-qm-E3v"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="VPI-hh-NpI" appends="YES" id="itw-g5-kBy"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="myImageView" destination="jcq-RJ-yl9" id="Plv-jU-RWa"/>
+                        <outlet property="myScroll" destination="zHW-UF-PMd" id="jnE-dk-sfI"/>
+                        <outlet property="myView" destination="dS2-hH-0Sp" id="n5c-3N-Ckh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wo3-Lg-q8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VPI-hh-NpI">
+                    <connections>
+                        <action selector="myTap:" destination="HOa-fX-EQx" id="yld-as-PUC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pinchGestureRecognizer id="jfs-zH-2H1">
+                    <connections>
+                        <action selector="myPinch:" destination="HOa-fX-EQx" id="A9V-qe-Nd2"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-349" y="1671"/>
         </scene>
         <!--作品展示-->
         <scene sceneID="RpV-Qq-IZT">
@@ -748,7 +824,6 @@
                         <barButtonItem key="rightBarButtonItem" title="监察目录" id="vp5-DI-LrK">
                             <connections>
                                 <action selector="adminDir:" destination="UQC-Sq-M3X" id="aIJ-Ws-4aL"/>
-                                <segue destination="r3T-Q9-EaP" kind="show" id="ry7-j8-J8E"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

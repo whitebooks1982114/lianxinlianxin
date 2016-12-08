@@ -16,6 +16,8 @@ class adminDirTableViewController: UITableViewController {
     var alarmContent = [String]()
     //提醒事项的id
     var objectID = [String]()
+    //监察人员设置提前天数
+    var adminSettingDays = 0.0
 
     let adminDetail = adminDetailViewController()
     
@@ -24,8 +26,8 @@ class adminDirTableViewController: UITableViewController {
         list.removeAll()
         let currentDay = Date()
         
-        
-        let nextDay = currentDay.addingTimeInterval(24.0 * 60.0 * 60.0)
+        adminSettingDays = Double(UserDefaults.standard.integer(forKey: "adminSettingDays"))
+        let nextDay = currentDay.addingTimeInterval(adminSettingDays * 24.0 * 60.0 * 60.0)
         
         
         let chinaDay = currentDay

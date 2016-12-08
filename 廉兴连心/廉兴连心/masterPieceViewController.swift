@@ -11,9 +11,9 @@ import UIKit
 class masterPieceViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var myCollection: UICollectionView!
-    
-    
     @IBOutlet weak var usrmenu: UIBarButtonItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if self.revealViewController() != nil {
@@ -35,26 +35,37 @@ class masterPieceViewController: UIViewController,UICollectionViewDelegate,UICol
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 2
         
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
-        
+       
+        if section == 0{
+        return 2
+        } else {
+            return 1
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid", for: indexPath) as! myCellCollectionViewCell
         
-        
-        myCell.myImage.image = UIImage(named: "摄影作品")
         if indexPath.section == 0 {
-            myCell.myImage.image = UIImage(named: "书法")
+            myCell.myImage.image = UIImage(named: "封面")
+            if indexPath.row == 0 {
+                myCell.myLabel.text = "书画作品"
+            }else {
+                myCell.myLabel.text = "摄影作品"
+            }
+        }else {
+            myCell.myImage.image = UIImage(named: "绘画1")
+            if indexPath.row == 0 {
+                myCell.myLabel.text = "绘画作品"
+            }
         }
-       
-        myCell.myLabel.text = "长兴作品"
-        
+    
+               
         return myCell
     }
     
@@ -62,13 +73,11 @@ class masterPieceViewController: UIViewController,UICollectionViewDelegate,UICol
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "myhead", for: indexPath) as! myHeadCollectionReusableView
         
         if indexPath.section == 0{
-            header.myHeadTitle.text = "书画"
+            header.myHeadTitle.text = "同兴筑梦"
             
         }else if indexPath.section == 1 {
-            header.myHeadTitle.text = "美文"
+            header.myHeadTitle.text = "亲子共绘"
             
-        }else {
-            header.myHeadTitle.text = "摄影"
         }
         
         header.backgroundColor = UIColor.clear
@@ -78,6 +87,42 @@ class masterPieceViewController: UIViewController,UICollectionViewDelegate,UICol
         return header
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       let pageDetail = self.storyboard?.instantiateViewController(withIdentifier: "pageDetail") as! pageDetailViewController
+        if indexPath.section == 0 {
+            if indexPath.row == 0 {
+                
+                pageDetail.selectedActivity = "dream"
+                //给作品板块加载本地封面，为网络加载预留时间
+                
+                 pageDetail.perface = "封面"
+                pageDetail.navigationItem.title = "同兴筑梦--书画"
+                
+                self.navigationController?.pushViewController(pageDetail, animated: true)
+                
+                
+            }else {
+                 pageDetail.selectedActivity = "dreampicture"
+                    //给作品板块加载本地封面，为网络加载预留时间
+                
+                  pageDetail.perface = "封面"
+                 pageDetail.navigationItem.title = "同兴筑梦--摄影"
+                self.navigationController?.pushViewController(pageDetail, animated: true)
+
+        }
+        
+            
+        }else if indexPath.section == 1 {
+         pageDetail.selectedActivity = "familypaint"
+                //给作品板块加载本地封面，为网络加载预留时间
+           
+            pageDetail.perface = "绘画1"
+            pageDetail.navigationItem.title = "亲子共绘"
+            self.navigationController?.pushViewController(pageDetail, animated: true)
+
+        }
+    }
  
 
     override func didReceiveMemoryWarning() {

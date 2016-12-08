@@ -122,9 +122,6 @@ class lianxinlianxinViewController: UIViewController {
        
         let currentDay = Date()
     
-        
-        print(currentDay)
-     
         let nextDay = currentDay.addingTimeInterval((alarmDaysSetting * 24.0 + 8.0) * 60.0 * 60.0)
         
       

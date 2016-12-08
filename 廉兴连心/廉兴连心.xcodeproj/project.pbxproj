@@ -77,6 +77,7 @@
 		A6BFFE7E1DD84A00004A781F /* baikeDirTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BFFE7C1DD84A00004A781F /* baikeDirTableViewController.swift */; };
 		A6BFFE831DD8596C004A781F /* detailContenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BFFE811DD8596C004A781F /* detailContenViewController.swift */; };
 		A6BFFE841DD8596C004A781F /* detailContenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6BFFE821DD8596C004A781F /* detailContenViewController.xib */; };
+		A6D91DB31DF91DB4008BE1FD /* pageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D91DB21DF91DB4008BE1FD /* pageDetailViewController.swift */; };
 		A6E8B4AA1DD196AD0093F597 /* userInfoChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E8B4A81DD196AD0093F597 /* userInfoChangeViewController.swift */; };
 		A6E8B4AB1DD196AD0093F597 /* userInfoChangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E8B4A91DD196AD0093F597 /* userInfoChangeViewController.xib */; };
 		A6EC66201DDE7DF700D71B0A /* noticedetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EC661E1DDE7DF700D71B0A /* noticedetailViewController.swift */; };
@@ -225,6 +226,7 @@
 		A6BFFE7C1DD84A00004A781F /* baikeDirTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = baikeDirTableViewController.swift; sourceTree = "<group>"; };
 		A6BFFE811DD8596C004A781F /* detailContenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailContenViewController.swift; sourceTree = "<group>"; };
 		A6BFFE821DD8596C004A781F /* detailContenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = detailContenViewController.xib; sourceTree = "<group>"; };
+		A6D91DB21DF91DB4008BE1FD /* pageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pageDetailViewController.swift; sourceTree = "<group>"; };
 		A6E558661DCDAB6D000C0161 /* 廉兴连心-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "廉兴连心-Bridging-Header.h"; path = "廉兴连心/廉兴连心-Bridging-Header.h"; sourceTree = "<group>"; };
 		A6E8B4A81DD196AD0093F597 /* userInfoChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userInfoChangeViewController.swift; sourceTree = "<group>"; };
 		A6E8B4A91DD196AD0093F597 /* userInfoChangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = userInfoChangeViewController.xib; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 			children = (
 				A64233261DF2DCC00011BD41 /* masterPieceViewController.swift */,
 				A642332A1DF2F9170011BD41 /* myHeadCollectionReusableView.swift */,
+				A6D91DB21DF91DB4008BE1FD /* pageDetailViewController.swift */,
 				A64233281DF2F5AC0011BD41 /* myCellCollectionViewCell.swift */,
 			);
 			name = "作品";
@@ -766,6 +769,7 @@
 				A673D2401DDFC1A200A264FF /* PDChartAxesComponent.swift in Sources */,
 				A6772BFF1DCC4D7700425322 /* ____.xcdatamodeld in Sources */,
 				A6772C7A1DCC5EC800425322 /* userListTableViewController.swift in Sources */,
+				A6D91DB31DF91DB4008BE1FD /* pageDetailViewController.swift in Sources */,
 				A61F45C71DD95E2A00D097E4 /* addViewController.swift in Sources */,
 				A6772C611DCC5CF800425322 /* liantixinViewController.swift in Sources */,
 				A6772C691DCC5D2E00425322 /* lianbaikeViewController.swift in Sources */,
