@@ -78,6 +78,10 @@
 		A6BFFE831DD8596C004A781F /* detailContenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BFFE811DD8596C004A781F /* detailContenViewController.swift */; };
 		A6BFFE841DD8596C004A781F /* detailContenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6BFFE821DD8596C004A781F /* detailContenViewController.xib */; };
 		A6D91DB31DF91DB4008BE1FD /* pageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D91DB21DF91DB4008BE1FD /* pageDetailViewController.swift */; };
+		A6DF60371DFA4FBF003AED3C /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6DF60361DFA4FBF003AED3C /* Icon-60@2x.png */; };
+		A6DF60391DFA5062003AED3C /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6DF60381DFA5062003AED3C /* Icon-60@3x.png */; };
+		A6DF603B1DFA50E8003AED3C /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = A6DF603A1DFA50E8003AED3C /* Icon-57.png */; };
+		A6DF603E1DFA579F003AED3C /* 长兴宣传画.png in Resources */ = {isa = PBXBuildFile; fileRef = A6DF603D1DFA579F003AED3C /* 长兴宣传画.png */; };
 		A6E8B4AA1DD196AD0093F597 /* userInfoChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E8B4A81DD196AD0093F597 /* userInfoChangeViewController.swift */; };
 		A6E8B4AB1DD196AD0093F597 /* userInfoChangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E8B4A91DD196AD0093F597 /* userInfoChangeViewController.xib */; };
 		A6EC66201DDE7DF700D71B0A /* noticedetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EC661E1DDE7DF700D71B0A /* noticedetailViewController.swift */; };
@@ -227,6 +231,10 @@
 		A6BFFE811DD8596C004A781F /* detailContenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailContenViewController.swift; sourceTree = "<group>"; };
 		A6BFFE821DD8596C004A781F /* detailContenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = detailContenViewController.xib; sourceTree = "<group>"; };
 		A6D91DB21DF91DB4008BE1FD /* pageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pageDetailViewController.swift; sourceTree = "<group>"; };
+		A6DF60361DFA4FBF003AED3C /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		A6DF60381DFA5062003AED3C /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		A6DF603A1DFA50E8003AED3C /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
+		A6DF603D1DFA579F003AED3C /* 长兴宣传画.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "长兴宣传画.png"; sourceTree = "<group>"; };
 		A6E558661DCDAB6D000C0161 /* 廉兴连心-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "廉兴连心-Bridging-Header.h"; path = "廉兴连心/廉兴连心-Bridging-Header.h"; sourceTree = "<group>"; };
 		A6E8B4A81DD196AD0093F597 /* userInfoChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userInfoChangeViewController.swift; sourceTree = "<group>"; };
 		A6E8B4A91DD196AD0093F597 /* userInfoChangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = userInfoChangeViewController.xib; sourceTree = "<group>"; };
@@ -427,6 +435,8 @@
 				A6772C001DCC4D7700425322 /* Assets.xcassets */,
 				A6772C021DCC4D7700425322 /* LaunchScreen.storyboard */,
 				A64466991DD2BFCC008CB465 /* department.plist */,
+				A6DF603D1DFA579F003AED3C /* 长兴宣传画.png */,
+				A6DF603C1DFA50EF003AED3C /* icons */,
 				A6EF662E1DEDA110008E72BC /* 提醒音效.mp3 */,
 				A6B7BCDE1DF17D4F001ACD10 /* alarmdays.plist */,
 				A6772C051DCC4D7700425322 /* Info.plist */,
@@ -519,6 +529,16 @@
 				A6BFFE821DD8596C004A781F /* detailContenViewController.xib */,
 			);
 			name = "百科";
+			sourceTree = "<group>";
+		};
+		A6DF603C1DFA50EF003AED3C /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				A6DF60361DFA4FBF003AED3C /* Icon-60@2x.png */,
+				A6DF60381DFA5062003AED3C /* Icon-60@3x.png */,
+				A6DF603A1DFA50E8003AED3C /* Icon-57.png */,
+			);
+			name = icons;
 			sourceTree = "<group>";
 		};
 		A6F7BF8A1DCD6DB700402147 /* SWRevealViewController */ = {
@@ -704,9 +724,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6F037AE1DF246CB007E1A2B /* adminDetailViewController.xib in Resources */,
+				A6DF603B1DFA50E8003AED3C /* Icon-57.png in Resources */,
+				A6DF60391DFA5062003AED3C /* Icon-60@3x.png in Resources */,
 				A6996D741DD5E7A700C5E1A1 /* contributionInfoViewController.xib in Resources */,
 				A6996D701DD5E06800C5E1A1 /* resultViewController.xib in Resources */,
 				A606BEE31DEEEB3D0094F8B6 /* settingsViewController.xib in Resources */,
+				A6DF603E1DFA579F003AED3C /* 长兴宣传画.png in Resources */,
 				A6772C041DCC4D7700425322 /* LaunchScreen.storyboard in Resources */,
 				A61685311DCE9AB700210D12 /* aboutUsViewController.xib in Resources */,
 				A6EC66271DDE7FF100D71B0A /* newsdetailViewController.xib in Resources */,
@@ -715,6 +738,7 @@
 				A6EF662F1DEDA110008E72BC /* 提醒音效.mp3 in Resources */,
 				A6772C2A1DCC4E3400425322 /* Bmob_iOS_SDK更新历史.txt in Resources */,
 				A6FE92431DD44DB0008CA618 /* 题库.plist in Resources */,
+				A6DF60371DFA4FBF003AED3C /* Icon-60@2x.png in Resources */,
 				A6772C011DCC4D7700425322 /* Assets.xcassets in Resources */,
 				A677CA681DD031EC008ECF71 /* logInViewController.xib in Resources */,
 				A6BFFE841DD8596C004A781F /* detailContenViewController.xib in Resources */,
