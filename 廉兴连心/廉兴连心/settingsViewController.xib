@@ -26,9 +26,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="通知背景" translatesAutoresizingMaskIntoConstraints="NO" id="5Ub-bV-SyO">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="通知背景" translatesAutoresizingMaskIntoConstraints="NO" id="5Ub-bV-SyO">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通知提示音开关" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKL-mB-1sQ">
                     <rect key="frame" x="20" y="119" width="150" height="21"/>
@@ -110,9 +109,11 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="5Ub-bV-SyO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="25C-KC-ij2"/>
                 <constraint firstItem="nfZ-zH-xzq" firstAttribute="centerY" secondItem="uKL-mB-1sQ" secondAttribute="centerY" id="2jO-F4-pX1"/>
                 <constraint firstItem="Fu2-zS-LQn" firstAttribute="centerX" secondItem="PGR-e9-uhO" secondAttribute="centerX" id="3Ya-vO-HJU"/>
                 <constraint firstItem="CWb-y4-oeY" firstAttribute="leading" secondItem="lyU-cP-fTL" secondAttribute="leading" id="90C-kt-fHh"/>
+                <constraint firstAttribute="trailing" secondItem="5Ub-bV-SyO" secondAttribute="trailing" id="EDM-Bg-0dW"/>
                 <constraint firstItem="D9T-nC-da9" firstAttribute="centerY" secondItem="bj5-H8-vUA" secondAttribute="centerY" id="FSG-GU-IQS"/>
                 <constraint firstAttribute="trailing" secondItem="hcM-L9-cu9" secondAttribute="trailing" id="IW4-gR-5v7"/>
                 <constraint firstItem="bj5-H8-vUA" firstAttribute="leading" secondItem="CWb-y4-oeY" secondAttribute="leading" id="KGx-9S-k9l"/>
@@ -134,8 +135,10 @@
                 <constraint firstItem="lyU-cP-fTL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="lFt-zS-IaE"/>
                 <constraint firstItem="Fu2-zS-LQn" firstAttribute="centerY" secondItem="CWb-y4-oeY" secondAttribute="centerY" id="nc4-vy-SdA"/>
                 <constraint firstItem="Fu2-zS-LQn" firstAttribute="leading" secondItem="CWb-y4-oeY" secondAttribute="trailing" constant="52" id="nmo-Lv-xi9"/>
+                <constraint firstItem="5Ub-bV-SyO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="oiP-e7-2tS"/>
                 <constraint firstAttribute="trailing" secondItem="iha-vE-wy5" secondAttribute="trailing" id="r2E-FV-WP6"/>
                 <constraint firstItem="06r-42-csV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rmX-3Z-RKZ"/>
+                <constraint firstAttribute="bottom" secondItem="5Ub-bV-SyO" secondAttribute="bottom" id="ron-3C-HIS"/>
                 <constraint firstAttribute="bottom" secondItem="06r-42-csV" secondAttribute="bottom" id="s1g-24-5o0"/>
                 <constraint firstItem="PGR-e9-uhO" firstAttribute="centerY" secondItem="lyU-cP-fTL" secondAttribute="centerY" id="w99-a8-uDc"/>
                 <constraint firstItem="uKL-mB-1sQ" firstAttribute="top" secondItem="iha-vE-wy5" secondAttribute="bottom" constant="40" id="xKK-0c-LUx"/>

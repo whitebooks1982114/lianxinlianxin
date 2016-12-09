@@ -39,7 +39,9 @@ class liantixinViewController: UIViewController  {
 
         }else {
             
-            self.navigationController?.pushViewController(adminDirTableViewController(), animated: true)
+           let adminDir = self.storyboard?.instantiateViewController(withIdentifier: "admindir") as! adminDirTableViewController
+                
+            self.navigationController?.pushViewController(adminDir, animated: true)
         }
         
         }
