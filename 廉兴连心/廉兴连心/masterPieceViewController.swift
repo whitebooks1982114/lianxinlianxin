@@ -98,6 +98,7 @@ class masterPieceViewController: UIViewController,UICollectionViewDelegate,UICol
                 
                  pageDetail.perface = "封面"
                 pageDetail.navigationItem.title = "同兴筑梦--书画"
+                pageDetail.lastOne = 4
                 
                 self.navigationController?.pushViewController(pageDetail, animated: true)
                 
@@ -108,6 +109,7 @@ class masterPieceViewController: UIViewController,UICollectionViewDelegate,UICol
                 
                   pageDetail.perface = "封面"
                  pageDetail.navigationItem.title = "同兴筑梦--摄影"
+                 pageDetail.lastOne = 0
                 self.navigationController?.pushViewController(pageDetail, animated: true)
 
         }
@@ -119,6 +121,7 @@ class masterPieceViewController: UIViewController,UICollectionViewDelegate,UICol
            
             pageDetail.perface = "绘画1"
             pageDetail.navigationItem.title = "亲子共绘"
+             pageDetail.lastOne = 14
             self.navigationController?.pushViewController(pageDetail, animated: true)
 
         }

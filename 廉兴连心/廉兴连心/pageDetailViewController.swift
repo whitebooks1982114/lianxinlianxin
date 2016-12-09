@@ -15,17 +15,59 @@ class pageDetailViewController: UIViewController, UIScrollViewDelegate {
     var selectedActivity: String?
     
     var perface: String?
+    //最后一幅画得Index
+    var lastOne = 0
+    //判断加载图画方向
+    var direction = true
    
     @IBOutlet weak var myImageView: UIImageView!
     
     @IBOutlet weak var myScroll: UIScrollView!
     @IBOutlet var myView: UIView!
+   
+    //点击加载图片
     @IBAction func myTap(_ sender: UITapGestureRecognizer) {
+        //获取触点位置
+        let point = sender.location(in: self.myView)
+         //点右边加载下一副图片
+        if point.x > self.myView.frame.width / 2 {
+            UIView.transition(with: self.myView, duration: 2.0, options: [.transitionFlipFromLeft , .allowAnimatedContent], animations:{
+                if self.direction == false {
+                    self.page += 2
+                }
+                self.myQuery()
+                self.page += 1
+                self.direction = true
+                
+                
+                if self.page > self.lastOne{
+                    self.page = self.lastOne
+                }
+                
+                
+            }, completion: nil)
+            
+        // 点左边加载上一幅图片
+        }else {
+            
+            UIView.transition(with: self.myView, duration: 2.0, options: [.transitionFlipFromRight , .allowAnimatedContent], animations:{
+                if self.direction == true {
+                    self.page -= 2
+                }
+                
+                self.myQuery()
+                self.page -= 1
+                self.direction = false
+                
+                if self.page < 0 {
+                    self.page = 0
+                }
+                
+            }, completion: nil)
+            
+        }
         
-        myQuery()
-        page += 1
-        
-    }
+          }
     
     
     @IBAction func myPinch(_ sender: UIPinchGestureRecognizer) {
