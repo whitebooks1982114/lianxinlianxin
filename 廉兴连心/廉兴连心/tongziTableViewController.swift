@@ -104,10 +104,10 @@ class tongziTableViewController: UITableViewController {
             self.present(alert, animated: true, completion: nil)
         }else {
             
-            let userName = usr?.object(forKey: "username")
-            let currentUser = userName as! String
-            
-            if currentUser == "whitebooks" {
+            //let userName = usr?.object(forKey: "username")
+            //let currentUser = userName as! String
+            let isAdmin = usr?.object(forKey: "isadmin") as? Bool
+            if isAdmin == true {
                 
                 let add = self.storyboard?.instantiateViewController(withIdentifier: "add") as! addNoticeAlarmViewController
                 

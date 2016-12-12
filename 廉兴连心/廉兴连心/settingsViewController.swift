@@ -141,19 +141,22 @@ class settingsViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
             alarmSwitch.isOn = true
         }
         let user = BmobUser.current()
-        let username = user?.username
-        if username != "whitebooks" {
-            self.adminLabel.isHidden = true
-            self.adminTextField.isHidden = true
-        }else {
+       // let username = user?.username
+        let isAdmin = user?.object(forKey: "isadmin") as? Bool
+        if isAdmin == true {
             self.adminTextField.isHidden = false
             self.adminLabel.isHidden = false
+            
+        }else {
+            
+            self.adminLabel.isHidden = true
+            self.adminTextField.isHidden = true
         }
-
+        
         
     }
     
-  
+    
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return (daysArray?.count)!

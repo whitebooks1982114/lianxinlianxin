@@ -138,10 +138,10 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
         myTabel.isHidden = true
         
         let usr = BmobUser.current()
-        let userName = usr?.object(forKey: "username")
-        let currentUser = userName as! String
-        
-        if currentUser != "whitebooks" {
+       // let userName = usr?.object(forKey: "username")
+       // let currentUser = userName as! String
+        let isAdmin = usr?.object(forKey: "isadmin") as? Bool
+        if isAdmin != true {
         
          self.noteicChecBox.isHidden = true
          //其他用户不能发通知，下拉列表视图按钮不可见

@@ -32,16 +32,16 @@ class contributionInfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.img.isHidden = true
         self.SuccessLabel.isHidden = true
-       
         
         // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+  
+        
         let usr = BmobUser.current()
         if usr != nil{
         let usrname = (usr?.username)! as String
@@ -50,14 +50,15 @@ class contributionInfoViewController: UIViewController {
         let author = BmobUser(outDataWithClassName: "_User", objectId: usrId)
         query?.whereKey("author", equalTo: author)
         
-        let level = usr?.object(forKey: "lianxinchuangguan") as! Int
+        let level = usr?.object(forKey: "lianxinchuangguan") as? Int
         
-        
-        
- 
-            self.clearedLevel.text = "您已闯过了\(level)关"
+            if level == nil {
+              self.clearedLevel.text = "您未闯过任何关卡"
+            }else {
+    
+            self.clearedLevel.text = "您已闯过了\((level!))关"
             self.clearedLevel.textColor = UIColor.orange
-            
+            }
             query?.countObjectsInBackground({ (num, error) in
                 if error != nil {
                     print("\(error?.localizedDescription)")
@@ -98,8 +99,8 @@ class contributionInfoViewController: UIViewController {
                     
                 }, completion: nil)
             } else {
-                self.img.isHidden = false
-                self.SuccessLabel.isHidden = false
+                self.img.isHidden = true
+                self.SuccessLabel.isHidden = true
             }
             
             

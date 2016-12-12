@@ -48,12 +48,14 @@ class userInfoChangeViewController: UIViewController , UITextFieldDelegate ,UIPi
             if success {
                 print("sccess")
                 let alart = UIAlertController(title: "信息", message: "恭喜更新成功！", preferredStyle: .alert)
-                let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+                let ok = UIAlertAction(title: "好", style: .default, handler: { (action) in
+                    self.dismiss(animated: true, completion: nil)
+                })
                 alart.addAction(ok)
                 self.present(alart, animated: true, completion: nil)
             }else {
                 print("error")
-                let alart = UIAlertController(title: "温馨提示", message: "用户名输入框不能为空", preferredStyle: .alert)
+                let alart = UIAlertController(title: "温馨提示", message: "更新信息有误", preferredStyle: .alert)
                 let ok = UIAlertAction(title: "好", style: .default, handler: nil)
                 alart.addAction(ok)
                 self.present(alart, animated: true, completion: nil)

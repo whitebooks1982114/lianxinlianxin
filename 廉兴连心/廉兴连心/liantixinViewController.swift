@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Charts
+
 
 class liantixinViewController: UIViewController  {
     @IBOutlet weak var usrmenu: UIBarButtonItem!
@@ -23,7 +23,8 @@ class liantixinViewController: UIViewController  {
     
     @IBAction func adminDir(_ sender: UIBarButtonItem) {
         let user = BmobUser.current()
-        let username = user?.username
+        //let username = user?.username
+        let isAdmin = user?.object(forKey: "isadmin") as? Bool
         if user == nil {
             let alert  = UIAlertController(title: "温馨提示", message: "对不起，您未登录", preferredStyle: .alert)
             let ok = UIAlertAction(title: "好", style: .default, handler: nil)
@@ -31,18 +32,17 @@ class liantixinViewController: UIViewController  {
             self.present(alert, animated: true, completion: nil)
 
         }else{
-            if username != "whitebooks" {
-            let alert  = UIAlertController(title: "温馨提示", message: "对不起，您不是纪检人员", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
-            alert.addAction(ok)
-            self.present(alert, animated: true, completion: nil)
-
-        }else {
-            
-           let adminDir = self.storyboard?.instantiateViewController(withIdentifier: "admindir") as! adminDirTableViewController
+            if isAdmin == true {
+                let adminDir = self.storyboard?.instantiateViewController(withIdentifier: "admindir") as! adminDirTableViewController
                 
-            self.navigationController?.pushViewController(adminDir, animated: true)
-        }
+                self.navigationController?.pushViewController(adminDir, animated: true)
+           
+        }else {
+                let alert  = UIAlertController(title: "温馨提示", message: "对不起，您不是纪检人员", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+                alert.addAction(ok)
+                self.present(alert, animated: true, completion: nil)
+                 }
         
         }
     }

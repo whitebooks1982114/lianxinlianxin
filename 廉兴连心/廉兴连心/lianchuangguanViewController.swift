@@ -152,34 +152,32 @@ class lianchuangguanViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-       //如果用户未登陆，则读取本地通过数，如果用户登录则从网络读取用户通关数并进行更新
+        //如果用户未登陆，则读取本地通过数，如果用户登录则从网络读取用户通关数并进行更新
         let usr = BmobUser.current()
-     
-        
         
         if usr == nil {
-        
-        let ud = UserDefaults.standard
-        for i  in 0...8 {
-            allLevels[i] = ud.integer(forKey: "level\(i+1)")
-        }
-        
-        allLevels[0] = 1
-        } else {
             
-       let level = usr?.object(forKey: "lianxinchuangguan") as? Int
-            if level != nil{
-            for i in 0...8 {
-                if i <= level! {
-                    allLevels[i] = 1
-                }
+            let ud = UserDefaults.standard
+            for i  in 0...8 {
+                allLevels[i] = ud.integer(forKey: "level\(i+1)")
             }
+            
+            allLevels[0] = 1
+        } else {
+            let level = usr?.object(forKey: "lianxinchuangguan") as? Int
+           
+            if level != nil{
+                for i in 0...8 {
+                    if i <= level! {
+                        allLevels[i] = 1
+                    }
+                }
             }else{
                 allLevels[0] = 1
             }
         }
         
-         let str = NSTemporaryDirectory()
+        let str = NSTemporaryDirectory()
         print(str)
         //组成关卡视图数组，完成动画
         images = [level1,level2,level3,level4,level5,level6,level7,level8,level9]
@@ -189,6 +187,8 @@ class lianchuangguanViewController: UIViewController {
         for item in btns {
             if allLevels[(item?.tag)! - 1] == 1 {
                 item?.setImage(nil, for: .normal)
+            }else {
+                item?.setImage(#imageLiteral(resourceName: "lock"), for: .normal)
             }
         }
         

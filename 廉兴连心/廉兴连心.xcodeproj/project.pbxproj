@@ -22,14 +22,12 @@
 		A64233291DF2F5AC0011BD41 /* myCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64233281DF2F5AC0011BD41 /* myCellCollectionViewCell.swift */; };
 		A642332B1DF2F9170011BD41 /* myHeadCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642332A1DF2F9170011BD41 /* myHeadCollectionReusableView.swift */; };
 		A644669A1DD2BFCC008CB465 /* department.plist in Resources */ = {isa = PBXBuildFile; fileRef = A64466991DD2BFCC008CB465 /* department.plist */; };
-		A660847A1DDF1BA2001B7F61 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A66084751DDF1ACE001B7F61 /* Charts.framework */; };
 		A673D23E1DDFC1A200A264FF /* PDBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673D2361DDFC1A200A264FF /* PDBarChart.swift */; };
 		A673D23F1DDFC1A200A264FF /* PDChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673D2371DDFC1A200A264FF /* PDChart.swift */; };
 		A673D2401DDFC1A200A264FF /* PDChartAxesComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673D2391DDFC1A200A264FF /* PDChartAxesComponent.swift */; };
 		A673D2411DDFC1A200A264FF /* PDLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673D23B1DDFC1A200A264FF /* PDLineChart.swift */; };
 		A673D2421DDFC1A200A264FF /* PDPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673D23D1DDFC1A200A264FF /* PDPieChart.swift */; };
 		A6772BF71DCC4D7700425322 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6772BF61DCC4D7700425322 /* AppDelegate.swift */; };
-		A6772BF91DCC4D7700425322 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6772BF81DCC4D7700425322 /* ViewController.swift */; };
 		A6772BFF1DCC4D7700425322 /* ____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6772BFD1DCC4D7700425322 /* ____.xcdatamodeld */; };
 		A6772C011DCC4D7700425322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6772C001DCC4D7700425322 /* Assets.xcassets */; };
 		A6772C041DCC4D7700425322 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6772C021DCC4D7700425322 /* LaunchScreen.storyboard */; };
@@ -117,27 +115,6 @@
 			remoteGlobalIDString = EA96F8FB1CBEB4CC0066C6B7;
 			remoteInfo = M13Checkbox;
 		};
-		A66084741DDF1ACE001B7F61 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A660846E1DDF1ACE001B7F61 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 06165F241D8110E600722320;
-			remoteInfo = Charts;
-		};
-		A66084761DDF1ACE001B7F61 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A660846E1DDF1ACE001B7F61 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 06B120D51D811E6200D14B02;
-			remoteInfo = ChartsRealm;
-		};
-		A66084781DDF1ACE001B7F61 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A660846E1DDF1ACE001B7F61 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 06165F2E1D8110E600722320;
-			remoteInfo = ChartsTests;
-		};
 		A6772C0B1DCC4D7700425322 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A6772BEB1DCC4D7700425322 /* Project object */;
@@ -170,7 +147,6 @@
 		A64233281DF2F5AC0011BD41 /* myCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		A642332A1DF2F9170011BD41 /* myHeadCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myHeadCollectionReusableView.swift; sourceTree = "<group>"; };
 		A64466991DD2BFCC008CB465 /* department.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = department.plist; sourceTree = "<group>"; };
-		A660846E1DDF1ACE001B7F61 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "廉兴连心/Charts-master/Charts.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		A673D2361DDFC1A200A264FF /* PDBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDBarChart.swift; sourceTree = "<group>"; };
 		A673D2371DDFC1A200A264FF /* PDChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDChart.swift; sourceTree = "<group>"; };
 		A673D2391DDFC1A200A264FF /* PDChartAxesComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDChartAxesComponent.swift; sourceTree = "<group>"; };
@@ -178,7 +154,6 @@
 		A673D23D1DDFC1A200A264FF /* PDPieChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDPieChart.swift; sourceTree = "<group>"; };
 		A6772BF31DCC4D7700425322 /* 廉兴连心.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "廉兴连心.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6772BF61DCC4D7700425322 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A6772BF81DCC4D7700425322 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A6772BFE1DCC4D7700425322 /* ____.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "____.xcdatamodel"; sourceTree = "<group>"; };
 		A6772C001DCC4D7700425322 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6772C031DCC4D7700425322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -259,7 +234,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A611C3C71DE04DD100C0C889 /* M13Checkbox.framework in Frameworks */,
-				A660847A1DDF1BA2001B7F61 /* Charts.framework in Frameworks */,
 				A6772C4C1DCC4F0700425322 /* libsqlite3.tbd in Frameworks */,
 				A6772C4A1DCC4EFE00425322 /* libicucore.tbd in Frameworks */,
 				A6772C481DCC4EF400425322 /* libz.1.2.5.tbd in Frameworks */,
@@ -337,16 +311,6 @@
 			name = "作品";
 			sourceTree = "<group>";
 		};
-		A660846F1DDF1ACE001B7F61 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A66084751DDF1ACE001B7F61 /* Charts.framework */,
-				A66084771DDF1ACE001B7F61 /* ChartsRealm.framework */,
-				A66084791DDF1ACE001B7F61 /* ChartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		A673D2341DDFC1A200A264FF /* PDChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -398,7 +362,6 @@
 				A6E558661DCDAB6D000C0161 /* 廉兴连心-Bridging-Header.h */,
 				A611C3AF1DE04CA100C0C889 /* M13Checkbox.xcodeproj */,
 				A673D2341DDFC1A200A264FF /* PDChart */,
-				A660846E1DDF1ACE001B7F61 /* Charts.xcodeproj */,
 				A6F7BF8A1DCD6DB700402147 /* SWRevealViewController */,
 				A6772C271DCC4E3400425322 /* Bmob_SDK_iOS_v1.7.2 */,
 				A6772BF51DCC4D7700425322 /* 廉兴连心 */,
@@ -431,7 +394,6 @@
 				A642332C1DF2F91F0011BD41 /* 作品 */,
 				A6F7BF901DCD72BC00402147 /* Main.storyboard */,
 				A6772C881DCC700B00425322 /* myTabViewController.swift */,
-				A6772BF81DCC4D7700425322 /* ViewController.swift */,
 				A6772C001DCC4D7700425322 /* Assets.xcassets */,
 				A6772C021DCC4D7700425322 /* LaunchScreen.storyboard */,
 				A64466991DD2BFCC008CB465 /* department.plist */,
@@ -630,7 +592,7 @@
 				TargetAttributes = {
 					A6772BF21DCC4D7700425322 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 5SV3GAQYT5;
+						DevelopmentTeam = EB33888S79;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
@@ -663,10 +625,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = A660846F1DDF1ACE001B7F61 /* Products */;
-					ProjectRef = A660846E1DDF1ACE001B7F61 /* Charts.xcodeproj */;
-				},
-				{
 					ProductGroup = A611C3B01DE04CA100C0C889 /* Products */;
 					ProjectRef = A611C3AF1DE04CA100C0C889 /* M13Checkbox.xcodeproj */;
 				},
@@ -693,27 +651,6 @@
 			fileType = wrapper.framework;
 			path = M13Checkbox.framework;
 			remoteRef = A611C3B91DE04CA100C0C889 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A66084751DDF1ACE001B7F61 /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = A66084741DDF1ACE001B7F61 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A66084771DDF1ACE001B7F61 /* ChartsRealm.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ChartsRealm.framework;
-			remoteRef = A66084761DDF1ACE001B7F61 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A66084791DDF1ACE001B7F61 /* ChartsTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ChartsTests.xctest;
-			remoteRef = A66084781DDF1ACE001B7F61 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -789,7 +726,6 @@
 				A673D23F1DDFC1A200A264FF /* PDChart.swift in Sources */,
 				A6B7BCE81DF1ACBD001ACD10 /* adminDirTableViewController.swift in Sources */,
 				A6FE92001DD44927008CA618 /* answerViewController.swift in Sources */,
-				A6772BF91DCC4D7700425322 /* ViewController.swift in Sources */,
 				A673D2401DDFC1A200A264FF /* PDChartAxesComponent.swift in Sources */,
 				A6772BFF1DCC4D7700425322 /* ____.xcdatamodeld in Sources */,
 				A6772C7A1DCC5EC800425322 /* userListTableViewController.swift in Sources */,
@@ -870,6 +806,7 @@
 		A6772C1C1DCC4D7700425322 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -890,6 +827,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -912,7 +850,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos10.1;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -921,6 +859,7 @@
 		A6772C1D1DCC4D7700425322 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -941,6 +880,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -956,7 +896,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos10.1;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -967,15 +907,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 5SV3GAQYT5;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = EB33888S79;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/廉兴连心/Bmob_SDK_iOS_v1.7.2",
 				);
 				INFOPLIST_FILE = "廉兴连心/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.whitebooks.----";
+				PRODUCT_BUNDLE_IDENTIFIER = com.163.whitebooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos10.1;
 				SWIFT_OBJC_BRIDGING_HEADER = "廉兴连心/廉兴连心-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -987,15 +930,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 5SV3GAQYT5;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = EB33888S79;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/廉兴连心/Bmob_SDK_iOS_v1.7.2",
 				);
 				INFOPLIST_FILE = "廉兴连心/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.whitebooks.----";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.163.whitebooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos10.1;
 				SWIFT_OBJC_BRIDGING_HEADER = "廉兴连心/廉兴连心-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
