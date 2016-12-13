@@ -29,6 +29,9 @@ class resultViewController: UIViewController {
         
         self.navigationItem.title = "答题结果"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", style: .plain, target: self, action: #selector(self.goBack))
+        self.result.adjustsFontSizeToFitWidth = true
+        
+        
     }
     
     func goBack() {
