@@ -21,7 +21,7 @@ class PDBarChartDataItem {
     var showAxes: Bool = true
     var axesWidth: CGFloat = 1.0
     
-    var barMargin: CGFloat = 4.0
+    var barMargin: CGFloat = 15.0
     var barWidth: CGFloat!
     
     var barCornerRadius: CGFloat = 0

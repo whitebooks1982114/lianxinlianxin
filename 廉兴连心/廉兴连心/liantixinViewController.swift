@@ -50,19 +50,19 @@ class liantixinViewController: UIViewController  {
     @IBAction func loadChart(_ sender: UITapGestureRecognizer) {
         
         
-        dataItem.xMax = 5.0
+        dataItem.xMax = 3.0
         dataItem.xInterval = 1.0
         dataItem.yMax = 10.0
         dataItem.yInterval = 1.0
-        
+       
         
         
         dataItem.axesColor = UIColor.blue
-        dataItem.barPointArray = [CGPoint(x: 1.0, y: CGFloat(countOfNews)), CGPoint(x: 2.0, y: CGFloat(countOfNotice)), CGPoint(x: 3.0, y: CGFloat(countOfAlarm)),CGPoint(x: 4.0, y: CGFloat(countOfEmNotice)), CGPoint(x: 5.0, y: CGFloat(countOfEmAlarm))]
-        dataItem.xAxesDegreeTexts = ["廉政要闻", "消息通知", "提醒事项","紧急通知","紧急事项"]
+        dataItem.barPointArray = [CGPoint(x: 1.0, y: CGFloat(countOfNews)), CGPoint(x: 2.0, y: CGFloat(countOfNotice)), CGPoint(x: 3.0, y: CGFloat(countOfAlarm))]
+        dataItem.xAxesDegreeTexts = ["廉政要闻", "消息通知", "提醒事项"]
         
         dataItem.barColor = UIColor.orange
-        let barChart: PDBarChart = PDBarChart(frame: CGRect(x: 0, y: 0, width: self.myView.frame.width - 20, height: self.myView.frame.height),dataItem: dataItem)
+        let barChart: PDBarChart = PDBarChart(frame: CGRect(x: self.myView.frame.width - 330, y: 0, width: 300, height: self.myView.frame.height),dataItem: dataItem)
         
         self.myView.addSubview(barChart)
         barChart.strokeChart()
@@ -95,9 +95,7 @@ class liantixinViewController: UIViewController  {
     var countOfNews = 0
     var countOfAlarm = 0
     var countOfNotice = 0
-    var countOfEmNotice = 0
-    var countOfEmAlarm = 0
-    
+   
     
     //柱状图
     let dataItem: PDBarChartDataItem = PDBarChartDataItem()
@@ -138,8 +136,10 @@ class liantixinViewController: UIViewController  {
                 if error != nil {
                     print("\(error?.localizedDescription)")
                 }else {
-                    self.countOfNews = Int(count)
-                    
+                    DispatchQueue.main.async {
+                        self.countOfNews = Int(count)
+                        
+                    }
                 }
             })
             let author = BmobUser(outDataWithClassName: "_User", objectId: userID)
@@ -148,7 +148,10 @@ class liantixinViewController: UIViewController  {
                 if error != nil {
                     print("\(error?.localizedDescription)")
                 }else {
-                    self.countOfAlarm = Int(count)
+                    DispatchQueue.main.async {
+                        self.countOfAlarm = Int(count)
+                    }
+               
                     
                 }
             })
@@ -157,8 +160,10 @@ class liantixinViewController: UIViewController  {
                 if error != nil {
                     print("\(error?.localizedDescription)")
                 }else {
-                    self.countOfNotice = Int(count)
-                    
+                    DispatchQueue.main.async {
+                        self.countOfNotice = Int(count)
+                        
+                    }
                     
                 }
             })
