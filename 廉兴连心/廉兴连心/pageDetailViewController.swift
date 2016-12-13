@@ -125,10 +125,6 @@ class pageDetailViewController: UIViewController, UIScrollViewDelegate {
         myScroll.delegate = self
        //重要否则无法缩放图片
         myScroll.isUserInteractionEnabled = true
-        
-        
-
-        // Do any additional setup after loading the view.
     }
     //此方法重要，否则无法缩放图片
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
@@ -147,18 +143,5 @@ class pageDetailViewController: UIViewController, UIScrollViewDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

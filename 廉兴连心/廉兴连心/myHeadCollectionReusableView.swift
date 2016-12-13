@@ -10,8 +10,6 @@ import UIKit
 
 class myHeadCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var myHeadTitle: UILabel!
-    
-
-    
+  
     
 }

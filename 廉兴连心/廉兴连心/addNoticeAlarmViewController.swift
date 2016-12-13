@@ -21,7 +21,17 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
     @IBOutlet weak var alarmCheckBox: M13Checkbox!
     //选择发送对象代码
     @IBAction func dropMenu(_ sender: UITapGestureRecognizer) {
+        //如果网络不好没取到数组
+        if self.trueNameList.count == 0 {
+            let alert = UIAlertController(title: "错误信息", message: "无法连接服务器", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+
+        }
+        
        //按下按钮，将用户名和ID填入SELECETD表，建立指针关系
+        
         for i in 0...self.trueNameList.count - 1 {
             
             self.indexPathToInsert.append(IndexPath(row: i, section: 0) as IndexPath)
@@ -138,8 +148,6 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
         myTabel.isHidden = true
         
         let usr = BmobUser.current()
-       // let userName = usr?.object(forKey: "username")
-       // let currentUser = userName as! String
         let isAdmin = usr?.object(forKey: "isadmin") as? Bool
         if isAdmin != true {
         
@@ -209,21 +217,18 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
                         let user = obj as! BmobUser
                          self.currentUserName = user.object(forKey: "chinesename") as! String
                          self.currentUserId = user.objectId as String
-                    
+                   
                         self.trueNameList.append(self.currentUserName)
                         self.userId.append(self.currentUserId)
                         self.select.append(false)
-
-                   
                     
+                    
+
                 }
             }
                 
         })
        
-       
-     //   self.bmobList = NSMutableArray(array: trueNameList)
-    
         
     }
     
@@ -526,18 +531,5 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
         // Dispose of any resources that can be recreated.
     }
     
-
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

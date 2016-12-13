@@ -97,13 +97,7 @@ class settingsViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
         
         let settedDays = Int(UserDefaults.standard.float(forKey: "days"))
         self.myTextField.text = "提前\(settedDays)天"
-        
-      
-        
-        
-
-        // Do any additional setup after loading the view.
-    }
+     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         UIView.animate(withDuration: 0.5, animations: {
@@ -141,7 +135,6 @@ class settingsViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
             alarmSwitch.isOn = true
         }
         let user = BmobUser.current()
-       // let username = user?.username
         let isAdmin = user?.object(forKey: "isadmin") as? Bool
         if isAdmin == true {
             self.adminTextField.isHidden = false
@@ -180,18 +173,7 @@ class settingsViewController: UIViewController,UITextFieldDelegate,UIPickerViewD
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

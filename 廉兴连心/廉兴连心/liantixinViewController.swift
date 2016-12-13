@@ -23,7 +23,6 @@ class liantixinViewController: UIViewController  {
     
     @IBAction func adminDir(_ sender: UIBarButtonItem) {
         let user = BmobUser.current()
-        //let username = user?.username
         let isAdmin = user?.object(forKey: "isadmin") as? Bool
         if user == nil {
             let alert  = UIAlertController(title: "温馨提示", message: "对不起，您未登录", preferredStyle: .alert)
@@ -199,13 +198,13 @@ class liantixinViewController: UIViewController  {
         }
         
         
-                   // Do any additional setup after loading the view.
+        
     }
     
   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+       
     }
     
     
@@ -282,14 +281,5 @@ class liantixinViewController: UIViewController  {
     
     
   
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
 }
