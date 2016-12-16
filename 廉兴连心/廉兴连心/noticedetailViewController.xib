@@ -18,14 +18,14 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="通知背景" translatesAutoresizingMaskIntoConstraints="NO" id="pst-66-Trv">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通知内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VxJ-uM-Z6P">
-                    <rect key="frame" x="20" y="50" width="100" height="40"/>
+                    <rect key="frame" x="20" y="55" width="100" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="quk-tT-6mL"/>
                         <constraint firstAttribute="width" constant="100" id="xPV-76-93w"/>
@@ -35,16 +35,17 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kW1-Sm-MHB">
-                    <rect key="frame" x="20" y="110" width="335" height="160"/>
+                    <rect key="frame" x="20" y="115" width="320" height="160"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="width" constant="320" id="9mp-NX-I9u"/>
                         <constraint firstAttribute="height" constant="160" id="XZC-FD-djV"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="剩余时间（天）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihi-Ee-jtH">
-                    <rect key="frame" x="20" y="290" width="150" height="40"/>
+                    <rect key="frame" x="20" y="295" width="150" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="WIi-R4-eLq"/>
                         <constraint firstAttribute="height" constant="40" id="wRm-aT-o7j"/>
@@ -54,7 +55,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DAYS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCv-hc-n1H">
-                    <rect key="frame" x="20" y="350" width="200" height="40"/>
+                    <rect key="frame" x="20" y="355" width="200" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="J7B-jv-liE"/>
                         <constraint firstAttribute="height" constant="40" id="u7Y-f3-OXV"/>
@@ -72,13 +73,12 @@
                 <constraint firstItem="VxJ-uM-Z6P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Axy-hT-14S"/>
                 <constraint firstItem="pst-66-Trv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HMk-Tw-7i5"/>
                 <constraint firstItem="pst-66-Trv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Rgn-gr-Zzh"/>
+                <constraint firstItem="VxJ-uM-Z6P" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="55" id="S4T-D4-oEj"/>
                 <constraint firstItem="HCv-hc-n1H" firstAttribute="top" secondItem="Ihi-Ee-jtH" secondAttribute="bottom" constant="20" id="SyZ-R4-K5r"/>
                 <constraint firstAttribute="trailing" secondItem="pst-66-Trv" secondAttribute="trailing" id="XTd-C7-yIi"/>
                 <constraint firstItem="Ihi-Ee-jtH" firstAttribute="top" secondItem="kW1-Sm-MHB" secondAttribute="bottom" constant="20" id="YpY-XY-uCf"/>
-                <constraint firstItem="VxJ-uM-Z6P" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="bYg-Ko-IeO"/>
                 <constraint firstItem="kW1-Sm-MHB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="c5S-vg-St8"/>
                 <constraint firstItem="Ihi-Ee-jtH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="dm9-09-Qpr"/>
-                <constraint firstAttribute="trailing" secondItem="kW1-Sm-MHB" secondAttribute="trailing" constant="20" id="ncN-Ek-bDp"/>
             </constraints>
             <point key="canvasLocation" x="32.5" y="79.5"/>
         </view>

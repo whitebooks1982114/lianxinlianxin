@@ -26,6 +26,7 @@ class newsdetailViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationItem.title = "要闻内容"
+        self.news.backgroundColor = UIColor.clear
 
     }
 
