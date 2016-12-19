@@ -592,9 +592,9 @@
 				TargetAttributes = {
 					A6772BF21DCC4D7700425322 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = EB33888S79;
+						DevelopmentTeam = 8MSH7WEY4Z;
 						LastSwiftMigration = 0810;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					A6772C091DCC4D7700425322 = {
 						CreatedOnToolsVersion = 8.1;
@@ -827,8 +827,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: lei chen (8MSH7WEY4Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: lei chen (8MSH7WEY4Z)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -880,8 +880,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: lei chen (8MSH7WEY4Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: lei chen (8MSH7WEY4Z)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -907,17 +907,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = EB33888S79;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: lei chen (8MSH7WEY4Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: lei chen (8MSH7WEY4Z)";
+				DEVELOPMENT_TEAM = 8MSH7WEY4Z;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/廉兴连心/Bmob_SDK_iOS_v1.7.2",
+					"$(PROJECT_DIR)/廉兴连心/Bmob_SDK_iOS_v1.7.2",
+					"$(PROJECT_DIR)/廉兴连心/PDChart-master",
+					"$(PROJECT_DIR)/廉兴连心/SWRevealViewController",
 				);
 				INFOPLIST_FILE = "廉兴连心/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.163.whitebooks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitebooks.LianXinLianXinLL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "85d9e4c1-3b74-415f-b6ff-6e775363e361";
+				PROVISIONING_PROFILE_SPECIFIER = "LianXin Distribution";
 				SDKROOT = iphoneos10.1;
 				SWIFT_OBJC_BRIDGING_HEADER = "廉兴连心/廉兴连心-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -930,18 +936,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = EB33888S79;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: lei chen (8MSH7WEY4Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: lei chen (8MSH7WEY4Z)";
+				DEVELOPMENT_TEAM = 8MSH7WEY4Z;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/廉兴连心/Bmob_SDK_iOS_v1.7.2",
+					"$(PROJECT_DIR)/廉兴连心/Bmob_SDK_iOS_v1.7.2",
+					"$(PROJECT_DIR)/廉兴连心/PDChart-master",
+					"$(PROJECT_DIR)/廉兴连心/SWRevealViewController",
 				);
 				INFOPLIST_FILE = "廉兴连心/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.163.whitebooks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitebooks.LianXinLianXinLL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "85d9e4c1-3b74-415f-b6ff-6e775363e361";
+				PROVISIONING_PROFILE_SPECIFIER = "LianXin Distribution";
 				SDKROOT = iphoneos10.1;
 				SWIFT_OBJC_BRIDGING_HEADER = "廉兴连心/廉兴连心-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
