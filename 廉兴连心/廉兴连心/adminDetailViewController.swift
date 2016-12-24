@@ -26,6 +26,7 @@ class adminDetailViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationItem.title = "事项内容"
+        alarmConten.backgroundColor = UIColor.clear
 
         // Do any additional setup after loading the view.
     }

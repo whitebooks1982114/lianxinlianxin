@@ -36,6 +36,7 @@ class noticedetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         content.text = myNoticeContent
+        noticeArrayIsNotNull = false
     
         let oneDay = 86400
         

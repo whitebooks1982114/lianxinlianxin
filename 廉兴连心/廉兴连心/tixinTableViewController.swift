@@ -53,6 +53,7 @@ class tixinTableViewController: UITableViewController {
             }
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+
             }
             
         })
@@ -85,6 +86,7 @@ class tixinTableViewController: UITableViewController {
 
     }
     
+       
         //转到添加提醒事项页面
     func addAlarm() {
         let usr = BmobUser.current()
@@ -200,7 +202,9 @@ class tixinTableViewController: UITableViewController {
             self.deadLine.remove(at: indexPath.row)
             self.noticeContent.remove(at: indexPath.row)
             self.tableView.deleteRows(at: indexPaths, with: .fade)
-            
+            if list.count == 0 {
+                alarmArrayIsNotNull = false
+            }
             
             
         }

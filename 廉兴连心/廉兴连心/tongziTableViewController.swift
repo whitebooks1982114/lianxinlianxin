@@ -55,6 +55,9 @@ class tongziTableViewController: UITableViewController {
             }
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                if self.list.count == 0 {
+                    noticeArrayIsNotNull = false
+                }
             }
 
         })

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import M13Checkbox
+
 
 class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource {
     
@@ -16,9 +16,33 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
     @IBOutlet weak var sendMessage: UIButton!
     
     @IBOutlet weak var sendObject: UIView!
-    @IBOutlet weak var noteicChecBox: M13Checkbox!
+   @IBOutlet weak var noteicChecBox: UIView!
  
-    @IBOutlet weak var alarmCheckBox: M13Checkbox!
+    @IBAction func noticeCheck(_ sender: UITapGestureRecognizer) {
+        if noteicChecBox.backgroundColor == UIColor.white {
+            noteicChecBox.backgroundColor = UIColor.blue
+            noticeSelected = true
+        }else{
+            noteicChecBox.backgroundColor = UIColor.white
+            noticeSelected = false
+        }
+        
+        
+    }
+    @IBAction func alarmCheck(_ sender: UITapGestureRecognizer) {
+        if alarmCheckBox.backgroundColor == UIColor.white {
+            alarmCheckBox.backgroundColor = UIColor.blue
+            alarmSelected = true
+        }else{
+            
+            alarmCheckBox.backgroundColor = UIColor.white
+            alarmSelected = false
+            
+        }
+        
+        
+    }
+    @IBOutlet weak var alarmCheckBox: UIView!
     //选择发送对象代码
     @IBAction func dropMenu(_ sender: UITapGestureRecognizer) {
         //如果网络不好没取到数组
@@ -44,6 +68,11 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
             post?.saveInBackground(resultBlock: { (success, error) in
                 if error != nil {
                     print("\(error?.localizedDescription)")
+                    let alert = UIAlertController(title: "错误信息", message: "发生错误", preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+                    alert.addAction(ok)
+                    self.present(alert, animated: true, completion: nil)
+                    
                 }
                 
             })
@@ -138,11 +167,8 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
         myToolbar.removeFromSuperview()
         myDatePicker.removeFromSuperview()
     
-        noteicChecBox.boxType = .square
-        alarmCheckBox.boxType = .square
-        noteicChecBox.enableMorphing = true
-        alarmCheckBox.enableMorphing = true
-       
+       noteicChecBox.backgroundColor = UIColor.white
+        alarmCheckBox.backgroundColor = UIColor.white
       
         
         myTabel.isHidden = true
@@ -259,34 +285,12 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.myDatePicker.addTarget(self, action: #selector(self.change(_:)), for: .valueChanged)
-        self.noteicChecBox.addTarget(self, action: #selector(self.noticeCheck), for: .valueChanged)
-        self.alarmCheckBox.addTarget(self, action: #selector(self.alarmCheck), for: .valueChanged)
-        
+        noteicChecBox.backgroundColor = UIColor.white
+        alarmCheckBox.backgroundColor = UIColor.white
    
     }
-    //判断通知复选框是否选中
-    func noticeCheck() {
-        switch noteicChecBox.checkState {
-        case .checked:
-            noticeSelected = true
-        default:
-            noticeSelected = false
-        }
-    }
-    
-    //判断事项复选框是否选中
-    func alarmCheck() {
-        switch alarmCheckBox.checkState {
-        case .checked:
-            alarmSelected = true
-        default:
-            alarmSelected = false
-        }
-        
-    }
-    
-    
-    
+  
+  
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

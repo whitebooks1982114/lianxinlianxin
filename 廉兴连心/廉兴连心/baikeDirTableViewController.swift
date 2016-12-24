@@ -26,6 +26,7 @@ class baikeDirTableViewController: UITableViewController, UISearchBarDelegate, U
         list.removeAll()
         barFilterList.removeAll()
         let query = BmobQuery(className: "bake")
+        query?.whereKey("check", equalTo: true)
         query?.limit = 1000
         query?.order(byDescending: "updatedAt")
         query?.findObjectsInBackground({ (array, error) in

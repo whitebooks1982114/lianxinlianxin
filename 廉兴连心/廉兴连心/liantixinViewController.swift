@@ -59,7 +59,7 @@ class liantixinViewController: UIViewController  {
         
         dataItem.axesColor = UIColor.blue
         dataItem.barPointArray = [CGPoint(x: 1.0, y: CGFloat(countOfNews)), CGPoint(x: 2.0, y: CGFloat(countOfNotice)), CGPoint(x: 3.0, y: CGFloat(countOfAlarm))]
-        dataItem.xAxesDegreeTexts = ["廉政要闻", "消息通知", "提醒事项"]
+        dataItem.xAxesDegreeTexts = ["廉政要闻", "消息通知", "预约提醒"]
         
         dataItem.barColor = UIColor.orange
         let barChart: PDBarChart = PDBarChart(frame: CGRect(x: self.myView.frame.width - 330, y: 0, width: 300, height: self.myView.frame.height),dataItem: dataItem)
@@ -253,6 +253,7 @@ class liantixinViewController: UIViewController  {
             
             self.noticeImage.isHidden = false
         }else{
+            
             self.noticeImage.isHidden = true
         }
         

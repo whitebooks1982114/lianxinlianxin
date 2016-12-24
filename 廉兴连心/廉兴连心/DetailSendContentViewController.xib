@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailSendContentViewController" customModule="廉兴连心" customModuleProvider="target">
+            <connections>
+                <outlet property="detailSendContent" destination="qpr-WH-7vL" id="AZm-p1-stk"/>
+                <outlet property="detailSentTitle" destination="Ul8-If-aMs" id="1eQ-6J-VjW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="通知背景" translatesAutoresizingMaskIntoConstraints="NO" id="NPg-qD-puw">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPZ-ce-y6Z">
+                    <rect key="frame" x="20" y="80" width="50" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="vrR-bX-44C"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ul8-If-aMs">
+                    <rect key="frame" x="110" y="80" width="240" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="7Y7-pn-aP4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qpr-WH-7vL">
+                    <rect key="frame" x="0.0" y="151" width="375" height="260"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="260" id="ep0-l4-7Ca"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dPZ-ce-y6Z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="6yq-yF-101"/>
+                <constraint firstItem="qpr-WH-7vL" firstAttribute="top" secondItem="Ul8-If-aMs" secondAttribute="bottom" constant="50" id="7A4-In-AS5"/>
+                <constraint firstItem="dPZ-ce-y6Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="HlK-I8-QNY"/>
+                <constraint firstAttribute="trailing" secondItem="Ul8-If-aMs" secondAttribute="trailing" constant="25" id="Y3m-GD-rMX"/>
+                <constraint firstItem="qpr-WH-7vL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ofK-I4-KWO"/>
+                <constraint firstItem="Ul8-If-aMs" firstAttribute="centerY" secondItem="dPZ-ce-y6Z" secondAttribute="centerY" id="t0D-W7-kQt"/>
+                <constraint firstAttribute="trailing" secondItem="qpr-WH-7vL" secondAttribute="trailing" id="tiN-Qz-CwA"/>
+            </constraints>
+            <point key="canvasLocation" x="95.5" y="93.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="通知背景" width="598" height="598"/>
+    </resources>
+</document>

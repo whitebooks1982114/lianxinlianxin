@@ -40,6 +40,7 @@ class tixindetailViewController: UIViewController {
         super.viewWillAppear(true)
         
         self.myAlarmContent.text = alarmContent
+        alarmArrayIsNotNull = false
         
         let oneDay = 86400
         

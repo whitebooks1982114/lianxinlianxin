@@ -18,6 +18,8 @@ class userListTableViewController: UITableViewController {
     
     let setting = settingsViewController()
     
+    
+    
     @IBAction func turnSetting(_ sender: UITapGestureRecognizer) {
         let user = BmobUser.current()
         if user != nil {
@@ -61,6 +63,7 @@ class userListTableViewController: UITableViewController {
         
     }
     
+
     
     @IBOutlet weak var usrInfoOut: UIButton?
     
@@ -71,6 +74,8 @@ class userListTableViewController: UITableViewController {
     
     @IBOutlet weak var aboutUsOut: UIButton?
     
+    @IBOutlet weak var reportOut: UIButton!
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +84,7 @@ class userListTableViewController: UITableViewController {
         self.compInfoOut?.contentHorizontalAlignment = .left
         self.logOutOut?.contentHorizontalAlignment = .left
         self.aboutUsOut?.contentHorizontalAlignment = .left
+        self.reportOut.contentHorizontalAlignment = .left
         self.tableView.tableFooterView = UIView()
         self.tableView.tableFooterView?.backgroundColor = UIColor.black
         //使表头不与状态栏重叠
@@ -131,6 +137,7 @@ class userListTableViewController: UITableViewController {
         
     }
     
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -146,9 +153,22 @@ class userListTableViewController: UITableViewController {
             return 1
         } else {
         
-        return 4
+        return 5
         }
       
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "report") {
+            let user = BmobUser.current()
+            if user == nil {
+                let alert  = UIAlertController(title: "提示", message: "您尚未登录", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+                alert.addAction(ok)
+                self.present(alert, animated: true, completion: nil)
+                
+            }
+            
+        }
     }
     
       

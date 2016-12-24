@@ -145,36 +145,36 @@ class lianxinlianxinViewController: UIViewController {
                     for obj in array! {
                         let object = obj as! BmobObject
                         _ = object.object(forKey: "deadline") as! Date
-                     
                         
-                    if self.noticeVoiceOn == true {
-                        if self.player == nil{
-                            do{
-                                try  self.player = AVAudioPlayer(contentsOf: self.myUrl!)
-                                self.player?.prepareToPlay()
-                                self.player?.numberOfLoops = 1
-                            }catch {
-                                print(error)
+                        
+                        if self.noticeVoiceOn == true {
+                            if self.player == nil{
+                                do{
+                                    try  self.player = AVAudioPlayer(contentsOf: self.myUrl!)
+                                    self.player?.prepareToPlay()
+                                    self.player?.numberOfLoops = 1
+                                }catch {
+                                    print(error)
+                                }
+                                
                             }
-                            
+                            if self.player?.isPlaying == false {
+                                self.player?.play()
+                            }
                         }
-                        if self.player?.isPlaying == false {
-                            self.player?.play()
-                        }
-                    }
                         DispatchQueue.main.async {
-                        noticeArrayIsNotNull = true
+                            noticeArrayIsNotNull = true
                         }
-                   
+                        
+                    }
                 }
-                }
-                
+                              
                 if error != nil {
                     print("\(error?.localizedDescription)")
                 }
                 
             })
- 
+            
             
             //查询马上到期提醒事项，并发出音效
            
@@ -219,6 +219,7 @@ class lianxinlianxinViewController: UIViewController {
                         }
                     }
                 }
+              
               
                 if error != nil {
                     print("\(error?.localizedDescription)")
