@@ -18,6 +18,8 @@ class userListTableViewController: UITableViewController {
     
     let setting = settingsViewController()
     
+  
+    
     var signTimes: Int?
     //判断能否签到，一天只能签一次
     var date1:Date?
@@ -55,6 +57,7 @@ class userListTableViewController: UITableViewController {
             alart.addAction(ok)
             self.present(alart, animated: true, completion: nil)
         }else {
+           
             if self.signTimes == nil {
                 self.signTimes = 1
             }else {
@@ -65,8 +68,9 @@ class userListTableViewController: UITableViewController {
             }else {
                 self.totalScore = self.totalScore! + 1
             }
+       
            usr?.setObject(signTimes, forKey: "signtimes")
-           usr?.setObject(totalScore, forKey: "score")
+            usr?.setObject(totalScore, forKey: "score")
            usr?.updateInBackground(resultBlock: { (success, error) in
             if success {
                   self.signOutLet.backgroundColor = UIColor.gray
@@ -198,30 +202,16 @@ class userListTableViewController: UITableViewController {
         
         if nowuser != nil {
         
-       
-        
         self.avatar?.image = UIImage(contentsOfFile: path)
         
       
         } else {
             self.avatar?.image = UIImage(named: "头像")
         }
-        //查询用户积分
-        let userScoreQuery = BmobQuery(className: "userscore")
-        userScoreQuery?.whereKey("author", equalTo: nowuser)
-        userScoreQuery?.findObjectsInBackground({ (array, error) in
-            if array != nil {
-                for obj in array! {
-                    let object = obj as! BmobObject
-        
-                    self.totalScore = object.object(forKey: "score") as? Int
-                    
-                }
-            }else {
-                
-                print("\(error?.localizedDescription)")
-            }
-        })
+        //查询用户签到积分
+        if nowuser != nil {
+            self.totalScore = nowuser?.object(forKey: "score") as! Int?
+        }
         
     }
     

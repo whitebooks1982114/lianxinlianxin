@@ -26,9 +26,12 @@ class lianxinlianxinViewController: UIViewController {
     var alarmSwitchTimes:Int?
     //用户积分
     var totalScore : Int?
+   
   
     //用户ID
     var currentUserId = ""
+    
+
     
     var player: AVAudioPlayer?
     
@@ -261,7 +264,6 @@ class lianxinlianxinViewController: UIViewController {
                     }
                 }
             })
-
             
             
         }

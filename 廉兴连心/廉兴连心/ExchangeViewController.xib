@@ -208,7 +208,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nav-Ck-nIw">
-                    <rect key="frame" x="20" y="515" width="100" height="30"/>
+                    <rect key="frame" x="20" y="537" width="100" height="30"/>
                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="IOa-ip-vJ4"/>
@@ -222,7 +222,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZT-ew-5HP">
-                    <rect key="frame" x="255" y="515" width="100" height="30"/>
+                    <rect key="frame" x="255" y="537" width="100" height="30"/>
                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="JjE-Eb-lrI"/>
@@ -267,7 +267,7 @@
                 <constraint firstItem="fJN-3q-32i" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="qSb-q9-8jV"/>
                 <constraint firstAttribute="trailing" secondItem="mZT-ew-5HP" secondAttribute="trailing" constant="20" id="rF5-Ts-OFG"/>
                 <constraint firstItem="E0t-Ju-apy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tmI-kH-qlb"/>
-                <constraint firstItem="nav-Ck-nIw" firstAttribute="top" secondItem="vGZ-Qu-6gI" secondAttribute="bottom" constant="-152" id="w6M-Op-Mim"/>
+                <constraint firstAttribute="bottom" secondItem="nav-Ck-nIw" secondAttribute="bottom" constant="100" id="udn-Ng-hMr"/>
                 <constraint firstItem="YHp-SF-7ap" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xvx-0I-Jvf"/>
             </constraints>
             <point key="canvasLocation" x="32.5" y="78.5"/>

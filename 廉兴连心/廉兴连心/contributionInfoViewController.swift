@@ -33,7 +33,9 @@ class contributionInfoViewController: UIViewController {
             if self.userTotalScore == nil {
                 self.userTotalScore = 0
             }
-        toExchange.leftScore = userTotalScore!
+        toExchange.leftScore = userTotalScore! + userSignScore!
+        toExchange.signScore = userSignScore
+        toExchange.contriScore = userTotalScore
         self.present(toExchange, animated: true, completion: nil)
         }
     }
@@ -47,6 +49,7 @@ class contributionInfoViewController: UIViewController {
     var updateKnowledgeNum = 0
     var signTimes:Int?
     var userTotalScore:Int?
+    var userSignScore:Int?
     
   
 
@@ -64,6 +67,10 @@ class contributionInfoViewController: UIViewController {
         if usr != nil{
         let usrname = (usr?.username)! as String
         let usrId = usr?.objectId
+        self.userSignScore = usr?.object(forKey: "score") as? Int
+            if userSignScore == nil {
+                userSignScore = 0
+            }
         let query = BmobQuery(className: "bake")
         let author = BmobUser(outDataWithClassName: "_User", objectId: usrId)
         query?.whereKey("author", equalTo: author)
@@ -141,7 +148,7 @@ class contributionInfoViewController: UIViewController {
                        
                             self.totalScore.text = "0"
                         }else{
-                    self.totalScore.text = "\(self.userTotalScore)分"
+                    self.totalScore.text = "\(self.userTotalScore! + self.userSignScore!)分"
                         }
                     }
                 }
