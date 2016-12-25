@@ -28,6 +28,20 @@ class lianbaikeViewController: UIViewController {
         }
 
     }
+    
+  override  func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let baikeDir = segue.destination as! baikeDirTableViewController
+    let user = BmobUser.current()
+    if segue.identifier == "dir" {
+       
+        if (user != nil) && (user?.object(forKey: "isadmin") as! Bool) {
+        
+        baikeDir.isAdmin = true
+        }else {
+            baikeDir.isAdmin = false
+        }
+    }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

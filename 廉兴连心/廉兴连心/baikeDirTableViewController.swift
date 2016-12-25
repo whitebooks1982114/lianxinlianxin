@@ -18,7 +18,9 @@ class baikeDirTableViewController: UITableViewController, UISearchBarDelegate, U
     
     var searchController: UISearchController!
     
-     let detailContent = detailContenViewController()
+    let detailContent = detailContenViewController()
+    
+    var isAdmin:Bool?
   
     
     //查询函数
@@ -26,7 +28,10 @@ class baikeDirTableViewController: UITableViewController, UISearchBarDelegate, U
         list.removeAll()
         barFilterList.removeAll()
         let query = BmobQuery(className: "bake")
+        if isAdmin != true {
+        
         query?.whereKey("check", equalTo: true)
+        }
         query?.limit = 1000
         query?.order(byDescending: "updatedAt")
         query?.findObjectsInBackground({ (array, error) in
@@ -125,6 +130,8 @@ class baikeDirTableViewController: UITableViewController, UISearchBarDelegate, U
         super.viewWillAppear(true)
         
         filterContent(searchText: "")
+   
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -157,13 +164,10 @@ class baikeDirTableViewController: UITableViewController, UISearchBarDelegate, U
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
-        
+      
         let selectedTitle = self.list[indexPath.row]
         
         detailContent.mytitle = selectedTitle
-        
-     
         
         self.navigationController?.pushViewController(detailContent, animated: true)
     }

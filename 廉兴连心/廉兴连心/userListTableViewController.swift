@@ -18,6 +18,13 @@ class userListTableViewController: UITableViewController {
     
     let setting = settingsViewController()
     
+    var signTimes: Int?
+    //判断能否签到，一天只能签一次
+    var date1:Date?
+    var date2:Date?
+    
+    var totalScore:Int?
+    
     
     
     @IBAction func turnSetting(_ sender: UITapGestureRecognizer) {
@@ -37,7 +44,50 @@ class userListTableViewController: UITableViewController {
     @IBOutlet weak var avatar: UIImageView?
    
     @IBOutlet weak var username: UILabel?
-    
+    //签到按钮输出口
+    @IBOutlet weak var signOutLet: UIButton!
+    //签到
+    @IBAction func sign(_ sender: UIButton) {
+          let usr = BmobUser.current()
+        if usr == nil {
+            let alart = UIAlertController(title: "温馨提示", message: "请先登录！", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+            alart.addAction(ok)
+            self.present(alart, animated: true, completion: nil)
+        }else {
+            if self.signTimes == nil {
+                self.signTimes = 1
+            }else {
+                self.signTimes = self.signTimes! + 1
+            }
+            if self.totalScore == nil {
+                self.totalScore = 1
+            }else {
+                self.totalScore = self.totalScore! + 1
+            }
+           usr?.setObject(signTimes, forKey: "signtimes")
+           usr?.setObject(totalScore, forKey: "score")
+           usr?.updateInBackground(resultBlock: { (success, error) in
+            if success {
+                  self.signOutLet.backgroundColor = UIColor.gray
+                  self.signOutLet.isEnabled = false
+                  self.date1 = Date()
+                  UserDefaults.standard.set(self.date1, forKey: "signeddate")
+                
+            }else {
+                print("error")
+                let alart = UIAlertController(title: "温馨提示", message: "签到失败", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+                alart.addAction(ok)
+                self.present(alart, animated: true, completion: nil)
+            }
+           })
+            
+        }
+        
+        
+        
+    }
     @IBOutlet weak var chinesename: UILabel?
     @IBAction func usrInfo(_ sender: UIButton) {
         self.present(userInfoChange, animated: true, completion: nil)
@@ -101,6 +151,21 @@ class userListTableViewController: UITableViewController {
    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
+        date2 = Date()
+        date1 = UserDefaults.standard.object(forKey: "signeddate") as! Date?
+        if date1 != nil{
+            if  Calendar.current.isDate(date1!, inSameDayAs: date2!) {
+                self.signOutLet.isEnabled = false
+                self.signOutLet.backgroundColor = UIColor.gray
+            }else{
+                self.signOutLet.isEnabled = true
+                self.signOutLet.backgroundColor = UIColor.red
+            }
+        }else{
+            self.signOutLet.isEnabled = true
+            self.signOutLet.backgroundColor = UIColor.red
+        }
         let nowuser = BmobUser.current()
         //加载用户名
         let currentUser = nowuser?.object(forKey: "username")
@@ -108,6 +173,13 @@ class userListTableViewController: UITableViewController {
             self.username?.text = currentUser as? String
         }else {
             self.username?.text = "用户名"
+        }
+        
+        let currentSignTimes = nowuser?.object(forKey: "signtimes")
+        if currentSignTimes != nil {
+            self.signTimes = currentSignTimes as! Int?
+        }else {
+            self.signTimes = 0
         }
        //加载中文名
         let currentChineseName = nowuser?.object(forKey: "chinesename")
@@ -134,6 +206,22 @@ class userListTableViewController: UITableViewController {
         } else {
             self.avatar?.image = UIImage(named: "头像")
         }
+        //查询用户积分
+        let userScoreQuery = BmobQuery(className: "userscore")
+        userScoreQuery?.whereKey("author", equalTo: nowuser)
+        userScoreQuery?.findObjectsInBackground({ (array, error) in
+            if array != nil {
+                for obj in array! {
+                    let object = obj as! BmobObject
+        
+                    self.totalScore = object.object(forKey: "score") as? Int
+                    
+                }
+            }else {
+                
+                print("\(error?.localizedDescription)")
+            }
+        })
         
     }
     

@@ -24,8 +24,11 @@ class lianxinlianxinViewController: UIViewController {
     var noticeSwitchTimes:Int?
     
     var alarmSwitchTimes:Int?
-    
-
+    //用户积分
+    var totalScore : Int?
+  
+    //用户ID
+    var currentUserId = ""
     
     var player: AVAudioPlayer?
     
@@ -122,6 +125,7 @@ class lianxinlianxinViewController: UIViewController {
       
         let chinaDay = currentDay
         let user = BmobUser.current()
+        let userQuery = BmobUser.query()
         if user != nil {
             //查询马上到期的通知，并发出音效
      
@@ -228,7 +232,38 @@ class lianxinlianxinViewController: UIViewController {
 
             })
             
-           
+            //将用户指针信息添加到USERSCORE表中
+            let post = BmobObject(className: "userscore")
+            userQuery?.findObjectsInBackground({ (array, error) in
+                if error != nil {
+                    print("\(error?.localizedDescription)")
+                    let alert = UIAlertController(title: "错误信息", message: "无法获得用户列表", preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+                    alert.addAction(ok)
+                    self.present(alert, animated: true, completion: nil)
+                    
+                } else {
+                    
+                    for obj in array! {
+                        
+                        let user = obj as! BmobUser
+                
+                        self.currentUserId = user.objectId as String
+                        
+                        let author = BmobUser(outDataWithClassName: "_User", objectId: self.currentUserId)
+                        post?.setObject(author, forKey: "author")
+                        post?.saveInBackground(resultBlock: { (finish, error) in
+                            if error != nil {
+                                print("\(error?.localizedDescription)")
+                            }
+                        })
+                      
+                    }
+                }
+            })
+
+            
+            
         }
      
     }

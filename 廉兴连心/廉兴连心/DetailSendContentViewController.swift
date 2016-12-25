@@ -20,6 +20,8 @@ class DetailSendContentViewController: UIViewController {
     var myObjectId: String!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "详细信息"
         detailSentTitle.adjustsFontSizeToFitWidth = true
         detailSendContent.backgroundColor = UIColor.clear
 

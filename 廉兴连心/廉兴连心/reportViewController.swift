@@ -73,7 +73,7 @@ class reportViewController: UIViewController {
                 }else {
                     self.newMailWarning.isHidden = true
                 }
-           print(count)
+       
             }
         })
     }

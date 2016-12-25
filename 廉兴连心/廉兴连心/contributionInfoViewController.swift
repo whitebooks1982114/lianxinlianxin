@@ -9,6 +9,7 @@
 import UIKit
 
 class contributionInfoViewController: UIViewController {
+    let toExchange = ExchangeViewController()
     
     @IBOutlet weak var img: UIImageView!
     
@@ -19,7 +20,23 @@ class contributionInfoViewController: UIViewController {
     
     @IBOutlet weak var updatedKnowledge: UILabel!
     
-
+    @IBOutlet weak var totalScore: UILabel!
+    //积分兑换
+    @IBAction func exchange(_ sender: UIButton) {
+        let usr = BmobUser.current()
+        if usr == nil {
+            let alart = UIAlertController(title: "温馨提示", message: "请先登录", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+            alart.addAction(ok)
+            self.present(alart, animated: true, completion: nil)
+        }else{
+            if self.userTotalScore == nil {
+                self.userTotalScore = 0
+            }
+        toExchange.leftScore = userTotalScore!
+        self.present(toExchange, animated: true, completion: nil)
+        }
+    }
     
     
     @IBAction func goBack(_ sender: UIBarButtonItem) {
@@ -27,6 +44,9 @@ class contributionInfoViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    var updateKnowledgeNum = 0
+    var signTimes:Int?
+    var userTotalScore:Int?
     
   
 
@@ -47,6 +67,8 @@ class contributionInfoViewController: UIViewController {
         let query = BmobQuery(className: "bake")
         let author = BmobUser(outDataWithClassName: "_User", objectId: usrId)
         query?.whereKey("author", equalTo: author)
+            
+        signTimes = usr?.object(forKey: "signtimes") as? Int
         
         let level = usr?.object(forKey: "lianxinchuangguan") as? Int
         
@@ -68,6 +90,7 @@ class contributionInfoViewController: UIViewController {
                 }else {
                     DispatchQueue.main.async {
                         print("success")
+                        self.updateKnowledgeNum = Int(num)
                         self.updatedKnowledge.text = "您上传了\(num)条内容"
                         self.updatedKnowledge.textColor = UIColor.magenta
                         
@@ -106,8 +129,24 @@ class contributionInfoViewController: UIViewController {
             self.clearedLevel.text = "请您先登录"
             self.updatedKnowledge.text = "请您先登录"
         }
-        
-        
+        let query = BmobQuery(className: "userscore")
+        query?.whereKey("author", equalTo: usr)
+        query?.findObjectsInBackground({ (array, error) in
+            if array != nil {
+                for obj in array! {
+                    let object = obj as! BmobObject
+                    self.userTotalScore = object.object(forKey: "score") as? Int
+                    DispatchQueue.main.async {
+                        if self.userTotalScore == nil {
+                       
+                            self.totalScore.text = "0"
+                        }else{
+                    self.totalScore.text = "\(self.userTotalScore)分"
+                        }
+                    }
+                }
+            }
+        })
         
     }
     

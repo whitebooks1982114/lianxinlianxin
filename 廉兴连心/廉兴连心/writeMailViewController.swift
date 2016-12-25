@@ -53,6 +53,8 @@ class writeMailViewController: UIViewController,UITextViewDelegate,UITextFieldDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "写信"
         myTitle.delegate = self
         contentText.delegate = self
 

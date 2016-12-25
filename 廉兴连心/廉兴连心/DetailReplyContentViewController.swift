@@ -20,7 +20,7 @@ class DetailReplyContentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.title = "详细信息"
         replyTitleLabel.adjustsFontSizeToFitWidth = true
         replyContentTextView.backgroundColor = UIColor.clear
 

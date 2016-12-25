@@ -26,7 +26,6 @@ class SendBoxTableViewController: UITableViewController {
         let author = BmobUser(outDataWithClassName: "_User", objectId: userID)
         query?.whereKey("author", equalTo: author)
     
-        query?.limit = 1000
         query?.order(byDescending: "updatedAt")
         query?.findObjectsInBackground({ (array, error) in
             if error != nil {
@@ -59,7 +58,7 @@ class SendBoxTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.title = "发件箱"
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "通知背景"))
         myQuery()
         

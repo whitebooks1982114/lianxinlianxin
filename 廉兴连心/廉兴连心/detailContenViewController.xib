@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,8 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="detailContenViewController" customModule="廉兴连心" customModuleProvider="target">
             <connections>
+                <outlet property="checkLabel" destination="0do-cr-33U" id="9ci-lC-hFV"/>
+                <outlet property="checkSwitch" destination="b4j-dE-eME" id="V2B-0U-Cci"/>
                 <outlet property="content" destination="kCc-oC-RRM" id="nZv-aX-B2o"/>
                 <outlet property="contentTitle" destination="4mR-4C-g02" id="H6T-Um-ccY"/>
+                <outlet property="updateScoreOutlet" destination="IQv-4P-LGy" id="TRB-i6-6Bb"/>
                 <outlet property="username" destination="XT1-KR-YPb" id="yB1-vZ-CIf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -61,11 +64,39 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="审核按钮" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0do-cr-33U">
+                    <rect key="frame" x="20" y="479" width="100" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Hy0-3V-1r0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="b4j-dE-eME">
+                    <rect key="frame" x="20" y="520" width="51" height="31"/>
+                    <connections>
+                        <action selector="check:" destination="-1" eventType="valueChanged" id="QKd-UU-1u2"/>
+                    </connections>
+                </switch>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQv-4P-LGy">
+                    <rect key="frame" x="141.5" y="521" width="92" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                    <state key="normal" title="更新用户得分">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="UpdateScore:" destination="-1" eventType="touchUpInside" id="sku-GM-36A"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="soR-gN-MQN" firstAttribute="leading" secondItem="IMu-SX-Ar3" secondAttribute="leading" id="Ezu-B9-I5d"/>
                 <constraint firstAttribute="bottom" secondItem="yEA-6W-Pfv" secondAttribute="bottom" id="IUh-Xn-fIq"/>
+                <constraint firstItem="IQv-4P-LGy" firstAttribute="centerY" secondItem="b4j-dE-eME" secondAttribute="centerY" id="LBf-nK-YGj"/>
+                <constraint firstItem="0do-cr-33U" firstAttribute="top" secondItem="kCc-oC-RRM" secondAttribute="bottom" constant="20" id="N77-52-TCu"/>
                 <constraint firstItem="4mR-4C-g02" firstAttribute="leading" secondItem="IMu-SX-Ar3" secondAttribute="trailing" constant="67" id="NUL-gt-ZbH"/>
                 <constraint firstItem="XT1-KR-YPb" firstAttribute="trailing" secondItem="4mR-4C-g02" secondAttribute="trailing" id="PWG-6r-4EM"/>
                 <constraint firstItem="kCc-oC-RRM" firstAttribute="leading" secondItem="soR-gN-MQN" secondAttribute="leading" id="PZb-a2-sEx"/>
@@ -73,10 +104,14 @@
                 <constraint firstItem="XT1-KR-YPb" firstAttribute="top" secondItem="soR-gN-MQN" secondAttribute="top" id="a8Y-9P-Kcj"/>
                 <constraint firstItem="kCc-oC-RRM" firstAttribute="trailing" secondItem="XT1-KR-YPb" secondAttribute="trailing" id="an6-gv-Vwn"/>
                 <constraint firstItem="yEA-6W-Pfv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cEo-xU-69D"/>
+                <constraint firstItem="b4j-dE-eME" firstAttribute="top" secondItem="0do-cr-33U" secondAttribute="bottom" constant="20" id="dRF-iH-RM2"/>
+                <constraint firstItem="b4j-dE-eME" firstAttribute="leading" secondItem="0do-cr-33U" secondAttribute="leading" id="eSB-go-Na4"/>
                 <constraint firstItem="XT1-KR-YPb" firstAttribute="leading" secondItem="4mR-4C-g02" secondAttribute="leading" id="g0E-HF-4DU"/>
                 <constraint firstItem="IMu-SX-Ar3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="ihT-vt-csE"/>
                 <constraint firstItem="kCc-oC-RRM" firstAttribute="top" secondItem="soR-gN-MQN" secondAttribute="bottom" constant="18" id="l2Z-eF-zBK"/>
                 <constraint firstItem="soR-gN-MQN" firstAttribute="top" secondItem="IMu-SX-Ar3" secondAttribute="bottom" constant="30" id="ql3-T8-9Sp"/>
+                <constraint firstItem="IQv-4P-LGy" firstAttribute="centerX" secondItem="yEA-6W-Pfv" secondAttribute="centerX" id="ri3-p8-XFJ"/>
+                <constraint firstItem="0do-cr-33U" firstAttribute="leading" secondItem="kCc-oC-RRM" secondAttribute="leading" id="udZ-xY-ur5"/>
                 <constraint firstItem="yEA-6W-Pfv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xRG-FB-ZLC"/>
                 <constraint firstItem="IMu-SX-Ar3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="yFM-IQ-pfQ"/>
                 <constraint firstItem="4mR-4C-g02" firstAttribute="top" secondItem="IMu-SX-Ar3" secondAttribute="top" id="zXe-5x-uHo"/>

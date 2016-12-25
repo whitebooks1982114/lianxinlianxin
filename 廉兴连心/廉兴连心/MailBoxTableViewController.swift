@@ -66,7 +66,7 @@ class MailBoxTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = "收件箱"
         
        self.tableView.backgroundView = UIImageView(image: UIImage(named: "通知背景"))
         myQuery()

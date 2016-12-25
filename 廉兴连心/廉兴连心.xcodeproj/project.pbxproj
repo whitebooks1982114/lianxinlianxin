@@ -15,6 +15,8 @@
 		A61F45C71DD95E2A00D097E4 /* addViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61F45C51DD95E2A00D097E4 /* addViewController.swift */; };
 		A61F45C81DD95E2A00D097E4 /* addViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61F45C61DD95E2A00D097E4 /* addViewController.xib */; };
 		A62E06601E077EA000EF93F9 /* LOGO修改2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A62E065F1E077EA000EF93F9 /* LOGO修改2.jpg */; };
+		A62F736A1E0E6D4E002EEC5D /* ExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F73681E0E6D4E002EEC5D /* ExchangeViewController.swift */; };
+		A62F736B1E0E6D4E002EEC5D /* ExchangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A62F73691E0E6D4E002EEC5D /* ExchangeViewController.xib */; };
 		A62F9E3A1DDD2B7400491D40 /* tixinTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F9E391DDD2B7400491D40 /* tixinTableViewController.swift */; };
 		A62F9E3C1DDD2B8200491D40 /* tongziTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F9E3B1DDD2B8200491D40 /* tongziTableViewController.swift */; };
 		A62F9E3E1DDD2B8E00491D40 /* dongtaiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F9E3D1DDD2B8E00491D40 /* dongtaiTableViewController.swift */; };
@@ -131,6 +133,8 @@
 		A61F45C51DD95E2A00D097E4 /* addViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addViewController.swift; sourceTree = "<group>"; };
 		A61F45C61DD95E2A00D097E4 /* addViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addViewController.xib; sourceTree = "<group>"; };
 		A62E065F1E077EA000EF93F9 /* LOGO修改2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "LOGO修改2.jpg"; sourceTree = "<group>"; };
+		A62F73681E0E6D4E002EEC5D /* ExchangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeViewController.swift; sourceTree = "<group>"; };
+		A62F73691E0E6D4E002EEC5D /* ExchangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchangeViewController.xib; sourceTree = "<group>"; };
 		A62F9E391DDD2B7400491D40 /* tixinTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tixinTableViewController.swift; sourceTree = "<group>"; };
 		A62F9E3B1DDD2B8200491D40 /* tongziTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tongziTableViewController.swift; sourceTree = "<group>"; };
 		A62F9E3D1DDD2B8E00491D40 /* dongtaiTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dongtaiTableViewController.swift; sourceTree = "<group>"; };
@@ -263,6 +267,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A62F73651E0E3A35002EEC5D /* 举报信箱 */ = {
+			isa = PBXGroup;
+			children = (
+				A6D17ABB1E0E0E1500071C84 /* MailBoxTableViewController.swift */,
+				A6D17ABD1E0E0E2300071C84 /* SendBoxTableViewController.swift */,
+				A6D17AC31E0E1B9300071C84 /* DetailReplyContentViewController.swift */,
+				A6D17AC41E0E1B9300071C84 /* DetailReplyContentViewController.xib */,
+				A6D17ABF1E0E1B7B00071C84 /* DetailSendContentViewController.swift */,
+				A6D17AC01E0E1B7B00071C84 /* DetailSendContentViewController.xib */,
+				A6D17AB91E0E05A800071C84 /* writeMailViewController.swift */,
+				A6D17AB71E0E033900071C84 /* reportViewController.swift */,
+			);
+			name = "举报信箱";
+			sourceTree = "<group>";
+		};
 		A62F9E381DDD2B4000491D40 /* 动态提醒 */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,17 +390,10 @@
 				A6FE92021DD44931008CA618 /* 闯关 */,
 				A677CA641DD029AF008ECF71 /* login and signup */,
 				A642332C1DF2F91F0011BD41 /* 作品 */,
-				A6F7BF901DCD72BC00402147 /* Main.storyboard */,
-				A6772BF61DCC4D7700425322 /* AppDelegate.swift */,
-				A6D17AB71E0E033900071C84 /* reportViewController.swift */,
-				A6D17AB91E0E05A800071C84 /* writeMailViewController.swift */,
-				A6D17ABF1E0E1B7B00071C84 /* DetailSendContentViewController.swift */,
-				A6D17AC01E0E1B7B00071C84 /* DetailSendContentViewController.xib */,
-				A6D17AC31E0E1B9300071C84 /* DetailReplyContentViewController.swift */,
-				A6D17AC41E0E1B9300071C84 /* DetailReplyContentViewController.xib */,
-				A6D17ABD1E0E0E2300071C84 /* SendBoxTableViewController.swift */,
+				A62F73651E0E3A35002EEC5D /* 举报信箱 */,
 				A6772C781DCC5EC800425322 /* userListTableViewController.swift */,
-				A6D17ABB1E0E0E1500071C84 /* MailBoxTableViewController.swift */,
+				A6772BF61DCC4D7700425322 /* AppDelegate.swift */,
+				A6F7BF901DCD72BC00402147 /* Main.storyboard */,
 				A6772C881DCC700B00425322 /* myTabViewController.swift */,
 				A6772C001DCC4D7700425322 /* Assets.xcassets */,
 				A6772C021DCC4D7700425322 /* LaunchScreen.storyboard */,
@@ -437,6 +449,8 @@
 				A6772C5C1DCC5CE600425322 /* lianxinlianxinViewController.swift */,
 				A677CA601DD029A7008ECF71 /* signUpViewController.swift */,
 				A6996D711DD5E7A700C5E1A1 /* contributionInfoViewController.swift */,
+				A62F73681E0E6D4E002EEC5D /* ExchangeViewController.swift */,
+				A62F73691E0E6D4E002EEC5D /* ExchangeViewController.xib */,
 				A6996D721DD5E7A700C5E1A1 /* contributionInfoViewController.xib */,
 				A6E8B4A81DD196AD0093F597 /* userInfoChangeViewController.swift */,
 				A606BEE01DEEEB3D0094F8B6 /* settingsViewController.swift */,
@@ -631,6 +645,7 @@
 				A6D17AC61E0E1B9300071C84 /* DetailReplyContentViewController.xib in Resources */,
 				A62E06601E077EA000EF93F9 /* LOGO修改2.jpg in Resources */,
 				A644669A1DD2BFCC008CB465 /* department.plist in Resources */,
+				A62F736B1E0E6D4E002EEC5D /* ExchangeViewController.xib in Resources */,
 				A6FE92011DD44927008CA618 /* answerViewController.xib in Resources */,
 				A61F45C81DD95E2A00D097E4 /* addViewController.xib in Resources */,
 				A6EC66211DDE7DF700D71B0A /* noticedetailViewController.xib in Resources */,
@@ -708,6 +723,7 @@
 				A6EC66261DDE7FF100D71B0A /* newsdetailViewController.swift in Sources */,
 				A6F7BF8D1DCD6DF700402147 /* SWRevealViewController.m in Sources */,
 				A6772C5D1DCC5CE600425322 /* lianxinlianxinViewController.swift in Sources */,
+				A62F736A1E0E6D4E002EEC5D /* ExchangeViewController.swift in Sources */,
 				A64233271DF2DCC00011BD41 /* masterPieceViewController.swift in Sources */,
 				A6772BF71DCC4D7700425322 /* AppDelegate.swift in Sources */,
 			);
