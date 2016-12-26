@@ -144,7 +144,7 @@ class contributionInfoViewController: UIViewController {
                     let object = obj as! BmobObject
                     self.userTotalScore = object.object(forKey: "score") as? Int
                     DispatchQueue.main.async {
-                        if self.userTotalScore == nil {
+                        if self.userTotalScore == nil || self.userSignScore == nil {
                        
                             self.totalScore.text = "0"
                         }else{

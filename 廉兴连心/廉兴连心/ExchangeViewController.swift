@@ -14,6 +14,111 @@ class ExchangeViewController: UIViewController,UITextFieldDelegate {
     var signScore:Int?
     var contriScore:Int?
     
+    @IBOutlet weak var gift1: UILabel!
+    
+    @IBOutlet weak var gift2: UILabel!
+    
+    @IBOutlet weak var gift3: UILabel!
+   
+    @IBOutlet weak var gift4: UILabel!
+    
+    @IBOutlet weak var gift5: UILabel!
+   
+    @IBAction func addButton(_ sender: UIButton) {
+        if sender.tag == 1{
+            exchang1Num = exchang1Num! + 1
+            exchange1.text = "\(String(exchang1Num))"
+            leftScore = leftScore - 1
+            self.scoreLeft.text = "\(leftScore)"
+           
+            
+        }else if sender.tag == 2{
+             exchang2Num = exchang2Num! + 1
+            exchange2.text = "\(String(exchang2Num))"
+            leftScore = leftScore - 2
+            self.scoreLeft.text = "\(leftScore)"
+        }else if sender.tag == 3{
+             exchang3Num = exchang3Num! + 1
+            exchange3.text = "\(String(exchang3Num))"
+            leftScore = leftScore - 3
+            self.scoreLeft.text = "\(leftScore)"
+        }else if sender.tag == 4{
+             exchang4Num = exchang4Num! + 1
+            exchange4.text = "\(String(exchang4Num))"
+            leftScore = leftScore - 4
+            self.scoreLeft.text = "\(leftScore)"
+        }else {
+             exchang5Num = exchang5Num! + 1
+            exchange5.text = "\(String(exchang5Num))"
+            leftScore = leftScore - 5
+            self.scoreLeft.text = "\(leftScore)"
+        }
+    }
+    
+    @IBAction func minusButton(_ sender: UIButton) {
+        if sender.tag == 1{
+            exchang1Num = exchang1Num! - 1
+            if exchang1Num < 0 {
+                exchang1Num = 0
+                leftScore = leftScore + 0
+            }else {
+                leftScore = leftScore + 1
+            }
+            exchange1.text = "\(String(exchang1Num))"
+           
+            self.scoreLeft.text = "\(leftScore)"
+            
+        }else if sender.tag == 2{
+            exchang2Num = exchang2Num! - 1
+            if exchang2Num < 0 {
+                exchang2Num = 0
+                leftScore = leftScore + 0
+            }else {
+                leftScore = leftScore + 2
+            }
+            exchange2.text = "\(String(exchang2Num))"
+    
+            self.scoreLeft.text = "\(leftScore)"
+        }else if sender.tag == 3{
+            exchang3Num = exchang3Num! - 1
+            if exchang3Num < 0 {
+                exchang3Num = 0
+                leftScore = leftScore + 0
+            }else {
+                leftScore = leftScore + 3
+            }
+            exchange3.text = "\(String(exchang3Num))"
+         
+            self.scoreLeft.text = "\(leftScore)"
+        }else if sender.tag == 4{
+            exchang4Num = exchang4Num! - 1
+            if exchang4Num < 0 {
+                exchang4Num = 0
+                leftScore = leftScore + 0
+            }else {
+                leftScore = leftScore + 4
+            }
+            exchange4.text = "\(String(exchang4Num))"
+         
+            self.scoreLeft.text = "\(leftScore)"
+            
+        }else {
+            exchang5Num = exchang5Num! - 1
+            if exchang5Num < 0 {
+                exchang5Num = 0
+                leftScore = leftScore + 0
+            }else {
+                leftScore = leftScore + 5
+            }
+            exchange5.text = "\(String(exchang5Num))"
+          
+            self.scoreLeft.text = "\(leftScore)"
+        }
+
+    }
+    
+
+    
     
     @IBAction func back(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
@@ -94,16 +199,11 @@ class ExchangeViewController: UIViewController,UITextFieldDelegate {
     
     
     @IBOutlet weak var exchange5: UITextField!
-    var exchang1Num:Int?
-    var exchang2Num:Int?
-    var exchang3Num:Int?
-    var exchang4Num:Int?
-    var exchang5Num:Int?
-    var exchang1Score = 0
-    var exchang2Score = 0
-    var exchang3Score = 0
-    var exchang4Score = 0
-    var exchang5Score = 0
+    var exchang1Num:Int!
+    var exchang2Num:Int!
+    var exchang3Num:Int!
+    var exchang4Num:Int!
+    var exchang5Num:Int!
     
     var leftScore = 0
     
@@ -115,6 +215,12 @@ class ExchangeViewController: UIViewController,UITextFieldDelegate {
            exchange4.delegate = self
            exchange5.delegate = self
         
+        gift1.adjustsFontSizeToFitWidth = true
+        gift2.adjustsFontSizeToFitWidth = true
+        gift3.adjustsFontSizeToFitWidth = true
+        gift4.adjustsFontSizeToFitWidth = true
+        gift5.adjustsFontSizeToFitWidth = true
+       
         
         // Do any additional setup after loading the view.
     }
@@ -132,7 +238,7 @@ class ExchangeViewController: UIViewController,UITextFieldDelegate {
         exchang4Num = 0
         exchang5Num = 0
         
-               scoreLeft.text = String(leftScore)
+        scoreLeft.text = String(leftScore)
         let nowUser = BmobUser.current()
         
         let userScoreQuery = BmobQuery(className: "userscore")
@@ -142,8 +248,6 @@ class ExchangeViewController: UIViewController,UITextFieldDelegate {
                 for obj in array! {
                     let object = obj as! BmobObject
                     self.scoreObjectId = object.object(forKey: "objectId") as! String?
-                    
-                    
                 }
             }else {
                 
@@ -153,83 +257,10 @@ class ExchangeViewController: UIViewController,UITextFieldDelegate {
         
     }
 
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if self.exchange1.text == "" {
-            self.exchange1.text = "0"
-            exchang1Num = 0
-            exchang1Score = 0
-        }else {
-            self.exchang1Num = Int (self.exchange1.text!)!
-            self.exchang1Score = Int (self.exchange1.text!)! * 1
-            
-        }
-        if self.exchange2.text == "" {
-            self.exchange2.text = "0"
-            exchang2Num = 0
-            exchang2Score = 0
-        }else{
-            self.exchang2Num = Int (self.exchange2.text!)!
-            self.exchang2Score = Int (self.exchange2.text!)! * 2
-        }
-        if self.exchange3.text == "" {
-            self.exchange3.text = "0"
-            exchang3Num = 0
-            exchang3Score = 0
-        }else {
-            self.exchang3Num = Int (self.exchange3.text!)!
-            self.exchang3Score = Int (self.exchange3.text!)! * 3
-            
-        }
-        if self.exchange4.text == "" {
-            self.exchange4.text = "0"
-            exchang4Num = 0
-            exchang4Score = 0
-        }else {
-            self.exchang4Num = Int (self.exchange4.text!)!
-            self.exchang4Score = Int (self.exchange4.text!)! * 4
-            
-        }
-        if self.exchange5.text == "" {
-            self.exchange5.text = "0"
-            exchang5Num = 0
-            exchang5Score = 0
-        }else {
-            
-            self.exchang5Num = Int (self.exchange5.text!)!
-            self.exchang5Score = Int (self.exchange5.text!)! * 5
-        }
-        
-
-        leftScore = leftScore - exchang1Score - exchang2Score - exchang3Score - exchang4Score - exchang5Score
-        
-        scoreLeft.text = String(leftScore)
-        
-    }
-    
-    
-    
-    
+     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        exchange1.resignFirstResponder()
-        exchange2.resignFirstResponder()
-        exchange3.resignFirstResponder()
-        exchange4.resignFirstResponder()
-        exchange5.resignFirstResponder()
-    }
-
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        exchange1.resignFirstResponder()
-        exchange2.resignFirstResponder()
-        exchange3.resignFirstResponder()
-        exchange4.resignFirstResponder()
-        exchange5.resignFirstResponder()
-        return true
-    }
-}
+   }

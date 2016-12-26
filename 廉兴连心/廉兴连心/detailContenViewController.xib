@@ -56,16 +56,16 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="1111" translatesAutoresizingMaskIntoConstraints="NO" id="kCc-oC-RRM">
-                    <rect key="frame" x="20" y="170" width="302" height="289"/>
+                    <rect key="frame" x="20" y="170" width="302" height="200"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="289" id="rel-xz-HSl"/>
+                        <constraint firstAttribute="height" constant="200" id="xJG-cd-27h"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="审核按钮" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0do-cr-33U">
-                    <rect key="frame" x="20" y="479" width="100" height="21"/>
+                    <rect key="frame" x="20" y="390" width="100" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="Hy0-3V-1r0"/>
                     </constraints>
@@ -74,13 +74,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="b4j-dE-eME">
-                    <rect key="frame" x="20" y="520" width="51" height="31"/>
+                    <rect key="frame" x="20" y="431" width="51" height="31"/>
                     <connections>
                         <action selector="check:" destination="-1" eventType="valueChanged" id="QKd-UU-1u2"/>
                     </connections>
                 </switch>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQv-4P-LGy">
-                    <rect key="frame" x="141.5" y="521" width="92" height="30"/>
+                    <rect key="frame" x="141.5" y="431.5" width="92" height="30"/>
                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                     <state key="normal" title="更新用户得分">
