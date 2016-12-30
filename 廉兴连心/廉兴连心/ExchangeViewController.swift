@@ -227,7 +227,7 @@ class ExchangeViewController: UIViewController,UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        exchange1.text = "0"
+         exchange1.text = "0"
          exchange2.text = "0"
          exchange3.text = "0"
          exchange4.text = "0"

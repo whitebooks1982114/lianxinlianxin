@@ -14,11 +14,15 @@ class newsdetailViewController: UIViewController {
     
     var newsName:String? = nil
     
+    var newsData:NSData?
+    
     @IBOutlet weak var newsTitle: UILabel!
     
     @IBOutlet weak var news: UITextView!
     
     @IBOutlet weak var newsImage: UIImageView!
+    
+    
     
 
     
@@ -56,10 +60,8 @@ class newsdetailViewController: UIViewController {
                     if newsImageFile != nil {
                         self.newsImage.isHidden = false
                         let url = NSURL(string: (newsImageFile?.url)!)
-                        let newsData = NSData(contentsOf: url as! URL)
-                
-                        self.newsImage.image = UIImage(data: newsData as! Data)
-                  
+                        self.newsData = NSData(contentsOf: url as! URL)
+               
                     }else {
                         self.newsImage.isHidden = true
                         
@@ -70,7 +72,7 @@ class newsdetailViewController: UIViewController {
                     
                     DispatchQueue.main.async {
                         self.news.text = self.newsContent
-                        
+                          self.newsImage.image = UIImage(data: self.newsData as! Data)
                     }
                     
                     

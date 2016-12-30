@@ -20,7 +20,11 @@ class baikeDirTableViewController: UITableViewController, UISearchBarDelegate, U
     
     let detailContent = detailContenViewController()
     
+    let media = mediaViewController()
+    
     var isAdmin:Bool?
+    
+    var kind:String!
   
     
     //查询函数
@@ -28,13 +32,20 @@ class baikeDirTableViewController: UITableViewController, UISearchBarDelegate, U
         list.removeAll()
         barFilterList.removeAll()
         let query = BmobQuery(className: "bake")
+        let query1 = BmobQuery(className: "bake")
+        let mainquery = BmobQuery(className: "bake")
         if isAdmin != true {
         
         query?.whereKey("check", equalTo: true)
         }
-        query?.limit = 1000
-        query?.order(byDescending: "updatedAt")
-        query?.findObjectsInBackground({ (array, error) in
+        query1?.whereKey("kind", equalTo: kind)
+        mainquery?.add(query)
+        mainquery?.add(query1)
+        mainquery?.andOperation()
+        
+        mainquery?.limit = 1000
+        mainquery?.order(byDescending: "updatedAt")
+        mainquery?.findObjectsInBackground({ (array, error) in
             if error != nil {
                 print("\(error?.localizedDescription)")
                 let alert = UIAlertController(title: "错误提示", message: "服务器连接失败", preferredStyle: .alert)
@@ -99,6 +110,8 @@ class baikeDirTableViewController: UITableViewController, UISearchBarDelegate, U
     
     
     func add() {
+        let add = addViewController()
+        add.addKind = self.kind
         
         let usr = BmobUser.current()
         if usr == nil {
@@ -109,7 +122,7 @@ class baikeDirTableViewController: UITableViewController, UISearchBarDelegate, U
             
         }
         
-        self.navigationController?.pushViewController(addViewController(), animated: true)
+        self.navigationController?.pushViewController(add, animated: true)
         
     }
     
@@ -164,12 +177,19 @@ class baikeDirTableViewController: UITableViewController, UISearchBarDelegate, U
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
       
         let selectedTitle = self.list[indexPath.row]
-        
+        if self.kind != "ketang"{
         detailContent.mytitle = selectedTitle
         
         self.navigationController?.pushViewController(detailContent, animated: true)
+        }
+        else{
+            media.myTitle = selectedTitle
+            self.navigationController?.pushViewController(media, animated: true)
+        }
     }
     
     func filterContent(searchText: String) {

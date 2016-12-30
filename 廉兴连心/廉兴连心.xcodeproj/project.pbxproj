@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A603A6531E162EB8000E28A0 /* mediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A603A6521E162EB8000E28A0 /* mediaViewController.swift */; };
 		A606BEE21DEEEB3D0094F8B6 /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A606BEE01DEEEB3D0094F8B6 /* settingsViewController.swift */; };
 		A606BEE31DEEEB3D0094F8B6 /* settingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A606BEE11DEEEB3D0094F8B6 /* settingsViewController.xib */; };
 		A611C3D81DE0610800C0C889 /* addNoticeAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A611C3D71DE0610800C0C889 /* addNoticeAlarmViewController.swift */; };
@@ -125,6 +126,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A603A6521E162EB8000E28A0 /* mediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mediaViewController.swift; sourceTree = "<group>"; };
 		A606BEE01DEEEB3D0094F8B6 /* settingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
 		A606BEE11DEEEB3D0094F8B6 /* settingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = settingsViewController.xib; sourceTree = "<group>"; };
 		A611C3D71DE0610800C0C889 /* addNoticeAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addNoticeAlarmViewController.swift; sourceTree = "<group>"; };
@@ -473,6 +475,7 @@
 				A61F45C51DD95E2A00D097E4 /* addViewController.swift */,
 				A61F45C61DD95E2A00D097E4 /* addViewController.xib */,
 				A6BFFE811DD8596C004A781F /* detailContenViewController.swift */,
+				A603A6521E162EB8000E28A0 /* mediaViewController.swift */,
 				A6BFFE821DD8596C004A781F /* detailContenViewController.xib */,
 			);
 			name = "百科";
@@ -688,6 +691,7 @@
 				A6996D6F1DD5E06800C5E1A1 /* resultViewController.swift in Sources */,
 				A6D17ABC1E0E0E1500071C84 /* MailBoxTableViewController.swift in Sources */,
 				A6D17AC51E0E1B9300071C84 /* DetailReplyContentViewController.swift in Sources */,
+				A603A6531E162EB8000E28A0 /* mediaViewController.swift in Sources */,
 				A6D17ABE1E0E0E2300071C84 /* SendBoxTableViewController.swift in Sources */,
 				A673D23E1DDFC1A200A264FF /* PDBarChart.swift in Sources */,
 				A6BFFE831DD8596C004A781F /* detailContenViewController.swift in Sources */,

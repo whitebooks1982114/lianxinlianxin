@@ -12,7 +12,6 @@ class lianbaikeViewController: UIViewController {
     @IBOutlet weak var usrmenu: UIBarButtonItem!
     
   
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,15 +31,49 @@ class lianbaikeViewController: UIViewController {
   override  func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     let baikeDir = segue.destination as! baikeDirTableViewController
     let user = BmobUser.current()
-    if segue.identifier == "dir" {
-       
+    if segue.identifier == "anli" {
+         baikeDir.kind = "anli"
         if (user != nil) && (user?.object(forKey: "isadmin") as! Bool) {
+          
         
         baikeDir.isAdmin = true
         }else {
             baikeDir.isAdmin = false
         }
     }
+    if segue.identifier == "ketang" {
+        baikeDir.kind = "ketang"
+        
+        if (user != nil) && (user?.object(forKey: "isadmin") as! Bool) {
+            
+            baikeDir.isAdmin = true
+        }else {
+            baikeDir.isAdmin = false
+        }
+    }
+    if segue.identifier == "zhishi" {
+        baikeDir.kind = "zhishi"
+        
+        if (user != nil) && (user?.object(forKey: "isadmin") as! Bool) {
+            
+            baikeDir.isAdmin = true
+        }else {
+            baikeDir.isAdmin = false
+        }
+    }
+    if segue.identifier == "xinde" {
+        baikeDir.kind = "xinde"
+        
+        if (user != nil) && (user?.object(forKey: "isadmin") as! Bool) {
+            
+            baikeDir.isAdmin = true
+        }else {
+            baikeDir.isAdmin = false
+        }
+    }
+
+
+
     }
 
     override func didReceiveMemoryWarning() {

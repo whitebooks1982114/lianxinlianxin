@@ -36,7 +36,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YHp-SF-7ap">
                     <rect key="frame" x="0.0" y="50" width="375" height="60"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物品1 每件1分  兑换数量                        " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p71-qt-rfZ">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每件1分  兑换数量                        " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p71-qt-rfZ">
                             <rect key="frame" x="0.0" y="0.0" width="195" height="60"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
@@ -86,10 +86,10 @@
                         <constraint firstItem="p71-qt-rfZ" firstAttribute="top" secondItem="YHp-SF-7ap" secondAttribute="top" id="MLO-Hy-YBJ"/>
                         <constraint firstItem="p71-qt-rfZ" firstAttribute="leading" secondItem="YHp-SF-7ap" secondAttribute="leading" id="P43-zc-qKh"/>
                         <constraint firstAttribute="bottom" secondItem="Wc1-Ha-tyX" secondAttribute="bottom" constant="15" id="SeU-6Q-nbM"/>
+                        <constraint firstAttribute="trailing" secondItem="p71-qt-rfZ" secondAttribute="trailing" constant="180" id="eHO-29-Lbd"/>
                         <constraint firstItem="k58-xe-ft6" firstAttribute="centerY" secondItem="p71-qt-rfZ" secondAttribute="centerY" id="grn-MB-hDb"/>
                         <constraint firstItem="k58-xe-ft6" firstAttribute="leading" secondItem="p71-qt-rfZ" secondAttribute="trailing" constant="30" id="k8R-Hp-FDE"/>
                         <constraint firstItem="Wc1-Ha-tyX" firstAttribute="top" secondItem="YHp-SF-7ap" secondAttribute="top" constant="15" id="rKe-67-6sc"/>
-                        <constraint firstItem="Wc1-Ha-tyX" firstAttribute="leading" secondItem="p71-qt-rfZ" secondAttribute="trailing" constant="120" id="vHP-ze-IoT"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E0t-Ju-apy">

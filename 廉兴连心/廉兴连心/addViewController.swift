@@ -16,6 +16,8 @@ class addViewController: UIViewController, UITextViewDelegate, UITextFieldDelega
     
     let baike = baikeDirTableViewController()
     
+    var addKind:String!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +44,7 @@ class addViewController: UIViewController, UITextViewDelegate, UITextFieldDelega
             let post = BmobObject(className: "bake")
             post?.setObject(self.addTitle.text, forKey: "liantitle")
             post?.setObject(self.addText.text, forKey: "content")
+            post?.setObject(self.addKind, forKey: "kind")
             
             let usr = BmobUser.current()
             let currentId = usr?.objectId
