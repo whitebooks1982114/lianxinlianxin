@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+
 //全局变量，判断是否有将要到期的通知
 var noticeArrayIsNotNull: Bool = false
 
@@ -24,9 +25,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Bmob.register(withAppKey: "e1f6b4e604e2fc50b6ef6de799d8bbc3")
+       
+            let categorys = UIMutableUserNotificationCategory()
+            let catSet = NSSet(object: categorys)
+        
+            categorys.identifier = "com.whitebooks.LianXinLianXinLL"
+            let userNotifisetting = UIUserNotificationSettings(types: [.alert,.badge,.sound], categories: catSet as! Set)
+ 
+            UIApplication.shared.registerUserNotificationSettings(userNotifisetting)
+            
+            UIApplication.shared.registerForRemoteNotifications()
+        
         
        
                     return true
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let currentInstallation = BmobInstallation()
+        currentInstallation.setDeviceTokenFrom(deviceToken)
+        currentInstallation.saveInBackground()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

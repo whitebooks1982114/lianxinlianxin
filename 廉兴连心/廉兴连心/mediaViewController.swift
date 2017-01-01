@@ -16,72 +16,99 @@ class mediaViewController: UIViewController {
     var myTitle:String!
     var myURL:NSURL?
     var myItem:AVPlayerItem?
+    var movieView:AVPlayerViewController?
+    var mediaObjectId:String?
     
 
     override func viewDidLoad() {
+    
         super.viewDidLoad()
-      
-
-        // Do any additional setup after loading the view.
+        
+               // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        let myGroup = DispatchGroup()
-        let myQueue = DispatchQueue(label: "myQueue")
-          myQueue.async(group: myGroup, qos: .default, flags: [], execute:
-           {
-            let query = BmobQuery(className: "bake")
-            query?.whereKey("liantitle", equalTo: self.myTitle)
-            query?.findObjectsInBackground({ (array, error) in
-                if array != nil {
-                    for obj in array!{
-                        let myObject = obj as! BmobObject
-                        let myfile = myObject.object(forKey: "media") as? BmobFile
-                        self.myURL = NSURL(string: (myfile?.url)!)
-                        self.myItem = AVPlayerItem(url: self.myURL as! URL)
+    
+        let query = BmobQuery(className: "media")
+        query?.whereKey("title", equalTo: self.myTitle)
+        query?.findObjectsInBackground({ (array, error) in
+            if array != nil {
+                for obj in array!{
+                    let myObject = obj as! BmobObject
+                    let myfile = myObject.object(forKey: "media") as? BmobFile
+                    self.mediaObjectId = myObject.objectId
+                    self.myURL = NSURL(string: (myfile?.url)!)
+                    DispatchQueue.main.async {
+                        self.myItem = AVPlayerItem(url: NSURL(string: (myfile?.url)!)as! URL)
                     }
+               
                 }
-                else{
-                    print("\(error?.localizedDescription)")
-                }
-            })
-            
-           
-            
+            }
+            else{
+                print("\(error?.localizedDescription)")
+            }
         })
         
-        myQueue.async {
-            if self.movie == nil {
-                
-            
-                self.movie = AVPlayer(playerItem: self.myItem)
-             
-                NotificationCenter.default.addObserver(self, selector: #selector(self.moviefinished), name: Notification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
-                
-                
-            }
-           
-                    self.movie?.play()
-         
-        }
         
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+      
+        if movieView == nil{
+            self.movieView = AVPlayerViewController()
+            
+            self.movie = AVPlayer(playerItem: self.myItem)
+            self.movieView?.player = self.movie
+            
+            
+            NotificationCenter.default.addObserver(self, selector: #selector(self.moviefinished), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+            
+            
+            self.present(self.movieView!, animated: true, completion: {
+                self.movieView?.player?.play()
+            })
+            
+        }else{
+            //点击完成按钮后的动作
+            self.movieView?.removeFromParentViewController()
+            self.movieView = nil
+             _ = self.navigationController?.popViewController(animated: true)
 
-    override func didReceiveMemoryWarning() {
+        }
+    }
+    
+    
+       override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func moviefinished(noify: Notification){
+        
         NotificationCenter.default.removeObserver(self)
-        self.movie?.pause()
-       // self.movie.view.removeFromSuperview()
-        self.movie = nil
+        let user = BmobUser.current()
+        if user != nil {
+        let userId = user?.objectId
+        
+        let post = BmobObject(outDataWithClassName: "media", objectId: self.mediaObjectId)
+        let relation = BmobRelation()
+        relation.add(BmobObject(outDataWithClassName: "_User", objectId: userId))
+        post?.add(relation, forKey: "users")
+        post?.updateInBackground(resultBlock: { (success, error) in
+            if error != nil {
+                print("\(error?.localizedDescription)")
+            }
+        })
+        }
+       
+        self.dismiss(animated: true, completion:nil)
+        _ = self.navigationController?.popViewController(animated: true)
     }
     
-
+   
     /*
     // MARK: - Navigation
 

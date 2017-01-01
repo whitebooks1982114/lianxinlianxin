@@ -13,6 +13,8 @@
 		A611C3D81DE0610800C0C889 /* addNoticeAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A611C3D71DE0610800C0C889 /* addNoticeAlarmViewController.swift */; };
 		A61685301DCE9AB700210D12 /* aboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A616852E1DCE9AB700210D12 /* aboutUsViewController.swift */; };
 		A61685311DCE9AB700210D12 /* aboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A616852F1DCE9AB700210D12 /* aboutUsViewController.xib */; };
+		A61A5B451E1753F2005A7077 /* mediaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61A5B441E1753F2005A7077 /* mediaCollectionViewController.swift */; };
+		A61A5B471E17540E005A7077 /* MediaCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61A5B461E17540E005A7077 /* MediaCellCollectionViewCell.swift */; };
 		A61F45C71DD95E2A00D097E4 /* addViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61F45C51DD95E2A00D097E4 /* addViewController.swift */; };
 		A61F45C81DD95E2A00D097E4 /* addViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61F45C61DD95E2A00D097E4 /* addViewController.xib */; };
 		A62E06601E077EA000EF93F9 /* LOGO修改2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A62E065F1E077EA000EF93F9 /* LOGO修改2.jpg */; };
@@ -132,6 +134,8 @@
 		A611C3D71DE0610800C0C889 /* addNoticeAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addNoticeAlarmViewController.swift; sourceTree = "<group>"; };
 		A616852E1DCE9AB700210D12 /* aboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aboutUsViewController.swift; sourceTree = "<group>"; };
 		A616852F1DCE9AB700210D12 /* aboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = aboutUsViewController.xib; sourceTree = "<group>"; };
+		A61A5B441E1753F2005A7077 /* mediaCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mediaCollectionViewController.swift; sourceTree = "<group>"; };
+		A61A5B461E17540E005A7077 /* MediaCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		A61F45C51DD95E2A00D097E4 /* addViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addViewController.swift; sourceTree = "<group>"; };
 		A61F45C61DD95E2A00D097E4 /* addViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addViewController.xib; sourceTree = "<group>"; };
 		A62E065F1E077EA000EF93F9 /* LOGO修改2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "LOGO修改2.jpg"; sourceTree = "<group>"; };
@@ -475,6 +479,8 @@
 				A61F45C51DD95E2A00D097E4 /* addViewController.swift */,
 				A61F45C61DD95E2A00D097E4 /* addViewController.xib */,
 				A6BFFE811DD8596C004A781F /* detailContenViewController.swift */,
+				A61A5B441E1753F2005A7077 /* mediaCollectionViewController.swift */,
+				A61A5B461E17540E005A7077 /* MediaCellCollectionViewCell.swift */,
 				A603A6521E162EB8000E28A0 /* mediaViewController.swift */,
 				A6BFFE821DD8596C004A781F /* detailContenViewController.xib */,
 			);
@@ -697,6 +703,7 @@
 				A6BFFE831DD8596C004A781F /* detailContenViewController.swift in Sources */,
 				A673D23F1DDFC1A200A264FF /* PDChart.swift in Sources */,
 				A6B7BCE81DF1ACBD001ACD10 /* adminDirTableViewController.swift in Sources */,
+				A61A5B471E17540E005A7077 /* MediaCellCollectionViewCell.swift in Sources */,
 				A6FE92001DD44927008CA618 /* answerViewController.swift in Sources */,
 				A673D2401DDFC1A200A264FF /* PDChartAxesComponent.swift in Sources */,
 				A6772BFF1DCC4D7700425322 /* ____.xcdatamodeld in Sources */,
@@ -716,6 +723,7 @@
 				A6B08A451DDD9B87009E66C6 /* tixindetailViewController.swift in Sources */,
 				A6BFFE7E1DD84A00004A781F /* baikeDirTableViewController.swift in Sources */,
 				A677CA671DD031EC008ECF71 /* logInViewController.swift in Sources */,
+				A61A5B451E1753F2005A7077 /* mediaCollectionViewController.swift in Sources */,
 				A677CA6D1DD04AB3008ECF71 /* fogetPwdViewController.swift in Sources */,
 				A62F9E3C1DDD2B8200491D40 /* tongziTableViewController.swift in Sources */,
 				A673D2421DDFC1A200A264FF /* PDPieChart.swift in Sources */,

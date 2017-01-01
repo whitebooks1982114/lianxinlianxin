@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 class baikeDirTableViewController: UITableViewController, UISearchBarDelegate, UISearchResultsUpdating {
     
@@ -19,8 +21,9 @@ class baikeDirTableViewController: UITableViewController, UISearchBarDelegate, U
     var searchController: UISearchController!
     
     let detailContent = detailContenViewController()
+    let mediaContent = mediaViewController()
     
-    let media = mediaViewController()
+   
     
     var isAdmin:Bool?
     
@@ -68,8 +71,7 @@ class baikeDirTableViewController: UITableViewController, UISearchBarDelegate, U
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-        
-            
+       
         })
         self.refreshControl?.endRefreshing()
     }
@@ -181,15 +183,12 @@ class baikeDirTableViewController: UITableViewController, UISearchBarDelegate, U
         
       
         let selectedTitle = self.list[indexPath.row]
-        if self.kind != "ketang"{
-        detailContent.mytitle = selectedTitle
+       
+       detailContent.mytitle = selectedTitle
+       self.navigationController?.pushViewController(detailContent, animated: true)
+       
+           
         
-        self.navigationController?.pushViewController(detailContent, animated: true)
-        }
-        else{
-            media.myTitle = selectedTitle
-            self.navigationController?.pushViewController(media, animated: true)
-        }
     }
     
     func filterContent(searchText: String) {
