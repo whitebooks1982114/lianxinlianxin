@@ -146,6 +146,8 @@ class detailContenViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        self.content.text = ""
+        
         let user = BmobUser.current()
         if (user != nil) && (user?.object(forKey: "isadmin") as! Bool) {
             self.checkSwitch.isHidden = false

@@ -67,11 +67,12 @@ class addNoticeAlarmViewController: UIViewController,UITextViewDelegate,UITextFi
             post?.setObject(associateUser, forKey: "associateuser")
             post?.saveInBackground(resultBlock: { (success, error) in
                 if error != nil {
+//                    print("\(error?.localizedDescription)")
+//                    let alert = UIAlertController(title: "错误信息", message: "发生错误", preferredStyle: .alert)
+//                    let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+//                    alert.addAction(ok)
+//                    self.present(alert, animated: true, completion: nil)
                     print("\(error?.localizedDescription)")
-                    let alert = UIAlertController(title: "错误信息", message: "发生错误", preferredStyle: .alert)
-                    let ok = UIAlertAction(title: "好", style: .default, handler: nil)
-                    alert.addAction(ok)
-                    self.present(alert, animated: true, completion: nil)
                     
                 }
                 

@@ -20,6 +20,9 @@ class contributionInfoViewController: UIViewController {
     
     @IBOutlet weak var updatedKnowledge: UILabel!
     
+    @IBOutlet weak var exchangeButton: UIButton!
+    
+    
     @IBOutlet weak var totalScore: UILabel!
     //积分兑换
     @IBAction func exchange(_ sender: UIButton) {
@@ -57,6 +60,7 @@ class contributionInfoViewController: UIViewController {
         super.viewDidLoad()
         self.img.isHidden = true
         self.SuccessLabel.isHidden = true
+        self.exchangeButton.isHidden = true
     }
 
     override func viewWillAppear(_ animated: Bool) {

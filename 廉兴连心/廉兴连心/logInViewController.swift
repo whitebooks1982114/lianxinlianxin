@@ -54,11 +54,29 @@ class logInViewController: UIViewController , UITextFieldDelegate{
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        UIView.animate(withDuration: 0.5, animations: {
+    
             self.usrName.resignFirstResponder()
-            self.passWord.resignFirstResponder()
-        })
-       
+        
+        if (usrName.text == "" || passWord.text == "") {
+            let alart = UIAlertController(title: "温馨提示", message: "请输入用户名或密码", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+            alart.addAction(ok)
+            self.present(alart, animated: true, completion: nil)
+            
+        } else {
+            BmobUser.loginInbackground(withAccount: usrName.text, andPassword: passWord.text, block: { (user, error) in
+                if user != nil {
+                    print("登录成功")
+                    _ = self.navigationController?.popToRootViewController(animated: true)
+                } else {
+                    let alart1 = UIAlertController(title: "温馨提示", message: "用户名或密码有误", preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+                    alart1.addAction(ok)
+                    self.present(alart1, animated: true, completion: nil)
+                }
+            })
+        }
+
         return true
     }
     

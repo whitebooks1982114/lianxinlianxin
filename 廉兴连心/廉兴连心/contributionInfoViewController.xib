@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="SuccessLabel" destination="Cqf-LS-D7i" id="xVG-8o-7mw"/>
                 <outlet property="clearedLevel" destination="pjC-7F-o0y" id="0PB-EB-hq7"/>
+                <outlet property="exchangeButton" destination="WAM-qD-4vs" id="xMM-tR-rCE"/>
                 <outlet property="img" destination="H8b-wF-IeA" id="kZP-XB-Pfz"/>
                 <outlet property="totalScore" destination="7s5-rQ-aHz" id="PJA-xz-NFZ"/>
                 <outlet property="updatedKnowledge" destination="pvK-4C-UkY" id="T32-PC-NcR"/>

@@ -40,8 +40,6 @@
 		A6772C2B1DCC4E3400425322 /* Bmob_iOS_SDK更新历史.txt in Resources */ = {isa = PBXBuildFile; fileRef = A6772C281DCC4E3400425322 /* Bmob_iOS_SDK更新历史.txt */; };
 		A6772C2C1DCC4E3400425322 /* Bmob_iOS_SDK更新历史.txt in Resources */ = {isa = PBXBuildFile; fileRef = A6772C281DCC4E3400425322 /* Bmob_iOS_SDK更新历史.txt */; };
 		A6772C2D1DCC4E3400425322 /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6772C291DCC4E3400425322 /* BmobSDK.framework */; };
-		A6772C2E1DCC4E3400425322 /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6772C291DCC4E3400425322 /* BmobSDK.framework */; };
-		A6772C2F1DCC4E3400425322 /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6772C291DCC4E3400425322 /* BmobSDK.framework */; };
 		A6772C341DCC4EA000425322 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6772C331DCC4EA000425322 /* Foundation.framework */; };
 		A6772C361DCC4EAA00425322 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6772C351DCC4EAA00425322 /* CoreLocation.framework */; };
 		A6772C381DCC4EB200425322 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6772C371DCC4EB200425322 /* Security.framework */; };
@@ -128,6 +126,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A60009E51E1E0A1600357251 /* 廉兴连心.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "廉兴连心.entitlements"; sourceTree = "<group>"; };
 		A603A6521E162EB8000E28A0 /* mediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mediaViewController.swift; sourceTree = "<group>"; };
 		A606BEE01DEEEB3D0094F8B6 /* settingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
 		A606BEE11DEEEB3D0094F8B6 /* settingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = settingsViewController.xib; sourceTree = "<group>"; };
@@ -258,7 +257,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6772C2E1DCC4E3400425322 /* BmobSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +264,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6772C2F1DCC4E3400425322 /* BmobSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +388,7 @@
 		A6772BF51DCC4D7700425322 /* 廉兴连心 */ = {
 			isa = PBXGroup;
 			children = (
+				A60009E51E1E0A1600357251 /* 廉兴连心.entitlements */,
 				A62F9E381DDD2B4000491D40 /* 动态提醒 */,
 				A6BFFE801DD84A20004A781F /* 百科 */,
 				A6FE92021DD44931008CA618 /* 闯关 */,
@@ -589,6 +587,14 @@
 						DevelopmentTeam = 8MSH7WEY4Z;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					A6772C091DCC4D7700425322 = {
 						CreatedOnToolsVersion = 8.1;
@@ -899,14 +905,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "廉兴连心/廉兴连心.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: lei chen (8MSH7WEY4Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: lei chen (8MSH7WEY4Z)";
 				DEVELOPMENT_TEAM = 8MSH7WEY4Z;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/廉兴连心/Bmob_SDK_iOS_v1.7.2",
 					"$(PROJECT_DIR)/廉兴连心/PDChart-master",
 					"$(PROJECT_DIR)/廉兴连心/SWRevealViewController",
+					"$(PROJECT_DIR)/廉兴连心",
 				);
 				INFOPLIST_FILE = "廉兴连心/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -927,14 +934,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "廉兴连心/廉兴连心.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: lei chen (8MSH7WEY4Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: lei chen (8MSH7WEY4Z)";
 				DEVELOPMENT_TEAM = 8MSH7WEY4Z;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/廉兴连心/Bmob_SDK_iOS_v1.7.2",
 					"$(PROJECT_DIR)/廉兴连心/PDChart-master",
 					"$(PROJECT_DIR)/廉兴连心/SWRevealViewController",
+					"$(PROJECT_DIR)/廉兴连心",
 				);
 				INFOPLIST_FILE = "廉兴连心/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

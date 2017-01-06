@@ -17,13 +17,22 @@ class userListTableViewController: UITableViewController {
     let contribuionInfo = contributionInfoViewController()
     
     let setting = settingsViewController()
+    //显示签到分数
+    @IBOutlet weak var scoreLabel: UILabel!
+    //得分动画view
+    @IBOutlet weak var scoreView: UIView!
     
-  
     
+    
+    //连续签到天数
+    var contSignTimes: Int?
+    //签到次数
     var signTimes: Int?
     //判断能否签到，一天只能签一次
     var date1:Date?
     var date2:Date?
+    //判断是否连续签到
+    var dateFlag:Bool?
     
     var totalScore:Int?
     
@@ -63,14 +72,29 @@ class userListTableViewController: UITableViewController {
             }else {
                 self.signTimes = self.signTimes! + 1
             }
+            if self.contSignTimes == nil {
+                self.contSignTimes = 1
+            }else{
+                if dateFlag! {
+                self.contSignTimes = self.contSignTimes! + 1
+                }else {
+                  self.contSignTimes = 1
+                }
+            }
+            
             if self.totalScore == nil {
                 self.totalScore = 1
             }else {
-                self.totalScore = self.totalScore! + 1
+                if self.contSignTimes! <= 7 {
+                self.totalScore = self.totalScore! + contSignTimes!
+                }else{
+                    self.totalScore = self.totalScore! + 7
+                }
             }
        
            usr?.setObject(signTimes, forKey: "signtimes")
             usr?.setObject(totalScore, forKey: "score")
+            usr?.setObject(contSignTimes, forKey: "contsigntimes")
            usr?.updateInBackground(resultBlock: { (success, error) in
             if success {
                   self.signOutLet.backgroundColor = UIColor.gray
@@ -86,6 +110,18 @@ class userListTableViewController: UITableViewController {
                 self.present(alart, animated: true, completion: nil)
             }
            })
+            
+            self.scoreView.isHidden = false
+            self.scoreLabel.text = " + \(self.contSignTimes!)"
+            self.scoreLabel.textColor = UIColor.red
+            self.scoreView.backgroundColor = UIColor.clear
+            self.scoreView.alpha = 1.0
+            UIView.animate(withDuration: 1.0, delay: 0, options: [.curveLinear], animations: {
+                self.scoreView.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+                self.scoreView.alpha = 0.0
+                
+            }, completion: nil)
+            
             
         }
         
@@ -156,8 +192,13 @@ class userListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        scoreView.isHidden = true
+        
         date2 = Date()
+       
         date1 = UserDefaults.standard.object(forKey: "signeddate") as! Date?
+       
+        dateFlag = Calendar.current.isDateInYesterday(date1!)
         if date1 != nil{
             if  Calendar.current.isDate(date1!, inSameDayAs: date2!) {
                 self.signOutLet.isEnabled = false
@@ -180,10 +221,17 @@ class userListTableViewController: UITableViewController {
         }
         
         let currentSignTimes = nowuser?.object(forKey: "signtimes")
+        let continuousSignedTimes = nowuser?.object(forKey: "contsigntimes")
         if currentSignTimes != nil {
             self.signTimes = currentSignTimes as! Int?
         }else {
             self.signTimes = 0
+        }
+        
+        if continuousSignedTimes != nil {
+            self.contSignTimes = continuousSignedTimes as! Int?
+        }else {
+            self.contSignTimes = 0
         }
        //加载中文名
         let currentChineseName = nowuser?.object(forKey: "chinesename")

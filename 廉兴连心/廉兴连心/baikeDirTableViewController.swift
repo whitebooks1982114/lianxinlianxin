@@ -132,8 +132,6 @@ class baikeDirTableViewController: UITableViewController, UISearchBarDelegate, U
         let seachString = searchController.searchBar.text
         self.filterContent(searchText: seachString!)
         
-        print(self.filterList)
-        
         self.tableView.reloadData()
     }
     
@@ -169,11 +167,19 @@ class baikeDirTableViewController: UITableViewController, UISearchBarDelegate, U
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellid", for: indexPath)
 
-        
+        if indexPath.row < self.barFilterList.count {
         cell.textLabel?.text = self.barFilterList[indexPath.row]
+        }else {
+            let alert  = UIAlertController(title: "温馨提示", message: "网速不佳，刷新失败啦！", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+ 
+        }
         cell.backgroundColor = UIColor.clear
         cell.textLabel?.lineBreakMode = .byWordWrapping
         cell.textLabel?.numberOfLines = 0
+       
         
         return cell
     }
