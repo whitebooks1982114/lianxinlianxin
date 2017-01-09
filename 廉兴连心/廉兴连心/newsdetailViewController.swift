@@ -28,6 +28,8 @@ class newsdetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        newsTitle.lineBreakMode = .byWordWrapping
+        newsTitle.numberOfLines = 0
         
         self.navigationItem.title = "要闻内容"
         self.news.backgroundColor = UIColor.clear
@@ -72,7 +74,9 @@ class newsdetailViewController: UIViewController {
                     
                     DispatchQueue.main.async {
                         self.news.text = self.newsContent
-                          self.newsImage.image = UIImage(data: self.newsData as! Data)
+                        if self.newsData != nil {
+                        self.newsImage.image = UIImage(data: self.newsData as! Data)
+                        }
                     }
                     
                     

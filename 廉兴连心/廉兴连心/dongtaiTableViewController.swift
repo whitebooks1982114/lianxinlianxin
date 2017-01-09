@@ -58,7 +58,7 @@ class dongtaiTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-              self.tableView.backgroundView = UIImageView(image: UIImage(named: "通知背景"))
+    self.tableView.backgroundView = UIImageView(image: UIImage(named: "通知背景"))
         self.navigationItem.title = "要闻动态"
  
         
@@ -97,7 +97,8 @@ class dongtaiTableViewController: UITableViewController {
 
         cell.textLabel?.text = self.list[indexPath.row]
         cell.backgroundColor = UIColor.clear
-        cell.textLabel?.adjustsFontSizeToFitWidth = true
+        cell.textLabel?.lineBreakMode = .byWordWrapping
+        cell.textLabel?.numberOfLines = 0
         
         switch levelList[indexPath.row] {
         case "中央":

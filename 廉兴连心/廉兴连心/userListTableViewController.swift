@@ -87,8 +87,10 @@ class userListTableViewController: UITableViewController {
             }else {
                 if self.contSignTimes! <= 7 {
                 self.totalScore = self.totalScore! + contSignTimes!
+                    self.scoreLabel.text = " + \(self.contSignTimes!)"
                 }else{
                     self.totalScore = self.totalScore! + 7
+                    self.scoreLabel.text = " + 7"
                 }
             }
        
@@ -112,7 +114,7 @@ class userListTableViewController: UITableViewController {
            })
             
             self.scoreView.isHidden = false
-            self.scoreLabel.text = " + \(self.contSignTimes!)"
+           
             self.scoreLabel.textColor = UIColor.red
             self.scoreView.backgroundColor = UIColor.clear
             self.scoreView.alpha = 1.0
@@ -197,8 +199,11 @@ class userListTableViewController: UITableViewController {
         date2 = Date()
        
         date1 = UserDefaults.standard.object(forKey: "signeddate") as! Date?
-       
+        if date1 != nil {
         dateFlag = Calendar.current.isDateInYesterday(date1!)
+        }else {
+            dateFlag = false
+        }
         if date1 != nil{
             if  Calendar.current.isDate(date1!, inSameDayAs: date2!) {
                 self.signOutLet.isEnabled = false

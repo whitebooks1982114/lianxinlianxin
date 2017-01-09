@@ -224,8 +224,10 @@ class answerViewController: UIViewController {
          btn4.titleLabel?.adjustsFontSizeToFitWidth = true
         
         //  自动换行
+        questionLable.adjustsFontSizeToFitWidth = true
         questionLable.lineBreakMode = .byWordWrapping
         questionLable.numberOfLines = 0
+        
         
      }
 

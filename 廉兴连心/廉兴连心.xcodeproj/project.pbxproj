@@ -27,11 +27,6 @@
 		A64233291DF2F5AC0011BD41 /* myCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64233281DF2F5AC0011BD41 /* myCellCollectionViewCell.swift */; };
 		A642332B1DF2F9170011BD41 /* myHeadCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642332A1DF2F9170011BD41 /* myHeadCollectionReusableView.swift */; };
 		A644669A1DD2BFCC008CB465 /* department.plist in Resources */ = {isa = PBXBuildFile; fileRef = A64466991DD2BFCC008CB465 /* department.plist */; };
-		A673D23E1DDFC1A200A264FF /* PDBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673D2361DDFC1A200A264FF /* PDBarChart.swift */; };
-		A673D23F1DDFC1A200A264FF /* PDChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673D2371DDFC1A200A264FF /* PDChart.swift */; };
-		A673D2401DDFC1A200A264FF /* PDChartAxesComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673D2391DDFC1A200A264FF /* PDChartAxesComponent.swift */; };
-		A673D2411DDFC1A200A264FF /* PDLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673D23B1DDFC1A200A264FF /* PDLineChart.swift */; };
-		A673D2421DDFC1A200A264FF /* PDPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673D23D1DDFC1A200A264FF /* PDPieChart.swift */; };
 		A6772BF71DCC4D7700425322 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6772BF61DCC4D7700425322 /* AppDelegate.swift */; };
 		A6772BFF1DCC4D7700425322 /* ____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6772BFD1DCC4D7700425322 /* ____.xcdatamodeld */; };
 		A6772C011DCC4D7700425322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6772C001DCC4D7700425322 /* Assets.xcassets */; };
@@ -147,11 +142,6 @@
 		A64233281DF2F5AC0011BD41 /* myCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		A642332A1DF2F9170011BD41 /* myHeadCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myHeadCollectionReusableView.swift; sourceTree = "<group>"; };
 		A64466991DD2BFCC008CB465 /* department.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = department.plist; sourceTree = "<group>"; };
-		A673D2361DDFC1A200A264FF /* PDBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDBarChart.swift; sourceTree = "<group>"; };
-		A673D2371DDFC1A200A264FF /* PDChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDChart.swift; sourceTree = "<group>"; };
-		A673D2391DDFC1A200A264FF /* PDChartAxesComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDChartAxesComponent.swift; sourceTree = "<group>"; };
-		A673D23B1DDFC1A200A264FF /* PDLineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDLineChart.swift; sourceTree = "<group>"; };
-		A673D23D1DDFC1A200A264FF /* PDPieChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDPieChart.swift; sourceTree = "<group>"; };
 		A6772BF31DCC4D7700425322 /* 廉兴连心.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "廉兴连心.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6772BF61DCC4D7700425322 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6772BFE1DCC4D7700425322 /* ____.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "____.xcdatamodel"; sourceTree = "<group>"; };
@@ -317,56 +307,10 @@
 			name = "作品";
 			sourceTree = "<group>";
 		};
-		A673D2341DDFC1A200A264FF /* PDChart */ = {
-			isa = PBXGroup;
-			children = (
-				A673D2351DDFC1A200A264FF /* PDBarChart */,
-				A673D2371DDFC1A200A264FF /* PDChart.swift */,
-				A673D2381DDFC1A200A264FF /* PDChartComponent */,
-				A673D23A1DDFC1A200A264FF /* PDLineChart */,
-				A673D23C1DDFC1A200A264FF /* PDPieChart */,
-			);
-			name = PDChart;
-			path = "廉兴连心/PDChart-master/PDChartDemo/PDChart";
-			sourceTree = "<group>";
-		};
-		A673D2351DDFC1A200A264FF /* PDBarChart */ = {
-			isa = PBXGroup;
-			children = (
-				A673D2361DDFC1A200A264FF /* PDBarChart.swift */,
-			);
-			path = PDBarChart;
-			sourceTree = "<group>";
-		};
-		A673D2381DDFC1A200A264FF /* PDChartComponent */ = {
-			isa = PBXGroup;
-			children = (
-				A673D2391DDFC1A200A264FF /* PDChartAxesComponent.swift */,
-			);
-			path = PDChartComponent;
-			sourceTree = "<group>";
-		};
-		A673D23A1DDFC1A200A264FF /* PDLineChart */ = {
-			isa = PBXGroup;
-			children = (
-				A673D23B1DDFC1A200A264FF /* PDLineChart.swift */,
-			);
-			path = PDLineChart;
-			sourceTree = "<group>";
-		};
-		A673D23C1DDFC1A200A264FF /* PDPieChart */ = {
-			isa = PBXGroup;
-			children = (
-				A673D23D1DDFC1A200A264FF /* PDPieChart.swift */,
-			);
-			path = PDPieChart;
-			sourceTree = "<group>";
-		};
 		A6772BEA1DCC4D7700425322 = {
 			isa = PBXGroup;
 			children = (
 				A6E558661DCDAB6D000C0161 /* 廉兴连心-Bridging-Header.h */,
-				A673D2341DDFC1A200A264FF /* PDChart */,
 				A6F7BF8A1DCD6DB700402147 /* SWRevealViewController */,
 				A6772C271DCC4E3400425322 /* Bmob_SDK_iOS_v1.7.2 */,
 				A6772BF51DCC4D7700425322 /* 廉兴连心 */,
@@ -705,13 +649,10 @@
 				A6D17AC51E0E1B9300071C84 /* DetailReplyContentViewController.swift in Sources */,
 				A603A6531E162EB8000E28A0 /* mediaViewController.swift in Sources */,
 				A6D17ABE1E0E0E2300071C84 /* SendBoxTableViewController.swift in Sources */,
-				A673D23E1DDFC1A200A264FF /* PDBarChart.swift in Sources */,
 				A6BFFE831DD8596C004A781F /* detailContenViewController.swift in Sources */,
-				A673D23F1DDFC1A200A264FF /* PDChart.swift in Sources */,
 				A6B7BCE81DF1ACBD001ACD10 /* adminDirTableViewController.swift in Sources */,
 				A61A5B471E17540E005A7077 /* MediaCellCollectionViewCell.swift in Sources */,
 				A6FE92001DD44927008CA618 /* answerViewController.swift in Sources */,
-				A673D2401DDFC1A200A264FF /* PDChartAxesComponent.swift in Sources */,
 				A6772BFF1DCC4D7700425322 /* ____.xcdatamodeld in Sources */,
 				A6772C7A1DCC5EC800425322 /* userListTableViewController.swift in Sources */,
 				A6D91DB31DF91DB4008BE1FD /* pageDetailViewController.swift in Sources */,
@@ -732,10 +673,8 @@
 				A61A5B451E1753F2005A7077 /* mediaCollectionViewController.swift in Sources */,
 				A677CA6D1DD04AB3008ECF71 /* fogetPwdViewController.swift in Sources */,
 				A62F9E3C1DDD2B8200491D40 /* tongziTableViewController.swift in Sources */,
-				A673D2421DDFC1A200A264FF /* PDPieChart.swift in Sources */,
 				A64233291DF2F5AC0011BD41 /* myCellCollectionViewCell.swift in Sources */,
 				A6D17AC11E0E1B7B00071C84 /* DetailSendContentViewController.swift in Sources */,
-				A673D2411DDFC1A200A264FF /* PDLineChart.swift in Sources */,
 				A6D17ABA1E0E05A800071C84 /* writeMailViewController.swift in Sources */,
 				A6EC66201DDE7DF700D71B0A /* noticedetailViewController.swift in Sources */,
 				A6EC66261DDE7FF100D71B0A /* newsdetailViewController.swift in Sources */,
