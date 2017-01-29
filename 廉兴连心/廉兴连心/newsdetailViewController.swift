@@ -78,8 +78,7 @@ class newsdetailViewController: UIViewController {
                         self.newsImage.image = UIImage(data: self.newsData as! Data)
                         }
                     }
-                    
-                    
+          
                 }
                 
             } else {

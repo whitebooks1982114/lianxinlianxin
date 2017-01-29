@@ -27,8 +27,12 @@ class logInViewController: UIViewController , UITextFieldDelegate{
         } else {
            BmobUser.loginInbackground(withAccount: usrName.text, andPassword: passWord.text, block: { (user, error) in
             if user != nil {
-                print("登录成功")
-               _ = self.navigationController?.popToRootViewController(animated: true)
+                let alart = UIAlertController(title: "提示", message: "登录成功", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "好", style: .default, handler: {(ok)->Void in
+                     _ = self.navigationController?.popToRootViewController(animated: true)                })
+                alart.addAction(ok)
+                self.present(alart, animated: true, completion: nil)
+              
             } else {
                 let alart1 = UIAlertController(title: "温馨提示", message: "用户名或密码有误", preferredStyle: .alert)
                 let ok = UIAlertAction(title: "好", style: .default, handler: nil)
@@ -66,8 +70,13 @@ class logInViewController: UIViewController , UITextFieldDelegate{
         } else {
             BmobUser.loginInbackground(withAccount: usrName.text, andPassword: passWord.text, block: { (user, error) in
                 if user != nil {
-                    print("登录成功")
-                    _ = self.navigationController?.popToRootViewController(animated: true)
+                    let alart = UIAlertController(title: "提示", message: "注册成功", preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "好", style: .default, handler: {(ok)->Void in
+                        _ = self.navigationController?.popToRootViewController(animated: true)                })
+                    alart.addAction(ok)
+                    self.present(alart, animated: true, completion: nil)
+                    
+
                 } else {
                     let alart1 = UIAlertController(title: "温馨提示", message: "用户名或密码有误", preferredStyle: .alert)
                     let ok = UIAlertAction(title: "好", style: .default, handler: nil)

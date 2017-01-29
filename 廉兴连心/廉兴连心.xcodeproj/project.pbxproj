@@ -60,14 +60,22 @@
 		A677CA681DD031EC008ECF71 /* logInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A677CA661DD031EC008ECF71 /* logInViewController.xib */; };
 		A677CA6D1DD04AB3008ECF71 /* fogetPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677CA6B1DD04AB3008ECF71 /* fogetPwdViewController.swift */; };
 		A677CA6E1DD04AB3008ECF71 /* fogetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A677CA6C1DD04AB3008ECF71 /* fogetPwdViewController.xib */; };
+		A67FCCA31E2379D80013CE50 /* libGeTuiSdk-1.5.3-noidfa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A67FCCA11E2379D80013CE50 /* libGeTuiSdk-1.5.3-noidfa.a */; };
+		A67FCCA41E2379D80013CE50 /* libGtExtensionSdk-1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A67FCCA21E2379D80013CE50 /* libGtExtensionSdk-1.0.0.a */; };
+		A67FCCA61E237A0F0013CE50 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A67FCCA51E237A0F0013CE50 /* libz.tbd */; };
+		A67FCCA81E237A180013CE50 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A67FCCA71E237A180013CE50 /* libc++.tbd */; };
+		A67FCCAA1E237A530013CE50 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67FCCA91E237A530013CE50 /* JavaScriptCore.framework */; };
+		A67FCCAC1E237A660013CE50 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67FCCAB1E237A660013CE50 /* UserNotifications.framework */; };
 		A6996D6F1DD5E06800C5E1A1 /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6996D6D1DD5E06800C5E1A1 /* resultViewController.swift */; };
 		A6996D701DD5E06800C5E1A1 /* resultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6996D6E1DD5E06800C5E1A1 /* resultViewController.xib */; };
 		A6996D731DD5E7A700C5E1A1 /* contributionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6996D711DD5E7A700C5E1A1 /* contributionInfoViewController.swift */; };
 		A6996D741DD5E7A700C5E1A1 /* contributionInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6996D721DD5E7A700C5E1A1 /* contributionInfoViewController.xib */; };
 		A6B08A451DDD9B87009E66C6 /* tixindetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B08A431DDD9B87009E66C6 /* tixindetailViewController.swift */; };
 		A6B08A461DDD9B87009E66C6 /* tixindetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6B08A441DDD9B87009E66C6 /* tixindetailViewController.xib */; };
+		A6B2FB641E3B9A2000F46FB5 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6B2FB611E3B985800F46FB5 /* Kingfisher.framework */; };
 		A6B7BCDF1DF17D4F001ACD10 /* alarmdays.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6B7BCDE1DF17D4F001ACD10 /* alarmdays.plist */; };
 		A6B7BCE81DF1ACBD001ACD10 /* adminDirTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B7BCE71DF1ACBD001ACD10 /* adminDirTableViewController.swift */; };
+		A6BF68771E3A0F62005269E9 /* DongTaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BF68761E3A0F62005269E9 /* DongTaiViewController.swift */; };
 		A6BFFE7E1DD84A00004A781F /* baikeDirTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BFFE7C1DD84A00004A781F /* baikeDirTableViewController.swift */; };
 		A6BFFE831DD8596C004A781F /* detailContenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BFFE811DD8596C004A781F /* detailContenViewController.swift */; };
 		A6BFFE841DD8596C004A781F /* detailContenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6BFFE821DD8596C004A781F /* detailContenViewController.xib */; };
@@ -92,6 +100,12 @@
 		A6EF662F1DEDA110008E72BC /* 提醒音效.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A6EF662E1DEDA110008E72BC /* 提醒音效.mp3 */; };
 		A6F037AD1DF246CB007E1A2B /* adminDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F037AB1DF246CB007E1A2B /* adminDetailViewController.swift */; };
 		A6F037AE1DF246CB007E1A2B /* adminDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6F037AC1DF246CB007E1A2B /* adminDetailViewController.xib */; };
+		A6F27AD11E3A423600E9C3A6 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F27ACF1E3A423600E9C3A6 /* ImageTableViewCell.swift */; };
+		A6F27AD21E3A423600E9C3A6 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6F27AD01E3A423600E9C3A6 /* ImageTableViewCell.xib */; };
+		A6F27AD51E3A424A00E9C3A6 /* VedioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F27AD31E3A424A00E9C3A6 /* VedioTableViewCell.swift */; };
+		A6F27AD61E3A424A00E9C3A6 /* VedioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6F27AD41E3A424A00E9C3A6 /* VedioTableViewCell.xib */; };
+		A6F27AD91E3A425500E9C3A6 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F27AD71E3A425500E9C3A6 /* TextTableViewCell.swift */; };
+		A6F27ADA1E3A425500E9C3A6 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6F27AD81E3A425500E9C3A6 /* TextTableViewCell.xib */; };
 		A6F7BF8D1DCD6DF700402147 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F7BF8C1DCD6DF700402147 /* SWRevealViewController.m */; };
 		A6F7BF8E1DCD6DF700402147 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F7BF8C1DCD6DF700402147 /* SWRevealViewController.m */; };
 		A6F7BF8F1DCD6DF700402147 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F7BF8C1DCD6DF700402147 /* SWRevealViewController.m */; };
@@ -180,14 +194,24 @@
 		A677CA661DD031EC008ECF71 /* logInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = logInViewController.xib; sourceTree = "<group>"; };
 		A677CA6B1DD04AB3008ECF71 /* fogetPwdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fogetPwdViewController.swift; sourceTree = "<group>"; };
 		A677CA6C1DD04AB3008ECF71 /* fogetPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = fogetPwdViewController.xib; sourceTree = "<group>"; };
+		A67FCC9F1E2379D80013CE50 /* GeTuiExtSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeTuiExtSdk.h; sourceTree = "<group>"; };
+		A67FCCA01E2379D80013CE50 /* GeTuiSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeTuiSdk.h; sourceTree = "<group>"; };
+		A67FCCA11E2379D80013CE50 /* libGeTuiSdk-1.5.3-noidfa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGeTuiSdk-1.5.3-noidfa.a"; sourceTree = "<group>"; };
+		A67FCCA21E2379D80013CE50 /* libGtExtensionSdk-1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGtExtensionSdk-1.0.0.a"; sourceTree = "<group>"; };
+		A67FCCA51E237A0F0013CE50 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A67FCCA71E237A180013CE50 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		A67FCCA91E237A530013CE50 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		A67FCCAB1E237A660013CE50 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		A6996D6D1DD5E06800C5E1A1 /* resultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resultViewController.swift; sourceTree = "<group>"; };
 		A6996D6E1DD5E06800C5E1A1 /* resultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = resultViewController.xib; sourceTree = "<group>"; };
 		A6996D711DD5E7A700C5E1A1 /* contributionInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contributionInfoViewController.swift; sourceTree = "<group>"; };
 		A6996D721DD5E7A700C5E1A1 /* contributionInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = contributionInfoViewController.xib; sourceTree = "<group>"; };
 		A6B08A431DDD9B87009E66C6 /* tixindetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tixindetailViewController.swift; sourceTree = "<group>"; };
 		A6B08A441DDD9B87009E66C6 /* tixindetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = tixindetailViewController.xib; sourceTree = "<group>"; };
+		A6B2FB611E3B985800F46FB5 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		A6B7BCDE1DF17D4F001ACD10 /* alarmdays.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = alarmdays.plist; sourceTree = "<group>"; };
 		A6B7BCE71DF1ACBD001ACD10 /* adminDirTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = adminDirTableViewController.swift; sourceTree = "<group>"; };
+		A6BF68761E3A0F62005269E9 /* DongTaiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DongTaiViewController.swift; sourceTree = "<group>"; };
 		A6BFFE7C1DD84A00004A781F /* baikeDirTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = baikeDirTableViewController.swift; sourceTree = "<group>"; };
 		A6BFFE811DD8596C004A781F /* detailContenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailContenViewController.swift; sourceTree = "<group>"; };
 		A6BFFE821DD8596C004A781F /* detailContenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = detailContenViewController.xib; sourceTree = "<group>"; };
@@ -213,6 +237,12 @@
 		A6EF662E1DEDA110008E72BC /* 提醒音效.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "提醒音效.mp3"; sourceTree = "<group>"; };
 		A6F037AB1DF246CB007E1A2B /* adminDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = adminDetailViewController.swift; sourceTree = "<group>"; };
 		A6F037AC1DF246CB007E1A2B /* adminDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = adminDetailViewController.xib; sourceTree = "<group>"; };
+		A6F27ACF1E3A423600E9C3A6 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		A6F27AD01E3A423600E9C3A6 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		A6F27AD31E3A424A00E9C3A6 /* VedioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VedioTableViewCell.swift; sourceTree = "<group>"; };
+		A6F27AD41E3A424A00E9C3A6 /* VedioTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VedioTableViewCell.xib; sourceTree = "<group>"; };
+		A6F27AD71E3A425500E9C3A6 /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		A6F27AD81E3A425500E9C3A6 /* TextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
 		A6F7BF8B1DCD6DED00402147 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		A6F7BF8C1DCD6DF700402147 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A6F7BF901DCD72BC00402147 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -226,9 +256,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6B2FB641E3B9A2000F46FB5 /* Kingfisher.framework in Frameworks */,
+				A67FCCAC1E237A660013CE50 /* UserNotifications.framework in Frameworks */,
+				A67FCCAA1E237A530013CE50 /* JavaScriptCore.framework in Frameworks */,
+				A67FCCA81E237A180013CE50 /* libc++.tbd in Frameworks */,
+				A67FCCA61E237A0F0013CE50 /* libz.tbd in Frameworks */,
 				A6772C4C1DCC4F0700425322 /* libsqlite3.tbd in Frameworks */,
 				A6772C4A1DCC4EFE00425322 /* libicucore.tbd in Frameworks */,
 				A6772C481DCC4EF400425322 /* libz.1.2.5.tbd in Frameworks */,
+				A67FCCA41E2379D80013CE50 /* libGtExtensionSdk-1.0.0.a in Frameworks */,
 				A6772C461DCC4EE400425322 /* MediaPlayer.framework in Frameworks */,
 				A6772C441DCC4EDD00425322 /* AVFoundation.framework in Frameworks */,
 				A6772C421DCC4ED700425322 /* SystemConfiguration.framework in Frameworks */,
@@ -238,6 +274,7 @@
 				A6772C3A1DCC4EBA00425322 /* CoreGraphics.framework in Frameworks */,
 				A6772C381DCC4EB200425322 /* Security.framework in Frameworks */,
 				A6772C361DCC4EAA00425322 /* CoreLocation.framework in Frameworks */,
+				A67FCCA31E2379D80013CE50 /* libGeTuiSdk-1.5.3-noidfa.a in Frameworks */,
 				A6772C341DCC4EA000425322 /* Foundation.framework in Frameworks */,
 				A6772C2D1DCC4E3400425322 /* BmobSDK.framework in Frameworks */,
 			);
@@ -292,6 +329,13 @@
 				A6EC661E1DDE7DF700D71B0A /* noticedetailViewController.swift */,
 				A6EC661F1DDE7DF700D71B0A /* noticedetailViewController.xib */,
 				A6B08A441DDD9B87009E66C6 /* tixindetailViewController.xib */,
+				A6BF68761E3A0F62005269E9 /* DongTaiViewController.swift */,
+				A6F27ACF1E3A423600E9C3A6 /* ImageTableViewCell.swift */,
+				A6F27AD01E3A423600E9C3A6 /* ImageTableViewCell.xib */,
+				A6F27AD31E3A424A00E9C3A6 /* VedioTableViewCell.swift */,
+				A6F27AD41E3A424A00E9C3A6 /* VedioTableViewCell.xib */,
+				A6F27AD71E3A425500E9C3A6 /* TextTableViewCell.swift */,
+				A6F27AD81E3A425500E9C3A6 /* TextTableViewCell.xib */,
 			);
 			name = "动态提醒";
 			sourceTree = "<group>";
@@ -310,6 +354,7 @@
 		A6772BEA1DCC4D7700425322 = {
 			isa = PBXGroup;
 			children = (
+				A67FCC9E1E2379D80013CE50 /* GtSdkLib-noidfa */,
 				A6E558661DCDAB6D000C0161 /* 廉兴连心-Bridging-Header.h */,
 				A6F7BF8A1DCD6DB700402147 /* SWRevealViewController */,
 				A6772C271DCC4E3400425322 /* Bmob_SDK_iOS_v1.7.2 */,
@@ -372,6 +417,11 @@
 		A6772C321DCC4EA000425322 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A6B2FB611E3B985800F46FB5 /* Kingfisher.framework */,
+				A67FCCAB1E237A660013CE50 /* UserNotifications.framework */,
+				A67FCCA91E237A530013CE50 /* JavaScriptCore.framework */,
+				A67FCCA71E237A180013CE50 /* libc++.tbd */,
+				A67FCCA51E237A0F0013CE50 /* libz.tbd */,
 				A6772C4B1DCC4F0700425322 /* libsqlite3.tbd */,
 				A6772C491DCC4EFE00425322 /* libicucore.tbd */,
 				A6772C471DCC4EF400425322 /* libz.1.2.5.tbd */,
@@ -411,6 +461,17 @@
 				A677CA611DD029A7008ECF71 /* signUpViewController.xib */,
 			);
 			name = "login and signup";
+			sourceTree = "<group>";
+		};
+		A67FCC9E1E2379D80013CE50 /* GtSdkLib-noidfa */ = {
+			isa = PBXGroup;
+			children = (
+				A67FCC9F1E2379D80013CE50 /* GeTuiExtSdk.h */,
+				A67FCCA01E2379D80013CE50 /* GeTuiSdk.h */,
+				A67FCCA11E2379D80013CE50 /* libGeTuiSdk-1.5.3-noidfa.a */,
+				A67FCCA21E2379D80013CE50 /* libGtExtensionSdk-1.0.0.a */,
+			);
+			path = "GtSdkLib-noidfa";
 			sourceTree = "<group>";
 		};
 		A6BFFE801DD84A20004A781F /* 百科 */ = {
@@ -470,6 +531,7 @@
 				A6772BEF1DCC4D7700425322 /* Sources */,
 				A6772BF01DCC4D7700425322 /* Frameworks */,
 				A6772BF11DCC4D7700425322 /* Resources */,
+				A6B2FB631E3B987900F46FB5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -582,6 +644,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6F037AE1DF246CB007E1A2B /* adminDetailViewController.xib in Resources */,
+				A6F27AD61E3A424A00E9C3A6 /* VedioTableViewCell.xib in Resources */,
 				A6DF603B1DFA50E8003AED3C /* Icon-57.png in Resources */,
 				A6DF60391DFA5062003AED3C /* Icon-60@3x.png in Resources */,
 				A6996D741DD5E7A700C5E1A1 /* contributionInfoViewController.xib in Resources */,
@@ -594,10 +657,12 @@
 				A6E8B4AB1DD196AD0093F597 /* userInfoChangeViewController.xib in Resources */,
 				A6D17AC21E0E1B7B00071C84 /* DetailSendContentViewController.xib in Resources */,
 				A6EF662F1DEDA110008E72BC /* 提醒音效.mp3 in Resources */,
+				A6F27ADA1E3A425500E9C3A6 /* TextTableViewCell.xib in Resources */,
 				A6772C2A1DCC4E3400425322 /* Bmob_iOS_SDK更新历史.txt in Resources */,
 				A6FE92431DD44DB0008CA618 /* 题库.plist in Resources */,
 				A6DF60371DFA4FBF003AED3C /* Icon-60@2x.png in Resources */,
 				A6772C011DCC4D7700425322 /* Assets.xcassets in Resources */,
+				A6F27AD21E3A423600E9C3A6 /* ImageTableViewCell.xib in Resources */,
 				A677CA681DD031EC008ECF71 /* logInViewController.xib in Resources */,
 				A6BFFE841DD8596C004A781F /* detailContenViewController.xib in Resources */,
 				A677CA631DD029A7008ECF71 /* signUpViewController.xib in Resources */,
@@ -634,6 +699,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A6B2FB631E3B987900F46FB5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A6772BEF1DCC4D7700425322 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -668,6 +750,7 @@
 				A6D17AB81E0E033900071C84 /* reportViewController.swift in Sources */,
 				A62F9E3A1DDD2B7400491D40 /* tixinTableViewController.swift in Sources */,
 				A6B08A451DDD9B87009E66C6 /* tixindetailViewController.swift in Sources */,
+				A6F27AD11E3A423600E9C3A6 /* ImageTableViewCell.swift in Sources */,
 				A6BFFE7E1DD84A00004A781F /* baikeDirTableViewController.swift in Sources */,
 				A677CA671DD031EC008ECF71 /* logInViewController.swift in Sources */,
 				A61A5B451E1753F2005A7077 /* mediaCollectionViewController.swift in Sources */,
@@ -679,8 +762,11 @@
 				A6EC66201DDE7DF700D71B0A /* noticedetailViewController.swift in Sources */,
 				A6EC66261DDE7FF100D71B0A /* newsdetailViewController.swift in Sources */,
 				A6F7BF8D1DCD6DF700402147 /* SWRevealViewController.m in Sources */,
+				A6F27AD51E3A424A00E9C3A6 /* VedioTableViewCell.swift in Sources */,
+				A6F27AD91E3A425500E9C3A6 /* TextTableViewCell.swift in Sources */,
 				A6772C5D1DCC5CE600425322 /* lianxinlianxinViewController.swift in Sources */,
 				A62F736A1E0E6D4E002EEC5D /* ExchangeViewController.swift in Sources */,
+				A6BF68771E3A0F62005269E9 /* DongTaiViewController.swift in Sources */,
 				A64233271DF2DCC00011BD41 /* masterPieceViewController.swift in Sources */,
 				A6772BF71DCC4D7700425322 /* AppDelegate.swift in Sources */,
 			);
@@ -853,10 +939,15 @@
 					"$(PROJECT_DIR)/廉兴连心/PDChart-master",
 					"$(PROJECT_DIR)/廉兴连心/SWRevealViewController",
 					"$(PROJECT_DIR)/廉兴连心",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "廉兴连心/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GtSdkLib-noidfa",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.whitebooks.LianXinLianXinLL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "85d9e4c1-3b74-415f-b6ff-6e775363e361";
@@ -882,10 +973,15 @@
 					"$(PROJECT_DIR)/廉兴连心/PDChart-master",
 					"$(PROJECT_DIR)/廉兴连心/SWRevealViewController",
 					"$(PROJECT_DIR)/廉兴连心",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "廉兴连心/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GtSdkLib-noidfa",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.whitebooks.LianXinLianXinLL;
 				PRODUCT_NAME = "$(TARGET_NAME)";

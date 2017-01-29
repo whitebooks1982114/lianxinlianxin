@@ -66,10 +66,11 @@ class liantixinViewController: UIViewController  {
     let newsDir = dongtaiTableViewController()
     let noticeDir = tongziTableViewController()
     let alarmDir = tixinTableViewController()
+    let dongTai = DongTaiViewController()
     
     @IBAction func toNewsDetail(_ sender: UITapGestureRecognizer) {
-        
-        self.navigationController?.pushViewController(newsDir, animated: true)
+      
+        self.navigationController?.pushViewController(dongTai, animated: true)
     }
     
     @IBAction func toNoticeDetail(_ sender: UITapGestureRecognizer) {
@@ -84,15 +85,13 @@ class liantixinViewController: UIViewController  {
     }
     
        
-
-
-    override func viewDidLoad() {
+       override func viewDidLoad() {
         super.viewDidLoad()
         if self.revealViewController() != nil {
             self.revealViewController().rearViewRevealWidth = 310
             self.revealViewController().toggleAnimationDuration = 0.5
      
-            
+           
             self.usrmenu.target = self.revealViewController()
             
             self.usrmenu.action = #selector(SWRevealViewController.revealToggle(_:))
@@ -128,7 +127,7 @@ class liantixinViewController: UIViewController  {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
+     
         let originNewsFrame = newsView.frame
         let originNoticeFrame = noticeView.frame
         let originAlarmFrame = alarmView.frame

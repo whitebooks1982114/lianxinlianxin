@@ -104,9 +104,12 @@ class signUpViewController: UIViewController,  UITextFieldDelegate{
         }else {
             user.signUpInBackground({ (success, error) in
                 if success {
-                    print("注册成功")
+                    let alart = UIAlertController(title: "提示", message: "登录成功", preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "好", style: .default, handler: {(ok)->Void in
+                        _ = self.navigationController?.popToRootViewController(animated: true)                })
+                    alart.addAction(ok)
+                    self.present(alart, animated: true, completion: nil)
                     
-                   _ = self.navigationController?.popToRootViewController(animated: true)
                     
                 }else {
                     print("注册失败")
