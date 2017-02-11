@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,9 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WeE-mN-DjG">
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WeE-mN-DjG">
                     <rect key="frame" x="0.0" y="26" width="375" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <items>
                         <navigationItem title="关于我们" id="yCg-9I-s0z">
                             <barButtonItem key="leftBarButtonItem" title="返回" id="ICe-xN-dJZ">
@@ -32,22 +31,38 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVN-Br-1wa">
-                    <rect key="frame" x="26" y="70" width="310" height="268"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVN-Br-1wa">
+                    <rect key="frame" x="26" y="70" width="310" height="400"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="400" id="LeQ-iL-ty7"/>
+                    </constraints>
                     <string key="text">公司名称：国网上海长兴供电公司
 
 地址：上海市长兴岛凤西路13号
 
 APP制作人： 陈磊
 
-意见反馈邮箱：  changxinlianxin@163.com</string>
+意见反馈邮箱：  changxinlianxin@163.com
+
+廉兴连心品牌简介：
+    廉兴连心作为国网上海长兴供电公司的廉政教育品牌创立于2016年。其品牌内涵是:
+    “廉兴”教育筑廉，“连心”聚集民心。
+    “廉兴”风险防控机制，“连心”安定民情。
+    “廉兴”监督保廉，“连心”听取民意。</string>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VVN-Br-1wa" firstAttribute="top" secondItem="WeE-mN-DjG" secondAttribute="bottom" id="4tM-jz-I39"/>
+                <constraint firstItem="VVN-Br-1wa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="ELG-7H-GDJ"/>
+                <constraint firstAttribute="trailing" secondItem="VVN-Br-1wa" secondAttribute="trailing" constant="39" id="meP-F5-i0i"/>
+                <constraint firstAttribute="trailing" secondItem="WeE-mN-DjG" secondAttribute="trailing" id="mqN-uZ-uve"/>
+                <constraint firstItem="WeE-mN-DjG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="s0C-r5-rtB"/>
+                <constraint firstItem="VVN-Br-1wa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="xz7-vt-xDH"/>
+            </constraints>
             <point key="canvasLocation" x="-479.5" y="93.5"/>
         </view>
     </objects>

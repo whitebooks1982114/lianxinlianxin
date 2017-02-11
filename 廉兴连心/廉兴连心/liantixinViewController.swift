@@ -63,7 +63,7 @@ class liantixinViewController: UIViewController  {
     
     @IBOutlet weak var alarmLabel: UILabel!
     
-    let newsDir = dongtaiTableViewController()
+  
     let noticeDir = tongziTableViewController()
     let alarmDir = tixinTableViewController()
     let dongTai = DongTaiViewController()

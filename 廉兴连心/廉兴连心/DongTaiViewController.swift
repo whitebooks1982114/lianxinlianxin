@@ -17,9 +17,13 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
     var btn2:UIButton!
     var btn3:UIButton!
     var adSCView:UIScrollView!
-    var pageControl:UIPageControl!
+    var pageControl:UIPageControl?
+    
+    let textNewsDetail = TextNewsDetailViewController()
+    let imageNewsDetail = imageNewsViewController()
+    let vedioNewsDetail = VedioNewsViewController()
     //滚动视图定时器
-    var timer:Timer!
+    var timer:Timer?
     
     var headLineNews:String!
     var timeAdjust:Double!
@@ -32,13 +36,13 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
     var newsVedioUrl:URL?
     
     var newsTitle = [String]()
-    var level = [String]()
+    var newsContents = [String]()
     var cellKind = [String]()
     var newsImage = [URL]()
     var newsVedio = [URL]()
     func queryNews(){
         newsTitle.removeAll()
-        level.removeAll()
+       newsContents.removeAll()
         cellKind.removeAll()
         newsImage.removeAll()
         newsVedio.removeAll()
@@ -68,11 +72,15 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
                     }else {
                         self.newsVedioUrl = NSURL(string: "") as? URL
                     }
-                    
+                    let cellKindStr = detailObject.object(forKey: "cellkind") as! String
+                    let newsContent = detailObject.object(forKey: "content") as! String
                     
                     self.newsTitle.append(cellTitle)
                     self.newsImage.append(self.newsImageUrl!)
                     self.newsVedio.append(self.newsVedioUrl!)
+                    self.cellKind.append(cellKindStr)
+                    self.newsContents.append(newsContent)
+                    
                     
                 }
                
@@ -105,7 +113,7 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
                 
                 self.label?.numberOfLines = 1
                 self.label?.textAlignment = .center
-                // label?.adjustsFontSizeToFitWidth = true
+                
                 self.label?.font = UIFont.systemFont(ofSize: 17)
 
                 self.label.text = self.headLineNews
@@ -139,7 +147,7 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
         }
         //重要：每次加载都把pageContol从父视图删除，否则圆点总数会叠加显示
         if self.pageControl != nil{
-        self.pageControl.removeFromSuperview()
+        self.pageControl?.removeFromSuperview()
         }
         
         let query = BmobQuery(className: "headlinenews")
@@ -207,11 +215,11 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
                         
                     }
                     
-                    self.pageControl = UIPageControl(frame: CGRect(x: self.view.frame.width / 4.0, y: 50 + UIApplication.shared.statusBarFrame.height + (self.navigationController?.navigationBar.frame.height)! + 210, width: 150, height: 30))
+                    self.pageControl = UIPageControl(frame: CGRect(x: UIScreen.main.bounds.width / 4.0, y: 50 + UIApplication.shared.statusBarFrame.height + (self.navigationController?.navigationBar.frame.height)! + 210, width: 150, height: 30))
          
-                    self.pageControl.numberOfPages = count
-                    self.pageControl.currentPageIndicatorTintColor = UIColor.red
-                    self.view.addSubview(self.pageControl)
+                    self.pageControl?.numberOfPages = count
+                    self.pageControl?.currentPageIndicatorTintColor = UIColor.red
+                    self.view.addSubview(self.pageControl!)
                     
                     self.timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.timerHanle), userInfo: nil, repeats: true)
                     
@@ -223,11 +231,13 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "新闻首页"
        queryHeadLine()
         newsKind = "中央"
         
         
-        newsView = UITableView(frame: CGRect(x: 0, y:50 + UIApplication.shared.statusBarFrame.height + (self.navigationController?.navigationBar.frame.height)!, width: self.view.frame.width, height: self.view.frame.height - 50 - UIApplication.shared.statusBarFrame.height - (self.navigationController?.navigationBar.frame.height)!))
+        newsView = UITableView(frame: CGRect(x: 0, y:50 + UIApplication.shared.statusBarFrame.height + (self.navigationController?.navigationBar.frame.height)!, width: self.view.frame.width, height: self.view.frame.height - 80 - UIApplication.shared.statusBarFrame.height - (self.navigationController?.navigationBar.frame.height)!))
         
         self.adSCView = UIScrollView()
         self.adSCView.delegate = self
@@ -247,8 +257,11 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
         self.newsView.register(nibVedio, forCellReuseIdentifier: "vediocell")
         self.newsView.register(nibText, forCellReuseIdentifier: "textcell")
         
-        self.newsView.estimatedRowHeight = 30
-        self.newsView.rowHeight = UITableViewAutomaticDimension
+//        self.newsView.estimatedRowHeight = 60
+//        self.newsView.rowHeight = UITableViewAutomaticDimension
+//        
+      self.newsView.separatorStyle = .none
+   
         
       btn1 = UIButton(frame: CGRect(x: 0.0, y: UIApplication.shared.statusBarFrame.height + (self.navigationController?.navigationBar.frame.height)!, width: UIScreen.main.bounds.width / 3.0, height: 30))
       btn1.setTitle("中央精神", for: .normal)
@@ -344,26 +357,107 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
         let vedioCell = tableView.dequeueReusableCell(withIdentifier: "vediocell", for: indexPath) as! VedioTableViewCell
         let textCell = tableView.dequeueReusableCell(withIdentifier: "textcell", for: indexPath) as! TextTableViewCell
         
+        if self.cellKind.count == 0 {
+            return textCell
+        }else {
+       
         
-        return imageCell
+        if self.cellKind[indexPath.row] == "t" {
+            textCell.textLabel?.text = self.newsTitle[indexPath.row]
+            textCell.textLabel?.numberOfLines = 0
+            textCell.textLabel?.preferredMaxLayoutWidth = tableView.bounds.width
+            return textCell
+            
+        }else if self.cellKind[indexPath.row] == "i"{
+            imageCell.myImageLabel.text = self.newsTitle[indexPath.row]
+            imageCell.myImageLabel.numberOfLines = 0
+            imageCell.myImageLabel.lineBreakMode = .byWordWrapping
+            imageCell.myImageLabel.adjustsFontSizeToFitWidth = true
+            imageCell.myImageView?.kf.setImage(with: ImageResource.init(downloadURL: self.newsImage[indexPath.row]),placeholder: UIImage(named:"默认图片"), options: nil, progressBlock: nil, completionHandler: nil)
+            
+            //重要：使CELL点击后图片不会突然变大
+            imageCell.selectionStyle = .none
+           
+            return imageCell
+            
+        }else {
+            vedioCell.vedioTitle.text = self.newsTitle[indexPath.row]
+            vedioCell.vedioTitle.numberOfLines = 0
+            vedioCell.vedioTitle.lineBreakMode = .byWordWrapping
+            vedioCell.selectionStyle = .none
+            return vedioCell
+        }
         
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         
+        if self.cellKind.count == 0 {
+            return 30.0
+        }else {
+        
+        if self.cellKind[indexPath.row] == "t" {
+            
+            let textCell = tableView.dequeueReusableCell(withIdentifier: "textcell", for: indexPath) as! TextTableViewCell
+          
+            return textCell.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height + 1
+            
+        }else if self.cellKind[indexPath.row] == "i"{
+           let imageCell = tableView.dequeueReusableCell(withIdentifier: "imagecell", for: indexPath) as! ImageTableViewCell
+            
+            return imageCell.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height + 1
+            
+        }else {
+             let vedioCell = tableView.dequeueReusableCell(withIdentifier: "vediocell", for: indexPath) as! VedioTableViewCell
+            return vedioCell.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height + 1
+        }
+    }
+
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+       return UITableViewAutomaticDimension
+     
+
     }
     
+ 
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedKind = self.cellKind[indexPath.row]
+        
+        switch selectedKind {
+        case "t":
+            textNewsDetail.newsTitle = self.newsTitle[indexPath.row]
+            textNewsDetail.newsContent = self.newsContents[indexPath.row]
+        
+            self.navigationController?.pushViewController(textNewsDetail , animated: true)
+        case "i":
+            imageNewsDetail.newsTitle = self.newsTitle[indexPath.row]
+            imageNewsDetail.newsContent = self.newsContents[indexPath.row]
+            imageNewsDetail.newsImageUrl = self.newsImage[indexPath.row]
+            self.navigationController?.pushViewController(imageNewsDetail, animated: true)
+        default:
+            vedioNewsDetail.myTitle = self.newsTitle[indexPath.row]
+            vedioNewsDetail.myURL = self.newsVedio[indexPath.row] 
+            self.navigationController?.pushViewController(vedioNewsDetail, animated: true)
+        }
+        
+        
+    }
+   
+   
+    
+
     func timerHanle(){
         if self.dataList.count == 0 {
             self.adSCView.isScrollEnabled = false
         }else{
         
         self.adSCView?.setContentOffset(CGPoint(x: self.adSCView!.contentOffset.x + self.view.frame.size.width, y: 0), animated: true)
-        self.pageControl.currentPage = Int(self.adSCView.contentOffset.x / self.view.frame.width) + 1
+        self.pageControl?.currentPage = Int(self.adSCView.contentOffset.x / self.view.frame.width) + 1
         }
         
     }
@@ -375,12 +469,24 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
         if point.x == -self.view.frame.size.width {
             
             scrollView.setContentOffset(CGPoint(x: scrollView.contentSize.width - self.view.frame.size.width, y: 0), animated: false)
-            self.pageControl.currentPage = self.dataList.count
+            self.pageControl?.currentPage = self.dataList.count
             
         }else if point.x == scrollView.contentSize.width {
             
             scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
-            self.pageControl.currentPage = 0
+            self.pageControl?.currentPage = 0
+            
+        }
+        
+        //当向下拉动时影藏pagecontrol
+        
+        if  scrollView == self.newsView {
+            let y = scrollView.contentOffset.y
+            if y != 0 {
+                self.pageControl?.isHidden = true
+            }else {
+                self.pageControl?.isHidden = false
+            }
             
         }
 
@@ -389,15 +495,12 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
     //MARK: 实现手动滚动视图，之后重新执行定时器
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        self.timer.invalidate()
+        self.timer?.invalidate()
 
         
     }
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        
-        
-        
-        
+    
          self.timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.timerHanle), userInfo: nil, repeats: true)
      
     }
@@ -405,11 +508,13 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if velocity.x > 0.0 {
           
-            self.pageControl.currentPage += 1
+            self.pageControl?.currentPage += 1
         }else{
         
-            self.pageControl.currentPage -= 1
+            self.pageControl?.currentPage -= 1
         }
+        
+    
     }
 
    

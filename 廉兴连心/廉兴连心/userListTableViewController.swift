@@ -36,6 +36,20 @@ class userListTableViewController: UITableViewController {
     
     var totalScore:Int?
     
+    @IBAction func login(_ sender: UIButton) {
+        let usr = BmobUser.current()
+        
+        if usr == nil {
+            
+           present(logInViewController(), animated: true, completion: nil)
+        }else {
+            let alert  = UIAlertController(title: "提示", message: "您已登录", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }
+
+    }
     
     
     @IBAction func turnSetting(_ sender: UITapGestureRecognizer) {
@@ -145,6 +159,8 @@ class userListTableViewController: UITableViewController {
         BmobUser.logout()
         alarmArrayIsNotNull = false
         noticeArrayIsNotNull = false
+        present((storyboard?.instantiateViewController(withIdentifier: "SWRevealViewController"))!, animated: true, completion: nil)
+        
    
     }
     

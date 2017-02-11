@@ -9,13 +9,39 @@
 import UIKit
 
 class logInViewController: UIViewController , UITextFieldDelegate{
+    let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
+   
+   
 
     @IBOutlet weak var usrName: UITextField!
     
     @IBOutlet weak var passWord: UITextField!
     
-    
+    @IBAction func signIn(_ sender: UIButton) {
+        let usr = BmobUser.current()
+        
+        if usr == nil {
+             self.present(self.myStoryboard.instantiateViewController(withIdentifier: "signup"), animated: true, completion: nil)
+        }else {
+            let alert  = UIAlertController(title: "提示", message: "您已登录", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+
+       
+    }
+
+    @IBAction func forgetPassword(_ sender: UIButton) {
+        self.present(self.myStoryboard.instantiateViewController(withIdentifier: "forget"), animated: true, completion: nil)
+        
+    }
  
+    @IBAction func goBack(_ sender: UIButton) {
+         self.present((self.myStoryboard.instantiateViewController(withIdentifier: "SWRevealViewController")), animated: true, completion: nil)
+        
+    }
     
     @IBAction func logIn(_ sender: UIButton) {
         if (usrName.text == "" || passWord.text == "") {
@@ -27,9 +53,10 @@ class logInViewController: UIViewController , UITextFieldDelegate{
         } else {
            BmobUser.loginInbackground(withAccount: usrName.text, andPassword: passWord.text, block: { (user, error) in
             if user != nil {
+               
                 let alart = UIAlertController(title: "提示", message: "登录成功", preferredStyle: .alert)
                 let ok = UIAlertAction(title: "好", style: .default, handler: {(ok)->Void in
-                     _ = self.navigationController?.popToRootViewController(animated: true)                })
+                 self.present((self.myStoryboard.instantiateViewController(withIdentifier: "SWRevealViewController")), animated: true, completion: nil)               })
                 alart.addAction(ok)
                 self.present(alart, animated: true, completion: nil)
               
@@ -91,19 +118,20 @@ class logInViewController: UIViewController , UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-               self.navigationItem.title = "登录"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "忘记密码", style: .plain, target: self , action: #selector(self.forget))
+              
+      
        
         usrName.delegate = self
         passWord.delegate = self
+        
+     
     }
 
-    func forget() {
+   
       
-        self.navigationController?.pushViewController(fogetPwdViewController(), animated: true)
-        
-        
-    }
+    
+    
+  
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

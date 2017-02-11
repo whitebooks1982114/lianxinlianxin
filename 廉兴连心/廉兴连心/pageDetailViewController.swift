@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class pageDetailViewController: UIViewController, UIScrollViewDelegate {
    
@@ -94,6 +95,7 @@ class pageDetailViewController: UIViewController, UIScrollViewDelegate {
         main?.add(query1)
         main?.add(query2)
         main?.andOperation()
+        var myUrl:URL?
         main?.findObjectsInBackground({ (array, error) in
             if error != nil {
                 print("\(error?.localizedDescription)")
@@ -102,15 +104,14 @@ class pageDetailViewController: UIViewController, UIScrollViewDelegate {
                 for obj in array! {
                     let myObject = obj as! BmobObject
                     let myFile = myObject.object(forKey: "works") as! BmobFile
-                    let myUrl = NSURL(string: myFile.url)
-                    DispatchQueue.main.async {
-                        let myData = NSData(contentsOf: myUrl as! URL)
-                        let myImage = UIImage(data: myData as! Data)
-                        self.myImageView.image = myImage
-                       
-                    }
+                    myUrl = URL(string: myFile.url)
                 }
             }
+            DispatchQueue.main.async {
+               self.myImageView.kf.setImage(with: ImageResource.init(downloadURL: myUrl!), placeholder: UIImage(named:"默认图片"), options: nil, progressBlock: nil, completionHandler: nil)
+                
+            }
+
         })
     }
     

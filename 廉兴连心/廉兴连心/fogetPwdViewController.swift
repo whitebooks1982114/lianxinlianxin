@@ -11,7 +11,7 @@ import UIKit
 class fogetPwdViewController: UIViewController ,UITextFieldDelegate {
     
     @IBOutlet weak var email: UITextField!
-    
+ 
     @IBAction func send(_ sender: UIButton) {
         if email.text == "" {
             let alart = UIAlertController(title: "温馨提示", message: "请输入电子邮箱地址", preferredStyle: .alert)
@@ -20,10 +20,16 @@ class fogetPwdViewController: UIViewController ,UITextFieldDelegate {
             self.present(alart, animated: true, completion: nil)
         }else {
             BmobUser.requestPasswordResetInBackground(withEmail: email.text)
+            self.present((self.myStoryboard.instantiateViewController(withIdentifier: "SWRevealViewController")), animated: true, completion: nil)
         }
         
-        
+
     }
+    
+    
+    let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
@@ -44,7 +50,7 @@ class fogetPwdViewController: UIViewController ,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "重置密码"
+       
         
         email.delegate = self
     }

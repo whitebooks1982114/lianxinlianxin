@@ -39,54 +39,22 @@ class lianxinlianxinViewController: UIViewController {
 
     @IBOutlet weak var usrmenu: UIBarButtonItem!
     
-    @IBOutlet weak var brandIntro: UILabel!
+   
     
-    @IBAction func signUp(_ sender: UIButton) {
-        
-        let usr = BmobUser.current()
-        
-        if usr == nil {
-       
-        self.navigationController?.pushViewController(signUpViewController(), animated: true)
-        }else {
-            let alert  = UIAlertController(title: "提示", message: "您已登录", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
-            alert.addAction(ok)
-            self.present(alert, animated: true, completion: nil)
-            
-        }
-        
-        
-    }
-    @IBAction func logIn(_ sender: UIButton) {
-        let usr = BmobUser.current()
-        
-        if usr == nil {
-        
-        self.navigationController?.pushViewController(logInViewController(), animated: true)
-        }else {
-        let alert  = UIAlertController(title: "提示", message: "您已登录", preferredStyle: .alert)
-        let ok = UIAlertAction(title: "好", style: .default, handler: nil)
-        alert.addAction(ok)
-        self.present(alert, animated: true, completion: nil)
-        }
-    }
-    override func viewDidLoad() {
+   
+       override func viewDidLoad() {
         super.viewDidLoad()
         if self.revealViewController() != nil {
             self.revealViewController().rearViewRevealWidth = 310
             self.revealViewController().toggleAnimationDuration = 0.5
             
-            
+           
             self.usrmenu.target = self.revealViewController()
             
             self.usrmenu.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             
-                //自适应宽度
-            self.brandIntro.adjustsFontSizeToFitWidth = true
-            
-           let path = Bundle.main.path(forResource: "提醒音效", ofType: "mp3")
+            let path = Bundle.main.path(forResource: "提醒音效", ofType: "mp3")
             myUrl = URL(fileURLWithPath: path!)
       
         }

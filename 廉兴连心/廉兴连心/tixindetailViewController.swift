@@ -30,6 +30,7 @@ class tixindetailViewController: UIViewController {
         super.viewDidLoad()
 
         self.navigationItem.title = "提醒内容"
+        self.myAlarmContent.backgroundColor = UIColor.clear
           }
 
     override func didReceiveMemoryWarning() {

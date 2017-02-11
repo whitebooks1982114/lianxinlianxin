@@ -11,6 +11,11 @@
 		A606BEE21DEEEB3D0094F8B6 /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A606BEE01DEEEB3D0094F8B6 /* settingsViewController.swift */; };
 		A606BEE31DEEEB3D0094F8B6 /* settingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A606BEE11DEEEB3D0094F8B6 /* settingsViewController.xib */; };
 		A611C3D81DE0610800C0C889 /* addNoticeAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A611C3D71DE0610800C0C889 /* addNoticeAlarmViewController.swift */; };
+		A612872A1E42051B00EA42C4 /* jcore-ios-1.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A61287271E42051B00EA42C4 /* jcore-ios-1.1.0.a */; };
+		A612872B1E42051B00EA42C4 /* jpush-ios-3.0.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A61287281E42051B00EA42C4 /* jpush-ios-3.0.1.a */; };
+		A612872D1E42054E00EA42C4 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A612872C1E42054E00EA42C4 /* CoreFoundation.framework */; };
+		A612872F1E42057500EA42C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A612872E1E42057500EA42C4 /* UIKit.framework */; };
+		A61287311E4205B200EA42C4 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A61287301E4205B200EA42C4 /* libresolv.tbd */; };
 		A61685301DCE9AB700210D12 /* aboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A616852E1DCE9AB700210D12 /* aboutUsViewController.swift */; };
 		A61685311DCE9AB700210D12 /* aboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A616852F1DCE9AB700210D12 /* aboutUsViewController.xib */; };
 		A61A5B451E1753F2005A7077 /* mediaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61A5B441E1753F2005A7077 /* mediaCollectionViewController.swift */; };
@@ -22,11 +27,14 @@
 		A62F736B1E0E6D4E002EEC5D /* ExchangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A62F73691E0E6D4E002EEC5D /* ExchangeViewController.xib */; };
 		A62F9E3A1DDD2B7400491D40 /* tixinTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F9E391DDD2B7400491D40 /* tixinTableViewController.swift */; };
 		A62F9E3C1DDD2B8200491D40 /* tongziTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F9E3B1DDD2B8200491D40 /* tongziTableViewController.swift */; };
-		A62F9E3E1DDD2B8E00491D40 /* dongtaiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F9E3D1DDD2B8E00491D40 /* dongtaiTableViewController.swift */; };
 		A64233271DF2DCC00011BD41 /* masterPieceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64233261DF2DCC00011BD41 /* masterPieceViewController.swift */; };
 		A64233291DF2F5AC0011BD41 /* myCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64233281DF2F5AC0011BD41 /* myCellCollectionViewCell.swift */; };
 		A642332B1DF2F9170011BD41 /* myHeadCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642332A1DF2F9170011BD41 /* myHeadCollectionReusableView.swift */; };
 		A644669A1DD2BFCC008CB465 /* department.plist in Resources */ = {isa = PBXBuildFile; fileRef = A64466991DD2BFCC008CB465 /* department.plist */; };
+		A65381FD1E3F20C500612525 /* TextNewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65381FB1E3F20C500612525 /* TextNewsDetailViewController.swift */; };
+		A65381FE1E3F20C500612525 /* TextNewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A65381FC1E3F20C500612525 /* TextNewsDetailViewController.xib */; };
+		A65382011E3F217200612525 /* imageNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65381FF1E3F217200612525 /* imageNewsViewController.swift */; };
+		A65382021E3F217200612525 /* imageNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A65382001E3F217200612525 /* imageNewsViewController.xib */; };
 		A6772BF71DCC4D7700425322 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6772BF61DCC4D7700425322 /* AppDelegate.swift */; };
 		A6772BFF1DCC4D7700425322 /* ____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6772BFD1DCC4D7700425322 /* ____.xcdatamodeld */; };
 		A6772C011DCC4D7700425322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6772C001DCC4D7700425322 /* Assets.xcassets */; };
@@ -55,13 +63,9 @@
 		A6772C7A1DCC5EC800425322 /* userListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6772C781DCC5EC800425322 /* userListTableViewController.swift */; };
 		A6772C891DCC700B00425322 /* myTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6772C881DCC700B00425322 /* myTabViewController.swift */; };
 		A677CA621DD029A7008ECF71 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677CA601DD029A7008ECF71 /* signUpViewController.swift */; };
-		A677CA631DD029A7008ECF71 /* signUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A677CA611DD029A7008ECF71 /* signUpViewController.xib */; };
 		A677CA671DD031EC008ECF71 /* logInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677CA651DD031EC008ECF71 /* logInViewController.swift */; };
 		A677CA681DD031EC008ECF71 /* logInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A677CA661DD031EC008ECF71 /* logInViewController.xib */; };
 		A677CA6D1DD04AB3008ECF71 /* fogetPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677CA6B1DD04AB3008ECF71 /* fogetPwdViewController.swift */; };
-		A677CA6E1DD04AB3008ECF71 /* fogetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A677CA6C1DD04AB3008ECF71 /* fogetPwdViewController.xib */; };
-		A67FCCA31E2379D80013CE50 /* libGeTuiSdk-1.5.3-noidfa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A67FCCA11E2379D80013CE50 /* libGeTuiSdk-1.5.3-noidfa.a */; };
-		A67FCCA41E2379D80013CE50 /* libGtExtensionSdk-1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A67FCCA21E2379D80013CE50 /* libGtExtensionSdk-1.0.0.a */; };
 		A67FCCA61E237A0F0013CE50 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A67FCCA51E237A0F0013CE50 /* libz.tbd */; };
 		A67FCCA81E237A180013CE50 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A67FCCA71E237A180013CE50 /* libc++.tbd */; };
 		A67FCCAA1E237A530013CE50 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67FCCA91E237A530013CE50 /* JavaScriptCore.framework */; };
@@ -70,6 +74,7 @@
 		A6996D701DD5E06800C5E1A1 /* resultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6996D6E1DD5E06800C5E1A1 /* resultViewController.xib */; };
 		A6996D731DD5E7A700C5E1A1 /* contributionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6996D711DD5E7A700C5E1A1 /* contributionInfoViewController.swift */; };
 		A6996D741DD5E7A700C5E1A1 /* contributionInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6996D721DD5E7A700C5E1A1 /* contributionInfoViewController.xib */; };
+		A699CA821E405B880096DF3A /* VedioNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A699CA811E405B880096DF3A /* VedioNewsViewController.swift */; };
 		A6B08A451DDD9B87009E66C6 /* tixindetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B08A431DDD9B87009E66C6 /* tixindetailViewController.swift */; };
 		A6B08A461DDD9B87009E66C6 /* tixindetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6B08A441DDD9B87009E66C6 /* tixindetailViewController.xib */; };
 		A6B2FB641E3B9A2000F46FB5 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6B2FB611E3B985800F46FB5 /* Kingfisher.framework */; };
@@ -95,8 +100,6 @@
 		A6E8B4AB1DD196AD0093F597 /* userInfoChangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E8B4A91DD196AD0093F597 /* userInfoChangeViewController.xib */; };
 		A6EC66201DDE7DF700D71B0A /* noticedetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EC661E1DDE7DF700D71B0A /* noticedetailViewController.swift */; };
 		A6EC66211DDE7DF700D71B0A /* noticedetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EC661F1DDE7DF700D71B0A /* noticedetailViewController.xib */; };
-		A6EC66261DDE7FF100D71B0A /* newsdetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EC66241DDE7FF100D71B0A /* newsdetailViewController.swift */; };
-		A6EC66271DDE7FF100D71B0A /* newsdetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EC66251DDE7FF100D71B0A /* newsdetailViewController.xib */; };
 		A6EF662F1DEDA110008E72BC /* 提醒音效.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A6EF662E1DEDA110008E72BC /* 提醒音效.mp3 */; };
 		A6F037AD1DF246CB007E1A2B /* adminDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F037AB1DF246CB007E1A2B /* adminDetailViewController.swift */; };
 		A6F037AE1DF246CB007E1A2B /* adminDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6F037AC1DF246CB007E1A2B /* adminDetailViewController.xib */; };
@@ -140,6 +143,12 @@
 		A606BEE01DEEEB3D0094F8B6 /* settingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
 		A606BEE11DEEEB3D0094F8B6 /* settingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = settingsViewController.xib; sourceTree = "<group>"; };
 		A611C3D71DE0610800C0C889 /* addNoticeAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addNoticeAlarmViewController.swift; sourceTree = "<group>"; };
+		A61287271E42051B00EA42C4 /* jcore-ios-1.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.0.a"; sourceTree = "<group>"; };
+		A61287281E42051B00EA42C4 /* jpush-ios-3.0.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.1.a"; sourceTree = "<group>"; };
+		A61287291E42051B00EA42C4 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		A612872C1E42054E00EA42C4 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		A612872E1E42057500EA42C4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A61287301E4205B200EA42C4 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		A616852E1DCE9AB700210D12 /* aboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aboutUsViewController.swift; sourceTree = "<group>"; };
 		A616852F1DCE9AB700210D12 /* aboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = aboutUsViewController.xib; sourceTree = "<group>"; };
 		A61A5B441E1753F2005A7077 /* mediaCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mediaCollectionViewController.swift; sourceTree = "<group>"; };
@@ -151,11 +160,14 @@
 		A62F73691E0E6D4E002EEC5D /* ExchangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchangeViewController.xib; sourceTree = "<group>"; };
 		A62F9E391DDD2B7400491D40 /* tixinTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tixinTableViewController.swift; sourceTree = "<group>"; };
 		A62F9E3B1DDD2B8200491D40 /* tongziTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tongziTableViewController.swift; sourceTree = "<group>"; };
-		A62F9E3D1DDD2B8E00491D40 /* dongtaiTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dongtaiTableViewController.swift; sourceTree = "<group>"; };
 		A64233261DF2DCC00011BD41 /* masterPieceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = masterPieceViewController.swift; sourceTree = "<group>"; };
 		A64233281DF2F5AC0011BD41 /* myCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		A642332A1DF2F9170011BD41 /* myHeadCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myHeadCollectionReusableView.swift; sourceTree = "<group>"; };
 		A64466991DD2BFCC008CB465 /* department.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = department.plist; sourceTree = "<group>"; };
+		A65381FB1E3F20C500612525 /* TextNewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextNewsDetailViewController.swift; sourceTree = "<group>"; };
+		A65381FC1E3F20C500612525 /* TextNewsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextNewsDetailViewController.xib; sourceTree = "<group>"; };
+		A65381FF1E3F217200612525 /* imageNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageNewsViewController.swift; sourceTree = "<group>"; };
+		A65382001E3F217200612525 /* imageNewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = imageNewsViewController.xib; sourceTree = "<group>"; };
 		A6772BF31DCC4D7700425322 /* 廉兴连心.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "廉兴连心.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6772BF61DCC4D7700425322 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6772BFE1DCC4D7700425322 /* ____.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "____.xcdatamodel"; sourceTree = "<group>"; };
@@ -189,15 +201,9 @@
 		A6772C781DCC5EC800425322 /* userListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userListTableViewController.swift; sourceTree = "<group>"; };
 		A6772C881DCC700B00425322 /* myTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myTabViewController.swift; sourceTree = "<group>"; };
 		A677CA601DD029A7008ECF71 /* signUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
-		A677CA611DD029A7008ECF71 /* signUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = signUpViewController.xib; sourceTree = "<group>"; };
 		A677CA651DD031EC008ECF71 /* logInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = logInViewController.swift; sourceTree = "<group>"; };
 		A677CA661DD031EC008ECF71 /* logInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = logInViewController.xib; sourceTree = "<group>"; };
 		A677CA6B1DD04AB3008ECF71 /* fogetPwdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fogetPwdViewController.swift; sourceTree = "<group>"; };
-		A677CA6C1DD04AB3008ECF71 /* fogetPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = fogetPwdViewController.xib; sourceTree = "<group>"; };
-		A67FCC9F1E2379D80013CE50 /* GeTuiExtSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeTuiExtSdk.h; sourceTree = "<group>"; };
-		A67FCCA01E2379D80013CE50 /* GeTuiSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeTuiSdk.h; sourceTree = "<group>"; };
-		A67FCCA11E2379D80013CE50 /* libGeTuiSdk-1.5.3-noidfa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGeTuiSdk-1.5.3-noidfa.a"; sourceTree = "<group>"; };
-		A67FCCA21E2379D80013CE50 /* libGtExtensionSdk-1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGtExtensionSdk-1.0.0.a"; sourceTree = "<group>"; };
 		A67FCCA51E237A0F0013CE50 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A67FCCA71E237A180013CE50 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		A67FCCA91E237A530013CE50 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -206,6 +212,7 @@
 		A6996D6E1DD5E06800C5E1A1 /* resultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = resultViewController.xib; sourceTree = "<group>"; };
 		A6996D711DD5E7A700C5E1A1 /* contributionInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contributionInfoViewController.swift; sourceTree = "<group>"; };
 		A6996D721DD5E7A700C5E1A1 /* contributionInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = contributionInfoViewController.xib; sourceTree = "<group>"; };
+		A699CA811E405B880096DF3A /* VedioNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VedioNewsViewController.swift; sourceTree = "<group>"; };
 		A6B08A431DDD9B87009E66C6 /* tixindetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tixindetailViewController.swift; sourceTree = "<group>"; };
 		A6B08A441DDD9B87009E66C6 /* tixindetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = tixindetailViewController.xib; sourceTree = "<group>"; };
 		A6B2FB611E3B985800F46FB5 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
@@ -232,8 +239,6 @@
 		A6E8B4A91DD196AD0093F597 /* userInfoChangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = userInfoChangeViewController.xib; sourceTree = "<group>"; };
 		A6EC661E1DDE7DF700D71B0A /* noticedetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = noticedetailViewController.swift; sourceTree = "<group>"; };
 		A6EC661F1DDE7DF700D71B0A /* noticedetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = noticedetailViewController.xib; sourceTree = "<group>"; };
-		A6EC66241DDE7FF100D71B0A /* newsdetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsdetailViewController.swift; sourceTree = "<group>"; };
-		A6EC66251DDE7FF100D71B0A /* newsdetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = newsdetailViewController.xib; sourceTree = "<group>"; };
 		A6EF662E1DEDA110008E72BC /* 提醒音效.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "提醒音效.mp3"; sourceTree = "<group>"; };
 		A6F037AB1DF246CB007E1A2B /* adminDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = adminDetailViewController.swift; sourceTree = "<group>"; };
 		A6F037AC1DF246CB007E1A2B /* adminDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = adminDetailViewController.xib; sourceTree = "<group>"; };
@@ -256,6 +261,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A61287311E4205B200EA42C4 /* libresolv.tbd in Frameworks */,
+				A612872F1E42057500EA42C4 /* UIKit.framework in Frameworks */,
+				A612872D1E42054E00EA42C4 /* CoreFoundation.framework in Frameworks */,
 				A6B2FB641E3B9A2000F46FB5 /* Kingfisher.framework in Frameworks */,
 				A67FCCAC1E237A660013CE50 /* UserNotifications.framework in Frameworks */,
 				A67FCCAA1E237A530013CE50 /* JavaScriptCore.framework in Frameworks */,
@@ -264,17 +272,17 @@
 				A6772C4C1DCC4F0700425322 /* libsqlite3.tbd in Frameworks */,
 				A6772C4A1DCC4EFE00425322 /* libicucore.tbd in Frameworks */,
 				A6772C481DCC4EF400425322 /* libz.1.2.5.tbd in Frameworks */,
-				A67FCCA41E2379D80013CE50 /* libGtExtensionSdk-1.0.0.a in Frameworks */,
 				A6772C461DCC4EE400425322 /* MediaPlayer.framework in Frameworks */,
 				A6772C441DCC4EDD00425322 /* AVFoundation.framework in Frameworks */,
 				A6772C421DCC4ED700425322 /* SystemConfiguration.framework in Frameworks */,
 				A6772C401DCC4ECF00425322 /* CoreTelephony.framework in Frameworks */,
+				A612872B1E42051B00EA42C4 /* jpush-ios-3.0.1.a in Frameworks */,
 				A6772C3E1DCC4EC800425322 /* CFNetwork.framework in Frameworks */,
 				A6772C3C1DCC4EC200425322 /* MobileCoreServices.framework in Frameworks */,
 				A6772C3A1DCC4EBA00425322 /* CoreGraphics.framework in Frameworks */,
+				A612872A1E42051B00EA42C4 /* jcore-ios-1.1.0.a in Frameworks */,
 				A6772C381DCC4EB200425322 /* Security.framework in Frameworks */,
 				A6772C361DCC4EAA00425322 /* CoreLocation.framework in Frameworks */,
-				A67FCCA31E2379D80013CE50 /* libGeTuiSdk-1.5.3-noidfa.a in Frameworks */,
 				A6772C341DCC4EA000425322 /* Foundation.framework in Frameworks */,
 				A6772C2D1DCC4E3400425322 /* BmobSDK.framework in Frameworks */,
 			);
@@ -297,6 +305,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A61287261E42051B00EA42C4 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				A61287271E42051B00EA42C4 /* jcore-ios-1.1.0.a */,
+				A61287281E42051B00EA42C4 /* jpush-ios-3.0.1.a */,
+				A61287291E42051B00EA42C4 /* JPUSHService.h */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
 		A62F73651E0E3A35002EEC5D /* 举报信箱 */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,15 +335,12 @@
 			children = (
 				A6772C601DCC5CF800425322 /* liantixinViewController.swift */,
 				A62F9E391DDD2B7400491D40 /* tixinTableViewController.swift */,
-				A62F9E3D1DDD2B8E00491D40 /* dongtaiTableViewController.swift */,
 				A62F9E3B1DDD2B8200491D40 /* tongziTableViewController.swift */,
 				A611C3D71DE0610800C0C889 /* addNoticeAlarmViewController.swift */,
 				A6B7BCE71DF1ACBD001ACD10 /* adminDirTableViewController.swift */,
 				A6F037AB1DF246CB007E1A2B /* adminDetailViewController.swift */,
 				A6F037AC1DF246CB007E1A2B /* adminDetailViewController.xib */,
 				A6B08A431DDD9B87009E66C6 /* tixindetailViewController.swift */,
-				A6EC66241DDE7FF100D71B0A /* newsdetailViewController.swift */,
-				A6EC66251DDE7FF100D71B0A /* newsdetailViewController.xib */,
 				A6EC661E1DDE7DF700D71B0A /* noticedetailViewController.swift */,
 				A6EC661F1DDE7DF700D71B0A /* noticedetailViewController.xib */,
 				A6B08A441DDD9B87009E66C6 /* tixindetailViewController.xib */,
@@ -336,6 +351,11 @@
 				A6F27AD41E3A424A00E9C3A6 /* VedioTableViewCell.xib */,
 				A6F27AD71E3A425500E9C3A6 /* TextTableViewCell.swift */,
 				A6F27AD81E3A425500E9C3A6 /* TextTableViewCell.xib */,
+				A65381FB1E3F20C500612525 /* TextNewsDetailViewController.swift */,
+				A65381FC1E3F20C500612525 /* TextNewsDetailViewController.xib */,
+				A65381FF1E3F217200612525 /* imageNewsViewController.swift */,
+				A65382001E3F217200612525 /* imageNewsViewController.xib */,
+				A699CA811E405B880096DF3A /* VedioNewsViewController.swift */,
 			);
 			name = "动态提醒";
 			sourceTree = "<group>";
@@ -354,7 +374,7 @@
 		A6772BEA1DCC4D7700425322 = {
 			isa = PBXGroup;
 			children = (
-				A67FCC9E1E2379D80013CE50 /* GtSdkLib-noidfa */,
+				A61287261E42051B00EA42C4 /* Lib */,
 				A6E558661DCDAB6D000C0161 /* 廉兴连心-Bridging-Header.h */,
 				A6F7BF8A1DCD6DB700402147 /* SWRevealViewController */,
 				A6772C271DCC4E3400425322 /* Bmob_SDK_iOS_v1.7.2 */,
@@ -417,6 +437,9 @@
 		A6772C321DCC4EA000425322 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A61287301E4205B200EA42C4 /* libresolv.tbd */,
+				A612872E1E42057500EA42C4 /* UIKit.framework */,
+				A612872C1E42054E00EA42C4 /* CoreFoundation.framework */,
 				A6B2FB611E3B985800F46FB5 /* Kingfisher.framework */,
 				A67FCCAB1E237A660013CE50 /* UserNotifications.framework */,
 				A67FCCA91E237A530013CE50 /* JavaScriptCore.framework */,
@@ -456,22 +479,9 @@
 				A6E8B4A91DD196AD0093F597 /* userInfoChangeViewController.xib */,
 				A677CA651DD031EC008ECF71 /* logInViewController.swift */,
 				A677CA6B1DD04AB3008ECF71 /* fogetPwdViewController.swift */,
-				A677CA6C1DD04AB3008ECF71 /* fogetPwdViewController.xib */,
 				A677CA661DD031EC008ECF71 /* logInViewController.xib */,
-				A677CA611DD029A7008ECF71 /* signUpViewController.xib */,
 			);
 			name = "login and signup";
-			sourceTree = "<group>";
-		};
-		A67FCC9E1E2379D80013CE50 /* GtSdkLib-noidfa */ = {
-			isa = PBXGroup;
-			children = (
-				A67FCC9F1E2379D80013CE50 /* GeTuiExtSdk.h */,
-				A67FCCA01E2379D80013CE50 /* GeTuiSdk.h */,
-				A67FCCA11E2379D80013CE50 /* libGeTuiSdk-1.5.3-noidfa.a */,
-				A67FCCA21E2379D80013CE50 /* libGtExtensionSdk-1.0.0.a */,
-			);
-			path = "GtSdkLib-noidfa";
 			sourceTree = "<group>";
 		};
 		A6BFFE801DD84A20004A781F /* 百科 */ = {
@@ -645,15 +655,15 @@
 			files = (
 				A6F037AE1DF246CB007E1A2B /* adminDetailViewController.xib in Resources */,
 				A6F27AD61E3A424A00E9C3A6 /* VedioTableViewCell.xib in Resources */,
+				A65381FE1E3F20C500612525 /* TextNewsDetailViewController.xib in Resources */,
 				A6DF603B1DFA50E8003AED3C /* Icon-57.png in Resources */,
 				A6DF60391DFA5062003AED3C /* Icon-60@3x.png in Resources */,
 				A6996D741DD5E7A700C5E1A1 /* contributionInfoViewController.xib in Resources */,
+				A65382021E3F217200612525 /* imageNewsViewController.xib in Resources */,
 				A6996D701DD5E06800C5E1A1 /* resultViewController.xib in Resources */,
 				A606BEE31DEEEB3D0094F8B6 /* settingsViewController.xib in Resources */,
 				A6772C041DCC4D7700425322 /* LaunchScreen.storyboard in Resources */,
 				A61685311DCE9AB700210D12 /* aboutUsViewController.xib in Resources */,
-				A6EC66271DDE7FF100D71B0A /* newsdetailViewController.xib in Resources */,
-				A677CA6E1DD04AB3008ECF71 /* fogetPwdViewController.xib in Resources */,
 				A6E8B4AB1DD196AD0093F597 /* userInfoChangeViewController.xib in Resources */,
 				A6D17AC21E0E1B7B00071C84 /* DetailSendContentViewController.xib in Resources */,
 				A6EF662F1DEDA110008E72BC /* 提醒音效.mp3 in Resources */,
@@ -665,7 +675,6 @@
 				A6F27AD21E3A423600E9C3A6 /* ImageTableViewCell.xib in Resources */,
 				A677CA681DD031EC008ECF71 /* logInViewController.xib in Resources */,
 				A6BFFE841DD8596C004A781F /* detailContenViewController.xib in Resources */,
-				A677CA631DD029A7008ECF71 /* signUpViewController.xib in Resources */,
 				A6D17AC61E0E1B9300071C84 /* DetailReplyContentViewController.xib in Resources */,
 				A62E06601E077EA000EF93F9 /* LOGO修改2.jpg in Resources */,
 				A644669A1DD2BFCC008CB465 /* department.plist in Resources */,
@@ -725,8 +734,8 @@
 				A6E8B4AA1DD196AD0093F597 /* userInfoChangeViewController.swift in Sources */,
 				A61685301DCE9AB700210D12 /* aboutUsViewController.swift in Sources */,
 				A6996D731DD5E7A700C5E1A1 /* contributionInfoViewController.swift in Sources */,
-				A62F9E3E1DDD2B8E00491D40 /* dongtaiTableViewController.swift in Sources */,
 				A6996D6F1DD5E06800C5E1A1 /* resultViewController.swift in Sources */,
+				A65381FD1E3F20C500612525 /* TextNewsDetailViewController.swift in Sources */,
 				A6D17ABC1E0E0E1500071C84 /* MailBoxTableViewController.swift in Sources */,
 				A6D17AC51E0E1B9300071C84 /* DetailReplyContentViewController.swift in Sources */,
 				A603A6531E162EB8000E28A0 /* mediaViewController.swift in Sources */,
@@ -760,7 +769,8 @@
 				A6D17AC11E0E1B7B00071C84 /* DetailSendContentViewController.swift in Sources */,
 				A6D17ABA1E0E05A800071C84 /* writeMailViewController.swift in Sources */,
 				A6EC66201DDE7DF700D71B0A /* noticedetailViewController.swift in Sources */,
-				A6EC66261DDE7FF100D71B0A /* newsdetailViewController.swift in Sources */,
+				A699CA821E405B880096DF3A /* VedioNewsViewController.swift in Sources */,
+				A65382011E3F217200612525 /* imageNewsViewController.swift in Sources */,
 				A6F7BF8D1DCD6DF700402147 /* SWRevealViewController.m in Sources */,
 				A6F27AD51E3A424A00E9C3A6 /* VedioTableViewCell.swift in Sources */,
 				A6F27AD91E3A425500E9C3A6 /* TextTableViewCell.swift in Sources */,
@@ -848,7 +858,6 @@
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/廉兴连心/Bmob_SDK_iOS_v1.7.2",
-					"$(PROJECT_DIR)/廉兴连心/PDChart-master",
 					"$(PROJECT_DIR)/廉兴连心/SWRevealViewController",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -906,7 +915,6 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/廉兴连心/Bmob_SDK_iOS_v1.7.2",
-					"$(PROJECT_DIR)/廉兴连心/PDChart-master",
 					"$(PROJECT_DIR)/廉兴连心/SWRevealViewController",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -936,7 +944,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/廉兴连心/Bmob_SDK_iOS_v1.7.2",
-					"$(PROJECT_DIR)/廉兴连心/PDChart-master",
 					"$(PROJECT_DIR)/廉兴连心/SWRevealViewController",
 					"$(PROJECT_DIR)/廉兴连心",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -947,6 +954,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GtSdkLib-noidfa",
+					"$(PROJECT_DIR)/Lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.whitebooks.LianXinLianXinLL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -970,7 +978,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/廉兴连心/Bmob_SDK_iOS_v1.7.2",
-					"$(PROJECT_DIR)/廉兴连心/PDChart-master",
 					"$(PROJECT_DIR)/廉兴连心/SWRevealViewController",
 					"$(PROJECT_DIR)/廉兴连心",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -981,6 +988,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GtSdkLib-noidfa",
+					"$(PROJECT_DIR)/Lib",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.whitebooks.LianXinLianXinLL;

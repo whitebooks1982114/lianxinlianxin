@@ -10,7 +10,10 @@ import UIKit
 
 class ImageTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var myImageView: UIImageView!
+  
 
+    @IBOutlet weak var myImageLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
