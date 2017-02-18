@@ -36,6 +36,7 @@ class userListTableViewController: UITableViewController {
     
     var totalScore:Int?
     
+    @IBOutlet weak var loginOutlet: UIButton!
     @IBAction func login(_ sender: UIButton) {
         let usr = BmobUser.current()
         
@@ -202,6 +203,10 @@ class userListTableViewController: UITableViewController {
         //设置圆角
         self.avatar?.layer.masksToBounds = true
         self.avatar?.layer.cornerRadius = 8
+        self.loginOutlet.layer.masksToBounds = true
+        self.loginOutlet.layer.cornerRadius = 4
+        self.signOutLet.layer.masksToBounds = true
+        self.signOutLet.layer.cornerRadius = 4
         
         self.username?.adjustsFontSizeToFitWidth = true
   

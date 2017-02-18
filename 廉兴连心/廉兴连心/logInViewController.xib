@@ -31,7 +31,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户名" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Epb-Ab-3jU">
-                    <rect key="frame" x="104" y="90" width="251" height="30"/>
+                    <rect key="frame" x="104" y="90" width="278" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="295-st-eBj"/>
                     </constraints>
@@ -40,7 +40,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sDM-KK-Zw9">
-                    <rect key="frame" x="104" y="170" width="251" height="30"/>
+                    <rect key="frame" x="104" y="170" width="278" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="5Ab-lD-rP3"/>
                     </constraints>
@@ -70,7 +70,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9Y-oQ-Mg2">
-                    <rect key="frame" x="281" y="379" width="74" height="34"/>
+                    <rect key="frame" x="308" y="379" width="74" height="34"/>
                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
                     <state key="normal" title="找回密码"/>
                     <connections>
@@ -115,7 +115,6 @@
                 <constraint firstItem="wYv-7j-ut2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="32" id="TA9-Vk-a47"/>
                 <constraint firstItem="qGi-ZF-f97" firstAttribute="leading" secondItem="aYr-bk-SgP" secondAttribute="trailing" constant="4" id="UUw-bg-MZv"/>
                 <constraint firstItem="8Az-U2-vFT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="127" id="XHr-8U-jMf"/>
-                <constraint firstAttribute="trailing" secondItem="Epb-Ab-3jU" secondAttribute="trailing" constant="59" id="aBa-x2-Q9k"/>
                 <constraint firstItem="sDM-KK-Zw9" firstAttribute="leading" secondItem="Epb-Ab-3jU" secondAttribute="leading" id="aMF-oe-plq"/>
                 <constraint firstItem="qGi-ZF-f97" firstAttribute="width" secondItem="8Az-U2-vFT" secondAttribute="width" id="bxZ-1W-EwA"/>
                 <constraint firstItem="sDM-KK-Zw9" firstAttribute="bottom" secondItem="Oua-vG-bO3" secondAttribute="bottom" id="c0E-zO-BLr"/>
@@ -123,6 +122,7 @@
                 <constraint firstAttribute="bottom" secondItem="brp-y7-tdJ" secondAttribute="bottom" id="dfH-Hm-2cr"/>
                 <constraint firstItem="wYv-7j-ut2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="fdY-Zk-xpp"/>
                 <constraint firstItem="T9Y-oQ-Mg2" firstAttribute="top" secondItem="aYr-bk-SgP" secondAttribute="top" id="hfW-6j-CMz"/>
+                <constraint firstAttribute="trailing" secondItem="T9Y-oQ-Mg2" secondAttribute="trailing" constant="32" id="nfB-SV-6Zk"/>
                 <constraint firstItem="qGi-ZF-f97" firstAttribute="centerY" secondItem="8Az-U2-vFT" secondAttribute="centerY" id="oP9-jq-AUw"/>
                 <constraint firstItem="aYr-bk-SgP" firstAttribute="top" secondItem="qGi-ZF-f97" secondAttribute="bottom" constant="34" id="tGl-aA-vDP"/>
                 <constraint firstItem="sDM-KK-Zw9" firstAttribute="top" secondItem="Epb-Ab-3jU" secondAttribute="bottom" constant="50" id="tIS-Re-Sh7"/>

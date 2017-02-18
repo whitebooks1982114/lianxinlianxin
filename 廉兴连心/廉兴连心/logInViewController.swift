@@ -56,6 +56,8 @@ class logInViewController: UIViewController , UITextFieldDelegate{
                
                 let alart = UIAlertController(title: "提示", message: "登录成功", preferredStyle: .alert)
                 let ok = UIAlertAction(title: "好", style: .default, handler: {(ok)->Void in
+                self.passWord.resignFirstResponder()
+                    self.usrName.resignFirstResponder()
                  self.present((self.myStoryboard.instantiateViewController(withIdentifier: "SWRevealViewController")), animated: true, completion: nil)               })
                 alart.addAction(ok)
                 self.present(alart, animated: true, completion: nil)

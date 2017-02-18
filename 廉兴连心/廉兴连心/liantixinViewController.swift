@@ -12,10 +12,9 @@ import UIKit
 class liantixinViewController: UIViewController  {
     @IBOutlet weak var usrmenu: UIBarButtonItem!
     
-    @IBOutlet weak var myView: UIView!
+    @IBOutlet weak var noticeImage: UIImageView!
     
-    @IBOutlet weak var newsView: UIView!
-    
+    @IBOutlet weak var alarmImage: UIImageView!
     
     @IBOutlet weak var noticeView: UIView!
     
@@ -49,13 +48,6 @@ class liantixinViewController: UIViewController  {
     
     @IBOutlet weak var alarmView: UIView!
     
-    @IBOutlet weak var noticeImage: UIImageView!
- 
-    @IBOutlet weak var alarmImage: UIImageView!
-    
-    @IBOutlet weak var newsImage: UIImageView!
-    
-    @IBOutlet weak var newsLable: UILabel!
     
     
     @IBOutlet weak var noticeLabel: UILabel!
@@ -66,12 +58,7 @@ class liantixinViewController: UIViewController  {
   
     let noticeDir = tongziTableViewController()
     let alarmDir = tixinTableViewController()
-    let dongTai = DongTaiViewController()
     
-    @IBAction func toNewsDetail(_ sender: UITapGestureRecognizer) {
-      
-        self.navigationController?.pushViewController(dongTai, animated: true)
-    }
     
     @IBAction func toNoticeDetail(_ sender: UITapGestureRecognizer) {
         
@@ -98,18 +85,6 @@ class liantixinViewController: UIViewController  {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             
             
-            self.newsImage.isHidden = true
-            self.noticeImage.isHidden = true
-            self.alarmImage.isHidden = true
-            
-            self.newsView.layer.masksToBounds = true
-            self.newsView.layer.cornerRadius = 16
-            
-            self.noticeView.layer.masksToBounds = true
-            self.noticeView.layer.cornerRadius = 16
-
-            self.alarmView.layer.masksToBounds = true
-            self.alarmView.layer.cornerRadius = 16
            
             
         }
@@ -127,66 +102,29 @@ class liantixinViewController: UIViewController  {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-     
-        let originNewsFrame = newsView.frame
-        let originNoticeFrame = noticeView.frame
-        let originAlarmFrame = alarmView.frame
-        
-        UIView.animate(withDuration: 2.0, animations: {
-            self.newsView.alpha = 1
-            self.newsView.frame.origin.y -= 400
-        })
-        UIView.animate(withDuration: 2.0, delay: 1.0, options: .allowAnimatedContent, animations: {
-            self.noticeView.alpha = 1
-            self.noticeView.frame.origin.y -= 400
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 2.0, delay: 2.0, options: .allowAnimatedContent, animations: {
-            self.alarmView.alpha = 1
-            self.alarmView.frame.origin.y -= 400
-            
-        }, completion: nil)
-        
-        newsView.frame = originNewsFrame
-        noticeView.frame = originNoticeFrame
-        alarmView.frame = originAlarmFrame
-        
-        
-        UIView.animate(withDuration: 2.0, delay: 2.0, options: [.repeat , .autoreverse], animations: {
-                self.newsLable.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-                self.noticeLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-                self.alarmLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-            self.newsLable.textColor = UIColor.cyan
-            self.noticeLabel.textColor = UIColor.orange
-            self.alarmLabel.textColor = UIColor.magenta
-        }, completion: nil)
+  
         
         if noticeArrayIsNotNull == true {
             
-            self.noticeImage.isHidden = false
+            self.noticeImage.image = #imageLiteral(resourceName: "newnotice")
+            self.noticeLabel.textColor = UIColor.red
         }else{
             
-            self.noticeImage.isHidden = true
+            self.noticeImage.image = #imageLiteral(resourceName: "notice")
+            self.noticeLabel.textColor = UIColor.black
         }
         
         if alarmArrayIsNotNull == true {
             
-            self.alarmImage.isHidden = false
+            self.alarmImage.image = #imageLiteral(resourceName: "newalarm")
+            self.alarmLabel.textColor = UIColor.red
         }else{
-            self.alarmImage.isHidden = true
+            self.alarmImage.image = #imageLiteral(resourceName: "alarm")
+            self.alarmLabel.textColor = UIColor.black
         }
-        
-        
-      
-       
-        
+
         
     }
     
-    
  
-    
-    
-  
-   
 }

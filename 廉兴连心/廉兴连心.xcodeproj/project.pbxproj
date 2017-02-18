@@ -56,7 +56,6 @@
 		A6772C481DCC4EF400425322 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A6772C471DCC4EF400425322 /* libz.1.2.5.tbd */; };
 		A6772C4A1DCC4EFE00425322 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A6772C491DCC4EFE00425322 /* libicucore.tbd */; };
 		A6772C4C1DCC4F0700425322 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A6772C4B1DCC4F0700425322 /* libsqlite3.tbd */; };
-		A6772C5D1DCC5CE600425322 /* lianxinlianxinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6772C5C1DCC5CE600425322 /* lianxinlianxinViewController.swift */; };
 		A6772C611DCC5CF800425322 /* liantixinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6772C601DCC5CF800425322 /* liantixinViewController.swift */; };
 		A6772C691DCC5D2E00425322 /* lianbaikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6772C681DCC5D2E00425322 /* lianbaikeViewController.swift */; };
 		A6772C6D1DCC5D3C00425322 /* lianchuangguanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6772C6C1DCC5D3C00425322 /* lianchuangguanViewController.swift */; };
@@ -194,7 +193,6 @@
 		A6772C4B1DCC4F0700425322 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		A6772C4E1DCC4F1C00425322 /* 廉兴连心Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "廉兴连心Tests-Bridging-Header.h"; sourceTree = "<group>"; };
 		A6772C4F1DCC4F1C00425322 /* 廉兴连心UITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "廉兴连心UITests-Bridging-Header.h"; sourceTree = "<group>"; };
-		A6772C5C1DCC5CE600425322 /* lianxinlianxinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lianxinlianxinViewController.swift; sourceTree = "<group>"; };
 		A6772C601DCC5CF800425322 /* liantixinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = liantixinViewController.swift; sourceTree = "<group>"; };
 		A6772C681DCC5D2E00425322 /* lianbaikeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lianbaikeViewController.swift; sourceTree = "<group>"; };
 		A6772C6C1DCC5D3C00425322 /* lianchuangguanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lianchuangguanViewController.swift; sourceTree = "<group>"; };
@@ -344,18 +342,6 @@
 				A6EC661E1DDE7DF700D71B0A /* noticedetailViewController.swift */,
 				A6EC661F1DDE7DF700D71B0A /* noticedetailViewController.xib */,
 				A6B08A441DDD9B87009E66C6 /* tixindetailViewController.xib */,
-				A6BF68761E3A0F62005269E9 /* DongTaiViewController.swift */,
-				A6F27ACF1E3A423600E9C3A6 /* ImageTableViewCell.swift */,
-				A6F27AD01E3A423600E9C3A6 /* ImageTableViewCell.xib */,
-				A6F27AD31E3A424A00E9C3A6 /* VedioTableViewCell.swift */,
-				A6F27AD41E3A424A00E9C3A6 /* VedioTableViewCell.xib */,
-				A6F27AD71E3A425500E9C3A6 /* TextTableViewCell.swift */,
-				A6F27AD81E3A425500E9C3A6 /* TextTableViewCell.xib */,
-				A65381FB1E3F20C500612525 /* TextNewsDetailViewController.swift */,
-				A65381FC1E3F20C500612525 /* TextNewsDetailViewController.xib */,
-				A65381FF1E3F217200612525 /* imageNewsViewController.swift */,
-				A65382001E3F217200612525 /* imageNewsViewController.xib */,
-				A699CA811E405B880096DF3A /* VedioNewsViewController.swift */,
 			);
 			name = "动态提醒";
 			sourceTree = "<group>";
@@ -399,6 +385,7 @@
 			children = (
 				A60009E51E1E0A1600357251 /* 廉兴连心.entitlements */,
 				A62F9E381DDD2B4000491D40 /* 动态提醒 */,
+				A6895C7B1E5047B800DF0997 /* 新闻首页 */,
 				A6BFFE801DD84A20004A781F /* 百科 */,
 				A6FE92021DD44931008CA618 /* 闯关 */,
 				A677CA641DD029AF008ECF71 /* login and signup */,
@@ -467,7 +454,6 @@
 			children = (
 				A616852E1DCE9AB700210D12 /* aboutUsViewController.swift */,
 				A616852F1DCE9AB700210D12 /* aboutUsViewController.xib */,
-				A6772C5C1DCC5CE600425322 /* lianxinlianxinViewController.swift */,
 				A677CA601DD029A7008ECF71 /* signUpViewController.swift */,
 				A6996D711DD5E7A700C5E1A1 /* contributionInfoViewController.swift */,
 				A62F73681E0E6D4E002EEC5D /* ExchangeViewController.swift */,
@@ -482,6 +468,25 @@
 				A677CA661DD031EC008ECF71 /* logInViewController.xib */,
 			);
 			name = "login and signup";
+			sourceTree = "<group>";
+		};
+		A6895C7B1E5047B800DF0997 /* 新闻首页 */ = {
+			isa = PBXGroup;
+			children = (
+				A6BF68761E3A0F62005269E9 /* DongTaiViewController.swift */,
+				A6F27ACF1E3A423600E9C3A6 /* ImageTableViewCell.swift */,
+				A6F27AD01E3A423600E9C3A6 /* ImageTableViewCell.xib */,
+				A6F27AD31E3A424A00E9C3A6 /* VedioTableViewCell.swift */,
+				A6F27AD41E3A424A00E9C3A6 /* VedioTableViewCell.xib */,
+				A6F27AD71E3A425500E9C3A6 /* TextTableViewCell.swift */,
+				A6F27AD81E3A425500E9C3A6 /* TextTableViewCell.xib */,
+				A65381FB1E3F20C500612525 /* TextNewsDetailViewController.swift */,
+				A65381FC1E3F20C500612525 /* TextNewsDetailViewController.xib */,
+				A65381FF1E3F217200612525 /* imageNewsViewController.swift */,
+				A65382001E3F217200612525 /* imageNewsViewController.xib */,
+				A699CA811E405B880096DF3A /* VedioNewsViewController.swift */,
+			);
+			name = "新闻首页";
 			sourceTree = "<group>";
 		};
 		A6BFFE801DD84A20004A781F /* 百科 */ = {
@@ -774,7 +779,6 @@
 				A6F7BF8D1DCD6DF700402147 /* SWRevealViewController.m in Sources */,
 				A6F27AD51E3A424A00E9C3A6 /* VedioTableViewCell.swift in Sources */,
 				A6F27AD91E3A425500E9C3A6 /* TextTableViewCell.swift in Sources */,
-				A6772C5D1DCC5CE600425322 /* lianxinlianxinViewController.swift in Sources */,
 				A62F736A1E0E6D4E002EEC5D /* ExchangeViewController.swift in Sources */,
 				A6BF68771E3A0F62005269E9 /* DongTaiViewController.swift in Sources */,
 				A64233271DF2DCC00011BD41 /* masterPieceViewController.swift in Sources */,

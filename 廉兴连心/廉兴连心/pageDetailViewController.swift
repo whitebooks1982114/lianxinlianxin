@@ -15,7 +15,7 @@ class pageDetailViewController: UIViewController, UIScrollViewDelegate {
     
     var selectedActivity: String?
     
-    var perface: String?
+   
     //最后一幅画得Index
     var lastOne = 0
     //判断加载图画方向
@@ -90,7 +90,7 @@ class pageDetailViewController: UIViewController, UIScrollViewDelegate {
         let query1 = BmobQuery(className: "works")
         let query2 = BmobQuery(className: "works")
         let main = BmobQuery(className: "works")
-        query1?.whereKey("activity", equalTo: selectedActivity)
+        query1?.whereKey("title", equalTo: selectedActivity)
         query2?.whereKey("index", equalTo: page)
         main?.add(query1)
         main?.add(query2)
@@ -105,6 +105,7 @@ class pageDetailViewController: UIViewController, UIScrollViewDelegate {
                     let myObject = obj as! BmobObject
                     let myFile = myObject.object(forKey: "works") as! BmobFile
                     myUrl = URL(string: myFile.url)
+                  
                 }
             }
             DispatchQueue.main.async {
@@ -114,7 +115,28 @@ class pageDetailViewController: UIViewController, UIScrollViewDelegate {
 
         })
     }
-    
+    func lastPageQuery() {
+        
+        let query1 = BmobQuery(className: "works")
+      
+        query1?.whereKey("title", equalTo: selectedActivity)
+        
+        query1?.countObjectsInBackground({ (count, error) in
+            if error != nil {
+                print("\(error?.localizedDescription)")
+            }else {
+                DispatchQueue.main.async {
+                      self.lastOne = Int(count) - 1
+                }
+              
+               
+            }
+      
+        })
+      
+     
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,16 +148,17 @@ class pageDetailViewController: UIViewController, UIScrollViewDelegate {
         myScroll.delegate = self
        //重要否则无法缩放图片
         myScroll.isUserInteractionEnabled = true
+  
+        lastPageQuery()
+        print(self.lastOne)
+        myQuery()
     }
     //此方法重要，否则无法缩放图片
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return myImageView
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-       myImageView.image = UIImage(named: perface!)
-    }
+  
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)

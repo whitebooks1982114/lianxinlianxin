@@ -9,6 +9,7 @@
 import UIKit
 
 class signUpViewController: UIViewController,  UITextFieldDelegate{
+    var isPartyMember:Bool = false
     
     @IBOutlet weak var userName: UITextField!
     
@@ -36,6 +37,13 @@ class signUpViewController: UIViewController,  UITextFieldDelegate{
     
     @IBOutlet weak var backButton: UIButton!
     
+    @IBAction func partySwitch(_ sender: UISwitch) {
+        if sender.isOn{
+            isPartyMember = true
+        }else{
+            isPartyMember = false
+        }
+    }
  
      let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
@@ -48,6 +56,7 @@ class signUpViewController: UIViewController,  UITextFieldDelegate{
         user.email = email.text
         user.setObject(chineseName.text, forKey: "chinesename")
         user.setObject(false, forKey: "isadmin")
+        user.setObject(isPartyMember, forKey: "party")
         if (self.userName.text == "" || self.passWord.text == "" || self.comfirmPassWord.text == "" || self.email.text == "" || self.chineseName.text == "") {
             let alart = UIAlertController(title: "温馨提示", message: "您的注册信息填写不完整", preferredStyle: .alert)
             let ok = UIAlertAction(title: "好", style: .default, handler: nil)
@@ -65,6 +74,7 @@ class signUpViewController: UIViewController,  UITextFieldDelegate{
                 if success {
                     let alart = UIAlertController(title: "提示", message: "注册成功", preferredStyle: .alert)
                     let ok = UIAlertAction(title: "好", style: .default, handler: {(ok)->Void in
+                        self.chineseName.resignFirstResponder()
                          self.present((self.myStoryboard.instantiateViewController(withIdentifier: "SWRevealViewController")), animated: true, completion: nil)          })
                     alart.addAction(ok)
                     self.present(alart, animated: true, completion: nil)

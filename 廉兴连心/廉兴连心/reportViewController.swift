@@ -37,15 +37,9 @@ class reportViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        newSendWarning.isHidden = true
-        newMailWarning.isHidden = true
-        mailBoxView.layer.masksToBounds = true
-        sendBoxView.layer.masksToBounds = true
-        mailBoxView.layer.cornerRadius = 10
-        sendBoxView.layer.cornerRadius = 10
+       
         
-
-        // Do any additional setup after loading the view.
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,9 +63,9 @@ class reportViewController: UIViewController {
         mainquery?.countObjectsInBackground({ (count, error) in
             DispatchQueue.main.async {
                 if count != 0 {
-                    self.newMailWarning.isHidden = false
+                    self.newMailWarning.image = #imageLiteral(resourceName: "inboxnew")
                 }else {
-                    self.newMailWarning.isHidden = true
+                    self.newMailWarning.image = #imageLiteral(resourceName: "inbox")
                 }
        
             }
