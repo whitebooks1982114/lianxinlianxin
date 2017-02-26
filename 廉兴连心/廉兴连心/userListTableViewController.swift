@@ -35,6 +35,8 @@ class userListTableViewController: UITableViewController {
     var dateFlag:Bool?
     
     var totalScore:Int?
+    //更新用户可兑换积分
+    var exchangeScore:Int?
     
     @IBOutlet weak var loginOutlet: UIButton!
     @IBAction func login(_ sender: UIButton) {
@@ -108,10 +110,20 @@ class userListTableViewController: UITableViewController {
                     self.scoreLabel.text = " + 7"
                 }
             }
+            if self.exchangeScore == nil {
+                self.exchangeScore = 1
+            }else {
+                if self.contSignTimes! <= 7 {
+                    self.exchangeScore = self.exchangeScore! + contSignTimes!
+                }else {
+                    self.exchangeScore = self.exchangeScore! + 7
+                }
+            }
        
            usr?.setObject(signTimes, forKey: "signtimes")
             usr?.setObject(totalScore, forKey: "score")
             usr?.setObject(contSignTimes, forKey: "contsigntimes")
+            usr?.setObject(exchangeScore, forKey: "exscore")
            usr?.updateInBackground(resultBlock: { (success, error) in
             if success {
                   self.signOutLet.backgroundColor = UIColor.gray
@@ -285,6 +297,7 @@ class userListTableViewController: UITableViewController {
         //查询用户签到积分
         if nowuser != nil {
             self.totalScore = nowuser?.object(forKey: "score") as! Int?
+            self.exchangeScore = nowuser?.object(forKey: "exscore") as! Int?
         }
         
     }

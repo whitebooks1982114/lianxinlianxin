@@ -8,7 +8,8 @@
 
 import UIKit
 import Kingfisher
-import AVFoundation
+
+
 
 class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate {
     //判断用户是否关闭提醒音效
@@ -32,12 +33,12 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
     
     //用户ID
     var currentUserId = ""
+    //到期通知到期日数组
+    var deadlineNotices = [Date]()
+    //到期提醒到期日数组
+    var deadlineAlarms = [Date]()
     
-    
-    
-    var player: AVAudioPlayer?
-    
-    var myUrl: URL?
+   
     
 
     
@@ -280,9 +281,7 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
             self.usrmenu.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             
-            let path = Bundle.main.path(forResource: "提醒音效", ofType: "mp3")
-            myUrl = URL(fileURLWithPath: path!)
-            
+                     
         }
 
         
@@ -350,6 +349,7 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
         myActivi.frame.origin.y = UIScreen.main.bounds.height / 2
         self.view.addSubview(myActivi)
         myActivi.startAnimating()
+        myActivi.color = UIColor.red
         
         
      
@@ -398,6 +398,10 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
         queryHeadImage()
         queryNews()
        
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+        
+        
         noticeVoiceOn = UserDefaults.standard.bool(forKey: "noticevoice")
         
         
@@ -433,7 +437,7 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
         let user = BmobUser.current()
         let userQuery = BmobUser.query()
         if user != nil {
-            //查询马上到期的通知，并发出音效
+            //查询马上到期的通知，并发出本地通知
             
             let query = BmobQuery(className: "notice")
             let noticeInQuery = BmobUser.query()
@@ -454,31 +458,38 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
                 if array != nil {
                     for obj in array! {
                         let object = obj as! BmobObject
-                        _ = object.object(forKey: "deadline") as! Date
+                        let deadline = object.object(forKey: "deadline") as! Date
                         
+                        self.deadlineNotices.append(deadline)
+                      noticeArrayIsNotNull = true
+                    }
+                }
+                DispatchQueue.main.async {
+                 
+                    if self.noticeVoiceOn == true {
+                        for i in 0..<self.deadlineNotices.count{
+                            let content = UNMutableNotificationContent()
+                            content.title = "到期通知提醒，第\(i + 1)个通知提醒"
+                            
+                           content.subtitle = "到期日期\(self.deadlineNotices[i])"
+                            content.body = "请及时查看相关通知内容 "
+                            content.sound = UNNotificationSound.default()
+                         
                         
-                        if self.noticeVoiceOn == true {
-                            if self.player == nil{
-                                do{
-                                    try  self.player = AVAudioPlayer(contentsOf: self.myUrl!)
-                                    self.player?.prepareToPlay()
-                                    self.player?.numberOfLoops = 1
-                                }catch {
-                                    print(error)
-                                }
-                                
-                            }
-                            if self.player?.isPlaying == false {
-                                self.player?.play()
-                            }
-                        }
-                        DispatchQueue.main.async {
-                            noticeArrayIsNotNull = true
+                            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60 * 60 * 12, repeats: true)
+                            let request = UNNotificationRequest(identifier: "notification.notice.\(i)", content: content, trigger: trigger)
+                            
+                            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                            
                         }
                         
                     }
+                    if self.noticeVoiceOn == false {
+                        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+                        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+                        
+                    }
                 }
-                
                 if error != nil {
                     print("\(error?.localizedDescription)")
                 }
@@ -507,30 +518,40 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
                     for obj in array! {
                         
                         let object = obj as! BmobObject
-                        _ = object.object(forKey: "deadLine") as! Date
-                        
-                        if self.alarmVoiceOn == true {
-                            if self.player == nil{
-                                do{
-                                    try  self.player = AVAudioPlayer(contentsOf: self.myUrl!)
-                                    self.player?.prepareToPlay()
-                                    self.player?.numberOfLoops = 1
-                                }catch {
-                                    print(error)
-                                }
-                                
-                            }
-                            if self.player?.isPlaying == false {
-                                self.player?.play()
-                            }
-                        }
-                        DispatchQueue.main.async {
-                            alarmArrayIsNotNull = true
-                        }
+                        let deadline = object.object(forKey: "deadLine") as! Date
+                        self.deadlineAlarms.append(deadline)
+                        alarmArrayIsNotNull = true
                     }
+                    
                 }
                 
-                
+                DispatchQueue.main.async {
+                    
+                    if self.alarmVoiceOn == true {
+                        for i in 0..<self.deadlineAlarms.count{
+                            let content = UNMutableNotificationContent()
+                            content.title = "到期提醒事项，第\(i + 1)个事项提醒"
+                            
+                            content.subtitle = "到期日期\(self.deadlineAlarms[i])"
+                            content.body = "请及时查看相关事项内容"
+                            content.sound = UNNotificationSound.default()
+                            
+                          
+                            
+                            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60 * 60 * 12, repeats: true)
+                            let request = UNNotificationRequest(identifier: "notification.alarm.\(i)", content: content, trigger: trigger)
+                            
+                            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                            
+                        }
+                        
+                    }
+                    if self.alarmVoiceOn == false {
+                        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+                         UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+                    }
+                }
+
                 if error != nil {
                     print("\(error?.localizedDescription)")
                 }

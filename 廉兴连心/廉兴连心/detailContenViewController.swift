@@ -20,7 +20,7 @@ class detailContenViewController: UIViewController {
     
     @IBOutlet weak var checkSwitch: UISwitch!
     
-    
+    var user:BmobUser?
     func getCurrentScore() {
         let userScoreQuery = BmobQuery(className: "userscore")
         userScoreQuery?.whereKey("author", equalTo: self.myAuthor)
@@ -85,16 +85,22 @@ class detailContenViewController: UIViewController {
     //给用户加减分按钮
     @IBAction func UpdateScore(_ sender: UIButton) {
        // print("\(self.score)")
+        exchangeScore = user?.object(forKey: "exscore") as! Int?
+        
          let post  = BmobObject(outDataWithClassName: "userscore", objectId: self.scoreObjectId)
        // print(self.addScoreFlag)
         if self.addScoreFlag {
         self.score = self.score! + 5
+            exchangeScore = exchangeScore! + 5
         }else {
            self.score = self.score! - 5
+            exchangeScore = exchangeScore! - 5
         }
         if self.score! < 0 {
             self.score = 0
+            exchangeScore = 0
         }
+        
         
          post?.setObject(self.score, forKey: "score")
         post?.updateInBackground(resultBlock: { (finish, error) in
@@ -102,6 +108,18 @@ class detailContenViewController: UIViewController {
                 print("\(error?.localizedDescription)")
                 let alert = UIAlertController(title: "错误提示", message: "更新失败", preferredStyle: .alert)
                 let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+                alert.addAction(ok)
+                self.present(alert, animated: true, completion: nil)
+            }else {
+                let alert = UIAlertController(title: "提示", message: "已经更新了该用户可兑换积分", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "好", style: .default, handler: {
+                    (ok)-> Void in
+                    self.user?.setObject(self.exchangeScore, forKey: "exscore")
+                    self.user?.updateInBackground(resultBlock: { (sccess, error) in
+                        if error != nil {
+                            print("\(error?.localizedDescription)")
+                        }
+                    })                })
                 alert.addAction(ok)
                 self.present(alert, animated: true, completion: nil)
             }
@@ -120,6 +138,9 @@ class detailContenViewController: UIViewController {
     var myAuthor:BmobUser?
     var checked: Bool?
     var addScoreFlag = false
+    
+    //用户可兑换积分
+    var exchangeScore:Int?
    
     var scoreObjectId:String?
 
@@ -148,7 +169,7 @@ class detailContenViewController: UIViewController {
         
         self.content.text = ""
         
-        let user = BmobUser.current()
+            user = BmobUser.current()
         if (user != nil) && (user?.object(forKey: "isadmin") as! Bool) {
             self.checkSwitch.isHidden = false
             self.checkLabel.isHidden = false

@@ -23,10 +23,9 @@
 		A61F45C71DD95E2A00D097E4 /* addViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61F45C51DD95E2A00D097E4 /* addViewController.swift */; };
 		A61F45C81DD95E2A00D097E4 /* addViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61F45C61DD95E2A00D097E4 /* addViewController.xib */; };
 		A62E06601E077EA000EF93F9 /* LOGO修改2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A62E065F1E077EA000EF93F9 /* LOGO修改2.jpg */; };
-		A62F736A1E0E6D4E002EEC5D /* ExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F73681E0E6D4E002EEC5D /* ExchangeViewController.swift */; };
-		A62F736B1E0E6D4E002EEC5D /* ExchangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A62F73691E0E6D4E002EEC5D /* ExchangeViewController.xib */; };
 		A62F9E3A1DDD2B7400491D40 /* tixinTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F9E391DDD2B7400491D40 /* tixinTableViewController.swift */; };
 		A62F9E3C1DDD2B8200491D40 /* tongziTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F9E3B1DDD2B8200491D40 /* tongziTableViewController.swift */; };
+		A63E42131E6117C2005B8D61 /* giftsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63E42121E6117C2005B8D61 /* giftsViewController.swift */; };
 		A64233271DF2DCC00011BD41 /* masterPieceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64233261DF2DCC00011BD41 /* masterPieceViewController.swift */; };
 		A64233291DF2F5AC0011BD41 /* myCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64233281DF2F5AC0011BD41 /* myCellCollectionViewCell.swift */; };
 		A642332B1DF2F9170011BD41 /* myHeadCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642332A1DF2F9170011BD41 /* myHeadCollectionReusableView.swift */; };
@@ -35,6 +34,7 @@
 		A65381FE1E3F20C500612525 /* TextNewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A65381FC1E3F20C500612525 /* TextNewsDetailViewController.xib */; };
 		A65382011E3F217200612525 /* imageNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65381FF1E3F217200612525 /* imageNewsViewController.swift */; };
 		A65382021E3F217200612525 /* imageNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A65382001E3F217200612525 /* imageNewsViewController.xib */; };
+		A671C2781E618D4800AF7707 /* shoppingcellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A671C2771E618D4800AF7707 /* shoppingcellTableViewCell.swift */; };
 		A6772BF71DCC4D7700425322 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6772BF61DCC4D7700425322 /* AppDelegate.swift */; };
 		A6772BFF1DCC4D7700425322 /* ____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6772BFD1DCC4D7700425322 /* ____.xcdatamodeld */; };
 		A6772C011DCC4D7700425322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6772C001DCC4D7700425322 /* Assets.xcassets */; };
@@ -99,7 +99,6 @@
 		A6E8B4AB1DD196AD0093F597 /* userInfoChangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E8B4A91DD196AD0093F597 /* userInfoChangeViewController.xib */; };
 		A6EC66201DDE7DF700D71B0A /* noticedetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EC661E1DDE7DF700D71B0A /* noticedetailViewController.swift */; };
 		A6EC66211DDE7DF700D71B0A /* noticedetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EC661F1DDE7DF700D71B0A /* noticedetailViewController.xib */; };
-		A6EF662F1DEDA110008E72BC /* 提醒音效.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A6EF662E1DEDA110008E72BC /* 提醒音效.mp3 */; };
 		A6F037AD1DF246CB007E1A2B /* adminDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F037AB1DF246CB007E1A2B /* adminDetailViewController.swift */; };
 		A6F037AE1DF246CB007E1A2B /* adminDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6F037AC1DF246CB007E1A2B /* adminDetailViewController.xib */; };
 		A6F27AD11E3A423600E9C3A6 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F27ACF1E3A423600E9C3A6 /* ImageTableViewCell.swift */; };
@@ -155,10 +154,9 @@
 		A61F45C51DD95E2A00D097E4 /* addViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addViewController.swift; sourceTree = "<group>"; };
 		A61F45C61DD95E2A00D097E4 /* addViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addViewController.xib; sourceTree = "<group>"; };
 		A62E065F1E077EA000EF93F9 /* LOGO修改2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "LOGO修改2.jpg"; sourceTree = "<group>"; };
-		A62F73681E0E6D4E002EEC5D /* ExchangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeViewController.swift; sourceTree = "<group>"; };
-		A62F73691E0E6D4E002EEC5D /* ExchangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchangeViewController.xib; sourceTree = "<group>"; };
 		A62F9E391DDD2B7400491D40 /* tixinTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tixinTableViewController.swift; sourceTree = "<group>"; };
 		A62F9E3B1DDD2B8200491D40 /* tongziTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tongziTableViewController.swift; sourceTree = "<group>"; };
+		A63E42121E6117C2005B8D61 /* giftsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = giftsViewController.swift; sourceTree = "<group>"; };
 		A64233261DF2DCC00011BD41 /* masterPieceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = masterPieceViewController.swift; sourceTree = "<group>"; };
 		A64233281DF2F5AC0011BD41 /* myCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		A642332A1DF2F9170011BD41 /* myHeadCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myHeadCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -167,6 +165,7 @@
 		A65381FC1E3F20C500612525 /* TextNewsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextNewsDetailViewController.xib; sourceTree = "<group>"; };
 		A65381FF1E3F217200612525 /* imageNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageNewsViewController.swift; sourceTree = "<group>"; };
 		A65382001E3F217200612525 /* imageNewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = imageNewsViewController.xib; sourceTree = "<group>"; };
+		A671C2771E618D4800AF7707 /* shoppingcellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shoppingcellTableViewCell.swift; sourceTree = "<group>"; };
 		A6772BF31DCC4D7700425322 /* 廉兴连心.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "廉兴连心.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6772BF61DCC4D7700425322 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6772BFE1DCC4D7700425322 /* ____.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "____.xcdatamodel"; sourceTree = "<group>"; };
@@ -237,7 +236,6 @@
 		A6E8B4A91DD196AD0093F597 /* userInfoChangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = userInfoChangeViewController.xib; sourceTree = "<group>"; };
 		A6EC661E1DDE7DF700D71B0A /* noticedetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = noticedetailViewController.swift; sourceTree = "<group>"; };
 		A6EC661F1DDE7DF700D71B0A /* noticedetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = noticedetailViewController.xib; sourceTree = "<group>"; };
-		A6EF662E1DEDA110008E72BC /* 提醒音效.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "提醒音效.mp3"; sourceTree = "<group>"; };
 		A6F037AB1DF246CB007E1A2B /* adminDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = adminDetailViewController.swift; sourceTree = "<group>"; };
 		A6F037AC1DF246CB007E1A2B /* adminDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = adminDetailViewController.xib; sourceTree = "<group>"; };
 		A6F27ACF1E3A423600E9C3A6 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -346,6 +344,15 @@
 			name = "动态提醒";
 			sourceTree = "<group>";
 		};
+		A63E42111E611798005B8D61 /* 积分商城 */ = {
+			isa = PBXGroup;
+			children = (
+				A63E42121E6117C2005B8D61 /* giftsViewController.swift */,
+				A671C2771E618D4800AF7707 /* shoppingcellTableViewCell.swift */,
+			);
+			name = "积分商城";
+			sourceTree = "<group>";
+		};
 		A642332C1DF2F91F0011BD41 /* 作品 */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +390,7 @@
 		A6772BF51DCC4D7700425322 /* 廉兴连心 */ = {
 			isa = PBXGroup;
 			children = (
+				A63E42111E611798005B8D61 /* 积分商城 */,
 				A60009E51E1E0A1600357251 /* 廉兴连心.entitlements */,
 				A62F9E381DDD2B4000491D40 /* 动态提醒 */,
 				A6895C7B1E5047B800DF0997 /* 新闻首页 */,
@@ -400,7 +408,6 @@
 				A64466991DD2BFCC008CB465 /* department.plist */,
 				A62E065F1E077EA000EF93F9 /* LOGO修改2.jpg */,
 				A6DF603C1DFA50EF003AED3C /* icons */,
-				A6EF662E1DEDA110008E72BC /* 提醒音效.mp3 */,
 				A6B7BCDE1DF17D4F001ACD10 /* alarmdays.plist */,
 				A6772C051DCC4D7700425322 /* Info.plist */,
 				A6FE92421DD44DB0008CA618 /* 题库.plist */,
@@ -456,8 +463,6 @@
 				A616852F1DCE9AB700210D12 /* aboutUsViewController.xib */,
 				A677CA601DD029A7008ECF71 /* signUpViewController.swift */,
 				A6996D711DD5E7A700C5E1A1 /* contributionInfoViewController.swift */,
-				A62F73681E0E6D4E002EEC5D /* ExchangeViewController.swift */,
-				A62F73691E0E6D4E002EEC5D /* ExchangeViewController.xib */,
 				A6996D721DD5E7A700C5E1A1 /* contributionInfoViewController.xib */,
 				A6E8B4A81DD196AD0093F597 /* userInfoChangeViewController.swift */,
 				A606BEE01DEEEB3D0094F8B6 /* settingsViewController.swift */,
@@ -671,7 +676,6 @@
 				A61685311DCE9AB700210D12 /* aboutUsViewController.xib in Resources */,
 				A6E8B4AB1DD196AD0093F597 /* userInfoChangeViewController.xib in Resources */,
 				A6D17AC21E0E1B7B00071C84 /* DetailSendContentViewController.xib in Resources */,
-				A6EF662F1DEDA110008E72BC /* 提醒音效.mp3 in Resources */,
 				A6F27ADA1E3A425500E9C3A6 /* TextTableViewCell.xib in Resources */,
 				A6772C2A1DCC4E3400425322 /* Bmob_iOS_SDK更新历史.txt in Resources */,
 				A6FE92431DD44DB0008CA618 /* 题库.plist in Resources */,
@@ -683,7 +687,6 @@
 				A6D17AC61E0E1B9300071C84 /* DetailReplyContentViewController.xib in Resources */,
 				A62E06601E077EA000EF93F9 /* LOGO修改2.jpg in Resources */,
 				A644669A1DD2BFCC008CB465 /* department.plist in Resources */,
-				A62F736B1E0E6D4E002EEC5D /* ExchangeViewController.xib in Resources */,
 				A6FE92011DD44927008CA618 /* answerViewController.xib in Resources */,
 				A61F45C81DD95E2A00D097E4 /* addViewController.xib in Resources */,
 				A6EC66211DDE7DF700D71B0A /* noticedetailViewController.xib in Resources */,
@@ -736,6 +739,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A677CA621DD029A7008ECF71 /* signUpViewController.swift in Sources */,
+				A671C2781E618D4800AF7707 /* shoppingcellTableViewCell.swift in Sources */,
 				A6E8B4AA1DD196AD0093F597 /* userInfoChangeViewController.swift in Sources */,
 				A61685301DCE9AB700210D12 /* aboutUsViewController.swift in Sources */,
 				A6996D731DD5E7A700C5E1A1 /* contributionInfoViewController.swift in Sources */,
@@ -744,6 +748,7 @@
 				A6D17ABC1E0E0E1500071C84 /* MailBoxTableViewController.swift in Sources */,
 				A6D17AC51E0E1B9300071C84 /* DetailReplyContentViewController.swift in Sources */,
 				A603A6531E162EB8000E28A0 /* mediaViewController.swift in Sources */,
+				A63E42131E6117C2005B8D61 /* giftsViewController.swift in Sources */,
 				A6D17ABE1E0E0E2300071C84 /* SendBoxTableViewController.swift in Sources */,
 				A6BFFE831DD8596C004A781F /* detailContenViewController.swift in Sources */,
 				A6B7BCE81DF1ACBD001ACD10 /* adminDirTableViewController.swift in Sources */,
@@ -779,7 +784,6 @@
 				A6F7BF8D1DCD6DF700402147 /* SWRevealViewController.m in Sources */,
 				A6F27AD51E3A424A00E9C3A6 /* VedioTableViewCell.swift in Sources */,
 				A6F27AD91E3A425500E9C3A6 /* TextTableViewCell.swift in Sources */,
-				A62F736A1E0E6D4E002EEC5D /* ExchangeViewController.swift in Sources */,
 				A6BF68771E3A0F62005269E9 /* DongTaiViewController.swift in Sources */,
 				A64233271DF2DCC00011BD41 /* masterPieceViewController.swift in Sources */,
 				A6772BF71DCC4D7700425322 /* AppDelegate.swift in Sources */,
