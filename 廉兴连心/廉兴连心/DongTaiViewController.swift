@@ -397,6 +397,29 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
         queryHeadLine()
         queryHeadImage()
         queryNews()
+        
+        //查询答题闯关界面各个试卷的objectid
+        
+        objectIDs.removeAll()
+        
+        let query1 = BmobQuery(className: "tests")
+        query1?.order(byAscending: "testid")
+        query1?.findObjectsInBackground({ (array, error) in
+            if error != nil {
+               print("\(error?.localizedDescription)")
+            }else if array != nil{
+                for obj in array! {
+                    let object = obj as! BmobObject
+                    let ids = object.object(forKey: "testid") as! Int
+                    objectIDs.append(ids)
+                    
+                }
+            }else {
+                print("题目为空")
+            }
+        })
+
+        
        
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         UNUserNotificationCenter.current().removeAllDeliveredNotifications()

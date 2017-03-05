@@ -10,14 +10,36 @@ import UIKit
 
 class answerViewController: UIViewController {
     
+    @IBOutlet weak var answeraView: UIView!
   
-    //计算每一关答过的题目，若果过四关就跳转至结果界面
-    var answeredquestion = 0
+    @IBOutlet weak var answerbView: UIView!
+    
+    @IBOutlet weak var answercView: UIView!
+    
+    @IBOutlet weak var answerdView: UIView!
+    
+    @IBOutlet weak var answeraLabel: UILabel!
+    
+    @IBOutlet weak var answerbLabel: UILabel!
+    
+    @IBOutlet weak var answercLable: UILabel!
+    
+    @IBOutlet weak var answerdLabel: UILabel!
+    
+    @IBOutlet weak var answeraImageView: UIImageView!
+    
+    @IBOutlet weak var answerbImageVeiw: UIImageView!
+    
+    @IBOutlet weak var answercImageView: UIImageView!
+    
+    @IBOutlet weak var answerdImageView: UIImageView!
+    
+    let levelResult = resultViewController()
+    //记录已答过题目
+    var answeredquestion:Int!
     //倒计时
     var countDownTime: Timer? = nil
 
-    //当前题目数
-    var currentQuestion:Int?
     //倒计时
     var answerTime = 30
     //答对题目数字
@@ -27,20 +49,27 @@ class answerViewController: UIViewController {
     
     //题目更新计时器
     var update: Timer? = nil
+    //试卷识别号
+    var testID:Int!
+    //及格线
+    var passline:Int!
+    //用户名
+    var username:String!
+    //用户答题表查询的ID
+    var myObjectID:String?
     
+    var question:String!
+    var answera:String!
+    var answerb:String!
+    var answerc:String!
+    var answerd:String!
+    var rightanswer:String!
+    //每道题的正确答题数字代码
+    var rightNum:Int!
+    //题目总数
+    var totalNum:Int!
    
-    
-   
-    
-    let path = Bundle.main.path(forResource: "题库", ofType: "plist")
-
-    @IBOutlet weak var tickImage1: UIImageView!
-    
-    @IBOutlet weak var tickImage2: UIImageView!
-    
-    @IBOutlet weak var tickImage3: UIImageView!
-    
-    @IBOutlet weak var tickImage4: UIImageView!
+    let myActivi = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
     
     @IBOutlet weak var questionLable: UILabel!
     
@@ -55,103 +84,184 @@ class answerViewController: UIViewController {
     @IBOutlet weak var btn4: UIButton!
     
     
+    
     @IBAction func judge(_ sender: UIButton) {
         judgeAnswer(sender: sender)
     }
+    //将ABCD转换成0123
+    func changeAlphaToNum(Entry:String) -> Int {
+        switch Entry {
+        case "A":
+            return 0
+           
+        case "B":
+            return 1
+           
+        case "C":
+            return 2
+          
+        default:
+            return 3
+         
+        }
+    }
+   
     
+    
+    func queryQuestions(index:Int) {
+        myActivi.startAnimating()
+        self.question = ""
+        self.answera = ""
+        self.answerb = ""
+        self.answerc = ""
+        self.answerd = ""
+        self.rightanswer = ""
+        
+        let query = BmobQuery(className: "question")
+        let query1 = BmobQuery(className: "question")
+        let andQuery = BmobQuery(className: "question")
+    
+        query1?.whereKey("index", equalTo: index)
+        query?.whereKey("testid", equalTo: testID)
+        andQuery?.add(query)
+        andQuery?.add(query1)
+        andQuery?.andOperation()
+        andQuery?.findObjectsInBackground({ (array, error) in
+       
+            if error != nil {
+                let alert  = UIAlertController(title: "错误", message: "\(error?.localizedDescription)", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "好", style: .default, handler: {
+                    (finish) -> Void in
+                    _ = self.navigationController?.popToRootViewController(animated: true)
+                })
+                alert.addAction(ok)
+                self.present(alert, animated: true, completion: nil)
+            }else{
+                
+                for obj in array! {
+                    let object  = obj as! BmobObject
+                    self.question = object.object(forKey: "questionlabel") as! String
+                    self.answera = object.object(forKey: "answera") as! String
+                    self.answerb = object.object(forKey: "answerb") as! String
+                    self.answerc = object.object(forKey: "answerc") as! String
+                    self.answerd = object.object(forKey: "answerd") as! String
+                    self.rightanswer = object.object(forKey: "rightanswer") as! String
+               
+                }
+                
+            }
+            DispatchQueue.main.async {
+                self.questionLable.text = self.question
+                self.answeraLabel.text = self.answera
+                self.answerbLabel.text = self.answerb
+                self.answercLable.text = self.answerc
+                self.answerdLabel.text = self.answerd
+                self.rightNum = self.changeAlphaToNum(Entry: self.rightanswer)
+                self.myActivi.stopAnimating()
+            }
+        })
+    }
     
     func judgeAnswer(sender: UIButton) {
-        let questionArray = NSArray(contentsOfFile: path!)
-        let question = questionArray?[currentQuestion!] as! NSArray
-        if sender.tag == question[5] as! Int{
+  
+        
+        if sender.tag == rightNum{
             rightans += 1
             
+        }else {
+            switch sender.tag  {
+            case 0:
+                self.answeraImageView.image = #imageLiteral(resourceName: "wrong")
+                break
+                
+            case 1:
+                self.answerbImageVeiw.image = #imageLiteral(resourceName: "wrong")
+                break
+                
+            case 2:
+                self.answercImageView.image = #imageLiteral(resourceName: "wrong")
+                break
+                
+            default:
+                self.answerdImageView.image = #imageLiteral(resourceName: "wrong")
+                break
+                
+            }
+
         }
         self.btn1.isEnabled = false
         self.btn2.isEnabled = false
         self.btn3.isEnabled = false
         self.btn4.isEnabled = false
-        switch question[5] as! Int {
+        switch rightNum  {
+        case 0:
+            self.answeraImageView.image = #imageLiteral(resourceName: "rightbtn")
+            break
+          
         case 1:
-            tickImage1.isHidden = false
+            self.answerbImageVeiw.image = #imageLiteral(resourceName: "rightbtn")
+            break
+           
         case 2:
-            tickImage2.isHidden = false
-        case 3:
-            tickImage3.isHidden = false
+            self.answercImageView.image = #imageLiteral(resourceName: "rightbtn")
+            break
+          
         default:
-            tickImage4.isHidden = false
+            self.answerdImageView.image = #imageLiteral(resourceName: "rightbtn")
+            break
+          
         }
-        answeredquestion += 1
+        answeredquestion = answeredquestion + 1
+
+        
         //一秒钟后更新题目
         self.update?.invalidate()
-        self.update = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateQuestion), userInfo: nil, repeats: false)
+        self.update = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.updateQuestion), userInfo: nil, repeats: false)
         
         
     }
     
     
     func updateQuestion() {
-      
-        let levelResult = resultViewController()
-        let questionArray = NSArray(contentsOfFile: path!)
-        if currentQuestion! < 89 {
-            currentQuestion! += 1
- 
-        }else {
-            currentQuestion = 89
+        if answeredquestion > totalNum - 1 {
+            
+            levelResult.rightresult = "\(self.rightans)"
+            levelResult.wrongresult = "\(self.totalNum - self.rightans)"
+            levelResult.testID_Result = self.testID
+            levelResult.objectID_Result = self.myObjectID
+            levelResult.rightanswers = rightans
+            if rightans >= passline {
+                levelResult.success = "恭喜你过关"
+                levelResult.clear = true
+                
+            }else {
+                levelResult.success = "很遗憾，您需要再努力"
+                levelResult.clear = false
+                
+            }
+            
+            self.navigationController?.pushViewController(levelResult, animated: true)
         }
-        let question = questionArray?[currentQuestion!] as! NSArray
+
         
-        questionLable.text = question[0] as? String
-        btn1.setTitle(question[1] as? String, for: .normal)
-        btn2.setTitle(question[2] as? String, for: .normal)
-        btn3.setTitle(question[3] as? String, for: .normal)
-        btn4.setTitle(question[4] as? String, for: .normal)
+        queryQuestions(index: answeredquestion)
         
+        self.answeraImageView.image = #imageLiteral(resourceName: "defaultbtn")
+        self.answerbImageVeiw.image = #imageLiteral(resourceName: "defaultbtn")
+        self.answercImageView.image = #imageLiteral(resourceName: "defaultbtn")
+        self.answerdImageView.image = #imageLiteral(resourceName: "defaultbtn")
+        
+      
         self.btn1.isEnabled = true
         self.btn2.isEnabled = true
         self.btn3.isEnabled = true
         self.btn4.isEnabled = true
-        self.tickImage1.isHidden = true
-        self.tickImage2.isHidden = true
-        self.tickImage3.isHidden = true
-        self.tickImage4.isHidden = true
+     
         self.countDownTime?.invalidate()
         
         answerTime = 30
         countDownTime = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.timeCount), userInfo: nil, repeats: true)
         
-        if answeredquestion > 9 {
-            answeredquestion = 0
-            
-           levelResult.rightresult = "\(self.rightans)"
-           levelResult.wrongresult = "\(10 - self.rightans)"
-            
-            if rightans == 10 {
-               levelResult.success = "恭喜你过关了"
-               levelResult.clearedLevel = self.currentLevel!
-           
-                
-            }else {
-                
-               levelResult.success = "很遗憾，您需要再努力"
-                levelResult.clearedLevel = self.currentLevel! - 1
-            }
-            
-            if rightans == 10 {
-                if self.currentLevel! < 9 {
-                   allLevels[currentLevel!] = 1
-                   write()
-            
-                    
-                } else if self.currentLevel == 9 {
-                    levelResult.success = "恭喜你闯关成功"
-                    levelResult.clearedLevel = self.currentLevel!
-                }
-            }
-            
-            self.navigationController?.pushViewController(levelResult, animated: true)
-        }
     }
 
 
@@ -171,27 +281,23 @@ class answerViewController: UIViewController {
             let alert  = UIAlertController(title: "信息提示", message: "时间已到", preferredStyle: .alert)
             let ok = UIAlertAction(title: "答题结果", style: .default, handler: { (act) in
                 
-                
+                levelResult.testID_Result = self.testID
+                levelResult.objectID_Result = self.myObjectID
                 levelResult.rightresult = "\(self.rightans)"
-                levelResult.wrongresult = "\(10 - self.rightans)"
-                if self.rightans == 10 {
-                    if self.currentLevel! < 9 {
-                        allLevels[self.currentLevel!] = 1
-                        write()
-                        levelResult.success = "恭喜你过关了"
-                        levelResult.clearedLevel = self.currentLevel!
-                        
-                        
-                    } else if self.currentLevel == 9 {
-                        levelResult.clearedLevel = self.currentLevel!
-                        
-                    }
-            
-                }else  {
-                    levelResult.success = "很遗憾，您需要再努力"
-                    levelResult.clearedLevel = self.currentLevel! - 1
+                levelResult.wrongresult = "\(self.totalNum - self.rightans)"
+                levelResult.rightanswers = self.rightans
+                if self.rightans >= self.passline {
                     
-                } //未达到过关要求
+                    levelResult.success = "恭喜你过关"
+                    levelResult.clear = true
+                    
+                }else {
+                    
+                    levelResult.success = "很遗憾，您需要再努力"
+                    levelResult.clear = false
+                    
+                }
+
                 
                 self.navigationController?.pushViewController(levelResult, animated: true)
             })
@@ -208,20 +314,14 @@ class answerViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationItem.title = "答题界面"
-        tickImage1.isHidden = true
-        tickImage2.isHidden = true
-        tickImage3.isHidden = true
-        tickImage4.isHidden = true
-        
-        btn1.contentHorizontalAlignment = .left
-        btn2.contentHorizontalAlignment = .left
-        btn3.contentHorizontalAlignment = .left
-        btn4.contentHorizontalAlignment = .left
+         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "保存并返回", style: .plain, target: self, action: #selector(self.saveBack))
+       
+        username = BmobUser.current().username
         //文字大小自适应宽度
-        btn1.titleLabel?.adjustsFontSizeToFitWidth = true
-         btn2.titleLabel?.adjustsFontSizeToFitWidth = true
-         btn3.titleLabel?.adjustsFontSizeToFitWidth = true
-         btn4.titleLabel?.adjustsFontSizeToFitWidth = true
+        answeraLabel.adjustsFontSizeToFitWidth = true
+        answerbLabel.adjustsFontSizeToFitWidth = true
+        answercLable.adjustsFontSizeToFitWidth = true
+        answerdLabel.adjustsFontSizeToFitWidth = true
         
         //  自动换行
         questionLable.adjustsFontSizeToFitWidth = true
@@ -229,7 +329,61 @@ class answerViewController: UIViewController {
         questionLable.numberOfLines = 0
         
         
+        myActivi.frame.origin.x = UIScreen.main.bounds.width / 2
+        myActivi.frame.origin.y = UIScreen.main.bounds.height / 2
+        self.view.addSubview(myActivi)
+        myActivi.startAnimating()
+        myActivi.color = UIColor.red
+        
+        
      }
+    
+    func saveBack(){
+        //保存答题记录到数据库
+        if myObjectID != nil {
+            let saveQuestion = BmobObject(outDataWithClassName: "usertestscore", objectId: myObjectID)
+            saveQuestion?.setObject(answeredquestion, forKey: "answerednum")
+            saveQuestion?.setObject(rightans, forKey: "right")
+            saveQuestion?.setObject(false, forKey: "success")
+            saveQuestion?.setObject(self.username, forKey: "name")
+            saveQuestion?.setObject(self.testID, forKey: "testid")
+            saveQuestion?.updateInBackground(resultBlock: { (success, error) in
+                if success {
+                    print("success")
+                    
+                }else {
+                    let alert  = UIAlertController(title: "提示", message: "保存失败", preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+                    alert.addAction(ok)
+                    self.present(alert, animated: true, completion: nil)
+                    
+                }
+                
+                
+            })
+        }else {
+            let saveQuestion = BmobObject(className: "usertestscore")
+            saveQuestion?.setObject(answeredquestion, forKey: "answerednum")
+            saveQuestion?.setObject(rightans, forKey: "right")
+            saveQuestion?.setObject(self.username, forKey: "name")
+            saveQuestion?.setObject(self.testID, forKey: "testid")
+            saveQuestion?.saveInBackground(resultBlock: { (success, error) in
+                if success {
+                    print("success")
+                    
+                }else {
+                    let alert  = UIAlertController(title: "提示", message: "保存失败", preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+                    alert.addAction(ok)
+                    self.present(alert, animated: true, completion: nil)
+                    
+                }
+
+            })
+        }
+        
+        _ = self.navigationController?.popToRootViewController(animated: true)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -238,15 +392,21 @@ class answerViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        let questionArray = NSArray(contentsOfFile: path!)
-        let question = questionArray?[currentQuestion!] as! NSArray
+    
         
-        questionLable.text = question[0] as? String
-        btn1.setTitle(question[1] as? String, for: .normal)
-        btn2.setTitle(question[2] as? String, for: .normal)
-        btn3.setTitle(question[3] as? String, for: .normal)
-        btn4.setTitle(question[4] as? String, for: .normal)
-        rightans = 0
+        if answeredquestion >= totalNum {
+            let alert  = UIAlertController(title: "温馨提示", message: "您已完成试卷，不可重复答题", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: {
+                (_) in _ = self.navigationController?.popToRootViewController(animated: true)
+            })
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+            
+        }else {
+      
+       queryQuestions(index: answeredquestion)
+        
+        }
 
         answerTime = 30
         

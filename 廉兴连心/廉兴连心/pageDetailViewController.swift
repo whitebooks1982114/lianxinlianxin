@@ -14,6 +14,7 @@ class pageDetailViewController: UIViewController, UIScrollViewDelegate {
     var page = 0
     
     var selectedActivity: String?
+
     
    
     //最后一幅画得Index
@@ -150,7 +151,7 @@ class pageDetailViewController: UIViewController, UIScrollViewDelegate {
         myScroll.isUserInteractionEnabled = true
   
         lastPageQuery()
-        print(self.lastOne)
+      
         myQuery()
     }
     //此方法重要，否则无法缩放图片

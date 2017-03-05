@@ -34,6 +34,11 @@
 		A65381FE1E3F20C500612525 /* TextNewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A65381FC1E3F20C500612525 /* TextNewsDetailViewController.xib */; };
 		A65382011E3F217200612525 /* imageNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65381FF1E3F217200612525 /* imageNewsViewController.swift */; };
 		A65382021E3F217200612525 /* imageNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A65382001E3F217200612525 /* imageNewsViewController.xib */; };
+		A66E28C01E6AC64A00D1B520 /* ExamPerfaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66E28BE1E6AC64A00D1B520 /* ExamPerfaceViewController.swift */; };
+		A66E28C11E6AC64A00D1B520 /* ExamPerfaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A66E28BF1E6AC64A00D1B520 /* ExamPerfaceViewController.xib */; };
+		A66E28C41E6ACD9E00D1B520 /* ExamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66E28C21E6ACD9E00D1B520 /* ExamDetailViewController.swift */; };
+		A66E28C51E6ACD9E00D1B520 /* ExamDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A66E28C31E6ACD9E00D1B520 /* ExamDetailViewController.xib */; };
+		A66E28C71E6AEF0700D1B520 /* answers.plist in Resources */ = {isa = PBXBuildFile; fileRef = A66E28C61E6AEF0700D1B520 /* answers.plist */; };
 		A671C2781E618D4800AF7707 /* shoppingcellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A671C2771E618D4800AF7707 /* shoppingcellTableViewCell.swift */; };
 		A6772BF71DCC4D7700425322 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6772BF61DCC4D7700425322 /* AppDelegate.swift */; };
 		A6772BFF1DCC4D7700425322 /* ____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6772BFD1DCC4D7700425322 /* ____.xcdatamodeld */; };
@@ -58,7 +63,6 @@
 		A6772C4C1DCC4F0700425322 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A6772C4B1DCC4F0700425322 /* libsqlite3.tbd */; };
 		A6772C611DCC5CF800425322 /* liantixinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6772C601DCC5CF800425322 /* liantixinViewController.swift */; };
 		A6772C691DCC5D2E00425322 /* lianbaikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6772C681DCC5D2E00425322 /* lianbaikeViewController.swift */; };
-		A6772C6D1DCC5D3C00425322 /* lianchuangguanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6772C6C1DCC5D3C00425322 /* lianchuangguanViewController.swift */; };
 		A6772C7A1DCC5EC800425322 /* userListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6772C781DCC5EC800425322 /* userListTableViewController.swift */; };
 		A6772C891DCC700B00425322 /* myTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6772C881DCC700B00425322 /* myTabViewController.swift */; };
 		A677CA621DD029A7008ECF71 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677CA601DD029A7008ECF71 /* signUpViewController.swift */; };
@@ -74,6 +78,10 @@
 		A6996D731DD5E7A700C5E1A1 /* contributionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6996D711DD5E7A700C5E1A1 /* contributionInfoViewController.swift */; };
 		A6996D741DD5E7A700C5E1A1 /* contributionInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6996D721DD5E7A700C5E1A1 /* contributionInfoViewController.xib */; };
 		A699CA821E405B880096DF3A /* VedioNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A699CA811E405B880096DF3A /* VedioNewsViewController.swift */; };
+		A6AC8B9D1E62DB1D00D1A748 /* CardCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AC8B9B1E62DB1D00D1A748 /* CardCellCollectionViewCell.swift */; };
+		A6AC8B9E1E62DB1D00D1A748 /* CardCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6AC8B9C1E62DB1D00D1A748 /* CardCellCollectionViewCell.xib */; };
+		A6AC8BA01E62E14200D1A748 /* CardLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AC8B9F1E62E14200D1A748 /* CardLayout.swift */; };
+		A6AC8BA21E62E1DF00D1A748 /* CardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AC8BA11E62E1DF00D1A748 /* CardCollectionViewController.swift */; };
 		A6B08A451DDD9B87009E66C6 /* tixindetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B08A431DDD9B87009E66C6 /* tixindetailViewController.swift */; };
 		A6B08A461DDD9B87009E66C6 /* tixindetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6B08A441DDD9B87009E66C6 /* tixindetailViewController.xib */; };
 		A6B2FB641E3B9A2000F46FB5 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6B2FB611E3B985800F46FB5 /* Kingfisher.framework */; };
@@ -165,6 +173,11 @@
 		A65381FC1E3F20C500612525 /* TextNewsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextNewsDetailViewController.xib; sourceTree = "<group>"; };
 		A65381FF1E3F217200612525 /* imageNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageNewsViewController.swift; sourceTree = "<group>"; };
 		A65382001E3F217200612525 /* imageNewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = imageNewsViewController.xib; sourceTree = "<group>"; };
+		A66E28BE1E6AC64A00D1B520 /* ExamPerfaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamPerfaceViewController.swift; sourceTree = "<group>"; };
+		A66E28BF1E6AC64A00D1B520 /* ExamPerfaceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExamPerfaceViewController.xib; sourceTree = "<group>"; };
+		A66E28C21E6ACD9E00D1B520 /* ExamDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamDetailViewController.swift; sourceTree = "<group>"; };
+		A66E28C31E6ACD9E00D1B520 /* ExamDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExamDetailViewController.xib; sourceTree = "<group>"; };
+		A66E28C61E6AEF0700D1B520 /* answers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = answers.plist; sourceTree = "<group>"; };
 		A671C2771E618D4800AF7707 /* shoppingcellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shoppingcellTableViewCell.swift; sourceTree = "<group>"; };
 		A6772BF31DCC4D7700425322 /* 廉兴连心.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "廉兴连心.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6772BF61DCC4D7700425322 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -194,7 +207,6 @@
 		A6772C4F1DCC4F1C00425322 /* 廉兴连心UITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "廉兴连心UITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		A6772C601DCC5CF800425322 /* liantixinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = liantixinViewController.swift; sourceTree = "<group>"; };
 		A6772C681DCC5D2E00425322 /* lianbaikeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lianbaikeViewController.swift; sourceTree = "<group>"; };
-		A6772C6C1DCC5D3C00425322 /* lianchuangguanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lianchuangguanViewController.swift; sourceTree = "<group>"; };
 		A6772C781DCC5EC800425322 /* userListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userListTableViewController.swift; sourceTree = "<group>"; };
 		A6772C881DCC700B00425322 /* myTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myTabViewController.swift; sourceTree = "<group>"; };
 		A677CA601DD029A7008ECF71 /* signUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +222,10 @@
 		A6996D711DD5E7A700C5E1A1 /* contributionInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contributionInfoViewController.swift; sourceTree = "<group>"; };
 		A6996D721DD5E7A700C5E1A1 /* contributionInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = contributionInfoViewController.xib; sourceTree = "<group>"; };
 		A699CA811E405B880096DF3A /* VedioNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VedioNewsViewController.swift; sourceTree = "<group>"; };
+		A6AC8B9B1E62DB1D00D1A748 /* CardCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		A6AC8B9C1E62DB1D00D1A748 /* CardCellCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCellCollectionViewCell.xib; sourceTree = "<group>"; };
+		A6AC8B9F1E62E14200D1A748 /* CardLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardLayout.swift; sourceTree = "<group>"; };
+		A6AC8BA11E62E1DF00D1A748 /* CardCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewController.swift; sourceTree = "<group>"; };
 		A6B08A431DDD9B87009E66C6 /* tixindetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tixindetailViewController.swift; sourceTree = "<group>"; };
 		A6B08A441DDD9B87009E66C6 /* tixindetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = tixindetailViewController.xib; sourceTree = "<group>"; };
 		A6B2FB611E3B985800F46FB5 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
@@ -407,6 +423,7 @@
 				A6772C021DCC4D7700425322 /* LaunchScreen.storyboard */,
 				A64466991DD2BFCC008CB465 /* department.plist */,
 				A62E065F1E077EA000EF93F9 /* LOGO修改2.jpg */,
+				A66E28C61E6AEF0700D1B520 /* answers.plist */,
 				A6DF603C1DFA50EF003AED3C /* icons */,
 				A6B7BCDE1DF17D4F001ACD10 /* alarmdays.plist */,
 				A6772C051DCC4D7700425322 /* Info.plist */,
@@ -532,11 +549,18 @@
 		A6FE92021DD44931008CA618 /* 闯关 */ = {
 			isa = PBXGroup;
 			children = (
-				A6772C6C1DCC5D3C00425322 /* lianchuangguanViewController.swift */,
 				A6996D6D1DD5E06800C5E1A1 /* resultViewController.swift */,
 				A6996D6E1DD5E06800C5E1A1 /* resultViewController.xib */,
 				A6FE91FF1DD44927008CA618 /* answerViewController.xib */,
 				A6FE91FE1DD44927008CA618 /* answerViewController.swift */,
+				A6AC8B9B1E62DB1D00D1A748 /* CardCellCollectionViewCell.swift */,
+				A6AC8B9C1E62DB1D00D1A748 /* CardCellCollectionViewCell.xib */,
+				A6AC8B9F1E62E14200D1A748 /* CardLayout.swift */,
+				A6AC8BA11E62E1DF00D1A748 /* CardCollectionViewController.swift */,
+				A66E28BE1E6AC64A00D1B520 /* ExamPerfaceViewController.swift */,
+				A66E28BF1E6AC64A00D1B520 /* ExamPerfaceViewController.xib */,
+				A66E28C21E6ACD9E00D1B520 /* ExamDetailViewController.swift */,
+				A66E28C31E6ACD9E00D1B520 /* ExamDetailViewController.xib */,
 			);
 			name = "闯关";
 			sourceTree = "<group>";
@@ -669,18 +693,22 @@
 				A6DF603B1DFA50E8003AED3C /* Icon-57.png in Resources */,
 				A6DF60391DFA5062003AED3C /* Icon-60@3x.png in Resources */,
 				A6996D741DD5E7A700C5E1A1 /* contributionInfoViewController.xib in Resources */,
+				A66E28C71E6AEF0700D1B520 /* answers.plist in Resources */,
 				A65382021E3F217200612525 /* imageNewsViewController.xib in Resources */,
+				A6AC8B9E1E62DB1D00D1A748 /* CardCellCollectionViewCell.xib in Resources */,
 				A6996D701DD5E06800C5E1A1 /* resultViewController.xib in Resources */,
 				A606BEE31DEEEB3D0094F8B6 /* settingsViewController.xib in Resources */,
 				A6772C041DCC4D7700425322 /* LaunchScreen.storyboard in Resources */,
 				A61685311DCE9AB700210D12 /* aboutUsViewController.xib in Resources */,
 				A6E8B4AB1DD196AD0093F597 /* userInfoChangeViewController.xib in Resources */,
 				A6D17AC21E0E1B7B00071C84 /* DetailSendContentViewController.xib in Resources */,
+				A66E28C11E6AC64A00D1B520 /* ExamPerfaceViewController.xib in Resources */,
 				A6F27ADA1E3A425500E9C3A6 /* TextTableViewCell.xib in Resources */,
 				A6772C2A1DCC4E3400425322 /* Bmob_iOS_SDK更新历史.txt in Resources */,
 				A6FE92431DD44DB0008CA618 /* 题库.plist in Resources */,
 				A6DF60371DFA4FBF003AED3C /* Icon-60@2x.png in Resources */,
 				A6772C011DCC4D7700425322 /* Assets.xcassets in Resources */,
+				A66E28C51E6ACD9E00D1B520 /* ExamDetailViewController.xib in Resources */,
 				A6F27AD21E3A423600E9C3A6 /* ImageTableViewCell.xib in Resources */,
 				A677CA681DD031EC008ECF71 /* logInViewController.xib in Resources */,
 				A6BFFE841DD8596C004A781F /* detailContenViewController.xib in Resources */,
@@ -742,7 +770,9 @@
 				A671C2781E618D4800AF7707 /* shoppingcellTableViewCell.swift in Sources */,
 				A6E8B4AA1DD196AD0093F597 /* userInfoChangeViewController.swift in Sources */,
 				A61685301DCE9AB700210D12 /* aboutUsViewController.swift in Sources */,
+				A6AC8BA01E62E14200D1A748 /* CardLayout.swift in Sources */,
 				A6996D731DD5E7A700C5E1A1 /* contributionInfoViewController.swift in Sources */,
+				A6AC8BA21E62E1DF00D1A748 /* CardCollectionViewController.swift in Sources */,
 				A6996D6F1DD5E06800C5E1A1 /* resultViewController.swift in Sources */,
 				A65381FD1E3F20C500612525 /* TextNewsDetailViewController.swift in Sources */,
 				A6D17ABC1E0E0E1500071C84 /* MailBoxTableViewController.swift in Sources */,
@@ -752,9 +782,11 @@
 				A6D17ABE1E0E0E2300071C84 /* SendBoxTableViewController.swift in Sources */,
 				A6BFFE831DD8596C004A781F /* detailContenViewController.swift in Sources */,
 				A6B7BCE81DF1ACBD001ACD10 /* adminDirTableViewController.swift in Sources */,
+				A66E28C41E6ACD9E00D1B520 /* ExamDetailViewController.swift in Sources */,
 				A61A5B471E17540E005A7077 /* MediaCellCollectionViewCell.swift in Sources */,
 				A6FE92001DD44927008CA618 /* answerViewController.swift in Sources */,
 				A6772BFF1DCC4D7700425322 /* ____.xcdatamodeld in Sources */,
+				A66E28C01E6AC64A00D1B520 /* ExamPerfaceViewController.swift in Sources */,
 				A6772C7A1DCC5EC800425322 /* userListTableViewController.swift in Sources */,
 				A6D91DB31DF91DB4008BE1FD /* pageDetailViewController.swift in Sources */,
 				A61F45C71DD95E2A00D097E4 /* addViewController.swift in Sources */,
@@ -762,7 +794,7 @@
 				A6772C691DCC5D2E00425322 /* lianbaikeViewController.swift in Sources */,
 				A6772C891DCC700B00425322 /* myTabViewController.swift in Sources */,
 				A611C3D81DE0610800C0C889 /* addNoticeAlarmViewController.swift in Sources */,
-				A6772C6D1DCC5D3C00425322 /* lianchuangguanViewController.swift in Sources */,
+				A6AC8B9D1E62DB1D00D1A748 /* CardCellCollectionViewCell.swift in Sources */,
 				A606BEE21DEEEB3D0094F8B6 /* settingsViewController.swift in Sources */,
 				A6F037AD1DF246CB007E1A2B /* adminDetailViewController.swift in Sources */,
 				A642332B1DF2F9170011BD41 /* myHeadCollectionReusableView.swift in Sources */,

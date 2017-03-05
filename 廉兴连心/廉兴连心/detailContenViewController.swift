@@ -205,21 +205,20 @@ class detailContenViewController: UIViewController {
                       
                             self.userid = self.myAuthor?.objectId
                             
-                            DispatchQueue.main.async{
-                                self.username.text = self.author
-                              
-                                if (self.checked != nil) && (self.checked!) {
-                                    self.checkSwitch.isOn = true
-                                }else{
-                                    self.checkSwitch.isOn = false
-                                }
-                                self.myContent = content as! String
-                               self.content.text = self.myContent
-                              
-                            }
+                         
                         }
-                        
-                        
+                        DispatchQueue.main.async{
+                            self.username.text = self.author
+                            
+                            if (self.checked != nil) && (self.checked!) {
+                                self.checkSwitch.isOn = true
+                            }else{
+                                self.checkSwitch.isOn = false
+                            }
+                            self.myContent = content as! String
+                            self.content.text = self.myContent
+                            
+                        }
                     })
          
                 }

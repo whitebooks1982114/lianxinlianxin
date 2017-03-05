@@ -169,6 +169,7 @@ class masterPieceViewController: UIViewController,UICollectionViewDelegate,UICol
                 //给作品板块加载本地封面，为网络加载预留时间
                 
                 pageDetail.navigationItem.title = "作品展示详情"
+        
                  
                 self.navigationController?.pushViewController(pageDetail, animated: true)
                 

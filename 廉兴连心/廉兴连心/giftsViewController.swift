@@ -165,6 +165,8 @@ class giftsViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         self.orderNameList.removeAll()
         self.orderNumList.removeAll()
         query()
+        userNeedScore = 0
+        self.totalScore.text = "您的可兑换积分总数为\(exscore),本次兑换所需积分\(userNeedScore)"
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -207,6 +209,9 @@ class giftsViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     //点击cell中的button更新totalScore label值
     func cellForRowButtonClicked(tableview: UITableView) {
        self.totalScore.text = "您的可兑换积分总数为\(exscore),本次兑换所需积分\(userNeedScore)"
+        if exscore < userNeedScore {
+            self.totalScore.textColor = UIColor.red
+        }
     }
     
     func getCellLabelContent(tableview: UITableView, cellIndexPath cellindexPath: IndexPath) {

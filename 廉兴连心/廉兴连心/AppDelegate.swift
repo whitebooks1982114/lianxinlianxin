@@ -16,6 +16,9 @@ var noticeArrayIsNotNull: Bool = false
 
 var alarmArrayIsNotNull: Bool = false
 
+//答题闯关界面testID
+var objectIDs = [Int]()
+
 
 
 
