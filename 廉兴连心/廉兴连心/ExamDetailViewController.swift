@@ -9,9 +9,11 @@
 import UIKit
 
 class ExamDetailViewController: UIViewController ,UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource{
+    let myStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
     
     @IBOutlet weak var myPickerView: UIPickerView!
     var testid_detail:Int!
+    var questionNum:Int!
     
     var answerArray:NSArray!
     
@@ -22,6 +24,8 @@ class ExamDetailViewController: UIViewController ,UITextFieldDelegate,UIPickerVi
     @IBOutlet weak var answerATF: UITextField!
 
     @IBOutlet weak var answerBTF: UITextField!
+    
+ 
     
     func saveQuestions(){
         if questionTF.text == "" || answerATF.text == "" || answerBTF.text == "" || answerCTF.text == "" ||
@@ -72,8 +76,15 @@ class ExamDetailViewController: UIViewController ,UITextFieldDelegate,UIPickerVi
     }
     
     @IBAction func nextQuestion(_ sender: UITapGestureRecognizer) {
+        if index + 1 <= questionNum {
         saveQuestions()
-           }
+        }else {
+            let alert  = UIAlertController(title: "提示", message: "题目编写数量已满，请点击完成按钮完成出题", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
     @IBOutlet weak var answerCTF: UITextField!
     
     @IBOutlet weak var answerDTF: UITextField!
@@ -128,9 +139,27 @@ class ExamDetailViewController: UIViewController ,UITextFieldDelegate,UIPickerVi
     }
     
     func complete() {
+      
+        if index + 1 < questionNum {
+            let alert  = UIAlertController(title: "提示", message: "请继续上传试题", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }else if index + 1 > questionNum{
+            let alert  = UIAlertController(title: "提示", message: "出题已完成，将返回首页", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: {
+                (ok) in
+               self.present((self.myStoryboard.instantiateViewController(withIdentifier: "SWRevealViewController")), animated: true, completion: nil)
+                
+            })
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+            
+        }else {
         saveQuestions()
         index = 0
        _ = self.navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     func goBack() {

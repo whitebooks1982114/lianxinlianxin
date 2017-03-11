@@ -8,28 +8,56 @@
 
 import UIKit
 
- var titleList = [String]()
+
 class mediaCollectionViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
-    
-   
-    
-     let media = mediaViewController()
-    let myRefresh = UIRefreshControl()
+    var titleList = [String]()
+    var perfaceName:String!
     
     @IBOutlet weak var mediaCollection: UICollectionView!
+    
+     let media = mediaViewController()
+    
+    func query() {
+        titleList.removeAll()
+        let query = BmobQuery(className: "media")
+        query?.whereKey("name", equalTo: perfaceName)
+        query?.order(byDescending: "updatedAt")
+        query?.findObjectsInBackground({ (array, error) in
+            if error != nil {
+                print("\(error?.localizedDescription)")
+                let alert = UIAlertController(title: "错误提示", message: "服务器连接失败", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+                alert.addAction(ok)
+                self.present(alert, animated: true, completion: nil)
+                
+            }else {
+                for obj in array! {
+                    
+                    let detail = obj as! BmobObject
+                    let listtitle = detail.object(forKey: "title") as! String
+                    self.titleList.append(listtitle)
+                    
+                }
+                
+            }
+            DispatchQueue.main.async {
+                self.mediaCollection.reloadData()
+            }
+            
+        })
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        mediaCollection.backgroundView = UIImageView(image: UIImage(named: "百科背景"))
-        
-        
-        mediaCollection.delegate = self
-        mediaCollection.dataSource = self
-        
-      
-        
+      mediaCollection.backgroundView = UIImageView(image: UIImage(named: "百科背景"))        
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        query()
+    }
    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

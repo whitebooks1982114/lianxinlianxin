@@ -40,6 +40,7 @@
 		A66E28C51E6ACD9E00D1B520 /* ExamDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A66E28C31E6ACD9E00D1B520 /* ExamDetailViewController.xib */; };
 		A66E28C71E6AEF0700D1B520 /* answers.plist in Resources */ = {isa = PBXBuildFile; fileRef = A66E28C61E6AEF0700D1B520 /* answers.plist */; };
 		A671C2781E618D4800AF7707 /* shoppingcellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A671C2771E618D4800AF7707 /* shoppingcellTableViewCell.swift */; };
+		A676569E1E70FA5A00AB9CA9 /* detailContenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676569C1E70FA5A00AB9CA9 /* detailContenViewController.swift */; };
 		A6772BF71DCC4D7700425322 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6772BF61DCC4D7700425322 /* AppDelegate.swift */; };
 		A6772BFF1DCC4D7700425322 /* ____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6772BFD1DCC4D7700425322 /* ____.xcdatamodeld */; };
 		A6772C011DCC4D7700425322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6772C001DCC4D7700425322 /* Assets.xcassets */; };
@@ -71,13 +72,12 @@
 		A677CA6D1DD04AB3008ECF71 /* fogetPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677CA6B1DD04AB3008ECF71 /* fogetPwdViewController.swift */; };
 		A67FCCA61E237A0F0013CE50 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A67FCCA51E237A0F0013CE50 /* libz.tbd */; };
 		A67FCCA81E237A180013CE50 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A67FCCA71E237A180013CE50 /* libc++.tbd */; };
-		A67FCCAA1E237A530013CE50 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67FCCA91E237A530013CE50 /* JavaScriptCore.framework */; };
 		A67FCCAC1E237A660013CE50 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67FCCAB1E237A660013CE50 /* UserNotifications.framework */; };
 		A6996D6F1DD5E06800C5E1A1 /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6996D6D1DD5E06800C5E1A1 /* resultViewController.swift */; };
 		A6996D701DD5E06800C5E1A1 /* resultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6996D6E1DD5E06800C5E1A1 /* resultViewController.xib */; };
-		A6996D731DD5E7A700C5E1A1 /* contributionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6996D711DD5E7A700C5E1A1 /* contributionInfoViewController.swift */; };
-		A6996D741DD5E7A700C5E1A1 /* contributionInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6996D721DD5E7A700C5E1A1 /* contributionInfoViewController.xib */; };
 		A699CA821E405B880096DF3A /* VedioNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A699CA811E405B880096DF3A /* VedioNewsViewController.swift */; };
+		A69A90181E6FA58A00EB6F0B /* contributionInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69A90161E6FA58A00EB6F0B /* contributionInfoViewController.xib */; };
+		A69A90191E6FA58A00EB6F0B /* contributionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69A90171E6FA58A00EB6F0B /* contributionInfoViewController.swift */; };
 		A6AC8B9D1E62DB1D00D1A748 /* CardCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AC8B9B1E62DB1D00D1A748 /* CardCellCollectionViewCell.swift */; };
 		A6AC8B9E1E62DB1D00D1A748 /* CardCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6AC8B9C1E62DB1D00D1A748 /* CardCellCollectionViewCell.xib */; };
 		A6AC8BA01E62E14200D1A748 /* CardLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AC8B9F1E62E14200D1A748 /* CardLayout.swift */; };
@@ -89,8 +89,6 @@
 		A6B7BCE81DF1ACBD001ACD10 /* adminDirTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B7BCE71DF1ACBD001ACD10 /* adminDirTableViewController.swift */; };
 		A6BF68771E3A0F62005269E9 /* DongTaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BF68761E3A0F62005269E9 /* DongTaiViewController.swift */; };
 		A6BFFE7E1DD84A00004A781F /* baikeDirTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BFFE7C1DD84A00004A781F /* baikeDirTableViewController.swift */; };
-		A6BFFE831DD8596C004A781F /* detailContenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BFFE811DD8596C004A781F /* detailContenViewController.swift */; };
-		A6BFFE841DD8596C004A781F /* detailContenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6BFFE821DD8596C004A781F /* detailContenViewController.xib */; };
 		A6D17AB81E0E033900071C84 /* reportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D17AB71E0E033900071C84 /* reportViewController.swift */; };
 		A6D17ABA1E0E05A800071C84 /* writeMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D17AB91E0E05A800071C84 /* writeMailViewController.swift */; };
 		A6D17ABC1E0E0E1500071C84 /* MailBoxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D17ABB1E0E0E1500071C84 /* MailBoxTableViewController.swift */; };
@@ -103,6 +101,8 @@
 		A6DF60371DFA4FBF003AED3C /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6DF60361DFA4FBF003AED3C /* Icon-60@2x.png */; };
 		A6DF60391DFA5062003AED3C /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6DF60381DFA5062003AED3C /* Icon-60@3x.png */; };
 		A6DF603B1DFA50E8003AED3C /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = A6DF603A1DFA50E8003AED3C /* Icon-57.png */; };
+		A6E825C71E73DD7300DC303F /* MediaPerfaceCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E825C61E73DD7300DC303F /* MediaPerfaceCollectionViewController.swift */; };
+		A6E825C91E73DD9100DC303F /* MediaPerfaceCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E825C81E73DD9100DC303F /* MediaPerfaceCellCollectionViewCell.swift */; };
 		A6E8B4AA1DD196AD0093F597 /* userInfoChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E8B4A81DD196AD0093F597 /* userInfoChangeViewController.swift */; };
 		A6E8B4AB1DD196AD0093F597 /* userInfoChangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E8B4A91DD196AD0093F597 /* userInfoChangeViewController.xib */; };
 		A6EC66201DDE7DF700D71B0A /* noticedetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EC661E1DDE7DF700D71B0A /* noticedetailViewController.swift */; };
@@ -123,7 +123,6 @@
 		A6F7BF931DCD72BC00402147 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6F7BF901DCD72BC00402147 /* Main.storyboard */; };
 		A6FE92001DD44927008CA618 /* answerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FE91FE1DD44927008CA618 /* answerViewController.swift */; };
 		A6FE92011DD44927008CA618 /* answerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6FE91FF1DD44927008CA618 /* answerViewController.xib */; };
-		A6FE92431DD44DB0008CA618 /* 题库.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6FE92421DD44DB0008CA618 /* 题库.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +178,7 @@
 		A66E28C31E6ACD9E00D1B520 /* ExamDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExamDetailViewController.xib; sourceTree = "<group>"; };
 		A66E28C61E6AEF0700D1B520 /* answers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = answers.plist; sourceTree = "<group>"; };
 		A671C2771E618D4800AF7707 /* shoppingcellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shoppingcellTableViewCell.swift; sourceTree = "<group>"; };
+		A676569C1E70FA5A00AB9CA9 /* detailContenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailContenViewController.swift; sourceTree = "<group>"; };
 		A6772BF31DCC4D7700425322 /* 廉兴连心.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "廉兴连心.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6772BF61DCC4D7700425322 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6772BFE1DCC4D7700425322 /* ____.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "____.xcdatamodel"; sourceTree = "<group>"; };
@@ -219,9 +219,9 @@
 		A67FCCAB1E237A660013CE50 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		A6996D6D1DD5E06800C5E1A1 /* resultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resultViewController.swift; sourceTree = "<group>"; };
 		A6996D6E1DD5E06800C5E1A1 /* resultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = resultViewController.xib; sourceTree = "<group>"; };
-		A6996D711DD5E7A700C5E1A1 /* contributionInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contributionInfoViewController.swift; sourceTree = "<group>"; };
-		A6996D721DD5E7A700C5E1A1 /* contributionInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = contributionInfoViewController.xib; sourceTree = "<group>"; };
 		A699CA811E405B880096DF3A /* VedioNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VedioNewsViewController.swift; sourceTree = "<group>"; };
+		A69A90161E6FA58A00EB6F0B /* contributionInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = contributionInfoViewController.xib; sourceTree = "<group>"; };
+		A69A90171E6FA58A00EB6F0B /* contributionInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contributionInfoViewController.swift; sourceTree = "<group>"; };
 		A6AC8B9B1E62DB1D00D1A748 /* CardCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		A6AC8B9C1E62DB1D00D1A748 /* CardCellCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCellCollectionViewCell.xib; sourceTree = "<group>"; };
 		A6AC8B9F1E62E14200D1A748 /* CardLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardLayout.swift; sourceTree = "<group>"; };
@@ -233,8 +233,6 @@
 		A6B7BCE71DF1ACBD001ACD10 /* adminDirTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = adminDirTableViewController.swift; sourceTree = "<group>"; };
 		A6BF68761E3A0F62005269E9 /* DongTaiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DongTaiViewController.swift; sourceTree = "<group>"; };
 		A6BFFE7C1DD84A00004A781F /* baikeDirTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = baikeDirTableViewController.swift; sourceTree = "<group>"; };
-		A6BFFE811DD8596C004A781F /* detailContenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailContenViewController.swift; sourceTree = "<group>"; };
-		A6BFFE821DD8596C004A781F /* detailContenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = detailContenViewController.xib; sourceTree = "<group>"; };
 		A6D17AB71E0E033900071C84 /* reportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reportViewController.swift; sourceTree = "<group>"; };
 		A6D17AB91E0E05A800071C84 /* writeMailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = writeMailViewController.swift; sourceTree = "<group>"; };
 		A6D17ABB1E0E0E1500071C84 /* MailBoxTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailBoxTableViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +246,8 @@
 		A6DF60381DFA5062003AED3C /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
 		A6DF603A1DFA50E8003AED3C /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
 		A6E558661DCDAB6D000C0161 /* 廉兴连心-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "廉兴连心-Bridging-Header.h"; path = "廉兴连心/廉兴连心-Bridging-Header.h"; sourceTree = "<group>"; };
+		A6E825C61E73DD7300DC303F /* MediaPerfaceCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPerfaceCollectionViewController.swift; sourceTree = "<group>"; };
+		A6E825C81E73DD9100DC303F /* MediaPerfaceCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPerfaceCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		A6E8B4A81DD196AD0093F597 /* userInfoChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userInfoChangeViewController.swift; sourceTree = "<group>"; };
 		A6E8B4A91DD196AD0093F597 /* userInfoChangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = userInfoChangeViewController.xib; sourceTree = "<group>"; };
 		A6EC661E1DDE7DF700D71B0A /* noticedetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = noticedetailViewController.swift; sourceTree = "<group>"; };
@@ -265,7 +265,6 @@
 		A6F7BF901DCD72BC00402147 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A6FE91FE1DD44927008CA618 /* answerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = answerViewController.swift; sourceTree = "<group>"; };
 		A6FE91FF1DD44927008CA618 /* answerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = answerViewController.xib; sourceTree = "<group>"; };
-		A6FE92421DD44DB0008CA618 /* 题库.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "题库.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,7 +277,6 @@
 				A612872D1E42054E00EA42C4 /* CoreFoundation.framework in Frameworks */,
 				A6B2FB641E3B9A2000F46FB5 /* Kingfisher.framework in Frameworks */,
 				A67FCCAC1E237A660013CE50 /* UserNotifications.framework in Frameworks */,
-				A67FCCAA1E237A530013CE50 /* JavaScriptCore.framework in Frameworks */,
 				A67FCCA81E237A180013CE50 /* libc++.tbd in Frameworks */,
 				A67FCCA61E237A0F0013CE50 /* libz.tbd in Frameworks */,
 				A6772C4C1DCC4F0700425322 /* libsqlite3.tbd in Frameworks */,
@@ -427,7 +425,6 @@
 				A6DF603C1DFA50EF003AED3C /* icons */,
 				A6B7BCDE1DF17D4F001ACD10 /* alarmdays.plist */,
 				A6772C051DCC4D7700425322 /* Info.plist */,
-				A6FE92421DD44DB0008CA618 /* 题库.plist */,
 				A6772BFD1DCC4D7700425322 /* ____.xcdatamodeld */,
 				A6772C4E1DCC4F1C00425322 /* 廉兴连心Tests-Bridging-Header.h */,
 				A6772C4F1DCC4F1C00425322 /* 廉兴连心UITests-Bridging-Header.h */,
@@ -476,11 +473,11 @@
 		A677CA641DD029AF008ECF71 /* login and signup */ = {
 			isa = PBXGroup;
 			children = (
+				A69A90161E6FA58A00EB6F0B /* contributionInfoViewController.xib */,
+				A69A90171E6FA58A00EB6F0B /* contributionInfoViewController.swift */,
 				A616852E1DCE9AB700210D12 /* aboutUsViewController.swift */,
 				A616852F1DCE9AB700210D12 /* aboutUsViewController.xib */,
 				A677CA601DD029A7008ECF71 /* signUpViewController.swift */,
-				A6996D711DD5E7A700C5E1A1 /* contributionInfoViewController.swift */,
-				A6996D721DD5E7A700C5E1A1 /* contributionInfoViewController.xib */,
 				A6E8B4A81DD196AD0093F597 /* userInfoChangeViewController.swift */,
 				A606BEE01DEEEB3D0094F8B6 /* settingsViewController.swift */,
 				A606BEE11DEEEB3D0094F8B6 /* settingsViewController.xib */,
@@ -514,15 +511,16 @@
 		A6BFFE801DD84A20004A781F /* 百科 */ = {
 			isa = PBXGroup;
 			children = (
+				A676569C1E70FA5A00AB9CA9 /* detailContenViewController.swift */,
 				A6772C681DCC5D2E00425322 /* lianbaikeViewController.swift */,
 				A6BFFE7C1DD84A00004A781F /* baikeDirTableViewController.swift */,
 				A61F45C51DD95E2A00D097E4 /* addViewController.swift */,
 				A61F45C61DD95E2A00D097E4 /* addViewController.xib */,
-				A6BFFE811DD8596C004A781F /* detailContenViewController.swift */,
 				A61A5B441E1753F2005A7077 /* mediaCollectionViewController.swift */,
 				A61A5B461E17540E005A7077 /* MediaCellCollectionViewCell.swift */,
 				A603A6521E162EB8000E28A0 /* mediaViewController.swift */,
-				A6BFFE821DD8596C004A781F /* detailContenViewController.xib */,
+				A6E825C61E73DD7300DC303F /* MediaPerfaceCollectionViewController.swift */,
+				A6E825C81E73DD9100DC303F /* MediaPerfaceCellCollectionViewCell.swift */,
 			);
 			name = "百科";
 			sourceTree = "<group>";
@@ -692,7 +690,6 @@
 				A65381FE1E3F20C500612525 /* TextNewsDetailViewController.xib in Resources */,
 				A6DF603B1DFA50E8003AED3C /* Icon-57.png in Resources */,
 				A6DF60391DFA5062003AED3C /* Icon-60@3x.png in Resources */,
-				A6996D741DD5E7A700C5E1A1 /* contributionInfoViewController.xib in Resources */,
 				A66E28C71E6AEF0700D1B520 /* answers.plist in Resources */,
 				A65382021E3F217200612525 /* imageNewsViewController.xib in Resources */,
 				A6AC8B9E1E62DB1D00D1A748 /* CardCellCollectionViewCell.xib in Resources */,
@@ -705,13 +702,12 @@
 				A66E28C11E6AC64A00D1B520 /* ExamPerfaceViewController.xib in Resources */,
 				A6F27ADA1E3A425500E9C3A6 /* TextTableViewCell.xib in Resources */,
 				A6772C2A1DCC4E3400425322 /* Bmob_iOS_SDK更新历史.txt in Resources */,
-				A6FE92431DD44DB0008CA618 /* 题库.plist in Resources */,
 				A6DF60371DFA4FBF003AED3C /* Icon-60@2x.png in Resources */,
 				A6772C011DCC4D7700425322 /* Assets.xcassets in Resources */,
 				A66E28C51E6ACD9E00D1B520 /* ExamDetailViewController.xib in Resources */,
 				A6F27AD21E3A423600E9C3A6 /* ImageTableViewCell.xib in Resources */,
+				A69A90181E6FA58A00EB6F0B /* contributionInfoViewController.xib in Resources */,
 				A677CA681DD031EC008ECF71 /* logInViewController.xib in Resources */,
-				A6BFFE841DD8596C004A781F /* detailContenViewController.xib in Resources */,
 				A6D17AC61E0E1B9300071C84 /* DetailReplyContentViewController.xib in Resources */,
 				A62E06601E077EA000EF93F9 /* LOGO修改2.jpg in Resources */,
 				A644669A1DD2BFCC008CB465 /* department.plist in Resources */,
@@ -767,11 +763,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A677CA621DD029A7008ECF71 /* signUpViewController.swift in Sources */,
+				A676569E1E70FA5A00AB9CA9 /* detailContenViewController.swift in Sources */,
 				A671C2781E618D4800AF7707 /* shoppingcellTableViewCell.swift in Sources */,
 				A6E8B4AA1DD196AD0093F597 /* userInfoChangeViewController.swift in Sources */,
 				A61685301DCE9AB700210D12 /* aboutUsViewController.swift in Sources */,
 				A6AC8BA01E62E14200D1A748 /* CardLayout.swift in Sources */,
-				A6996D731DD5E7A700C5E1A1 /* contributionInfoViewController.swift in Sources */,
 				A6AC8BA21E62E1DF00D1A748 /* CardCollectionViewController.swift in Sources */,
 				A6996D6F1DD5E06800C5E1A1 /* resultViewController.swift in Sources */,
 				A65381FD1E3F20C500612525 /* TextNewsDetailViewController.swift in Sources */,
@@ -780,7 +776,6 @@
 				A603A6531E162EB8000E28A0 /* mediaViewController.swift in Sources */,
 				A63E42131E6117C2005B8D61 /* giftsViewController.swift in Sources */,
 				A6D17ABE1E0E0E2300071C84 /* SendBoxTableViewController.swift in Sources */,
-				A6BFFE831DD8596C004A781F /* detailContenViewController.swift in Sources */,
 				A6B7BCE81DF1ACBD001ACD10 /* adminDirTableViewController.swift in Sources */,
 				A66E28C41E6ACD9E00D1B520 /* ExamDetailViewController.swift in Sources */,
 				A61A5B471E17540E005A7077 /* MediaCellCollectionViewCell.swift in Sources */,
@@ -791,6 +786,7 @@
 				A6D91DB31DF91DB4008BE1FD /* pageDetailViewController.swift in Sources */,
 				A61F45C71DD95E2A00D097E4 /* addViewController.swift in Sources */,
 				A6772C611DCC5CF800425322 /* liantixinViewController.swift in Sources */,
+				A6E825C71E73DD7300DC303F /* MediaPerfaceCollectionViewController.swift in Sources */,
 				A6772C691DCC5D2E00425322 /* lianbaikeViewController.swift in Sources */,
 				A6772C891DCC700B00425322 /* myTabViewController.swift in Sources */,
 				A611C3D81DE0610800C0C889 /* addNoticeAlarmViewController.swift in Sources */,
@@ -809,10 +805,12 @@
 				A62F9E3C1DDD2B8200491D40 /* tongziTableViewController.swift in Sources */,
 				A64233291DF2F5AC0011BD41 /* myCellCollectionViewCell.swift in Sources */,
 				A6D17AC11E0E1B7B00071C84 /* DetailSendContentViewController.swift in Sources */,
+				A69A90191E6FA58A00EB6F0B /* contributionInfoViewController.swift in Sources */,
 				A6D17ABA1E0E05A800071C84 /* writeMailViewController.swift in Sources */,
 				A6EC66201DDE7DF700D71B0A /* noticedetailViewController.swift in Sources */,
 				A699CA821E405B880096DF3A /* VedioNewsViewController.swift in Sources */,
 				A65382011E3F217200612525 /* imageNewsViewController.swift in Sources */,
+				A6E825C91E73DD9100DC303F /* MediaPerfaceCellCollectionViewCell.swift in Sources */,
 				A6F7BF8D1DCD6DF700402147 /* SWRevealViewController.m in Sources */,
 				A6F27AD51E3A424A00E9C3A6 /* VedioTableViewCell.swift in Sources */,
 				A6F27AD91E3A425500E9C3A6 /* TextTableViewCell.swift in Sources */,
@@ -894,6 +892,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: lei chen (8MSH7WEY4Z)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -920,6 +919,7 @@
 				SDKROOT = iphoneos10.1;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -951,6 +951,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: lei chen (8MSH7WEY4Z)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -967,15 +968,18 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos10.1;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
 		A6772C1F1DCC4D7700425322 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "廉兴连心/廉兴连心.entitlements";
@@ -996,6 +1000,7 @@
 					"$(PROJECT_DIR)/GtSdkLib-noidfa",
 					"$(PROJECT_DIR)/Lib",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.whitebooks.LianXinLianXinLL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "85d9e4c1-3b74-415f-b6ff-6e775363e361";
@@ -1004,12 +1009,14 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "廉兴连心/廉兴连心-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
 		A6772C201DCC4D7700425322 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "廉兴连心/廉兴连心.entitlements";
@@ -1038,6 +1045,7 @@
 				SDKROOT = iphoneos10.1;
 				SWIFT_OBJC_BRIDGING_HEADER = "廉兴连心/廉兴连心-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};

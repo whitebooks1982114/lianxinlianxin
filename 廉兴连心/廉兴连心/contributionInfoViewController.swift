@@ -10,7 +10,9 @@ import UIKit
 
 class contributionInfoViewController: UIViewController {
     
+    @IBOutlet weak var test: UILabel!
 
+    @IBOutlet weak var party: UILabel!
     
     @IBOutlet weak var signedlevel: UILabel!
     
@@ -27,6 +29,8 @@ class contributionInfoViewController: UIViewController {
     var updateKnowledgeNum = 0
     var signTimes:Int!
     var userTotalScore:Int!
+    var partyScore:Int?
+    var testScore:Int?
    
     
   
@@ -43,25 +47,36 @@ class contributionInfoViewController: UIViewController {
         
         let usr = BmobUser.current()
         if usr != nil{
-   
-        let usrId = usr?.objectId
-        self.userTotalScore = usr?.object(forKey: "exscore") as? Int
+            
+            let usrId = usr?.objectId
+            self.userTotalScore = usr?.object(forKey: "exscore") as? Int
             if userTotalScore == nil {
                 userTotalScore = 0
             }
             totalScore.text = "\(String(self.userTotalScore))"
+            signTimes = usr?.object(forKey: "signtimes") as? Int
+            if signTimes == nil {
+                self.signedlevel.text = "0"
+            }else {
+                self.signedlevel.text = "\(String(self.signTimes))"
+                self.signedlevel.textColor = UIColor.orange
+            }
+            self.partyScore = usr?.object(forKey: "partyscore") as? Int
+            if partyScore == nil {
+                partyScore = 0
+            }
+            party.text = "\(String(self.partyScore!))"
+            self.testScore = usr?.object(forKey: "examscore") as? Int
+            if testScore == nil {
+                testScore = 0
+            }
+            test.text = "\(String(self.testScore!))"
+            signTimes = usr?.object(forKey: "signtimes") as? Int
         let query = BmobQuery(className: "bake")
         let author = BmobUser(outDataWithClassName: "_User", objectId: usrId)
         query?.whereKey("author", equalTo: author)
             
-        signTimes = usr?.object(forKey: "signtimes") as? Int
-     
-            if signTimes == nil {
-              self.signedlevel.text = "0"
-            }else {
-            self.signedlevel.text = "\(String(self.signTimes))"
-            self.signedlevel.textColor = UIColor.orange
-            }
+      
             query?.countObjectsInBackground({ (num, error) in
                 if error != nil {
                     print("\(error?.localizedDescription)")
@@ -87,6 +102,8 @@ class contributionInfoViewController: UIViewController {
             self.signedlevel.text = "请您先登录"
             self.updatedKnowledge.text = "请您先登录"
             self.totalScore.text = "请您先登录"
+            self.test.text = "请您先登录"
+            self.party.text = "请您先登录"
         }
      
         

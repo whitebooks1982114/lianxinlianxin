@@ -42,7 +42,7 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
     
 
     
-    var label:UILabel!
+    var label:UILabel?
     var newsView:UITableView!
     var btn1:UIButton!
     var btn2:UIButton!
@@ -134,6 +134,9 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
     }
     //加载头条新闻
     func queryHeadLine(){
+        if self.label != nil {
+        self.label?.removeFromSuperview()
+        }
         let query = BmobQuery(className: "headlinenews")
         query?.getObjectInBackground(withId: "CyM35558", block: { (obj, error) in
             if error != nil {
@@ -143,8 +146,8 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
             }
             
             DispatchQueue.main.async {
-                self.label = UILabel(frame: CGRect(x: 100.0, y: 70.0, width: 200.0, height: 20.0))
-                
+
+                self.label = UILabel()
                 self.label?.textColor = UIColor.red
                 self.label?.backgroundColor = UIColor.clear
                 
@@ -153,7 +156,7 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
                 
                 self.label?.font = UIFont.systemFont(ofSize: 17)
 
-                self.label.text = self.headLineNews
+                self.label?.text = self.headLineNews
                 let text:String = (self.label?.text!)!
                 let attributes = [NSFontAttributeName: self.label?.font!]//计算label的字体
                 self.label?.frame = self.labelSize(text: text, attributes: attributes as [NSObject : AnyObject])//调用计算label宽高的方法
@@ -162,7 +165,7 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
                 
                 self.view.addSubview(self.label!)
                 
-                self.timeAdjust = Double(self.label.frame.width)
+                self.timeAdjust = Double((self.label?.frame.width)!)
                 UIView.animate(withDuration: 0.1 * Double(self.timeAdjust), delay: 0, options: [.repeat,.curveLinear], animations: {
                     self.label?.transform = CGAffineTransform(translationX: -UIScreen.main.bounds.width - (self.label?.frame.size.width)!, y: 0)
                 }, completion: nil)
@@ -286,9 +289,9 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
 
         
         self.navigationItem.title = "新闻首页"
-       queryHeadLine()
+        queryHeadLine()
         newsKind = "中央"
-        
+      
         
         newsView = UITableView(frame: CGRect(x: 0, y:50 + UIApplication.shared.statusBarFrame.height + (self.navigationController?.navigationBar.frame.height)!, width: self.view.frame.width, height: self.view.frame.height - 80 - UIApplication.shared.statusBarFrame.height - (self.navigationController?.navigationBar.frame.height)!))
         

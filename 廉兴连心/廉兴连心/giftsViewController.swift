@@ -12,6 +12,7 @@ import Kingfisher
 var userNeedScore = 0
 
 class giftsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource ,cellbuttonclick{
+    @IBOutlet weak var usrmenu: UIBarButtonItem!
 
     @IBOutlet weak var shopList: UITableView!
     
@@ -134,6 +135,19 @@ class giftsViewController: UIViewController,UITableViewDelegate,UITableViewDataS
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.revealViewController() != nil {
+            self.revealViewController().rearViewRevealWidth = 310
+            self.revealViewController().toggleAnimationDuration = 0.5
+            
+            
+            self.usrmenu.target = self.revealViewController()
+            
+            self.usrmenu.action = #selector(SWRevealViewController.revealToggle(_:))
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            
+            
+        }
          shopList.dataSource = self
         shopList.delegate = self
         
@@ -141,13 +155,18 @@ class giftsViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         
         user = BmobUser.current()
         if user != nil {
-        exscore = user?.object(forKey: "exscore") as! Int
+            
+          exscore = (user?.object(forKey: "exscore") as? Int)!
+            
+            if exscore == nil {
+                exscore = 0
+            }
         }
         
         self.totalScore.adjustsFontSizeToFitWidth = true
         self.totalScore.lineBreakMode = .byWordWrapping
         self.totalScore.numberOfLines = 0
-        self.totalScore.text = "您的可兑换积分总数为\(exscore),本次兑换所需积分\(userNeedScore)"
+        self.totalScore.text = "您的可兑换积分总数为\(String(exscore)),本次兑换所需积分\(userNeedScore)"
 
         shoppingcellTableViewCell.delegate = self
         
@@ -166,7 +185,7 @@ class giftsViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         self.orderNumList.removeAll()
         query()
         userNeedScore = 0
-        self.totalScore.text = "您的可兑换积分总数为\(exscore),本次兑换所需积分\(userNeedScore)"
+       self.totalScore.text = "您的可兑换积分总数为\(String(exscore)),本次兑换所需积分\(userNeedScore)"
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

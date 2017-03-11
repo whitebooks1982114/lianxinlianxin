@@ -54,6 +54,7 @@ class ExamPerfaceViewController: UIViewController,UITextFieldDelegate {
                 if success {
                     print("success")
                     self.detail.testid_detail = self.testid
+                    self.detail.questionNum = Int(self.numTF.text!)
                     self.navigationController?.pushViewController(self.detail, animated: true)
                     
                     

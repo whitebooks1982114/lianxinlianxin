@@ -83,7 +83,7 @@ class answerViewController: UIViewController {
     
     @IBOutlet weak var btn4: UIButton!
     
-    
+    let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
     @IBAction func judge(_ sender: UIButton) {
         judgeAnswer(sender: sender)
@@ -110,12 +110,7 @@ class answerViewController: UIViewController {
     
     func queryQuestions(index:Int) {
         myActivi.startAnimating()
-        self.question = ""
-        self.answera = ""
-        self.answerb = ""
-        self.answerc = ""
-        self.answerd = ""
-        self.rightanswer = ""
+        
         
         let query = BmobQuery(className: "question")
         let query1 = BmobQuery(className: "question")
@@ -214,7 +209,7 @@ class answerViewController: UIViewController {
         answeredquestion = answeredquestion + 1
 
         
-        //一秒钟后更新题目
+        //两秒钟后更新题目
         self.update?.invalidate()
         self.update = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.updateQuestion), userInfo: nil, repeats: false)
         
@@ -243,7 +238,12 @@ class answerViewController: UIViewController {
             self.navigationController?.pushViewController(levelResult, animated: true)
         }
 
-        
+        self.question = ""
+        self.answera = ""
+        self.answerb = ""
+        self.answerc = ""
+        self.answerd = ""
+        self.rightanswer = ""
         queryQuestions(index: answeredquestion)
         
         self.answeraImageView.image = #imageLiteral(resourceName: "defaultbtn")
@@ -259,7 +259,7 @@ class answerViewController: UIViewController {
      
         self.countDownTime?.invalidate()
         
-        answerTime = 30
+        answerTime = 50
         countDownTime = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.timeCount), userInfo: nil, repeats: true)
         
     }
@@ -366,6 +366,7 @@ class answerViewController: UIViewController {
             saveQuestion?.setObject(answeredquestion, forKey: "answerednum")
             saveQuestion?.setObject(rightans, forKey: "right")
             saveQuestion?.setObject(self.username, forKey: "name")
+            saveQuestion?.setObject(false, forKey: "success")
             saveQuestion?.setObject(self.testID, forKey: "testid")
             saveQuestion?.saveInBackground(resultBlock: { (success, error) in
                 if success {
@@ -382,7 +383,7 @@ class answerViewController: UIViewController {
             })
         }
         
-        _ = self.navigationController?.popToRootViewController(animated: true)
+          self.present((self.myStoryboard.instantiateViewController(withIdentifier: "SWRevealViewController")), animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -392,7 +393,7 @@ class answerViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-    
+   
         
         if answeredquestion >= totalNum {
             let alert  = UIAlertController(title: "温馨提示", message: "您已完成试卷，不可重复答题", preferredStyle: .alert)
@@ -408,7 +409,7 @@ class answerViewController: UIViewController {
         
         }
 
-        answerTime = 30
+        answerTime = 50
         
         countDownTime = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.timeCount), userInfo: nil, repeats: true)
         

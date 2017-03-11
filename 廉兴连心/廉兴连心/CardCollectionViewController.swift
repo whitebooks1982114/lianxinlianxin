@@ -9,6 +9,7 @@ import UIKit
 
 class CardCollectionViewController: UICollectionViewController {
     
+    @IBOutlet weak var usrmenu: UIBarButtonItem!
     var currentUserName:String?
     //题目数组
     var titleList = [String]()
@@ -34,6 +35,8 @@ class CardCollectionViewController: UICollectionViewController {
     let detail = answerViewController()
    
     let  myActivi = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    
+    var  numLabel:UILabel!
     
     //添加试卷
     @IBAction func addquestion(_ sender: UIBarButtonItem) {
@@ -152,6 +155,7 @@ class CardCollectionViewController: UICollectionViewController {
         scrollView.isHidden = true
         scrollView.isPagingEnabled = true
         scrollView.delegate = self
+        scrollView.bounces = true
         return scrollView
         }()
     
@@ -161,7 +165,19 @@ class CardCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
-       
+        
+        if self.revealViewController() != nil {
+            self.revealViewController().rearViewRevealWidth = 310
+            self.revealViewController().toggleAnimationDuration = 0.5
+            
+            
+            self.usrmenu.target = self.revealViewController()
+            
+            self.usrmenu.action = #selector(SWRevealViewController.revealToggle(_:))
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            
+            
+        }
         
         // inset collection view left/right-most cards can be centered
         let flowLayout = self.collectionView!.collectionViewLayout as! UICollectionViewFlowLayout
@@ -186,6 +202,12 @@ class CardCollectionViewController: UICollectionViewController {
         self.collectionView!.superview!.insertSubview(pagingScrollView, belowSubview: self.collectionView!)
         self.collectionView!.addGestureRecognizer(pagingScrollView.panGestureRecognizer)
         self.collectionView!.isScrollEnabled = false
+        numLabel = UILabel(frame: CGRect(x: UIScreen.main.bounds.width / 2 - 10.0, y: UIScreen.main.bounds.height - 80.0, width: 100.0, height: 30.0))
+        
+        numLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
+        self.view.addSubview(numLabel)
+        
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -203,6 +225,8 @@ class CardCollectionViewController: UICollectionViewController {
         self.view.addSubview(myActivi)
         myActivi.startAnimating()
         myActivi.color = UIColor.red
+        
+       
         
      
     }
@@ -222,51 +246,54 @@ extension CardCollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
    
         let user = BmobUser.current()
+        if user != nil {
         let userName = user?.username
         let userisParty = user?.object(forKey: "party") as! Bool
-        if isPartyList[indexPath.row - 1] {
-            if userisParty {
-              
-                detail.testID = objectIDs[indexPath.row - 1]
-                detail.passline = self.passLineList[indexPath.row - 1]
-                detail.totalNum = self.questionsList[indexPath.row - 1]
-                //查询答题记录
-                let query = BmobQuery(className: "usertestscore")
-                let query1 = BmobQuery(className: "usertestscore")
-                let mainQuery = BmobQuery(className: "usertestscore")
-                query?.whereKey("name", equalTo: userName)
-                query1?.whereKey("testid", equalTo: objectIDs[indexPath.row - 1])
-                mainQuery?.add(query)
-                mainQuery?.add(query1)
-                mainQuery?.andOperation()
-                
-
-                mainQuery?.findObjectsInBackground({ (array, error) in
-                    if error != nil {
-                        let alert  = UIAlertController(title: "温馨提示", message: "未查到答题记录", preferredStyle: .alert)
-                        let ok = UIAlertAction(title: "好", style: .default, handler: nil)
-                        alert.addAction(ok)
-                        self.present(alert, animated: true, completion: nil)
-                    }else if (array?.count)! > 0 {
-                        for obj in array! {
-                            let object = obj as! BmobObject
-                            let answeredNum = object.object(forKey: "answerednum") as! Int
-                            let rigthNum = object.object(forKey: "right") as! Int
-                            self.detail.myObjectID = object.objectId
-                            self.detail.answeredquestion = answeredNum
-                            self.detail.rightans = rigthNum
+            if isPartyList[indexPath.row - 1] {
+                if userisParty {
+                    detail.testID = objectIDs[indexPath.row - 1]
+                    detail.passline = self.passLineList[indexPath.row - 1]
+                    detail.totalNum = self.questionsList[indexPath.row - 1]
+                    //查询答题记录
+                    let query = BmobQuery(className: "usertestscore")
+                    let query1 = BmobQuery(className: "usertestscore")
+                    let mainQuery = BmobQuery(className: "usertestscore")
+                    query?.whereKey("name", equalTo: userName)
+                    query1?.whereKey("testid", equalTo: objectIDs[indexPath.row - 1])
+                    mainQuery?.add(query)
+                    mainQuery?.add(query1)
+                    mainQuery?.andOperation()
+                    
+                    mainQuery?.findObjectsInBackground({ (array, error) in
+                        if error != nil {
+                            let alert  = UIAlertController(title: "温馨提示", message: "未查到答题记录", preferredStyle: .alert)
+                            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+                            alert.addAction(ok)
+                            self.present(alert, animated: true, completion: nil)
+                        }else{
                             
+                            if (array?.count)! > 0 {
+                                print(1)
+                                for obj in array! {
+                                    let object = obj as! BmobObject
+                                    let answeredNum = object.object(forKey: "answerednum") as! Int
+                                    let rigthNum = object.object(forKey: "right") as! Int
+                                    self.detail.myObjectID = object.objectId
+                                    self.detail.answeredquestion = answeredNum
+                                    self.detail.rightans = rigthNum
+                                    
+                                }
+                                
+                                self.navigationController?.pushViewController(self.detail, animated: true)
+                            }else {
+                                print("aaaa")
+                                self.detail.answeredquestion = 0
+                                self.detail.rightans = 0
+                                self.navigationController?.pushViewController(self.detail, animated: true)
+                            }
                         }
-                        
-                        self.navigationController?.pushViewController(self.detail, animated: true)
-                    }else {
-                        self.detail.answeredquestion = 0
-                        self.detail.rightans = 0
-                        self.navigationController?.pushViewController(self.detail, animated: true)
-                    }
-                })
+                    })
 
-                self.navigationController?.pushViewController(detail, animated: true)
             }else {
                 let alert  = UIAlertController(title: "温馨提示", message: "此试卷为党员试卷", preferredStyle: .alert)
                 let ok = UIAlertAction(title: "好", style: .default, handler: nil)
@@ -317,6 +344,12 @@ extension CardCollectionViewController {
             })
         
         }
+        }else{
+            let alert  = UIAlertController(title: "温馨提示", message: "对不起，您未登录", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }
 
@@ -341,18 +374,21 @@ extension CardCollectionViewController {
             cell.testScore.isHidden = true
             cell.testTitle.isHidden = true
             cell.testLevels.textColor = UIColor.red
+            cell.testLevels.font = UIFont.boldSystemFont(ofSize: 30.0)
             cell.myContentView.layer.backgroundColor = UIColor.cyan.cgColor
             cell.isUserInteractionEnabled = false
         }else {
             cell.testTitle.text = titleList[indexPath.row - 1]
             cell.testScore.text = "积分为\(String(scoreList[indexPath.row - 1]))分"
             cell.testLevels.text = "未查询到做题记录,共\(String(questionsList[indexPath.row - 1]))题"
-            for i in 0..<self.user_testid.count{
-                if self.user_testid[i] == objectIDs[indexPath.row - 1] {
-                    if successList[i] == true {
-                        cell.testLevels.text = "恭喜您已过关"
-                    }else {
-                    cell.testLevels.text = "您已答\(String(answeredList[i]))题，共\(String(questionsList[indexPath.row - 1]))题"
+            if self.user_testid.count > 0 {
+                for i in 0..<self.user_testid.count{
+                    if self.user_testid[i] == objectIDs[indexPath.row - 1] {
+                        if successList[i] == true {
+                            cell.testLevels.text = "恭喜您已过关"
+                        }else {
+                            cell.testLevels.text = "您已答\(String(answeredList[i]))题，共\(String(questionsList[indexPath.row - 1]))题"
+                        }
                     }
                 }
             }
@@ -383,6 +419,18 @@ extension CardCollectionViewController {
             
         return cell
     }
+    //滑动COLLECTON LABEL 文字发生变化
+    
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pinPoint:CGPoint = self.view.convert((self.collectionView?.center)!, to: self.collectionView)
+        let myindexPath:IndexPath = (self.collectionView?.indexPathForItem(at: pinPoint))!
+       
+        
+         numLabel.text = "\(myindexPath.row)/\(titleList.count)"
+        
+        
+        
+    }
 }
 
 
@@ -395,6 +443,11 @@ extension CardCollectionViewController {
             let contentOffset = CGPoint(x: scrollView.contentOffset.x - self.collectionView!.contentInset.left,
                                         y: self.collectionView!.contentOffset.y)
             self.collectionView!.contentOffset = contentOffset
+         
+        }
+        //防止scrollView过度滑动,每个ITEM宽度250
+        if Double(scrollView.contentOffset.x) > Double(titleList.count * 250) {
+            scrollView.contentOffset.x = CGFloat(titleList.count * 250)
         }
     }
 }

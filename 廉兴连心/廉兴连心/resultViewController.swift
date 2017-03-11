@@ -31,9 +31,18 @@ class resultViewController: UIViewController {
     var clear:Bool!
     //答对题目数
     var rightanswers:Int!
+    //已获得积分数
+    var score:Int!
+    //已获得党员积分
+    var partyscore:Int!
+    //本次测试获得积分
+    var currentScore:Int!
+    
+    
     
     let usr = BmobUser.current()
     let myActivi = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,8 +104,7 @@ class resultViewController: UIViewController {
             })
         }
 
-        
-       _ = navigationController?.popToRootViewController(animated: true)
+        self.present((self.myStoryboard.instantiateViewController(withIdentifier: "SWRevealViewController")), animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -106,6 +114,17 @@ class resultViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.myActivi.startAnimating()
+        score =  usr?.object(forKey: "examscore") as! Int
+        if score == nil {
+            score = 0
+        }
+        if self.usr?.object(forKey: "party") as! Bool{
+           
+            partyscore = usr?.object(forKey: "partyscore") as! Int
+            if partyscore == nil {
+                partyscore = 0
+            }
+        }
         let query = BmobQuery(className: "tests")
         query?.whereKey("testid", equalTo: self.testID_Result)
         query?.findObjectsInBackground({ (array, error) in
@@ -119,25 +138,40 @@ class resultViewController: UIViewController {
                 for obj in array! {
                     let object  = obj as! BmobObject
                     self.questionsNum = object.object(forKey: "questions") as! Int
-                    
+                    self.currentScore = object.object(forKey: "score") as! Int
+                   
                    
                     
                 }
                 
             }
             DispatchQueue.main.async {
-             self.totalNum.text = "\(String(self.questionsNum))"
-             self.myActivi.stopAnimating()
+                
+                print(self.score)
+                print(self.currentScore)
+                self.totalNum.text = "\(String(self.questionsNum))"
+                self.myActivi.stopAnimating()
+                if Bool(self.clear) {
+                    self.score = self.score + self.currentScore
+                    self.usr?.setObject(self.score, forKey: "examscore")
+                    if self.usr?.object(forKey: "party") as! Bool {
+                        self.partyscore = self.partyscore  + self.currentScore
+                        self.usr?.setObject(self.score, forKey: "partyscore")
+                    }
+                    self.usr?.updateInBackground()
+                }
             }
 
         })
         
-        
+       
         self.rightNum.text = rightresult
         self.wrongNum.text = wrongresult
         self.result.text = success
         if success == "恭喜你过关了" {
-            self.result.textColor = UIColor.red
+            self.result.textColor = UIColor.orange
+            self.result.isHighlighted = true
+           
         }else if success == "很遗憾，您需要再努力" {
             self.result.textColor = UIColor.green
         }else {
