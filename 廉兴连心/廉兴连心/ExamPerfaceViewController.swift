@@ -121,7 +121,7 @@ class ExamPerfaceViewController: UIViewController,UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         let frame: CGRect = passlineTF.frame
         
-        let offset = frame.origin.y + 100 - (self.view.frame.size.height - 240)
+        let offset = frame.origin.y + 10 - (self.view.frame.size.height - 240)
         
         if offset > 0 {
             UIView.animate(withDuration: 0.8, animations: {

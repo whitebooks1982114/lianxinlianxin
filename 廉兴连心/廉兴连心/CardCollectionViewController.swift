@@ -381,7 +381,7 @@ extension CardCollectionViewController {
             cell.testTitle.text = titleList[indexPath.row - 1]
             cell.testScore.text = "积分为\(String(scoreList[indexPath.row - 1]))分"
             cell.testLevels.text = "未查询到做题记录,共\(String(questionsList[indexPath.row - 1]))题"
-            if self.user_testid.count > 0 {
+            if self.user_testid.count > 0 && objectIDs.count > 0 {
                 for i in 0..<self.user_testid.count{
                     if self.user_testid[i] == objectIDs[indexPath.row - 1] {
                         if successList[i] == true {
