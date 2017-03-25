@@ -947,18 +947,17 @@
                 <tapGestureRecognizer id="Ubl-km-eza">
                     <connections>
                         <action selector="toNoticeDetail:" destination="UQC-Sq-M3X" id="SXY-gM-ToU"/>
-                        <segue destination="q39-vX-VGH" kind="show" id="nMc-Ks-tAC"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Pet-oe-xr2">
                     <connections>
                         <action selector="toAlarmDetail:" destination="UQC-Sq-M3X" id="JA2-s0-cz5"/>
-                        <segue destination="qwY-nA-oIC" kind="show" id="Tyh-5b-TZ6"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="ZFo-CB-TQ9">
                     <connections>
-                        <segue destination="E8Z-ft-alu" kind="show" id="Cxh-Tl-stu"/>
+                        <action selector="showworks:" destination="UQC-Sq-M3X" id="6nP-ys-amz"/>
+                        <segue destination="E8Z-ft-alu" kind="show" identifier="masterpiece" id="azN-Z0-gYA"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -1786,7 +1785,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tio-Tm-8jr">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="30.000000000000004"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="75" id="4H6-G7-0bS"/>
                                                         <constraint firstAttribute="width" constant="375" id="xFB-w5-x2Q"/>
@@ -1799,7 +1798,7 @@
                                                     </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="设置信息" translatesAutoresizingMaskIntoConstraints="NO" id="u6c-Nv-kPL">
-                                                    <rect key="frame" x="263" y="12" width="50" height="50"/>
+                                                    <rect key="frame" x="263" y="12.000000000000004" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="BP8-SH-h4p"/>
                                                         <constraint firstAttribute="height" constant="50" id="gn8-yg-mfZ"/>
@@ -1829,7 +1828,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjV-jE-kjy">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="30.000000000000004"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="375" id="0Ib-Vh-PmB"/>
                                                         <constraint firstAttribute="height" constant="75" id="rhU-Ds-mK9"/>
@@ -1842,7 +1841,7 @@
                                                     </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="闯关信息" translatesAutoresizingMaskIntoConstraints="NO" id="KET-f2-MTg">
-                                                    <rect key="frame" x="263" y="12" width="50" height="50"/>
+                                                    <rect key="frame" x="263" y="12.000000000000004" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="n8O-q5-1km"/>
                                                         <constraint firstAttribute="height" constant="50" id="p29-eO-vT9"/>

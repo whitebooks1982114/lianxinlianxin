@@ -158,9 +158,7 @@ class giftsViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             
           exscore = (user?.object(forKey: "exscore") as? Int)!
             
-            if exscore == nil {
-                exscore = 0
-            }
+          
         }
         
         self.totalScore.adjustsFontSizeToFitWidth = true
@@ -183,9 +181,18 @@ class giftsViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         super.viewWillAppear(true)
         self.orderNameList.removeAll()
         self.orderNumList.removeAll()
+        let user = BmobUser.current()
+        if user == nil {
+            let alert  = UIAlertController(title: "温馨提示", message: "对不起，您未登录", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+            
+        }else {
         query()
         userNeedScore = 0
        self.totalScore.text = "您的可兑换积分总数为\(String(exscore)),本次兑换所需积分\(userNeedScore)"
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -215,13 +222,13 @@ class giftsViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         return mycell
     }
     
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        let mycell = tableView.dequeueReusableCell(withIdentifier: "cellid", for: indexPath) as! shoppingcellTableViewCell
-        
-        return mycell.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height + 1
-    }
+//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//        let mycell = tableView.dequeueReusableCell(withIdentifier: "cellid", for: indexPath) as! shoppingcellTableViewCell
+//        
+//        return mycell.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height + 1
+//    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return 180
     }
     
    
@@ -230,6 +237,8 @@ class giftsViewController: UIViewController,UITableViewDelegate,UITableViewDataS
        self.totalScore.text = "您的可兑换积分总数为\(exscore),本次兑换所需积分\(userNeedScore)"
         if exscore < userNeedScore {
             self.totalScore.textColor = UIColor.red
+        }else{
+            self.totalScore.textColor = UIColor.blue
         }
     }
     

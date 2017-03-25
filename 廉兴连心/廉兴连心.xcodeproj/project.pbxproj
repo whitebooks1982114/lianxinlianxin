@@ -511,8 +511,8 @@
 		A6BFFE801DD84A20004A781F /* 百科 */ = {
 			isa = PBXGroup;
 			children = (
-				A676569C1E70FA5A00AB9CA9 /* detailContenViewController.swift */,
 				A6772C681DCC5D2E00425322 /* lianbaikeViewController.swift */,
+				A676569C1E70FA5A00AB9CA9 /* detailContenViewController.swift */,
 				A6BFFE7C1DD84A00004A781F /* baikeDirTableViewController.swift */,
 				A61F45C51DD95E2A00D097E4 /* addViewController.swift */,
 				A61F45C61DD95E2A00D097E4 /* addViewController.xib */,

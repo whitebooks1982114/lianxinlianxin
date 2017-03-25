@@ -58,20 +58,57 @@ class liantixinViewController: UIViewController  {
   
     let noticeDir = tongziTableViewController()
     let alarmDir = tixinTableViewController()
+    let masterpiece = masterPieceViewController()
     
     
     @IBAction func toNoticeDetail(_ sender: UITapGestureRecognizer) {
-        
+        let user = BmobUser.current()
+        if user == nil {
+            let alert  = UIAlertController(title: "温馨提示", message: "对不起，您未登录", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+            
+        }else {
         self.navigationController?.pushViewController(noticeDir, animated: true)
+        }
     }
     
     
     @IBAction func toAlarmDetail(_ sender: UITapGestureRecognizer) {
+        let user = BmobUser.current()
+        if user == nil {
+            let alert  = UIAlertController(title: "温馨提示", message: "对不起，您未登录", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+            
+        }else {
         
         self.navigationController?.pushViewController(alarmDir, animated: true)
+        }
     }
     
+    @IBAction func showworks(_ sender: UITapGestureRecognizer) {
        
+    }
+    
+    override  func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "masterpiece" {
+            let user = BmobUser.current()
+            if user == nil {
+                let alert  = UIAlertController(title: "温馨提示", message: "对不起，您未登录", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+                alert.addAction(ok)
+                self.present(alert, animated: true, completion: nil)
+                
+            }else {
+            _ = segue.destination as! masterPieceViewController
+            }
+            
+        }
+        
+    }
        override func viewDidLoad() {
         super.viewDidLoad()
         if self.revealViewController() != nil {

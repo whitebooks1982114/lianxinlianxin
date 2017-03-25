@@ -35,6 +35,14 @@ class lianbaikeViewController: UIViewController {
   override  func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
     let user = BmobUser.current()
+   
+    if user == nil {
+        let alert  = UIAlertController(title: "温馨提示", message: "对不起，您未登录", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: nil)
+        
+    }else {
     if segue.identifier == "anli" {
          let baikeDir = segue.destination as! baikeDirTableViewController
          baikeDir.kind = "anli"
@@ -71,9 +79,8 @@ class lianbaikeViewController: UIViewController {
     }
     if segue.identifier == "ketang" {
        _ = segue.destination as! MediaPerfaceCollectionViewController
-        
-       
 
+    }
     }
  }
     override func didReceiveMemoryWarning() {

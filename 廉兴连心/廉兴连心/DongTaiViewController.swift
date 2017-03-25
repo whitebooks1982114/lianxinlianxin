@@ -198,7 +198,7 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
                 self.adSCView.addSubview(myImageView)
             }else if array == nil {
                 let defaultImageView = UIImageView(image: UIImage(named: "默认图片"))
-                defaultImageView.frame = (CGRect(x: 0, y: 0, width: self.view.frame.width, height:250))
+                defaultImageView.frame = (CGRect(x: 0, y: 0, width: self.view.frame.width, height:280))
              
           
                 self.adSCView.addSubview(defaultImageView)
@@ -220,7 +220,7 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
                 self.adSCView = UIScrollView()
                 self.adSCView.delegate = self
                 self.adSCView.isPagingEnabled = true
-                self.adSCView.frame = CGRect(x: 0, y: 50 + UIApplication.shared.statusBarFrame.height + (self.navigationController?.navigationBar.frame.height)!, width: self.view.frame.width, height:250)
+                self.adSCView.frame = CGRect(x: 0, y: 50 + UIApplication.shared.statusBarFrame.height + (self.navigationController?.navigationBar.frame.height)!, width: self.view.frame.width, height:280)
                 self.adSCView.contentSize = CGSize(width: CGFloat(self.dataList.count) * self.adSCView.frame.width,height: self.adSCView.frame.height)
                 self.adSCView.contentInset = UIEdgeInsetsMake(0, self.view.frame.width, 0, self.view.frame.width)
                 self.newsView.tableHeaderView = self.adSCView
@@ -232,18 +232,18 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
                     self.adSCView.addSubview(myImageView)
                 }else {
                     for index in 0..<count {
-                        let newsImageView = UIImageView(frame: CGRect(x: CGFloat(index) * self.view.frame.width, y: 0, width: self.view.frame.width, height:250))
+                        let newsImageView = UIImageView(frame: CGRect(x: CGFloat(index) * self.view.frame.width, y: 0, width: self.view.frame.width, height:280))
                         newsImageView.contentMode = .scaleToFill
                      
                     newsImageView.kf.setImage(with: ImageResource.init(downloadURL: self.dataList[index] as URL), placeholder: UIImage(named:"默认图片"), options: nil, progressBlock: nil, completionHandler: nil)
                         self.adSCView.addSubview(newsImageView)
                     }
-                    let leftImageView = UIImageView(frame: CGRect(x: -self.view.frame.width, y: 0, width: self.view.frame.width, height:250))
+                    let leftImageView = UIImageView(frame: CGRect(x: -self.view.frame.width, y: 0, width: self.view.frame.width, height:280))
               
                     leftImageView.kf.setImage(with: ImageResource.init(downloadURL: self.dataList[count - 1] as URL), placeholder: UIImage(named:"默认图片"), options: nil, progressBlock: nil, completionHandler: nil)
                     self.adSCView.addSubview(leftImageView)
                     
-                    let rightImageView = UIImageView(frame: CGRect(x: CGFloat(count) * self.view.frame.size.width, y: 0, width: self.view.frame.width, height:250))
+                    let rightImageView = UIImageView(frame: CGRect(x: CGFloat(count) * self.view.frame.size.width, y: 0, width: self.view.frame.width, height:280))
               
                     rightImageView.kf.setImage(with: ImageResource.init(downloadURL: self.dataList[0] as URL), placeholder: UIImage(named:"默认图片"), options: nil, progressBlock: nil, completionHandler: nil)
                     
@@ -255,7 +255,7 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
                         
                     }
                     
-                    self.pageControl = UIPageControl(frame: CGRect(x: UIScreen.main.bounds.width / 4.0, y: 50 + UIApplication.shared.statusBarFrame.height + (self.navigationController?.navigationBar.frame.height)! + 210, width: 150, height: 30))
+                    self.pageControl = UIPageControl(frame: CGRect(x: UIScreen.main.bounds.width / 4.0, y: 50 + UIApplication.shared.statusBarFrame.height + (self.navigationController?.navigationBar.frame.height)! + 240, width: 150, height: 30))
          
                     self.pageControl?.numberOfPages = count
                     self.pageControl?.currentPageIndicatorTintColor = UIColor.red
@@ -289,7 +289,7 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
 
         
         self.navigationItem.title = "新闻首页"
-        queryHeadLine()
+       
         newsKind = "中央"
       
         
@@ -397,10 +397,18 @@ class DongTaiViewController: UIViewController,UITableViewDataSource,UITableViewD
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        let usr = BmobUser.current()
+        if usr == nil {
+            let alert  = UIAlertController(title: "温馨提示", message: "对不起，您未登录", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+            
+        }else {
         queryHeadLine()
         queryHeadImage()
         queryNews()
-        
+        }
         //查询答题闯关界面各个试卷的objectid
         
         objectIDs.removeAll()

@@ -398,7 +398,8 @@ class answerViewController: UIViewController {
         if answeredquestion >= totalNum {
             let alert  = UIAlertController(title: "温馨提示", message: "您已完成试卷，不可重复答题", preferredStyle: .alert)
             let ok = UIAlertAction(title: "好", style: .default, handler: {
-                (_) in _ = self.navigationController?.popToRootViewController(animated: true)
+                (_) in
+                self.present((self.myStoryboard.instantiateViewController(withIdentifier: "SWRevealViewController")), animated: true, completion: nil)
             })
             alert.addAction(ok)
             self.present(alert, animated: true, completion: nil)

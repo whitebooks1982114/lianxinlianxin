@@ -57,6 +57,12 @@ class signUpViewController: UIViewController,  UITextFieldDelegate{
         user.setObject(chineseName.text, forKey: "chinesename")
         user.setObject(false, forKey: "isadmin")
         user.setObject(isPartyMember, forKey: "party")
+        user.setObject(0, forKey: "signtimes")
+        user.setObject(0, forKey: "contsigntimes")
+        user.setObject(0, forKey: "examscore")
+        user.setObject(0, forKey: "exscore")
+        user.setObject(0, forKey: "partyscore")
+        user.setObject(0, forKey: "score")
         if (self.userName.text == "" || self.passWord.text == "" || self.comfirmPassWord.text == "" || self.email.text == "" || self.chineseName.text == "") {
             let alart = UIAlertController(title: "温馨提示", message: "您的注册信息填写不完整", preferredStyle: .alert)
             let ok = UIAlertAction(title: "好", style: .default, handler: nil)

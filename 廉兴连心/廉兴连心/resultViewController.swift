@@ -32,9 +32,9 @@ class resultViewController: UIViewController {
     //答对题目数
     var rightanswers:Int!
     //已获得积分数
-    var score:Int!
+    var score:Int?
     //已获得党员积分
-    var partyscore:Int!
+    var partyscore:Int?
     //本次测试获得积分
     var currentScore:Int!
     
@@ -114,13 +114,13 @@ class resultViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.myActivi.startAnimating()
-        score =  usr?.object(forKey: "examscore") as! Int
+        score =  usr?.object(forKey: "examscore") as? Int
         if score == nil {
             score = 0
         }
         if self.usr?.object(forKey: "party") as! Bool{
            
-            partyscore = usr?.object(forKey: "partyscore") as! Int
+            partyscore = usr?.object(forKey: "partyscore") as? Int
             if partyscore == nil {
                 partyscore = 0
             }
@@ -147,15 +147,13 @@ class resultViewController: UIViewController {
             }
             DispatchQueue.main.async {
                 
-                print(self.score)
-                print(self.currentScore)
                 self.totalNum.text = "\(String(self.questionsNum))"
                 self.myActivi.stopAnimating()
                 if Bool(self.clear) {
-                    self.score = self.score + self.currentScore
+                    self.score = self.score! + self.currentScore
                     self.usr?.setObject(self.score, forKey: "examscore")
                     if self.usr?.object(forKey: "party") as! Bool {
-                        self.partyscore = self.partyscore  + self.currentScore
+                        self.partyscore = self.partyscore!  + self.currentScore
                         self.usr?.setObject(self.score, forKey: "partyscore")
                     }
                     self.usr?.updateInBackground()
