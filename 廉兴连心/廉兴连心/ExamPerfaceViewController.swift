@@ -87,7 +87,7 @@ class ExamPerfaceViewController: UIViewController,UITextFieldDelegate {
         numTF.delegate = self
         partySW.isOn = false
         self.navigationItem.title = "编辑试题概要"
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", style: .plain, target: self, action: #selector(self.goBack))
+       self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", style: .plain, target: self, action: #selector(self.goBack))
         
 
         // Do any additional setup after loading the view.

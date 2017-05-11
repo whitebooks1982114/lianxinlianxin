@@ -10,6 +10,8 @@ import UIKit
 
 class signUpViewController: UIViewController,  UITextFieldDelegate{
     var isPartyMember:Bool = false
+    //正确的中文名
+    var rightChineseName:String!
     
     @IBOutlet weak var userName: UITextField!
     
@@ -75,7 +77,14 @@ class signUpViewController: UIViewController,  UITextFieldDelegate{
             alart1.addAction(ok)
             self.present(alart1, animated: true, completion: nil)
             
-        }else {
+        }else if (self.chineseName.text != rightChineseName) {
+          
+            let alart1 = UIAlertController(title: "温馨提示", message: "您的P账号与姓名不匹配", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "好", style: .default, handler: nil)
+            alart1.addAction(ok)
+            self.present(alart1, animated: true, completion: nil)
+        }
+        else {
             user.signUpInBackground({ (success, error) in
                 if success {
                     let alart = UIAlertController(title: "提示", message: "注册成功", preferredStyle: .alert)
@@ -104,6 +113,29 @@ class signUpViewController: UIViewController,  UITextFieldDelegate{
         
     }
     
+    func paccountQuery(account:String) {
+        var userChineseName = ""
+        let query = BmobQuery(className: "sign")
+        query?.whereKey("paccount", equalTo: account)
+        query?.findObjectsInBackground({ (array, error) in
+            if array != nil {
+                for obj in array! {
+                    let object = obj as! BmobObject
+                    userChineseName = object.object(forKey: "chinesename") as! String
+                    self.rightChineseName = userChineseName
+                 
+                }
+            }else {
+                print("wrong")
+                self.rightChineseName = ""
+            }
+           
+        })
+       
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -120,7 +152,9 @@ class signUpViewController: UIViewController,  UITextFieldDelegate{
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-       
+        
+        paccountQuery(account: self.userName.text!)
+      
             self.userName.resignFirstResponder()
             self.passWord.resignFirstResponder()
             self.comfirmPassWord.resignFirstResponder()
@@ -133,6 +167,8 @@ class signUpViewController: UIViewController,  UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
+        paccountQuery(account: self.userName.text!)
+       
         UIView.animate(withDuration: 0.5, animations: {
             self.userName.resignFirstResponder()
             self.passWord.resignFirstResponder()
@@ -148,7 +184,6 @@ class signUpViewController: UIViewController,  UITextFieldDelegate{
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         let frame: CGRect = chineseName.frame
-        print(frame.origin.y)
         let offSet = frame.origin.y + 80 - (self.view.frame.size.height - 216)
         if offSet > 0 {
             UIView.animate(withDuration: 0.5, animations: { 

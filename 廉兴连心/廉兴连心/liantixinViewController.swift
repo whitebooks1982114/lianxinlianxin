@@ -56,8 +56,8 @@ class liantixinViewController: UIViewController  {
     @IBOutlet weak var alarmLabel: UILabel!
     
   
-    let noticeDir = tongziTableViewController()
-    let alarmDir = tixinTableViewController()
+  
+    
     let masterpiece = masterPieceViewController()
     
     
@@ -70,7 +70,8 @@ class liantixinViewController: UIViewController  {
             self.present(alert, animated: true, completion: nil)
             
         }else {
-        self.navigationController?.pushViewController(noticeDir, animated: true)
+          UIApplication.shared.applicationIconBadgeNumber = 0
+        self.navigationController?.pushViewController(self.storyboard?.instantiateViewController(withIdentifier: "tongzhi") as! tongziTableViewController, animated: true)
         }
     }
     
@@ -84,8 +85,8 @@ class liantixinViewController: UIViewController  {
             self.present(alert, animated: true, completion: nil)
             
         }else {
-        
-        self.navigationController?.pushViewController(alarmDir, animated: true)
+         UIApplication.shared.applicationIconBadgeNumber = 0
+        self.navigationController?.pushViewController(self.storyboard?.instantiateViewController(withIdentifier: "tixin") as! tixinTableViewController, animated: true)
         }
     }
     
@@ -103,6 +104,7 @@ class liantixinViewController: UIViewController  {
                 self.present(alert, animated: true, completion: nil)
                 
             }else {
+                
             _ = segue.destination as! masterPieceViewController
             }
             
